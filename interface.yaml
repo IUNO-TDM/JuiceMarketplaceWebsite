@@ -1,0 +1,1033 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: JuiceMarketplaceWebsite Rest API
+  contact:
+    name: TRUMPF Werkzeugmaschinen GmbH & Co KG
+  description: ''
+host: 'localhost:3004'
+schemes:
+  - http
+  - https
+consumes:
+  - application/json
+paths:
+  /auth/iuno:
+    get:
+      description: triggers the login route
+      responses:
+        '200':
+          description: ok
+  /auth/loggedin:
+    get:
+      description: returns the login state
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: boolean
+  /auth/logout:
+    get:
+      description: triggers the logout
+      responses:
+        '200':
+          description: ok
+  /recipes:
+    get:
+      description: Returns a list of recipes
+      parameters:
+        - name: createdBy
+          in: query
+          required: false
+          description: A filter to only get recipes createdBy by a specified UserUUID
+          type: string
+          format: uuid
+        - name: orderBy
+          in: query
+          required: false
+          description: How the results are sorted
+          type: string
+          enum:
+            - alphASC
+            - alphDESC
+            - random
+            - ratingASC
+            - ratingDESC
+        - name: limit
+          in: query
+          required: false
+          description: Limits the results
+          type: integer
+          minimum: 1
+        - name: components
+          in: query
+          required: false
+          description: A list of component UUIDs which have to be in the recipes
+          type: array
+          items:
+            type: string
+            format: uuid
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: The requested recipes
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Recipe'
+  /recipes/licenses/count:
+    get:
+      description: returns a list of counts of licenses for the recipes filtered
+      parameters:
+        - name: createdBy
+          in: query
+          required: false
+          description: A filter to only get recipes createdBy by a specified UserUUID
+          type: string
+          format: uuid
+        - name: orderBy
+          in: query
+          required: false
+          description: How the results are sorted
+          type: string
+          enum:
+            - alphASC
+            - alphDESC
+            - random
+            - ratingASC
+            - ratingDESC
+        - name: components
+          in: query
+          required: false
+          description: A list of component UUIDs which have to be in the recipes
+          type: array
+          items:
+            type: string
+            format: uuid
+        - name: startDate
+          in: query
+          required: false
+          description: The including startdate in js notation
+          type: string
+          format: date
+        - name: endDate
+          in: query
+          required: false
+          description: The including enddate in js notation
+          type: string
+          format: date
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: the count of licenses per recipe
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                recipeId:
+                  type: string
+                  format: uuid
+                licenseCount:
+                  type: integer
+                  minimum: 0
+  /recipes/licenses/total:
+    get:
+      description: the total license count for the recipes in the filter
+      parameters:
+        - name: createdBy
+          in: query
+          required: false
+          description: A filter to only get recipes createdBy by a specified UserUUID
+          type: string
+          format: uuid
+        - name: components
+          in: query
+          required: false
+          description: A list of component UUIDs which have to be in the recipes
+          type: array
+          items:
+            type: string
+            format: uuid
+        - name: startDate
+          in: query
+          required: false
+          description: The including startdate in js notation
+          type: string
+          format: date
+        - name: endDate
+          in: query
+          required: false
+          description: The including enddate in js notation
+          type: string
+          format: date
+      responses:
+        '200':
+          description: the total count of license
+          schema:
+            type: integer
+            minimum: 0
+  /recipes/licenses/total/history:
+    get:
+      description: the license count history for the recipes in the filter
+      parameters:
+        - name: createdBy
+          in: query
+          required: false
+          description: A filter to only get recipes createdBy by a specified UserUUID
+          type: string
+          format: uuid
+        - name: components
+          in: query
+          required: false
+          description: A list of component UUIDs which have to be in the recipes
+          type: array
+          items:
+            type: string
+            format: uuid
+        - name: startDate
+          in: query
+          required: false
+          description: The including startdate in js notation
+          type: string
+          format: date
+        - name: endDate
+          in: query
+          required: false
+          description: The including enddate in js notation
+          type: string
+          format: date
+        - name: interval
+          in: query
+          required: false
+          type: string
+          enum:
+            - minute
+            - hour
+            - day
+            - week
+            - month
+            - year
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: the history of count of license
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                date:
+                  type: string
+                  format: date
+                count:
+                  type: integer
+                  minimum: 0
+  '/recipes/{recipeId}/licenses/count':
+    get:
+      description: Returns the specified Recipe
+      parameters:
+        - name: recipeId
+          in: path
+          required: true
+          description: the recipe UUID
+          type: string
+          format: uuid
+        - name: startDate
+          in: query
+          required: false
+          description: The including startdate in js notation
+          type: string
+          format: date
+        - name: endDate
+          in: query
+          required: false
+          description: The including enddate in js notation
+          type: string
+          format: date
+      responses:
+        '200':
+          description: The count of licenses
+          schema:
+            type: integer
+            minimum: 0
+        '404':
+          description: No recipe with this id
+  '/recipes/{recipeId}/licenses/count/history':
+    get:
+      description: Returns the specified Recipe
+      parameters:
+        - name: recipeId
+          in: path
+          required: true
+          description: the recipe UUID
+          type: string
+          format: uuid
+        - name: startDate
+          in: query
+          required: false
+          description: The including startdate in js notation
+          type: string
+          format: date
+        - name: endDate
+          in: query
+          required: false
+          description: The including enddate in js notation
+          type: string
+          format: date
+        - name: interval
+          in: query
+          required: false
+          type: string
+          enum:
+            - minute
+            - hour
+            - day
+            - week
+            - month
+            - year
+      responses:
+        '200':
+          description: The history of count of licenses
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                date:
+                  type: string
+                  format: date
+                count:
+                  type: integer
+                  minimum: 0
+        '404':
+          description: No recipe with this id
+  '/recipes/{recipeId}':
+    get:
+      description: Returns the specified Recipe
+      parameters:
+        - name: recipeId
+          in: path
+          required: true
+          description: the recipe UUID
+          type: string
+          format: uuid
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: The requested recipe
+          schema:
+            $ref: '#/definitions/Recipe'
+        '404':
+          description: No recipe with this id
+  '/recipes/{recipeId}/image':
+    get:
+      description: Returns the image for a recipe
+      parameters:
+        - name: recipeId
+          in: path
+          required: true
+          description: the recipe UUID
+          type: string
+          format: uuid
+      produces:
+        - image/*
+      responses:
+        '200':
+          description: The image for a recipe
+          schema:
+            type: string
+            format: binary
+    put:
+      description: Upload an image for a recipe
+      consumes:
+        - image/*
+      parameters:
+        - name: recipeId
+          in: path
+          required: true
+          description: the recipe UUID
+          type: string
+          format: uuid
+      responses:
+        '201':
+          description: Upload Successful
+  /components:
+    get:
+      description: Get all components available
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: components
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Component'
+    post:
+      description: Create a new Component
+      consumes:
+        - application/json
+      parameters:
+        - name: component
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Component'
+      produces:
+        - application/json
+      responses:
+        '201':
+          description: created component
+          schema:
+            $ref: '#/definitions/Component'
+  '/components/{componentId}':
+    get:
+      description: Get a specified component
+      parameters:
+        - name: componentId
+          in: path
+          required: true
+          type: string
+          format: uuid
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: the component
+          schema:
+            $ref: '#/definitions/Component'
+        '404':
+          description: no component with this id
+  /users:
+    get:
+      description: 'Returns a list of users, used for administration'
+      parameters:
+        - name: sortedBy
+          in: query
+          required: false
+          description: How the users are sorted
+          type: string
+          enum:
+            - alph
+            - alphBack
+            - random
+        - name: from
+          in: query
+          required: false
+          description: the count from which the user list should be transmitted
+          type: integer
+          minimum: 0
+        - name: to
+          in: query
+          required: false
+          description: the count up to which the user list should be transmitted
+          type: integer
+          minimum: 1
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: the user list
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/User'
+  '/users/{userId}':
+    get:
+      description: 'Returns a list of users, used for administration'
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          type: string
+          format: uuid
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: the user list
+          schema:
+            $ref: '#/definitions/User'
+  '/users/{userId}/image':
+    get:
+      description: Returns the image of the user
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          type: string
+          format: uuid
+      produces:
+        - image/*
+      responses:
+        '200':
+          description: the user image
+          schema:
+            type: string
+            format: binary
+    put:
+      description: sets the image of the user
+      consumes:
+        - image/*
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          type: string
+          format: uuid
+        - name: image
+          in: body
+          required: true
+          schema:
+            type: string
+            format: binary
+      responses:
+        '200':
+          description: the user image
+  '/users/{userId}/recipes':
+    get:
+      description: Returns a list of recipes
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          type: string
+          format: uuid
+        - name: orderBy
+          in: query
+          required: false
+          description: How the results are sorted
+          type: string
+          enum:
+            - alphASC
+            - alphDESC
+            - random
+            - ratingASC
+            - ratingDESC
+        - name: limit
+          in: query
+          required: false
+          description: Limits the results
+          type: integer
+          minimum: 1
+        - name: components
+          in: query
+          required: false
+          description: A list of component UUIDs which have to be in the recipes
+          type: array
+          items:
+            type: string
+            format: uuid
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: The requested recipes
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Recipe'
+    post:
+      description: upload a recipe
+      parameters:
+        - name: recipeUpload
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/RecipeUpload'
+      responses:
+        '201':
+          description: Upload successful
+          schema:
+            $ref: '#/definitions/Recipe'
+  '/users/{userId}/recipes/limit':
+    get:
+      description: The number of recipes a user can have
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          type: string
+          format: uuid
+      responses:
+        '200':
+          description: The number of recipes in total a creator can create
+          schema:
+            type: integer
+            minimum: 0
+  '/users/{userId}/recipes/count':
+    get:
+      description: The count of recipes a user has created
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          type: string
+          format: uuid
+      responses:
+        '200':
+          description: The count of recipes for this user
+          schema:
+            type: object
+            properties:
+              active:
+                type: integer
+                minimum: 0
+              total:
+                type: integer
+                minimum: 0
+  '/users/{userId}/vault/balance':
+    get:
+      description: Getting the total balance of all user wallets in the vault
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          type: string
+          format: uuid
+      responses:
+        '200':
+          description: the balance in coin
+          schema:
+            type: integer
+        '404':
+          description: the user in unknown in the vault
+  '/users/{userId}/vault/wallets':
+    get:
+      description: Getting the total balance of all user wallets in the vault
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          type: string
+          format: uuid
+      responses:
+        '200':
+          description: an array of wallets
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Wallet'
+        '404':
+          description: the user in unknown in the vault
+  '/users/{userId}/vault/wallets/{walletId}/payouts':
+    post:
+      description: triggering the payout
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          type: string
+          format: uuid
+        - name: walletId
+          in: path
+          required: true
+          type: string
+          format: uuid
+      responses:
+        '200':
+          description: the payout
+          schema:
+            $ref: '#/definitions/Payout'
+        '404':
+          description: the user in unknown in the vault or this is not the user's wallet
+  '/users/{userId}/reports/revenue':
+    get:
+      description: Route to get the total revenue of a user
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          type: string
+          format: uuid
+        - name: from
+          in: query
+          required: true
+          type: string
+          format: date-time
+        - name: to
+          in: query
+          required: true
+          type: string
+          format: date-time
+      responses:
+        '200':
+          description: the report
+          schema:
+            $ref: '#/definitions/UserRevenueReport'
+  '/users/{userId}/reports/recipes/top':
+    get:
+      description: Get the toplist of recipes for a user
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          type: string
+          format: uuid
+        - name: from
+          in: query
+          required: true
+          type: string
+          format: date-time
+        - name: to
+          in: query
+          required: true
+          type: string
+          format: date-time
+        - name: limit
+          in: query
+          required: true
+          type: integer
+          minimum: 1
+      responses:
+        '200':
+          description: the report
+          schema:
+            $ref: '#/definitions/RecipesTopReport'
+  /coupons:
+    post:
+      description: Create a Coupon object to get a Coupon
+      consumes:
+        - application/x-www-form-urlencoded
+      produces:
+        - application/json
+      responses:
+        '201':
+          description: id of created Coupon
+          schema:
+            type: string
+            format: uuid
+  '/coupons/{couponId}/ios':
+    get:
+      description: Get a ios coupon which was created before
+      parameters:
+        - name: couponId
+          in: path
+          required: true
+          type: string
+          format: uuid
+      responses:
+        '200':
+          description: Ok
+          schema:
+            type: string
+            format: binary
+        '404':
+          description: No Coupon for this id
+  '/coupons/{couponId}/pdf':
+    get:
+      description: Get a pdf coupon which was created before
+      parameters:
+        - name: couponId
+          in: path
+          required: true
+          type: string
+          format: uuid
+      responses:
+        '200':
+          description: Ok
+          schema:
+            type: string
+            format: binary
+        '404':
+          description: No Coupon for this id
+  /reports/revenue:
+    get:
+      description: Route to get the total revenue
+      parameters:
+        - name: from
+          in: query
+          required: true
+          type: string
+          format: date-time
+        - name: to
+          in: query
+          required: true
+          type: string
+          format: date-time
+        - name: detail
+          in: query
+          required: true
+          type: string
+          enum:
+            - day
+            - hour
+      responses:
+        '200':
+          description: the report
+          schema:
+            $ref: '#/definitions/RevenueReport'
+  /reports/recipes/history:
+    get:
+      description: Route to get the amount and revenue per recipe and hour
+      parameters:
+        - name: from
+          in: query
+          required: true
+          type: string
+          format: date-time
+        - name: to
+          in: query
+          required: true
+          type: string
+          format: date-time
+      responses:
+        '200':
+          description: the report
+          schema:
+            $ref: '#/definitions/RecipeHistoryReport'
+  /reports/recipes/top:
+    get:
+      description: Get the toplist of recipes
+      parameters:
+        - name: from
+          in: query
+          required: true
+          type: string
+          format: date-time
+        - name: to
+          in: query
+          required: true
+          type: string
+          format: date-time
+        - name: limit
+          in: query
+          required: true
+          type: integer
+          minimum: 1
+      responses:
+        '200':
+          description: the report
+          schema:
+            $ref: '#/definitions/RecipesTopReport'
+  /reports/components/top:
+    get:
+      description: Get the toplist of components
+      parameters:
+        - name: from
+          in: query
+          required: true
+          type: string
+          format: date-time
+        - name: to
+          in: query
+          required: true
+          type: string
+          format: date-time
+        - name: limit
+          in: query
+          required: true
+          type: integer
+          minimum: 1
+      responses:
+        '200':
+          description: the report
+          schema:
+            $ref: '#/definitions/ComponentTopReport'
+definitions:
+  ComponentTopReport:
+    type: array
+    items:
+      type: object
+      properties:
+        componentname:
+          type: string
+        amount:
+          type: integer
+          minimum: 0
+  RecipesTopReport:
+    type: array
+    items:
+      type: object
+      properties:
+        technologydataname:
+          type: string
+        amount:
+          type: integer
+          minimum: 0
+        revenue:
+          type: number
+          minimum: 0
+  RecipeHistoryReport:
+    type: array
+    items:
+      type: object
+      properties:
+        year:
+          type: number
+          minimum: 1971
+          maximum: 2100
+        month:
+          type: number
+          minimum: 1
+          maximum: 12
+        day:
+          type: number
+          minimum: 1
+          maximum: 31
+        hour:
+          type: number
+          minimum: 0
+          maximum: 23
+        technologydataname:
+          type: string
+        amount:
+          type: integer
+          minimum: 0
+        revenue:
+          type: number
+          minimum: 0
+  UserRevenueReport:
+    type: object
+    properties:
+      amount:
+        type: integer
+        minimum: 0
+      revenue:
+        type: number
+        minimum: 0
+  RevenueReport:
+    type: object
+    properties:
+      date:
+        type: string
+        format: date-time
+      hour:
+        type: number
+        minimum: 0
+        maximum: 23
+      technologydataname:
+        type: string
+      amount:
+        type: integer
+        minimum: 0
+      revenue:
+        type: number
+        minimum: 0
+  Wallet:
+    type: object
+    properties:
+      walletId:
+        type: string
+        format: UUID
+      unconfirmed:
+        type: integer
+        minimum: 0
+      confirmed:
+        type: integer
+        minimum: 0
+  Payout:
+    type: object
+    properties:
+      payoutId:
+        type: string
+        format: UUID
+        required: false
+      payoutAddress:
+        type: string
+      amount:
+        type: integer
+        format: int32
+        minimum: 1
+      emptyWallet:
+        type: boolean
+      referenceId:
+        type: string
+        required: false
+  User:
+    type: object
+    properties:
+      id:
+        type: string
+      username:
+        type: string
+      externalid:
+        type: string
+      firstname:
+        type: string
+      lastname:
+        type: string
+      useremail:
+        type: string
+      createdAt:
+        type: string
+  Component:
+    type: object
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      description:
+        type: string
+  RecipeUpload:
+    type: object
+    properties:
+      title:
+        type: string
+      description:
+        type: string
+      license-fee:
+        type: number
+        minimum: 0
+        maximum: 2000
+      program:
+        type: object
+        properties:
+          amount-per-millisecond:
+            type: number
+            minimum: 0.001
+            maximum: 1
+          sequences:
+            type: array
+            items:
+              type: object
+              properties:
+                ingredient-id:
+                  type: string
+                  format: UUID
+                phases:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      start:
+                        type: integer
+                        minimum: 0
+                        maximum: 1000
+                      amount:
+                        type: integer
+                        minimum: 1
+                        maximum: 1000
+                      throughput:
+                        type: integer
+                        minimum: 1
+                        maximum: 100
+  Recipe:
+    type: object
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+      description:
+        type: string
+      fee:
+        type: number
+      createddate:
+        type: string
+      createdby:
+        type: string
+      updatedate:
+        type: string
+      updatedby:
+        type: string
+      componentList:
+        type: array
+        items:
+          type: string
