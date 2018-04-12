@@ -21,10 +21,10 @@
             <div fxLayout.gt-md="row" fxLayout.lt-md="column" fxFlex="100" fxLayoutAlign.gt-md="center start" fxLayoutAlign.lt-md="center"
                  fxLayoutGap="30px" style="background-color: #0f00;">
                 <div fxLayoutAlign="center center" fxFlex="30" fxShow.lt-md="false" style="background-color: #ff00;">
-                    <cocktail-component-list style="max-width: 300px; height: 450px;"></cocktail-component-list>
+                    <cocktail-component-list [showRecommended]="showRecommendedComponents" [showAvailable]="showAvailableComponents" [showInstalled]="showInstalledComponents" style="max-width: 300px; height: 450px;"></cocktail-component-list>
                 </div>
                 <div style="background-color: #0ff0;" fxFlex.gt-md="300px" fxFlex.lt-md="auto" fxLayoutAlign="center center">
-                    <cocktail-beaker #beaker [cocktail]="cocktail" [editMode]="getBeakerEditMode()" style="width: 300px; height: 450px;"></cocktail-beaker>
+                    <cocktail-beaker #beaker [cocktail]="cocktail" (onSelectComponent)="selectComponent($event)" [editMode]="getBeakerEditMode()" style="width: 300px; height: 450px;"></cocktail-beaker>
                 </div>
                 <div style="background-color: #00f0;" fxLayoutAlign.gt-md="center start" fxFlex.gt-md="320px" fxFlex.lt-md="auto" fxLayoutAlign.lt-md="center start">
                     <cocktail-ingredients-listing [cocktail]="cocktail" fxFlexFill></cocktail-ingredients-listing>
