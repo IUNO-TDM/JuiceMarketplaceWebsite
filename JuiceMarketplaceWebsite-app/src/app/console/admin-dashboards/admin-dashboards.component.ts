@@ -3,20 +3,20 @@ import {AdminService} from "../services/admin.service";
 import * as moment from "moment";
 import {GoogleChartComponent} from "ng2-google-charts";
 import {Observable} from "rxjs/Observable";
-
+import {ClientService} from "../services/client.service";
+import 'rxjs/add/observable/forkJoin'
 @Component({
     selector: 'app-admin-dashboards',
     templateUrl: './admin-dashboards.component.html',
     styleUrls: ['./admin-dashboards.component.css'],
-    providers: [AdminService]
+    providers: [AdminService, ClientService]
 })
 export class AdminDashboardsComponent implements OnInit {
 
-    constructor(private adminService: AdminService) {
+    constructor(private adminService: AdminService,private clientService: ClientService) {
     }
 
     @ViewChild('timelinechart') timelinechart: GoogleChartComponent;
-
 
     connectionObservable1: Observable<Object>;
     connectionObservable2: Observable<Object>;
@@ -92,12 +92,24 @@ export class AdminDashboardsComponent implements OnInit {
         }
     };
 
-    createConnectionDiagram(from: Date, to: Date, data: any, lastdata: any) {
+    createConnectionDiagram(from: Date, to: Date, data: any, lastdata: any, clients: Array<Object>) {
         this.machinesConnectedData.dataTable = [];
-        if (data.length == 0 && lastdata.length == 0) {
+        if (data.length == 0) {
+
+            var isOneConnected = false;
+            for(let d of lastdata){
+                if(d.payload.connected == true){
+                    isOneConnected = true;
+                }
+            }
+            if(!isOneConnected || lastdata.length == 0){
+                this.connectedChartDisabled = true;
+                return;
+            }
             this.connectedChartDisabled = true;
             return;
         }
+
         this.connectedChartDisabled = false;
         this.machinesConnectedData.dataTable.push(
             [
@@ -106,6 +118,11 @@ export class AdminDashboardsComponent implements OnInit {
                 {type: 'date', id: 'End'}
             ]);
         data.reverse();
+        var clientList = {};
+        for(let client of clients){
+            clientList[client['id']] = client['clientname'];
+        }
+
         let sortedByMachine = {};
         for (let line of data) {
             if (!sortedByMachine.hasOwnProperty(line.clientid)) {
@@ -132,7 +149,12 @@ export class AdminDashboardsComponent implements OnInit {
 
             for (let i = 0; i < sortedByMachine[machine].length; i += 2) {
                 let graphline = [];
-                graphline.push(machine);
+                if(clientList.hasOwnProperty(machine)){
+                    graphline.push(clientList[machine]);
+                }else{
+                    graphline.push(machine);
+                }
+
                 graphline.push(sortedByMachine[machine][i]);
                 graphline.push(sortedByMachine[machine][i + 1]);
                 this.machinesConnectedData.dataTable.push(graphline);
@@ -192,7 +214,20 @@ export class AdminDashboardsComponent implements OnInit {
         this.connectionObservable1 = this.adminService.getConnectionProtocols(from, to);
         this.connectionObservable2  = this.adminService.getLastConnectionProtocols(lcfrom, lcto);
         this.connectionObservableC = this.connectionObservable1.combineLatest(this.connectionObservable2,(x,y)=>{return {a:x,b:y}});
-        this.connectionObservableC.subscribe(d => this.createConnectionDiagram(from, to, d['a'], d['b']), error2 => console.log(error2));
+
+        this.connectionObservableC.subscribe(d => {
+
+            var observables = [];
+            for(let client of d['b']) {
+                observables.push(this.clientService.getClient(client['clientid']));
+            }
+
+            Observable.forkJoin(observables).subscribe(clients =>{
+                this.createConnectionDiagram(from, to, d['a'], d['b'],clients)
+            });
+
+
+        }, error2 => console.log(error2));
 
 
     }
