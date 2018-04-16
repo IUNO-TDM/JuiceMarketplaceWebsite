@@ -171,6 +171,9 @@ export class DashboardComponent implements OnInit {
                     hAxis: {
                         format: 'dd.MM.'
                     },
+                    vAxis: {
+                        title: 'Umsatz (IUNO)'
+                    },
                     series: series
                 }
 
