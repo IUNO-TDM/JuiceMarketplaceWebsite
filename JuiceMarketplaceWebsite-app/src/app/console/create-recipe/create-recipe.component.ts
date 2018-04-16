@@ -66,9 +66,15 @@ export class CreateRecipeComponent implements OnInit {
 
     getBeakerEditMode() {
         var editMode = false;
-        let windowWidth = window.innerWidth;
-        if (windowWidth < 960) {
+        var ua = window.navigator.userAgent;
+        // https://stackoverflow.com/a/25394023/1771537
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(ua)) {
             editMode = true
+        } else {
+            let windowWidth = window.innerWidth;
+            if (windowWidth < 960) {
+                editMode = true
+            }
         }
         return editMode
     }
