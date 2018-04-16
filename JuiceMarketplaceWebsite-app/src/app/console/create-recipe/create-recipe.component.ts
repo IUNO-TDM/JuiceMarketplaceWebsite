@@ -93,9 +93,7 @@ export class CreateRecipeComponent implements OnInit {
         this.accessGuard.guardLoggedIn().subscribe(loggedIn => {
             if (loggedIn) {
                 let valid = true;
-                //TODO: Declare recipe as Recipe from TDM-Common after Issue #136 was fixed.
-                // const recipe = new Recipe();
-                const recipe: any = {};
+                const recipe = new Recipe();
 
                 recipe.title = this.recipeName;
                 recipe.licenseFee = this.recipeLicenseFee * 100000;
@@ -123,15 +121,6 @@ export class CreateRecipeComponent implements OnInit {
                     this.spinnerCounter += 1;
                     // create json
                     let machineProgram = this.cocktail.getMachineProgram();
-
-
-                    //TODO: Remove this hotfix -  real fix tracked in issue #134
-                    // Round all component amount to integers
-                    for (let line_index in machineProgram.recipe.lines) {
-                        for (let component_index in machineProgram.recipe.lines[line_index].components) {
-                            machineProgram.recipe.lines[line_index].components[component_index].amount = Math.round(machineProgram.recipe.lines[line_index].components[component_index].amount);
-                        }
-                    }
 
                     recipe.program = machineProgram;
                     console.log("Recipe:");

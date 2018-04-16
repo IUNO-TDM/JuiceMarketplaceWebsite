@@ -8,7 +8,6 @@ const https = require('https');
 const logger = require('../global/logger');
 const CONFIG = require('../config/config_loader');
 const request = require('request');
-const Component = require('../model/component');
 const helper = require('../services/helper_service');
 
 //<editor-fold desc="Build Options">
@@ -47,20 +46,13 @@ self.getAllComponents = function (accessToken, callback) {
     );
     options.headers.authorization = 'Bearer ' + accessToken;
 
-    request(options, function (e, r, jsonData) {
-        const err = logger.logRequestAndResponse(e, options, r, jsonData);
-        const components = [];
-
-        if (helper.isArray(jsonData)) {
-            jsonData.forEach(function (entry) {
-                components.push(Component.CreateComponentFromJSON(entry));
-            });
+    request(options, function (e, r, components) {
+        const err = logger.logRequestAndResponse(e, options, r, components);
+        var tdmComponents = null
+        if (components && !err) {
+            tdmComponents = mapToTdmComponents(components)
         }
-        else {
-            logger.warn('Unexpected response when retrieving components from market place core:');
-        }
-
-        callback(err, components);
+        callback(err, tdmComponents);
     });
 };
 //</editor-fold>
@@ -89,15 +81,14 @@ self.getRecipesForUser = function (userId, accessToken, callback) {
 
     options.headers.authorization = 'Bearer ' + accessToken;
 
-    request(options, function (e, r, jsonData) {
-        const err = logger.logRequestAndResponse(e, options, r, jsonData);
+    request(options, function (e, r, recipes) {
+        const err = logger.logRequestAndResponse(e, options, r, recipes);
 
-        //TODO: Parse content into recipe object from tdm common Issue #133
-        if (err) {
-            return callback(err, null);
+        var tdmRecipes = null
+        if (recipes && !err) {
+            tdmRecipes = mapToTdmRecipes(recipes)
         }
-
-        callback(err, jsonData);
+        callback(err, tdmRecipes);
     });
 };
 
@@ -172,7 +163,13 @@ self.getAllRecipes = function (token, params, callback) {
     );
     options.headers.authorization = 'Bearer ' + token.accessToken;
 
-    doRequest(options, callback);
+    doRequest(options, function (err, recipes) {
+        var tdmRecipes = null
+        if (recipes && !err) {
+            tdmRecipes = mapToTdmRecipes(recipes)
+        }
+        callback(err, tdmRecipes);
+    });
 };
 //</editor-fold>
 
@@ -192,6 +189,7 @@ self.getTechnologyDataHistory = function (from, to, token, callback) {
     );
     options.headers.authorization = 'Bearer ' + token.accessToken;
 
+    // does not return recipe class
     doRequest(options, callback);
 };
 
@@ -211,7 +209,9 @@ self.getTopComponents = function (from, to, limit, token, callback) {
     );
     options.headers.authorization = 'Bearer ' + token.accessToken;
 
-    doRequest(options, callback);
+    doRequest(options, function (err, componentReports) {
+        callback(err, componentReports)
+    })
 };
 
 self.getTopTechnologyData = function (from, to, limit, token, callback) {
@@ -231,6 +231,7 @@ self.getTopTechnologyData = function (from, to, limit, token, callback) {
 
     options.headers.authorization = 'Bearer ' + token.accessToken;
 
+    // does not return recipe class
     doRequest(options, callback);
 };
 
@@ -309,7 +310,7 @@ self.getTopTechnologyDataForUser = function (user, accessToken, from, to, limit,
         }
     );
     options.headers.authorization = 'Bearer ' + accessToken;
-
+    // does not use recipe class
     doRequest(options, callback);
 };
 //</editor-fold>
@@ -444,6 +445,33 @@ module.exports = self;
 
 
 // --- FUNCTIONS ---
+function mapToTdmRecipes(recipes) {
+    var tdmRecipes = recipes.map(r => {
+        var recipe = {}
+        recipe.id = r.technologydatauuid
+        recipe.title = r.technologydataname
+        recipe.description = r.technologydatadescription
+        recipe.licenseFee = r.licensefee
+        recipe.program = r.technologydata
+        recipe.backgroundColor = r.backgroundcolor
+        recipe.components = mapToTdmComponents(r.componentlist)
+        recipe.imageRef = r.technologydataimgref
+        return recipe
+    })
+    return tdmRecipes
+}
+
+function mapToTdmComponents(components) {
+    var tdmComponents = components.map(c => {
+        var component = {}
+        component.id = c.componentuuid
+        component.name = c.componentname
+        component.color = c.displaycolor
+        return component
+    })
+    return tdmComponents
+}
+
 function doRequest(options, callback) {
     request(options, function (e, r, jsonData) {
         logger.debug('Response from MarketplaceCore: ' + JSON.stringify(jsonData));
