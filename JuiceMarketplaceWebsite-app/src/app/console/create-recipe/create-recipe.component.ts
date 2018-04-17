@@ -30,13 +30,13 @@ export class CreateRecipeComponent implements OnInit {
     @ViewChild(RecipeImagePickerComponent) recipeImagePicker: RecipeImagePickerComponent;
     @ViewChild(BeakerComponent) beaker: BeakerComponent;
 
-    recipe = new Recipe()
+    recipe = new Recipe();
     cocktail: Cocktail;
     components: CocktailComponent[] = [];
 
-    showRecommendedComponents = false
-    showInstalledComponents = false
-    showAvailableComponents = true
+    showRecommendedComponents = true;
+    showInstalledComponents = false;
+    showAvailableComponents = true;
 
     // components: TdmComponent[];
     licenseFees: number[] = [0.25, 0.5, 0.75, 1.00];
