@@ -24,7 +24,7 @@ export class AdminDashboardsComponent implements OnInit, AfterViewInit {
     connectionObservableC: Observable<Object>;
 
 
-    connectedChartOption = 'year';
+    connectedChartOption = 'week';
     connectedChartDisabled = false;
     machinesConnectedData = {
         chartType: 'Timeline',
@@ -209,7 +209,7 @@ export class AdminDashboardsComponent implements OnInit, AfterViewInit {
         }
 
 
-        this.connectionObservable1 = this.adminService.getConnectionProtocols(from, to);
+        this.connectionObservable1 = this.adminService.getConnectionProtocols(from, to,10000);
         this.connectionObservable2 = this.adminService.getLastConnectionProtocols(lcfrom, lcto);
         this.connectionObservableC = this.connectionObservable1.combineLatest(this.connectionObservable2, (x, y) => {
             return {a: x, b: y}
