@@ -1,17 +1,18 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {AdminService} from "../services/admin.service";
 import * as moment from "moment";
 import {GoogleChartComponent} from "ng2-google-charts";
 import {Observable} from "rxjs/Observable";
 import {ClientService} from "../services/client.service";
 import 'rxjs/add/observable/forkJoin'
+import {GoogleChartsLoaderService} from "ng2-google-charts/google-charts-loader.service";
 @Component({
     selector: 'app-admin-dashboards',
     templateUrl: './admin-dashboards.component.html',
     styleUrls: ['./admin-dashboards.component.css'],
     providers: [AdminService, ClientService]
 })
-export class AdminDashboardsComponent implements OnInit {
+export class AdminDashboardsComponent implements OnInit, AfterViewInit {
 
     constructor(private adminService: AdminService,private clientService: ClientService) {
     }
@@ -23,14 +24,14 @@ export class AdminDashboardsComponent implements OnInit {
     connectionObservableC: Observable<Object>;
 
 
-    connectedChartOption = 'week';
+    connectedChartOption = 'year';
     connectedChartDisabled = false;
     machinesConnectedData = {
         chartType: 'Timeline',
         dataTable: [
-            [ {type: 'string', id: 'Role'},
-                {type: 'date', id: 'Start'},
-                {type: 'date', id: 'End'}]
+            [ 'Name', 'From', 'To'],
+            ['nix',moment().startOf('day').subtract(1,'year').toDate(),moment().endOf('day').toDate() ]
+
         ],
         options: {
             title: 'Aktivität der Maschinen',
@@ -106,17 +107,11 @@ export class AdminDashboardsComponent implements OnInit {
                 this.connectedChartDisabled = true;
                 return;
             }
-            this.connectedChartDisabled = true;
-            return;
         }
 
         this.connectedChartDisabled = false;
         this.machinesConnectedData.dataTable.push(
-            [
-                {type: 'string', id: 'Role'},
-                {type: 'date', id: 'Start'},
-                {type: 'date', id: 'End'}
-            ]);
+            [ 'Name', 'From', 'To']);
         data.reverse();
         var clientList = {};
         for(let client of clients){
@@ -163,7 +158,10 @@ export class AdminDashboardsComponent implements OnInit {
 
         }
         this.machinesConnectedData.options['hAxis'] = {minValue: from, maxValue: to};
-        this.timelinechart.redraw();
+
+
+        this.connectedChartDisabled = false;
+
 
     }
 
@@ -215,6 +213,8 @@ export class AdminDashboardsComponent implements OnInit {
         this.connectionObservable2  = this.adminService.getLastConnectionProtocols(lcfrom, lcto);
         this.connectionObservableC = this.connectionObservable1.combineLatest(this.connectionObservable2,(x,y)=>{return {a:x,b:y}});
 
+
+        this.connectedChartDisabled = true;
         this.connectionObservableC.subscribe(d => {
 
             var observables = [];
@@ -233,9 +233,14 @@ export class AdminDashboardsComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.acquireConnectionProtocol()
+
 
     }
+
+    ngAfterViewInit(){
+        this.acquireConnectionProtocol();
+    }
+
 
 
 }
