@@ -51,6 +51,42 @@ self.getUserInfoForToken = function (token, callback) {
 
 };
 
+self.getClient = function (clientId, callback) {
+    if (typeof(callback) !== 'function') {
+        callback = (err, data) => {
+            logger.warn('Callback not handled by caller');
+        };
+    }
+
+    self.getPublicToken((err, token) => {
+        if (err) {
+            return next(err);
+        }
+        if (!token) {
+            logger.crit('[auth_service_adapter] could not get public token.');
+            callback(new Error('Missing authorization token'));
+        }
+
+        const options = buildOptionsForRequest(
+            'GET',
+            CONFIG.HOST_SETTINGS.OAUTH_SERVER_INTERNAL.PROTOCOL,
+            CONFIG.HOST_SETTINGS.OAUTH_SERVER_INTERNAL.HOST,
+            CONFIG.HOST_SETTINGS.OAUTH_SERVER_INTERNAL.PORT,
+            `/clients/${clientId}`,
+            {}
+        );
+
+        options.headers.authorization = `Bearer ${token['accessToken']}`;
+
+        request(options, (e, r, jsonData) => {
+            logger.debug('Response from OAUTH Server: ' + JSON.stringify(jsonData));
+            const err = logger.logRequestAndResponse(e, options, r, jsonData);
+
+            callback(err, jsonData);
+        });
+    });
+};
+
 self.getImageForUser = function (userId, token, callback) {
     if (typeof(callback) !== 'function') {
 

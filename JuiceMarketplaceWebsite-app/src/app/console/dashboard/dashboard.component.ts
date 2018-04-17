@@ -23,7 +23,7 @@ import {VaultService} from "../services/vault.service";
 
 export class DashboardComponent implements OnInit {
     amountToday: number = null;
-    topRecipe: Recipe = null;
+    topRecipe: RecipeReport = null;
     topRecipeName: string = null;
 
 
@@ -47,12 +47,10 @@ export class DashboardComponent implements OnInit {
     ngOnInit() {
 
         // pupulate topRecipe
-        this.dashboardService.getTopRecipeForUser().subscribe(recipe => {
-            console.log(recipe);
-            this.topRecipe = recipe;
-            if (recipe) {
-                //TODO: use recipe.name after issue #133 was fixed
-                this.topRecipeName = recipe.technologydataname;
+        this.dashboardService.getTopRecipeForUser().subscribe(report => {
+            this.topRecipe = report;
+            if (report) {
+                this.topRecipeName = report.technologydataname;
             } else {
                 this.topRecipeName = null;
             }
@@ -80,8 +78,8 @@ export class DashboardComponent implements OnInit {
 
         from = moment().startOf('day').subtract(1, 'month').toDate();
         to = moment().endOf('day').toDate();
-        this.dashboardService.getTopRecipes(from, to, 5).subscribe(recipes => {
-            this.topRecipes = recipes;
+        this.dashboardService.getTopRecipes(from, to, 5).subscribe(recipeReports => {
+            this.topRecipes = recipeReports;
             this.drawTopRecipes();
         }, error2 => {
             console.log(error2);
@@ -172,6 +170,9 @@ export class DashboardComponent implements OnInit {
                     legend: {position: 'bottom'},
                     hAxis: {
                         format: 'dd.MM.'
+                    },
+                    vAxis: {
+                        title: 'Umsatz (IUNO)'
                     },
                     series: series
                 }

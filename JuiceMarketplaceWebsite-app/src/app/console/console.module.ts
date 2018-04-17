@@ -41,6 +41,7 @@ import { VaultComponent } from './vault/vault.component';
 import { VaultPayoutDialogComponent } from './vault-payout-dialog/vault-payout-dialog.component';
 import {RecipeImagePickerModule} from "./recipe-image-picker/recipe-image-picker.module";
 import {VaultTestnetHelpDialogComponent} from "./vault-testnet-help-dialog/vault-testnet-help-dialog.component";
+import { AdminDashboardsComponent } from './admin-dashboards/admin-dashboards.component';
 
 import {CocktailConfiguratorModule, DragAndDropService} from 'cocktail-configurator'
 import {ComponentService} from 'tdm-common'
@@ -82,7 +83,8 @@ import {ComponentService} from 'tdm-common'
         DashboardComponent,
         VaultComponent,
         VaultPayoutDialogComponent,
-        VaultTestnetHelpDialogComponent
+        VaultTestnetHelpDialogComponent,
+        AdminDashboardsComponent
     ],
     providers: [
         AccessGuard,

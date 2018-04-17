@@ -16,9 +16,6 @@ router.get('/', validate({
     query: validation_schema.Recipe_Query,
     body: validation_schema.Empty
 }), function (req, res, next) {
-
-
-
     const components = req.query['components'];
     let createdBy = req.query['createdBy'];
     if(req.params['user_id']){
@@ -26,7 +23,6 @@ router.get('/', validate({
     }
     const limit = req.query['limit'];
     const orderedBy = req.query['orderBy'];
-
 
     const params = {};
 
@@ -43,12 +39,11 @@ router.get('/', validate({
             return next(err);
         }
 
-
         switch (orderedBy) {
             case 'alphASC':
                 recipes.sort(function(a,b) {
-                    const nameA = a.technologydataname.toUpperCase(); // ignore upper and lowercase
-                    const nameB = b.technologydataname.toUpperCase(); // ignore upper and lowercase
+                    const nameA = a.title.toUpperCase(); // ignore upper and lowercase
+                    const nameB = b.title.toUpperCase(); // ignore upper and lowercase
                     if (nameA < nameB) {
                         return -1;
                     }
@@ -62,8 +57,8 @@ router.get('/', validate({
                 break;
             case 'alphDESC':
                 recipes.sort(function(a,b) {
-                    const nameA = a.technologydataname.toUpperCase(); // ignore upper and lowercase
-                    const nameB = b.technologydataname.toUpperCase(); // ignore upper and lowercase
+                    const nameA = a.title.toUpperCase(); // ignore upper and lowercase
+                    const nameB = b.title.toUpperCase(); // ignore upper and lowercase
                     if (nameA > nameB) {
                         return -1;
                     }

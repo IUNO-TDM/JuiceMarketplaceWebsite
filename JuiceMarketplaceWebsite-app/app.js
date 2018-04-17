@@ -59,6 +59,7 @@ app.use('/', express.static(path.join(__dirname, 'dist')));
 
 // -- RESTRICTED CONTENT --
 app.use('/api/users', isLoggedIn, require('./routes/users'));
+app.use('/api/clients', isLoggedIn, require('./routes/clients'));
 app.use('/api/recipes', isLoggedIn, require('./routes/recipes'));
 app.use('/api/components', isLoggedIn, require('./routes/components'));
 

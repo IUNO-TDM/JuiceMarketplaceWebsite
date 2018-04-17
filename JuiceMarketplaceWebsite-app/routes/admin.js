@@ -15,6 +15,27 @@ router.get('/protocols', validate({
 
     marketplaceCore.getProtocols(
         req.query['eventType'],
+        req.query['clientId'],
+        req.query['from'],
+        req.query['to'],
+        req.query['limit'],
+        token['accessToken'],
+        function (err, protocols) {
+            if (err) {
+                return next(err);
+            }
+            res.json(protocols);
+        });
+});
+
+router.get('/protocols/last', validate({
+    query: validation_schema.Protocols_Last_Query,
+    body: validation_schema.Empty
+}), function (req, res, next) {
+    const token = req.user.token;
+
+    marketplaceCore.getLastProtocolForEachClient(
+        req.query['eventType'],
         req.query['from'],
         req.query['to'],
         token['accessToken'],

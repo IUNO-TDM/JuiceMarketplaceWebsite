@@ -23,22 +23,17 @@
 
                     <ng-container matColumnDef="name">
                         <mat-header-cell *matHeaderCellDef>Getränkename</mat-header-cell>
-                        <mat-cell *matCellDef="let recipe"> {{recipe.technologydataname}}</mat-cell>
+                        <mat-cell *matCellDef="let recipe"> {{recipe.title}}</mat-cell>
                     </ng-container>
 
                     <ng-container matColumnDef="description">
                         <mat-header-cell *matHeaderCellDef>Beschreibung</mat-header-cell>
-                        <mat-cell *matCellDef="let recipe"> {{recipe.technologydatadescription}}</mat-cell>
-                    </ng-container>
-
-                    <ng-container matColumnDef="revenue">
-                        <mat-header-cell *matHeaderCellDef>Gesamtumsatz (IUNOs)</mat-header-cell>
-                        <mat-cell *matCellDef="let recipe"> {{recipe.revenue | number:'1.2'}}</mat-cell>
+                        <mat-cell *matCellDef="let recipe"> {{recipe.description}}</mat-cell>
                     </ng-container>
 
                     <ng-container matColumnDef="licensefee">
                         <mat-header-cell *matHeaderCellDef>Lizenzgebühr (IUNOs)</mat-header-cell>
-                        <mat-cell *matCellDef="let recipe"> {{(recipe.licensefee / 100000).toFixed(2)  | number:'1.2'}}</mat-cell>
+                        <mat-cell *matCellDef="let recipe"> {{(recipe.licenseFee / 100000).toFixed(2)  | number:'1.2'}}</mat-cell>
                     </ng-container>
 
                     <!-- <ng-container matColumnDef="li">
