@@ -171,7 +171,7 @@ export class AdminDashboardsComponent implements OnInit, AfterViewInit {
         }
 
         this.machinesConnectedData.options['hAxis'] = {minValue: from, maxValue: to};
-        this.machinesConnectedData.options['height'] = Object.keys(machineLastConnectedState).length * 20 + 55;
+        this.machinesConnectedData.options['height'] = Object.keys(machineLastConnectedState).length * 38 + 80;
 
         this.connectedChartDisabled = false;
 
