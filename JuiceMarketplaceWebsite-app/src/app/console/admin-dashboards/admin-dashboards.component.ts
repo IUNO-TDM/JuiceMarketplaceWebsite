@@ -119,13 +119,27 @@ export class AdminDashboardsComponent implements OnInit, AfterViewInit {
         }
 
         let sortedByMachine = {};
+        let machineLastConnectedState = {};
         for (let line of data) {
             if (!sortedByMachine.hasOwnProperty(line.clientid)) {
                 sortedByMachine[line.clientid] = [];
                 if (!line.payload.connected) {
                     sortedByMachine[line.clientid].push(from);
+                    machineLastConnectedState[line.clentid] = false;
                 }
             }
+
+            if(machineLastConnectedState.hasOwnProperty(line.clientid)){
+                if(line.payload.connected === machineLastConnectedState[line.clientid]){
+                    if(line.payload.connected === false){ //doubled not connected entries should be skipped
+                        continue;
+                    }
+                    machineLastConnectedState[line.clientid] = !line.payload.connected;
+                    sortedByMachine[line.clientid].push(new Date(line.sourcetimestamp));
+                }
+            }
+
+            machineLastConnectedState[line.clientid] = line.payload.connected;
             sortedByMachine[line.clientid].push(new Date(line.sourcetimestamp));
 
 
@@ -154,11 +168,10 @@ export class AdminDashboardsComponent implements OnInit, AfterViewInit {
                 graphline.push(sortedByMachine[machine][i + 1]);
                 this.machinesConnectedData.dataTable.push(graphline);
             }
-
-
         }
-        this.machinesConnectedData.options['hAxis'] = {minValue: from, maxValue: to};
 
+        this.machinesConnectedData.options['hAxis'] = {minValue: from, maxValue: to};
+        this.machinesConnectedData.options['height'] = Object.keys(machineLastConnectedState).length * 38 + 80;
 
         this.connectedChartDisabled = false;
 
@@ -242,8 +255,6 @@ export class AdminDashboardsComponent implements OnInit, AfterViewInit {
     ngAfterViewInit() {
         this.acquireConnectionProtocol();
     }
-
-
 }
 
 
