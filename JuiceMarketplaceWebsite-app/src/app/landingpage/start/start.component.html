@@ -142,60 +142,78 @@
     </section>
 
     <section #devs class="start-section developers" ffxLayout="row">
-        <div [ngClass]="{onTop: quote == 'hans-peter'}" class="start-section developer" (click)="showQuote('hans-peter', devs)">
+        <div [ngClass]="{onTop: quote == 'hans-peter', inactive: quote && quote !='hans-peter'}" class="start-section developer" (click)="showQuote('hans-peter', devs)">
             <div class="text-headline developer-name">Hans-Peter Bock</div>
             <img class="avatar" src="./assets/images/avatars/hans-peter.jpg">
         </div>
         <section *ngIf="quote == 'hans-peter'" class="start-section quotes">
             <p class="quote">
-                "Der IUNO Werkzeugkasten bietet Methoden zur Risikoanalyse und passgerechte Maßnahmen
-                zur Minimierung der identifizierten Security Risiken. Im Anwendungsfall „Technologiedatenmarktplatz“
-                zum Industrie 4.0 Kernelement „sichere Daten“ ermöglichte die Methode der Datenflußanalyse
-                die Identifikation der zu betrachtenden Stellen. Die umgesetzten Maßnahmen wie zum Beispiel Zones
-                and Conduits und Defense in Depth schützen den Marktplatz gezielt vor Angreifern.
-                Bereits über zehn unterschiedliche an den Marktplatz angebundene Maschinen verdeutlichen den Erfolg
-                des Konzepts und der sicheren Umsetzung." <span style="white-space: nowrap;">-- <b>Dr.-Ing. Hans-Peter Bock</b></span>
+                <span style="white-space: nowrap;"><b>Dr.-Ing. Hans-Peter Bock</b></span>
+                <br>
+                Experte für Industrie 4.0 Kommunikation und Security
+                <br>
+                <br>
+                Hans-Peter Bock leitet die Entwicklung des Technologiedatenmarktplatzes und der ersten daran angebundenen Maschinen.
             </p>
+
         </section>
-        <div [ngClass]="{onTop: quote == 'manuel'}" class="start-section developer" (click)="showQuote('manuel', devs)">
+        <div [ngClass]="{onTop: quote == 'manuel', inactive: quote && quote !='manuel'}" class="start-section developer" (click)="showQuote('manuel', devs)">
             <div class="text-headline developer-name">Manuel Beuttler</div>
-            <img class="avatar" src="./assets/images/avatars/manuel.svg">
+            <img class="avatar" src="./assets/images/avatars/manuel.png">
         </div>
         <section *ngIf="quote == 'manuel'" class="start-section quotes">
             <p class="quote">
-                „Eines von vier neuen Geschäftsmodellen, die im Projekt IUNO betrachtet werden,
-                ist ein Technologiedatenmarktplatz. Hierbei ist angedacht,
-                dass Anwender zunächst eine Maschine mit Grundfunktionen erwerben und dann je nach Kundenauftrag
-                über den Technologiedatenmarktplatz die dafür notwendigen Prozessdaten erwerben –
-                oder diese dort selbst einstellen und anderen Herstellern als Lizenz anbieten“,
-                <span style="white-space: nowrap;">-- <b>Manuel Beuttler</b></span>
+                <span style="white-space: nowrap;"><b>Manuel Beuttler</b></span>
+                <br>
+                Projektmanager IoT
+                <br>
+                <br>
+                Manuel Beuttler hat im Projekt den Überblick über das Zusammenspiel der verschiedenen Komponenten.
+                Er verantwortet die Web-Services, sowie Spezifikation und Absicherung der Schnittstellen.
             </p>
         </section>
-        <div [ngClass]="{onTop: quote == 'christian'}" class="start-section developer" (click)="showQuote('christian', devs)">
+        <div [ngClass]="{onTop: quote == 'christian', inactive: quote && quote !='christian'}" class="start-section developer" (click)="showQuote('christian', devs)">
             <div class="text-headline developer-name">Christian Görg</div>
             <img class="avatar" src="./assets/images/avatars/christian.png">
         </div>
         <section *ngIf="quote == 'christian'" class="start-section quotes">
             <p class="quote">
-                "Christians tolles Zitat...." <span style="white-space: nowrap;">-- <b>Christian Görg</b></span>
+                <span style="white-space: nowrap;"><b>Christian Görg</b></span>
+                <br>
+                Projektmanager New Technologies
+                <br>
+                <br>
+                Christan Görg entwickelt das Bezahlssystem hinter dem Technologiedatenmarktplatz
+                und verantwortet den sicheren Umgang mit Technologiedaten auf der Maschinen-Steuerung.
             </p>
         </section>
-        <div [ngClass]="{onTop: quote == 'marcel'}" class="start-section developer" (click)="showQuote('marcel', devs)">
+        <div [ngClass]="{onTop: quote == 'marcel', inactive: quote && quote !='marcel'}" class="start-section developer" (click)="showQuote('marcel', devs)">
             <div class="text-headline developer-name">Marcel Ely Gomes</div>
-            <img class="avatar" src="./assets/images/avatars/marcel.svg">
+            <img class="avatar" src="./assets/images/avatars/marcel.png">
         </div>
         <section *ngIf="quote == 'marcel'" class="start-section quotes">
             <p class="quote">
-                "Marcel tolles Zitat...." <span style="white-space: nowrap;">-- <b>Marcel Ely Gomes</b></span>
+                <span style="white-space: nowrap;"><b>Marcel Ely Gomes</b></span>
+                <br>
+                Projektmanager Big Data
+                <br>
+                <br>
+                Marcel Ely Gomes arbeitet am Herzen des Technologiedaten Marktplatz.
+                Er verantwortet das Datenbankdesign und entwickelt die Datenbank spezifischen Sicherheitskonzepte.
             </p>
         </section>
-        <div [ngClass]="{onTop: quote == 'klaus'}" class="start-section developer" (click)="showQuote('klaus', devs)">
+        <div [ngClass]="{onTop: quote == 'klaus', inactive: quote && quote !='klaus'}" class="start-section developer" (click)="showQuote('klaus', devs)">
             <div class="text-headline developer-name">Klaus Bauer</div>
-            <img class="avatar" src="./assets/images/avatars/marcel.svg">
+            <img class="avatar" src="./assets/images/avatars/klaus.png">
         </div>
         <section *ngIf="quote == 'klaus'" class="start-section quotes">
             <p class="quote">
-                "Klaus tolles Zitat...." <span style="white-space: nowrap;">-- <b>Klaus Bauer</b></span>
+                <span style="white-space: nowrap;"><b>Klaus Bauer</b></span>
+                <br>
+                Experte für Informations- und Kommunikationstechnologien in Produktionsnetzwerken
+                <br>
+                <br>
+                Klaus Bauer leitet den Bereich Basistechnologien bei TRUMPF und ist Visionsgeber des Technologiedatenmarktplats.
             </p>
         </section>
     </section>

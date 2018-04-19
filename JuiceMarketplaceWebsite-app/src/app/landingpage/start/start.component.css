@@ -159,6 +159,7 @@ hr {
 
 .developer-name {
     text-align: center;
+    display: none;
 }
 
 .quotes {
@@ -177,4 +178,8 @@ hr {
 
 .onTop {
     order: -2;
+}
+
+.inactive {
+    /*opacity: 0.3;*/
 }
