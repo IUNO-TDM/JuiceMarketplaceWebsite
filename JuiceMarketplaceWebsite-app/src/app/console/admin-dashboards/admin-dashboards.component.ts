@@ -1,7 +1,7 @@
-import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {AdminService} from "../services/admin.service";
 import * as moment from "moment";
-import {GoogleChartComponent} from "ng2-google-charts";
+import {unitOfTime} from "moment";
 import {Observable} from "rxjs/Observable";
 import {ClientService} from "../services/client.service";
 import 'rxjs/add/observable/forkJoin'
@@ -15,31 +15,21 @@ import 'rxjs/add/observable/forkJoin'
 export class AdminDashboardsComponent implements OnInit, AfterViewInit {
 
     constructor(private adminService: AdminService, private clientService: ClientService) {
-    }
 
-    @ViewChild('timelinechart') timelinechart: GoogleChartComponent;
+    }
 
     connectionObservable1: Observable<Object>;
     connectionObservable2: Observable<Object>;
     connectionObservableC: Observable<Object>;
 
 
+    scopeOffset = 0;
+    scopeFromLabel: string;
+    scopeToLabel: string;
+
     connectedChartOption = 'week';
     connectedChartDisabled = false;
-    machinesConnectedData = {
-        chartType: 'Timeline',
-        dataTable: [
-            ['Name', 'From', 'To'],
-            ['nix', moment().startOf('day').subtract(1, 'year').toDate(), moment().endOf('day').toDate()]
-
-        ],
-        options: {
-            title: 'Aktivität der Maschinen',
-            timeline: {
-                groupByRowLabel: true
-            }
-        }
-    };
+    machinesConnectedData: any;
 
 
     machinesGeolocationData = {
@@ -129,9 +119,9 @@ export class AdminDashboardsComponent implements OnInit, AfterViewInit {
                 }
             }
 
-            if(machineLastConnectedState.hasOwnProperty(line.clientid)){
-                if(line.payload.connected === machineLastConnectedState[line.clientid]){
-                    if(line.payload.connected === false){ //doubled not connected entries should be skipped
+            if (machineLastConnectedState.hasOwnProperty(line.clientid)) {
+                if (line.payload.connected === machineLastConnectedState[line.clientid]) {
+                    if (line.payload.connected === false) { //doubled not connected entries should be skipped
                         continue;
                     }
                     machineLastConnectedState[line.clientid] = !line.payload.connected;
@@ -174,11 +164,10 @@ export class AdminDashboardsComponent implements OnInit, AfterViewInit {
         this.machinesConnectedData.options['height'] = Object.keys(machineLastConnectedState).length * 38 + 80;
 
         this.connectedChartDisabled = false;
-
-
     }
 
     acquireConnectionProtocol() {
+        this.connectedChartDisabled = true;
 
         let from: Date;
         let to: Date;
@@ -186,53 +175,69 @@ export class AdminDashboardsComponent implements OnInit, AfterViewInit {
         let lcto: Date;
         switch (this.connectedChartOption) {
             case 'day':
-                from = moment().startOf('day').toDate();
-                to = moment().endOf('day').toDate();
+                from = moment().startOf('day').subtract(this.scopeOffset, 'day').toDate();
+                to = moment().endOf('day').subtract(this.scopeOffset, 'day').toDate();
 
-                lcfrom = moment().startOf('day').subtract(1, 'month').toDate();
-                lcto = moment().endOf('day').toDate();
+                lcfrom = moment().startOf('day').subtract(this.scopeOffset, 'day').subtract(1, 'month').toDate();
+                lcto = moment().endOf('day').subtract(this.scopeOffset, 'day').toDate();
 
                 break;
             case 'week':
-                from = moment().startOf('day').subtract(1, 'week').toDate();
-                to = moment().endOf('day').toDate();
+                from = moment().startOf('week').subtract(this.scopeOffset, 'week').toDate();
+                to = moment().endOf('week').subtract(this.scopeOffset, 'week').toDate();
 
-                lcfrom = moment().startOf('day').subtract(1, 'month').toDate();
-                lcto = moment().endOf('day').toDate();
+                lcfrom = moment().startOf('week').subtract(this.scopeOffset, 'week').subtract(1, 'month').toDate();
+                lcto = moment().endOf('week').subtract(this.scopeOffset, 'week').toDate();
 
                 break;
             case 'month':
-                from = moment().startOf('day').subtract(1, 'month').toDate();
-                to = moment().endOf('day').toDate();
+                from = moment().startOf('month').subtract(this.scopeOffset, 'month').toDate();
+                to = moment().endOf('month').subtract(this.scopeOffset, 'month').toDate();
 
 
-                lcfrom = moment().startOf('day').subtract(2, 'month').toDate();
-                lcto = moment().endOf('day').toDate();
+                lcfrom = moment().startOf('month').subtract(this.scopeOffset + 2, 'month').toDate();
+                lcto = moment().endOf('month').subtract(this.scopeOffset, 'month').toDate();
 
                 break;
             case 'year':
-                from = moment().startOf('day').subtract(1, 'year').toDate();
-                to = moment().endOf('day').toDate();
+                from = moment().startOf('year').subtract(this.scopeOffset, 'year').toDate();
+                to = moment().endOf('year').subtract(this.scopeOffset, 'year').toDate();
 
 
-                lcfrom = moment().startOf('day').subtract(2, 'year').toDate();
-                lcto = moment().endOf('day').toDate();
+                lcfrom = moment().startOf('year').subtract(this.scopeOffset + 2, 'year').toDate();
+                lcto = moment().endOf('year').subtract(this.scopeOffset, 'year').toDate();
 
                 break;
         }
 
+        this.machinesConnectedData = {
+            chartType: 'Timeline',
+            dataTable: [
+                ['Name', 'From', 'To'],
+                ['nix', from, to]
 
-        this.connectionObservable1 = this.adminService.getConnectionProtocols(from, to,10000);
+            ],
+            options: {
+                title: 'Aktivität der Maschinen',
+                timeline: {
+                    groupByRowLabel: true
+                }
+            }
+        };
+
+
+        this.scopeFromLabel = from.toLocaleDateString();
+        this.scopeToLabel = to.toLocaleDateString();
+
+        this.connectionObservable1 = this.adminService.getConnectionProtocols(from, to, 10000);
         this.connectionObservable2 = this.adminService.getLastConnectionProtocols(lcfrom, lcto);
         this.connectionObservableC = this.connectionObservable1.combineLatest(this.connectionObservable2, (x, y) => {
             return {a: x, b: y}
         });
 
-
-        this.connectedChartDisabled = true;
         this.connectionObservableC.subscribe(d => {
 
-            var observables = [];
+            const observables = [];
             for (let client of d['b']) {
                 observables.push(this.clientService.getClient(client['clientid']));
             }
@@ -248,11 +253,33 @@ export class AdminDashboardsComponent implements OnInit, AfterViewInit {
     }
 
     ngOnInit() {
-
-
+        this.acquireConnectionProtocol();
     }
 
     ngAfterViewInit() {
+    }
+
+    resetScope() {
+        this.scopeOffset = 0;
+        this.acquireConnectionProtocol();
+    }
+
+    pastData() {
+        this.scopeOffset++;
+        this.acquireConnectionProtocol();
+    }
+
+    futureData() {
+
+        const future = moment().startOf(this.connectedChartOption as unitOfTime.StartOf).subtract(this.scopeOffset - 1, this.connectedChartOption as unitOfTime.DurationConstructor);
+        const today = moment();
+
+        if (today.diff(future) < 0) {
+            return;
+        }
+
+        this.scopeOffset--;
+
         this.acquireConnectionProtocol();
     }
 }
