@@ -16,7 +16,7 @@ const routes: Routes = [
             {path: 'create-recipe', component: CreateRecipeComponent, canActivate: [AccessGuard]},
             {path: 'recipes', component: RecipesComponent, canActivate: [AccessGuard]},
             {path: 'vault', component: VaultComponent, canActivate: [AccessGuard]},
-            {path: 'admin-dashboard', component: AdminDashboardsComponent}
+            {path: 'admin-dashboard', component: AdminDashboardsComponent, canActivate: [AccessGuard]}
         ]
     },
 ];
