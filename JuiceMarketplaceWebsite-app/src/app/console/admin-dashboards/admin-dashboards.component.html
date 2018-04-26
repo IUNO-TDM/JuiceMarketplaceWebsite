@@ -12,7 +12,7 @@
     <button mat-button (click)="futureData()">Später</button>
     <mat-card-subtitle>Von: {{scopeFromLabel}} Bis: {{scopeToLabel}}</mat-card-subtitle>
     <ng-container *ngIf="!connectedChartDisabled">
-        <google-chart #timelinechart [data]="machinesConnectedData"></google-chart>
+        <google-chart [data]="machinesConnectedData"></google-chart>
     </ng-container>
 
     <ng-container *ngIf="connectedChartDisabled">

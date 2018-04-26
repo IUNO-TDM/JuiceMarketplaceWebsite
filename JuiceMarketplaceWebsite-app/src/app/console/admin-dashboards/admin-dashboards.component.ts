@@ -1,8 +1,7 @@
-import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {AdminService} from "../services/admin.service";
 import * as moment from "moment";
 import {unitOfTime} from "moment";
-import {GoogleChartComponent} from "ng2-google-charts";
 import {Observable} from "rxjs/Observable";
 import {ClientService} from "../services/client.service";
 import 'rxjs/add/observable/forkJoin'
@@ -16,9 +15,8 @@ import 'rxjs/add/observable/forkJoin'
 export class AdminDashboardsComponent implements OnInit, AfterViewInit {
 
     constructor(private adminService: AdminService, private clientService: ClientService) {
-    }
 
-    @ViewChild('timelinechart') timelinechart: GoogleChartComponent;
+    }
 
     connectionObservable1: Observable<Object>;
     connectionObservable2: Observable<Object>;
@@ -166,26 +164,10 @@ export class AdminDashboardsComponent implements OnInit, AfterViewInit {
         this.machinesConnectedData.options['height'] = Object.keys(machineLastConnectedState).length * 38 + 80;
 
         this.connectedChartDisabled = false;
-
-
     }
 
     acquireConnectionProtocol() {
-
-        this.machinesConnectedData = {
-            chartType: 'Timeline',
-            dataTable: [
-                ['Name', 'From', 'To'],
-                ['nix', moment().startOf('day').subtract(1, 'year').toDate(), moment().endOf('day').toDate()]
-
-            ],
-            options: {
-                title: 'Aktivität der Maschinen',
-                timeline: {
-                    groupByRowLabel: true
-                }
-            }
-        };
+        this.connectedChartDisabled = true;
 
         let from: Date;
         let to: Date;
@@ -228,6 +210,21 @@ export class AdminDashboardsComponent implements OnInit, AfterViewInit {
                 break;
         }
 
+        this.machinesConnectedData = {
+            chartType: 'Timeline',
+            dataTable: [
+                ['Name', 'From', 'To'],
+                ['nix', from, to]
+
+            ],
+            options: {
+                title: 'Aktivität der Maschinen',
+                timeline: {
+                    groupByRowLabel: true
+                }
+            }
+        };
+
 
         this.scopeFromLabel = from.toLocaleDateString();
         this.scopeToLabel = to.toLocaleDateString();
@@ -240,7 +237,7 @@ export class AdminDashboardsComponent implements OnInit, AfterViewInit {
 
         this.connectionObservableC.subscribe(d => {
 
-            var observables = [];
+            const observables = [];
             for (let client of d['b']) {
                 observables.push(this.clientService.getClient(client['clientid']));
             }
@@ -256,22 +253,18 @@ export class AdminDashboardsComponent implements OnInit, AfterViewInit {
     }
 
     ngOnInit() {
-
-
-    }
-
-    ngAfterViewInit() {
         this.acquireConnectionProtocol();
     }
 
+    ngAfterViewInit() {
+    }
+
     resetScope() {
-        this.connectedChartDisabled = true;
         this.scopeOffset = 0;
         this.acquireConnectionProtocol();
     }
 
     pastData() {
-        this.connectedChartDisabled = true;
         this.scopeOffset++;
         this.acquireConnectionProtocol();
     }
@@ -287,7 +280,6 @@ export class AdminDashboardsComponent implements OnInit, AfterViewInit {
 
         this.scopeOffset--;
 
-        this.connectedChartDisabled = true;
         this.acquireConnectionProtocol();
     }
 }
