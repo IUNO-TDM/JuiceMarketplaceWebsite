@@ -10,7 +10,8 @@ import {AdminService} from "../../services/admin.service";
 @Component({
     selector: 'app-connected-clients',
     templateUrl: './connected-clients.component.html',
-    styleUrls: ['./connected-clients.component.css']
+    styleUrls: ['./connected-clients.component.css'],
+    providers: [AdminService, ClientService]
 })
 export class ConnectedClientsComponent implements OnInit {
 
