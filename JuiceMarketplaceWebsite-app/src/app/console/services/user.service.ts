@@ -13,7 +13,7 @@ export class UserService {
     }
 
     isLoggedIn(): Observable<boolean> {
-        return this.http.get<boolean>("/auth/loggedin").flatMap(loggedin => {
+        return this.http.get<boolean>("/auth/loggedin", { headers: { 'Cache-Control' : 'no-cache' } } ).flatMap(loggedin => {
             return Observable.of(loggedin);
         })
     }

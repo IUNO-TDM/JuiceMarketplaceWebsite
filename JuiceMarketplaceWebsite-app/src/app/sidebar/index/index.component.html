@@ -1,16 +1,39 @@
-<div fxLayout="column" fxLayoutAlign="">
-    <button (click)="openLandingPage()" mat-button class="nav-button index">Start
-        <span flex></span>
-    </button>
-    <button (click)="openConsole()" mat-button class="nav-button index">Marktplatz
-        <span flex></span>
-    </button>
-    <app-console-menu></app-console-menu>
-    <button (click)="openStatistics()" mat-button class="nav-button index">Statistiken
-        <span flex></span>
-    </button>
-    <!--<app-statistics></app-statistics>-->
-    <!--<button (click)="openNews()" mat-button class="nav-button index">Neuigkeiten-->
+<ng-container *ngIf="showTopItems">
+    <div fxLayout="column" fxLayoutAlign="">
+        <button (click)="openLandingPage()" mat-button class="nav-button index">Start
+            <span flex></span>
+        </button>
+        <button (click)="openConsole()" mat-button class="nav-button index">Marktplatz
+            <span flex></span>
+        </button>
+        <ng-container *ngTemplateOutlet="console"></ng-container>
+        <button (click)="openStatistics()" mat-button class="nav-button index">Statistiken
+            <span flex></span>
+        </button>
+        <!--<app-statistics></app-statistics>-->
+        <!--<button (click)="openNews()" mat-button class="nav-button index">Neuigkeiten-->
         <!--<span flex></span>-->
-    <!--</button>-->
-</div>
+        <!--</button>-->
+    </div>
+</ng-container>
+<ng-container *ngIf="!showTopItems">
+    <ng-container *ngIf="showConsoleItems()">
+        <ng-container *ngTemplateOutlet="console"></ng-container>    
+    </ng-container>
+</ng-container>
+<ng-template #console>
+    <div *ngIf="showConsoleItems()" fxLayout="column" fxLayoutAlign="">
+        <button (click)="openDashboard()" mat-button class="nav-button">Dashboard
+            <span flex></span>
+        </button>
+        <button (click)="openCreateRecipe()" mat-button class="nav-button">Neues Getränk anlegen
+            <span flex></span>
+        </button>
+        <button (click)="openRecipes()" mat-button class="nav-button">Getränke verwalten
+            <span flex></span>
+        </button>
+        <button (click)="openVault()" mat-button class="nav-button">Guthaben verwalten
+            <span flex></span>
+        </button>
+    </div>
+</ng-template>

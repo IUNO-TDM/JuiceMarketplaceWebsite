@@ -1,11 +1,12 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
-import {Router, ActivatedRoute, NavigationEnd} from '@angular/router';
-import {Subscription} from 'rxjs/Subscription';
-import {MatSidenav} from '@angular/material';
-import {HostListener} from '@angular/core';
-import {UserService} from "./console/services/user.service";
-
-import { NgcCookieConsentService, NgcInitializeEvent} from 'ngx-cookieconsent';
+import { Component, OnInit, ViewChild, Inject, OnDestroy } from '@angular/core';
+import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
+import { Subscription } from 'rxjs/Subscription';
+import { MatSidenav } from '@angular/material';
+import { HostListener } from '@angular/core';
+import { UserService } from "./console/services/user.service";
+import { NgcCookieConsentService, NgcInitializeEvent } from 'ngx-cookieconsent';
+import { MediaMonitor, ObservableMedia, MediaChange } from '@angular/flex-layout';
+import { IndexComponent } from './sidebar/index/index.component';
 
 @Component({
     selector: 'app-root',
@@ -14,83 +15,69 @@ import { NgcCookieConsentService, NgcInitializeEvent} from 'ngx-cookieconsent';
     providers: [UserService]
 })
 
-export class AppComponent implements OnInit {
-    title = 'app';
-    routerSubscription: Subscription;
-    menuVisible = false;
-    menuButtonVisible = false;
+export class AppComponent implements OnInit, OnDestroy {
+    watcher: Subscription
+    title = 'app'
+    routerSubscription: Subscription
+    toolbarMenuVisible = false
+    hamburgerButtonVisible = false
 
-    navigationButtonsVisible = true;
     tdmLogoVisible = true;
     accountInfoShortened = false;
 
-    path = '';
-
     @ViewChild(MatSidenav) sidenav: MatSidenav;
+    @ViewChild(IndexComponent) index: IndexComponent;
 
     constructor(private router: Router,
-                private activatedRoute: ActivatedRoute,
-                private userService: UserService,private ccService: NgcCookieConsentService) {
-
-
+        private activatedRoute: ActivatedRoute,
+        private media: ObservableMedia,
+        private userService: UserService, private ccService: NgcCookieConsentService) {
+        this.watcher = media.subscribe((change: MediaChange) => {
+            // console.log("Watcher: " + change.mqAlias)
+            if (change.mqAlias == 'xs' || change.mqAlias == 'sm') {
+                this.toolbarMenuVisible = false
+            } else {
+                this.toolbarMenuVisible = true
+            }
+            setTimeout(() => {
+                this.updateMenuState()
+            })
+        });
     }
 
-    @HostListener('window:resize', ['$event'])
-    windowResized(event: UIEvent) {
-        this.updateResponsiveElements();
+    private isMenuButtonVisible() {
+        var menuButtonVisible = this.index.isMenuAvailable()
+        return menuButtonVisible
+    }
+
+    updateMenuState() {
+        if (this.sidenav) {
+            this.hamburgerButtonVisible = this.index.isMenuAvailable()
+            if (this.toolbarMenuVisible) {
+                if (this.index.isMenuAvailable()) {
+                    this.sidenav.mode = 'side'
+                    this.sidenav.open()
+                } else {
+                    this.sidenav.close()
+                }
+            } else {
+                this.sidenav.mode = 'push'
+                this.sidenav.close()
+            }
+        }
     }
 
     ngOnInit() {
-        const self = this;
-        this.routerSubscription = this.router.events.subscribe(function (s) {
+        this.routerSubscription = this.router.events.subscribe(s => {
             if (s instanceof NavigationEnd) {
-                self.path = s.urlAfterRedirects;
-                self.calculateMenu(self.path);
+                this.updateMenuState()
             }
         })
+        this.updateMenuState()
     }
 
-    private updateResponsiveElements() {
-        this.navigationButtonsVisible = window.innerWidth > 1100;
-        this.accountInfoShortened = window.innerWidth < 580;
-        this.tdmLogoVisible = window.innerWidth > 290;
-        this.calculateMenu(this.path);
-    }
-
-    // this.router.navigate([{outlets: {'sidebar': ['statistics']}}]);
-    calculateMenu(path: string) {
-        if (this.navigationButtonsVisible) {
-            this.sidenav.mode = 'side';
-            if (path.startsWith('/console')) {
-                this.menuVisible = true;
-                this.menuButtonVisible = true;
-                // console.log(self.tdmButton);
-                this.router.navigate([{outlets: {'sidebar': ['console-menu']}}]);
-            } else if (path.startsWith('/statistics')) {
-                // this.menuVisible = true;
-                // this.menuButtonVisible = true;
-                // this.router.navigate([{outlets: {'sidebar': ['statistics']}}]);
-                this.menuVisible = false;
-                this.menuButtonVisible = false;
-                this.sidenav.close();
-            } else if (path.startsWith('/landingpage')) {
-                this.menuVisible = false;
-                this.menuButtonVisible = false;
-                this.sidenav.close();
-
-            } else if (path.startsWith('/news')) {
-                this.menuVisible = false;
-                this.menuButtonVisible = false;
-                this.sidenav.close();
-            }
-        } else {
-            this.router.navigate([{outlets: {'sidebar': ['index']}}]);
-            this.sidenav.mode = 'over';
-            this.menuButtonVisible = true;
-            this.menuVisible = false;
-            this.sidenav.close();
-        }
-
+    ngOnDestroy() {
+        this.watcher.unsubscribe();
     }
 
     startClicked() {
@@ -102,15 +89,11 @@ export class AppComponent implements OnInit {
             if (loggedin) {
                 this.router.navigateByUrl('/console');
             } else {
-
                 document.cookie = "redirectTo=/console";
                 window.location.href = "/auth/iuno";
             }
         })
-
-
     }
-
 
     statisticsClicked() {
         this.router.navigateByUrl('/statistics');
@@ -119,6 +102,4 @@ export class AppComponent implements OnInit {
     newsClicked() {
         this.router.navigateByUrl('/news');
     }
-
-
 }

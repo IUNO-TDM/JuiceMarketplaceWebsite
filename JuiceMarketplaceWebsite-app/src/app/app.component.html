@@ -1,30 +1,36 @@
-<div class="app" fxLayout="column" style="background-color: #0d47a1">
-    <mat-toolbar color="primary" class="mat-elevation-z5 nav-bar" style="z-index: 2">
+<div class="app" fxLayout="column">
+    <mat-toolbar fxFlex="64px" color="primary" class="mat-elevation-z5 nav-bar" style="z-index: 2">
 
-        <button *ngIf="menuButtonVisible" mat-button (click)="sidenav.toggle()">
-            <mat-icon>menu</mat-icon>
-        </button>
-        <a mat-button  *ngIf="tdmLogoVisible" class="logobutton" (click)="startClicked()"><img class="logo" src="./assets/images/tdm_logo.svg"></a>
+        <!-- Burger Button -->
+        <button *ngIf="hamburgerButtonVisible" mat-button (click)="sidenav.toggle()" class="menu-button"><mat-icon>menu</mat-icon></button>
 
-        <div *ngIf="navigationButtonsVisible" class="nav-buttons">
-            <!--<a #start mat-button class="lightupper " (click)="startClicked()">Start</a>-->
-            <a #tdm mat-button class="lightupper " (click)="tdmClicked()">Marktplatz</a>
-            <a #stats mat-button class="lightupper " (click)="statisticsClicked()">Statistiken</a>
-            <!--<a #news mat-button class="lightupper " (click)="newsClicked()">Neuigkeiten</a>-->
+        <!-- TDM Button -->
+        <a mat-button class="logobutton" (click)="startClicked()"><img class="logo" src="./assets/images/tdm_logo.svg"></a>
+        <!-- <div [fxShow.lt-sm]="false" [fxShow.gt-xs]="true">Test</div> -->
+
+        <!-- Direct Links -->
+        <div *ngIf="toolbarMenuVisible" class="nav-buttons" #navbuttons>
+            <a #tdm mat-button class="lightupper" (click)="tdmClicked()">Marktplatz</a>
+            <a #stats mat-button class="lightupper" (click)="statisticsClicked()">Statistiken</a>
         </div>
-        <span class="spacer"></span>
+        <div fxFlex></div>
+
+        <!-- Login / Register / Account -->
         <app-account></app-account>
     </mat-toolbar>
     <mat-sidenav-container fxFlex>
-        <mat-sidenav #sidenav mode="side" align="start" class="mat-elevation-z6" opened="{{menuVisible}}">
-            <router-outlet name="sidebar"></router-outlet>
+        <mat-sidenav #sidenav mode="push" align="start" class="mat-elevation-z6">
+            <app-index #index [showTopItems]="!toolbarMenuVisible"></app-index>
+            <!-- <router-outlet name="sidebar"></router-outlet> -->
         </mat-sidenav>
+        <mat-sidenav-content>
         <div class="component-viewer" fxLayout="column">
             <div fxFlex="grow">
                 <router-outlet></router-outlet>
             </div>
             <app-footer fxFlex="none"></app-footer>
         </div>
+        </mat-sidenav-content>
     </mat-sidenav-container>
 </div>
 
