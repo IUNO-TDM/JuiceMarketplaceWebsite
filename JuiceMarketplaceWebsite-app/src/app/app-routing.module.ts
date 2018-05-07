@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {ConsoleMenuComponent} from './sidebar/console/console-menu.component';
-import {StatisticsComponent} from './sidebar/statistics/statistics.component';
 import {IndexComponent} from './sidebar/index/index.component';
 
 
@@ -13,7 +12,6 @@ const routes: Routes = [
     {path: 'news', loadChildren: './news/news.module#NewsModule'},
     {path: 'index', outlet: 'sidebar', component: IndexComponent},
     {path: 'console-menu', outlet: 'sidebar', component: ConsoleMenuComponent},
-    // {path: 'statistics', outlet: 'sidebar', component: StatisticsComponent}
 ];
 
 @NgModule({

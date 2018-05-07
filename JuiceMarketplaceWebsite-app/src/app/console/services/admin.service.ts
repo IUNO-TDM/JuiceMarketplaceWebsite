@@ -9,10 +9,10 @@ export class AdminService {
     constructor(private http: HttpClient) {
     }
 
-    getConnectionProtocols(from: Date, to: Date): Observable<Object>{
+    getConnectionProtocols(from: Date, to: Date, limit: number): Observable<Object>{
         const fromDate = moment.utc([from.getFullYear(),from.getMonth(), from.getDate(),from.getHours(), from.getMinutes(), from.getSeconds()]);
         const toDate = moment.utc([to.getFullYear(),to.getMonth(), to.getDate(),to.getHours(), to.getMinutes(), to.getSeconds()]);
-        const url = '/api/admin/protocols?eventType=connection&from=' + fromDate.format() + '&to=' + toDate.format();
+        const url = '/api/admin/protocols?eventType=connection&from=' + fromDate.format() + '&to=' + toDate.format() + '&limit='+limit;
         return this.http.get(url);
     }
 

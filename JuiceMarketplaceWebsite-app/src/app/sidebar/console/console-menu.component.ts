@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import {UserService} from "../../console/services/user.service";
 
 @Component({
     selector: 'app-console-menu',
@@ -8,10 +9,15 @@ import {Router} from '@angular/router';
 })
 export class ConsoleMenuComponent implements OnInit {
 
-    constructor(private router: Router) {
+    public isAdmin: boolean = false;
+
+    constructor(private router: Router, private userService: UserService) {
     }
 
     ngOnInit() {
+        this.userService.isAdmin().subscribe(isAdmin => {
+            this.isAdmin = isAdmin;
+        });
     }
 
     openDashboard() {
@@ -25,7 +31,12 @@ export class ConsoleMenuComponent implements OnInit {
     openRecipes() {
         this.router.navigateByUrl('/console/recipes');
     }
+
     openVault() {
         this.router.navigateByUrl('/console/vault');
+    }
+
+    openAdminDashboard() {
+        this.router.navigateByUrl('/console/admin-dashboard');
     }
 }

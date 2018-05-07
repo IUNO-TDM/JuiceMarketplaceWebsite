@@ -88,7 +88,7 @@ hr {
 }
 
 .news-card {
-    max-width: 500px;
+    max-width: 700px;
 }
 
 .news-text {
@@ -98,7 +98,10 @@ hr {
 
 .news-card img {
     padding: 10px;
-    max-height: 120px;
+    max-height: 200px;
+}
+.news-text a {
+    color: black;
 }
 
 .text-headline {
