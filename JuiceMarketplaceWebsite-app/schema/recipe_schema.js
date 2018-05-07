@@ -225,7 +225,7 @@ self.Recipe_Body = {
                                                 "amount": {
                                                     type: "integer",
                                                     minimum: 1,
-                                                    maximum: 1000
+                                                    maximum: 100
                                                 },
                                                 "ingredient": {
                                                     type: "string",
@@ -233,16 +233,24 @@ self.Recipe_Body = {
                                                 }
                                             },
                                             required: ["amount", "ingredient"],
-                                        }
+                                            additionalProperties: false
+                                        },
+                                        maxItems: 8,
+                                        additionalItems: false
                                     }
                                 },
                                 required: ["sleep", "timing", "components"],
-                            }
+                                additionalProperties: false
+                            },
+                            maxItems: 8,
+                            additionalItems: false
                         }
                     },
-                    required: ["lines"]
+                    required: ["lines"],
+                    additionalProperties: false
                 },
             },
+            required: ["recipe"],
             additionalProperties: false
         },
         imageRef: {

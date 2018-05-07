@@ -38,14 +38,13 @@ export class CreateRecipeComponent implements OnInit {
         }
     }
 
-    recipe = new Recipe()
     cocktail: Cocktail;
     components: CocktailComponent[] = [];
     isBeakerEditModeEnabled = false
 
-    showRecommendedComponents = false
-    showInstalledComponents = false
-    showAvailableComponents = true
+    showRecommendedComponents = true;
+    showInstalledComponents = false;
+    showAvailableComponents = true;
 
     licenseFees: number[] = [0.25, 0.5, 0.75, 1.00];
     spinnerCounter = 0;
