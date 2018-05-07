@@ -23,6 +23,7 @@ import {NgcCookieConsentConfig, NgcCookieConsentModule} from 'ngx-cookieconsent'
 import {registerLocaleData} from "@angular/common";
 import localeDe from '@angular/common/locales/de';
 import { IndexComponent } from './sidebar/index/index.component';
+import { LayoutService } from './services/layout.service';
 
 registerLocaleData(localeDe, 'de');
 
@@ -76,6 +77,7 @@ const cookieConfig: NgcCookieConsentConfig = {
         BrowserModule
     ],
     providers: [
+        LayoutService,
         {
             provide: LOCALE_ID,
             useValue: 'de'

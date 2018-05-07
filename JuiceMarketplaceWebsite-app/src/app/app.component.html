@@ -2,10 +2,14 @@
     <mat-toolbar fxFlex="64px" color="primary" class="mat-elevation-z5 nav-bar" style="z-index: 2">
 
         <!-- Burger Button -->
-        <button *ngIf="hamburgerButtonVisible" mat-button (click)="sidenav.toggle()" class="menu-button"><mat-icon>menu</mat-icon></button>
+        <button *ngIf="hamburgerButtonVisible" mat-button (click)="sidenav.toggle()" class="menu-button">
+            <mat-icon>menu</mat-icon>
+        </button>
 
         <!-- TDM Button -->
-        <a mat-button class="logobutton" (click)="startClicked()"><img class="logo" src="./assets/images/tdm_logo.svg"></a>
+        <a mat-button class="logobutton" (click)="startClicked()">
+            <img class="logo" src="./assets/images/tdm_logo.svg">
+        </a>
         <!-- <div [fxShow.lt-sm]="false" [fxShow.gt-xs]="true">Test</div> -->
 
         <!-- Direct Links -->
@@ -24,13 +28,12 @@
             <!-- <router-outlet name="sidebar"></router-outlet> -->
         </mat-sidenav>
         <mat-sidenav-content>
-        <div class="component-viewer" fxLayout="column">
-            <div fxFlex="grow">
-                <router-outlet></router-outlet>
+            <div class="component-viewer" fxLayout="column">
+                <div fxFlex>
+                    <router-outlet></router-outlet>
+                </div>
+                <app-footer fxFlex="none"></app-footer>
             </div>
-            <app-footer fxFlex="none"></app-footer>
-        </div>
         </mat-sidenav-content>
     </mat-sidenav-container>
 </div>
-

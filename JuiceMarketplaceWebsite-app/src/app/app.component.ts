@@ -5,8 +5,8 @@ import { MatSidenav } from '@angular/material';
 import { HostListener } from '@angular/core';
 import { UserService } from "./console/services/user.service";
 import { NgcCookieConsentService, NgcInitializeEvent } from 'ngx-cookieconsent';
-import { MediaMonitor, ObservableMedia, MediaChange } from '@angular/flex-layout';
 import { IndexComponent } from './sidebar/index/index.component';
+import { LayoutService } from './services/layout.service';
 
 @Component({
     selector: 'app-root',
@@ -30,19 +30,15 @@ export class AppComponent implements OnInit, OnDestroy {
 
     constructor(private router: Router,
         private activatedRoute: ActivatedRoute,
-        private media: ObservableMedia,
-        private userService: UserService, private ccService: NgcCookieConsentService) {
-        this.watcher = media.subscribe((change: MediaChange) => {
-            // console.log("Watcher: " + change.mqAlias)
-            if (change.mqAlias == 'xs' || change.mqAlias == 'sm') {
-                this.toolbarMenuVisible = false
-            } else {
-                this.toolbarMenuVisible = true
-            }
+        private layoutService: LayoutService,
+        private userService: UserService,
+        private ccService: NgcCookieConsentService) {
+        layoutService.layoutProperties.subscribe(layoutProperties => {
+            this.toolbarMenuVisible = !layoutProperties.isSmallLayout
             setTimeout(() => {
                 this.updateMenuState()
             })
-        });
+        })
     }
 
     private isMenuButtonVisible() {
