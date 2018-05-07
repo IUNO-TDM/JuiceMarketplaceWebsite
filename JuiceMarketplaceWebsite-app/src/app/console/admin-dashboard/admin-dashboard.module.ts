@@ -6,6 +6,7 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 import {MatCardModule, MatSelectModule} from "@angular/material";
 import {Ng2GoogleChartsModule} from "ng2-google-charts";
 import {AdminDashboardRoutingModule} from "./admin-dashboard-routing.module";
+import { ClientMapComponent } from './client-map/client-map.component';
 
 @NgModule({
     imports: [
@@ -18,7 +19,8 @@ import {AdminDashboardRoutingModule} from "./admin-dashboard-routing.module";
     ],
     declarations: [
         ConnectedClientsComponent,
-        AdminDashboardComponent
+        AdminDashboardComponent,
+        ClientMapComponent
     ],
     bootstrap: [
         AdminDashboardComponent
