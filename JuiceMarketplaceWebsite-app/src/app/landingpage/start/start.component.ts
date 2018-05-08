@@ -7,10 +7,16 @@ import {Component, OnInit} from '@angular/core';
 })
 export class StartComponent implements OnInit {
 
+    quote: string;
+
     constructor() {
     }
 
     ngOnInit() {
     }
 
+    showQuote(dev: string, anchor: Element) {
+        this.quote = this.quote == dev ? undefined : dev;
+        anchor.scrollIntoView({block: "start", behavior: "smooth"});
+    }
 }
