@@ -1,16 +1,26 @@
 import {Component, OnInit} from '@angular/core';
+import {AdminService} from "../../services/admin.service";
+import {ClientService} from "../../services/client.service";
+import {Observable} from "rxjs/Observable";
+import {ChartMouseOverEvent, ChartSelectEvent} from "ng2-google-charts";
+import {Protocol} from "../../models/Protocol";
 
 @Component({
     selector: 'app-client-map',
     templateUrl: './client-map.component.html',
-    styleUrls: ['./client-map.component.css']
+    styleUrls: ['./client-map.component.css'],
+    providers: [AdminService, ClientService]
 })
 export class ClientMapComponent implements OnInit {
+
+    private locationProtocols: Protocol[];
+    private lastConnectionProtocol: Protocol[];
+    private lastConfigurationProtocol: Protocol[];
 
     public geoDataReady: boolean = false;
     public geoData: any;
 
-    constructor() {
+    constructor(private adminService: AdminService, private clientService: ClientService) {
     }
 
     ngOnInit() {
@@ -19,24 +29,56 @@ export class ClientMapComponent implements OnInit {
 
 
     loadGeoData() {
-        this.geoData = {
-            chartType: 'GeoChart',
-            apiKey: 'AIzaSyDlZ5Yh79toiIzEV_NIQGX8F42663WGTxg',
-            dataTable: [
-                ['Lat', 'Long', 'Value'],
-                [49.431411, 7.751871, 2],
-                [48.251981, 11.634248, 2],
-                [49.798497, 8.823595, 3],
-                [49.000273, 8.409850, 4],
-                [48.817400, 9.065440, 5],
-            ],
-            options: {
-                region: 'DE',
-                sizeAxis: {minValue: 0, maxValue: 10}
-            }
-        };
+        this.adminService.getLastLocation().subscribe(
+            data => {
+                const observables = [];
+                for (let i in data) {
+                    observables.push(this.clientService.getClient(data[i].clientid));
+                }
 
-        this.geoDataReady = true;
+                this.locationProtocols = data;
+
+                Observable.forkJoin(observables).subscribe(clients => {
+
+                    const dataTable = [
+                        ['Lat', 'Long', 'Client']
+                    ];
+
+                    for (let i in data) {
+
+                        if (!data[i].payload['latitude'] || !data[i].payload['longitude']) {
+                            continue;
+                        }
+
+                        dataTable.push(
+                            [
+                                data[i].payload['latitude'],
+                                data[i].payload['longitude'],
+                                // clients.find(x => x.id == data[i].clientid).clientname
+                                '<b>FUHUUU</b>' +
+                                '<br>\n' +
+                                'FASFDA'
+                            ]
+                        );
+                    }
+
+                    this.geoData = {
+                        chartType: 'GeoChart',
+                        apiKey: 'AIzaSyDlZ5Yh79toiIzEV_NIQGX8F42663WGTxg',
+                        dataTable: dataTable,
+                        options: {
+                            region: 'DE'
+                        }
+                    };
+
+                    this.geoDataReady = true;
+                });
+
+            },
+            error => {
+                console.log(error);
+            }
+        )
     }
 
     onResize() {

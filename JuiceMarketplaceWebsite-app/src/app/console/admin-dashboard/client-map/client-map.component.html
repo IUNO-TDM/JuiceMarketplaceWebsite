@@ -1,9 +1,7 @@
 <mat-card class="map-card">
-  <ng-container *ngIf="geoDataReady">
-    <google-chart [data]="geoData"></google-chart>
-  </ng-container>
-
-  <ng-container *ngIf="!geoDataReady">
-    <p>No Data to be displayed</p>
-  </ng-container>
+    <ng-container *ngIf="geoDataReady">
+        <google-chart
+                [data]="geoData">
+        </google-chart>
+    </ng-container>
 </mat-card>
