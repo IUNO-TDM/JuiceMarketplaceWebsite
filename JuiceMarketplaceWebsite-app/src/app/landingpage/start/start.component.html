@@ -103,7 +103,7 @@
         </div>
     </section>
     <hr>
-    <section class="start-section machineoperator" ffxLayout="row" fxLayout.lt-sm="column"
+    <section class="start-section machineoperator" fxLayout="row" fxLayout.lt-sm="column"
              fxLayoutAlign.lt-sm="center stretch" fxLayoutAlign="space-evenly center">
 
 
@@ -124,7 +124,7 @@
         </div>
     </section>
     <hr>
-    <section class="start-section trumpf" ffxLayout="row" fxLayout.lt-sm="column"
+    <section class="start-section trumpf" fxLayout="row" fxLayout.lt-sm="column"
              fxLayoutAlign.lt-sm="center stretch" fxLayoutAlign="space-evenly center">
 
         <div class="start-section-text" fxFlex="50">
@@ -148,13 +148,13 @@
         </div>
     </section>
 
-    <section #devs class="start-section developers" ffxLayout="row">
+    <section #devs class="start-section developers" fxLayout="row">
         <div [ngClass]="{onTop: quote == 'hans-peter', inactive: quote && quote !='hans-peter'}" class="start-section developer" (click)="showQuote('hans-peter', devs)">
             <div class="text-headline developer-name">Hans-Peter Bock</div>
             <img class="avatar" src="./assets/images/avatars/hans-peter.png">
         </div>
-        <section *ngIf="quote == 'hans-peter'" class="start-section quotes">
-            <p class="quote">
+        <section *ngIf="quote == 'hans-peter'" class="start-section quotes" fxLayoutAlign="center">
+            <p class="quote" fxFlex="80">
                 <span style="white-space: nowrap;"><b>Dr.-Ing. Hans-Peter Bock</b></span>
                 <br>
                 Experte für Industrie 4.0 Kommunikation und Security
@@ -168,8 +168,8 @@
             <div class="text-headline developer-name">Manuel Beuttler</div>
             <img class="avatar" src="./assets/images/avatars/manuel.png">
         </div>
-        <section *ngIf="quote == 'manuel'" class="start-section quotes">
-            <p class="quote">
+        <section *ngIf="quote == 'manuel'" class="start-section quotes"fxLayoutAlign="center">
+            <p class="quote" fxFlex="80">
                 <span style="white-space: nowrap;"><b>Manuel Beuttler</b></span>
                 <br>
                 System Developer for New Technologies
@@ -183,8 +183,8 @@
             <div class="text-headline developer-name">Christian Görg</div>
             <img class="avatar" src="./assets/images/avatars/christian.png">
         </div>
-        <section *ngIf="quote == 'christian'" class="start-section quotes">
-            <p class="quote">
+        <section *ngIf="quote == 'christian'" class="start-section quotes"fxLayoutAlign="center">
+            <p class="quote" fxFlex="80">
                 <span style="white-space: nowrap;"><b>Christian Görg</b></span>
                 <br>
                 System Architect for Enabling Technologies
@@ -198,8 +198,8 @@
             <div class="text-headline developer-name">Marcel Ely Gomes</div>
             <img class="avatar" src="./assets/images/avatars/marcel.png">
         </div>
-        <section *ngIf="quote == 'marcel'" class="start-section quotes">
-            <p class="quote">
+        <section *ngIf="quote == 'marcel'" class="start-section quotes"fxLayoutAlign="center">
+            <p class="quote" fxFlex="80">
                 <span style="white-space: nowrap;"><b>Marcel Ely Gomes</b></span>
                 <br>
                 System Architect for Big Data and Analytics
@@ -213,8 +213,8 @@
             <div class="text-headline developer-name">Klaus Bauer</div>
             <img class="avatar" src="./assets/images/avatars/klaus.png">
         </div>
-        <section *ngIf="quote == 'klaus'" class="start-section quotes">
-            <p class="quote">
+        <section *ngIf="quote == 'klaus'" class="start-section quotes"fxLayoutAlign="center">
+            <p class="quote" fxFlex="80">
                 <span style="white-space: nowrap;"><b>Klaus Bauer</b></span>
                 <br>
                 Experte für Informations- und Kommunikationstechnologien in Produktionsnetzwerken
