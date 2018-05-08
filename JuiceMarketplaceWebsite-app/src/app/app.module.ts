@@ -14,7 +14,6 @@ import {MatMenuModule} from '@angular/material';
 
 // Custom imports
 import {FooterComponent} from './footer/footer.component';
-import {SidebarModule} from "./sidebar/sidebar.module";
 import {AccountComponent} from './account/account.component';
 import {ConsoleModule} from './console/console.module';
 import {AppRoutingModule} from './app-routing.module';
@@ -23,6 +22,8 @@ import {NgcCookieConsentConfig, NgcCookieConsentModule} from 'ngx-cookieconsent'
 
 import {registerLocaleData} from "@angular/common";
 import localeDe from '@angular/common/locales/de';
+import { IndexComponent } from './sidebar/index/index.component';
+import { LayoutService } from './services/layout.service';
 
 registerLocaleData(localeDe, 'de');
 
@@ -58,14 +59,14 @@ const cookieConfig: NgcCookieConsentConfig = {
     declarations: [
         AppComponent,
         FooterComponent,
-        AccountComponent
+        AccountComponent,
+        IndexComponent
     ],
     imports: [
         NgcCookieConsentModule.forRoot(cookieConfig),
         CommonModule,
         BrowserAnimationsModule,
         AppRoutingModule,
-        SidebarModule,
         MatToolbarModule,
         MatSidenavModule,
         MatButtonModule,
@@ -76,6 +77,7 @@ const cookieConfig: NgcCookieConsentConfig = {
         BrowserModule
     ],
     providers: [
+        LayoutService,
         {
             provide: LOCALE_ID,
             useValue: 'de'

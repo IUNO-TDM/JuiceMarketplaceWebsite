@@ -7,6 +7,10 @@
     background-color: #f5f5f5;
 }
 
+:host ::ng-deep .menu-button {
+    min-width: 0px;
+}
+
 :host ::ng-deep .centered-component {
     /* max-width: 940px; */
     width: 100%;
@@ -56,13 +60,6 @@ mat-sidenav-container {
 
 .nav-buttons {
     padding-left: 20px;
-}
-
-@media only screen and (max-width: 1100px) {
-    .nav-buttons {
-        visibility: hidden;
-        width: 0px;
-    }
 }
 
 :host ::ng-deep .card-information {

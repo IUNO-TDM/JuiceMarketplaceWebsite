@@ -1,22 +1,24 @@
-import {Injectable, ViewChild, ElementRef, HostListener} from '@angular/core';
-import {Component, OnInit} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {Router, ActivatedRoute} from '@angular/router';
+import { Injectable, ViewChild, ElementRef, HostListener, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Router, ActivatedRoute } from '@angular/router';
 import { MatDialog } from '@angular/material';
-import * as $ from 'jquery';
+// import * as $ from 'jquery';
 
-import {MarketplaceService} from '../services/marketplace.service';
-import {RecipeService} from '../services/recipe.service';
-import {AccessGuard} from '../services/user.service';
+import { MarketplaceService } from '../services/marketplace.service';
+import { RecipeService } from '../services/recipe.service';
+import { AccessGuard } from '../services/user.service';
 import "rxjs/add/operator/combineLatest"
-import {RecipeImagePickerComponent} from "../recipe-image-picker/recipe-image-picker/recipe-image-picker.component";
+import { RecipeImagePickerComponent } from "../recipe-image-picker/recipe-image-picker/recipe-image-picker.component";
 
-import {Recipe} from 'tdm-common'
-import {Cocktail} from 'tdm-common'
-import {CocktailComponent} from 'tdm-common'
-import {CocktailLayer} from 'tdm-common'
-import {ComponentService} from 'tdm-common'
-import {ComponentListComponent, DragAndDropService, BeakerComponent, ComponentListDialogComponent} from 'cocktail-configurator'
+import { Recipe } from 'tdm-common'
+import { Cocktail } from 'tdm-common'
+import { CocktailComponent } from 'tdm-common'
+import { CocktailLayer } from 'tdm-common'
+import { ComponentService } from 'tdm-common'
+import { ComponentListComponent, DragAndDropService, BeakerComponent, ComponentListDialogComponent } from 'cocktail-configurator'
+import { Subscription } from 'rxjs';
+import { LayoutService } from '../../services/layout.service';
 
 @Component({
     selector: 'app-create-recipe',
@@ -28,17 +30,22 @@ import {ComponentListComponent, DragAndDropService, BeakerComponent, ComponentLi
 @Injectable()
 export class CreateRecipeComponent implements OnInit {
     @ViewChild(RecipeImagePickerComponent) recipeImagePicker: RecipeImagePickerComponent;
-    @ViewChild(BeakerComponent) beaker: BeakerComponent;
+    @ViewChild(BeakerComponent) set beaker(beaker: BeakerComponent) {
+        if (beaker) {
+            setTimeout(() => {
+                beaker.setEditMode(this.isBeakerEditModeEnabled)
+            })
+        }
+    }
 
-    recipe = new Recipe();
     cocktail: Cocktail;
     components: CocktailComponent[] = [];
+    isBeakerEditModeEnabled = false
 
     showRecommendedComponents = true;
     showInstalledComponents = false;
     showAvailableComponents = true;
 
-    // components: TdmComponent[];
     licenseFees: number[] = [0.25, 0.5, 0.75, 1.00];
     spinnerCounter = 0;
     recipeName: string = "";
@@ -49,34 +56,31 @@ export class CreateRecipeComponent implements OnInit {
     recipeCount = 0;
 
     constructor(private marketplaceService: MarketplaceService,
-                private dialog: MatDialog,
-                private recipeService: RecipeService,
-                private http: HttpClient,
-                private router: Router,
-                private activatedRoute: ActivatedRoute,
-                private accessGuard: AccessGuard,
-                private componentService: ComponentService) {
+        private dialog: MatDialog,
+        private recipeService: RecipeService,
+        private http: HttpClient,
+        private router: Router,
+        private activatedRoute: ActivatedRoute,
+        private accessGuard: AccessGuard,
+        private layoutService: LayoutService,
+        private componentService: ComponentService) {
 
         this.cocktail = new Cocktail();
         this.cocktail.amount = 100;
         componentService.availableComponents.subscribe(components => {
             this.components = components;
         })
-    }
-
-    getBeakerEditMode() {
-        var editMode = false;
-        var ua = window.navigator.userAgent;
-        // https://stackoverflow.com/a/25394023/1771537
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(ua)) {
-            editMode = true
-        } else {
-            let windowWidth = window.innerWidth;
-            if (windowWidth < 960) {
+        layoutService.layoutProperties.subscribe(layoutProperties => {
+            var editMode = false
+            if (layoutProperties.isSmallLayout || layoutProperties.isTouchDevice) {
                 editMode = true
             }
-        }
-        return editMode
+            this.isBeakerEditModeEnabled = editMode
+            if (this.beaker) {
+                this.beaker.setEditMode(editMode)
+            }
+            
+        })
     }
 
     ngOnInit() {
@@ -90,7 +94,7 @@ export class CreateRecipeComponent implements OnInit {
             this.recipesLeft = result;
             this.spinnerCounter -= 1;
             if (this.recipesLeft <= 0) {
-                this.router.navigate(['../recipes', {errorMaxRecipes: true}], {relativeTo: this.activatedRoute});
+                this.router.navigate(['../recipes', { errorMaxRecipes: true }], { relativeTo: this.activatedRoute });
             }
         });
     }

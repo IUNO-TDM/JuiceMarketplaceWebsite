@@ -1,18 +1,19 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
-import {AdminService} from "../services/admin.service";
+import {Component, OnInit} from '@angular/core';
 import * as moment from "moment";
 import {unitOfTime} from "moment";
 import {Observable} from "rxjs/Observable";
-import {ClientService} from "../services/client.service";
 import 'rxjs/add/observable/forkJoin'
 
+import {ClientService} from "../../services/client.service";
+import {AdminService} from "../../services/admin.service";
+
 @Component({
-    selector: 'app-admin-dashboards',
-    templateUrl: './admin-dashboards.component.html',
-    styleUrls: ['./admin-dashboards.component.css'],
+    selector: 'app-connected-clients',
+    templateUrl: './connected-clients.component.html',
+    styleUrls: ['./connected-clients.component.css'],
     providers: [AdminService, ClientService]
 })
-export class AdminDashboardsComponent implements OnInit, AfterViewInit {
+export class ConnectedClientsComponent implements OnInit {
 
     constructor(private adminService: AdminService, private clientService: ClientService) {
 
@@ -22,7 +23,6 @@ export class AdminDashboardsComponent implements OnInit, AfterViewInit {
     connectionObservable2: Observable<Object>;
     connectionObservableC: Observable<Object>;
 
-
     scopeOffset = 0;
     scopeFromLabel: string;
     scopeToLabel: string;
@@ -30,58 +30,6 @@ export class AdminDashboardsComponent implements OnInit, AfterViewInit {
     connectedChartOption = 'week';
     connectedChartDisabled = false;
     machinesConnectedData: any;
-
-
-    machinesGeolocationData = {
-        chartType: 'GeoChart',
-        apiKey: 'AIzaSyDlZ5Yh79toiIzEV_NIQGX8F42663WGTxg',
-        dataTable: [
-            ['Lat', 'Long', 'Value'],
-            [49.431411, 7.751871, 2],
-            [48.251981, 11.634248, 2],
-            [49.798497, 8.823595, 3],
-            [49.000273, 8.409850, 4],
-            [48.817400, 9.065440, 5],
-        ],
-        options: {
-            region: 'DE',
-            sizeAxis: {minValue: 0, maxValue: 10}
-        }
-    };
-
-    componentConfigurationData = {
-        chartType: "Sankey",
-        dataTable: [
-            ['From', 'To', 'Weight'],
-            ['A', 'Mineralwasser', 1],
-            ['A', 'Orangensaft', 1],
-            ['A', 'Apfelsaft', 1],
-            ['A', 'Mangosaft', 1],
-            ['A', 'Maracujasaft', 1],
-            ['A', 'Ananassaft', 1],
-            ['A', 'Bananensaft', 1],
-            ['A', 'Kirschsaft', 1],
-            ['B', 'Mineralwasser', 1],
-            ['B', 'Orangensaft', 1],
-            ['B', 'Apfelsaft', 1],
-            ['B', 'Mangosaft', 1],
-            ['B', 'Maracujasaft', 1],
-            ['B', 'Ananassaft', 1],
-            ['B', 'Bananensaft', 1],
-            ['B', 'Limettensaft', 1],
-            ['C', 'Mineralwasser', 1],
-            ['C', 'Orangensaft', 1],
-            ['C', 'Apfelsaft', 1],
-            ['C', 'Mangosaft', 1],
-            ['C', 'Maracujasaft', 1],
-            ['C', 'Rum', 1],
-            ['C', 'Wodka', 1],
-            ['C', 'Limettensaft', 1]
-        ],
-        options: {
-            width: 600
-        }
-    };
 
     createConnectionDiagram(from: Date, to: Date, data: any, lastdata: any, clients: Array<Object>) {
         this.machinesConnectedData.dataTable = [];
@@ -282,7 +230,5 @@ export class AdminDashboardsComponent implements OnInit, AfterViewInit {
 
         this.acquireConnectionProtocol();
     }
+
 }
-
-
-
