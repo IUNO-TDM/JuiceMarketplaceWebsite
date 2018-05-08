@@ -158,7 +158,14 @@ hr {
     width: 300px;
 }
 
+.developer-link {
+    color: #0000EE;
+    white-space:nowrap;
+}
 
+.developer-link:hover{
+    cursor: pointer;
+}
 
 .developer-name {
     text-align: center;
