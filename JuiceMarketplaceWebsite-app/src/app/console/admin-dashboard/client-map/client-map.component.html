@@ -1,0 +1,8 @@
+<mat-card class="map-card">
+    <mat-card-title *ngIf="geoDataReady" >Aktueller Aufstellungsort der Maschinen</mat-card-title>
+    <ng-container *ngIf="geoDataReady">
+        <google-chart
+                [data]="geoData">
+        </google-chart>
+    </ng-container>
+</mat-card>
