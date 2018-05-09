@@ -14,8 +14,6 @@ import {Protocol} from "../../models/Protocol";
 export class ClientMapComponent implements OnInit {
 
     private locationProtocols: Protocol[];
-    private lastConnectionProtocol: Protocol[];
-    private lastConfigurationProtocol: Protocol[];
 
     public geoDataReady: boolean = false;
     public geoData: any;
@@ -54,10 +52,7 @@ export class ClientMapComponent implements OnInit {
                             [
                                 data[i].payload['latitude'],
                                 data[i].payload['longitude'],
-                                // clients.find(x => x.id == data[i].clientid).clientname
-                                '<b>FUHUUU</b>' +
-                                '<br>\n' +
-                                'FASFDA'
+                                clients.find(x => x.id == data[i].clientid).clientname
                             ]
                         );
                     }

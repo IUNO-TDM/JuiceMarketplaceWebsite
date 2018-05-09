@@ -65,7 +65,6 @@ export class ClientRequestsComponent implements OnInit {
             chartType: 'ScatterChart',
             dataTable: tableData,
             options: {
-                title: 'Rezeptabfragen am Marktplatz',
                 legend: {position: 'bottom'},
                 pointSize: 10,
                 vAxis: {

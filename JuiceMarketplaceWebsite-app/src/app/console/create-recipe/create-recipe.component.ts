@@ -5,7 +5,6 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { MatDialog } from '@angular/material';
 // import * as $ from 'jquery';
 
-import { MarketplaceService } from '../services/marketplace.service';
 import { RecipeService } from '../services/recipe.service';
 import { AccessGuard } from '../services/user.service';
 import "rxjs/add/operator/combineLatest"
@@ -14,17 +13,15 @@ import { RecipeImagePickerComponent } from "../recipe-image-picker/recipe-image-
 import { Recipe } from 'tdm-common'
 import { Cocktail } from 'tdm-common'
 import { CocktailComponent } from 'tdm-common'
-import { CocktailLayer } from 'tdm-common'
 import { ComponentService } from 'tdm-common'
-import { ComponentListComponent, DragAndDropService, BeakerComponent, ComponentListDialogComponent } from 'cocktail-configurator'
-import { Subscription } from 'rxjs';
+import { BeakerComponent, ComponentListDialogComponent } from 'cocktail-configurator'
 import { LayoutService } from '../../services/layout.service';
 
 @Component({
     selector: 'app-create-recipe',
     templateUrl: './create-recipe.component.html',
     styleUrls: ['./create-recipe.component.css'],
-    providers: [MarketplaceService, RecipeService],
+    providers: [RecipeService],
 })
 
 @Injectable()
@@ -55,7 +52,7 @@ export class CreateRecipeComponent implements OnInit {
     recipeLimit = 0;
     recipeCount = 0;
 
-    constructor(private marketplaceService: MarketplaceService,
+    constructor(
         private dialog: MatDialog,
         private recipeService: RecipeService,
         private http: HttpClient,

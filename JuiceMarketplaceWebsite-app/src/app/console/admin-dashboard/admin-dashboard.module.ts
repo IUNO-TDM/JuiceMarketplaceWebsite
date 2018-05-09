@@ -10,6 +10,7 @@ import {AdminDashboardRoutingModule} from "./admin-dashboard-routing.module";
 import {ClientMapComponent} from './client-map/client-map.component';
 import {ClientRequestsComponent} from './client-requests/client-requests.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { ClientConfigurationsComponent } from './client-configurations/client-configurations.component';
 
 @NgModule({
     imports: [
@@ -29,7 +30,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
         ConnectedClientsComponent,
         AdminDashboardComponent,
         ClientMapComponent,
-        ClientRequestsComponent
+        ClientRequestsComponent,
+        ClientConfigurationsComponent
     ],
     bootstrap: [
         AdminDashboardComponent
