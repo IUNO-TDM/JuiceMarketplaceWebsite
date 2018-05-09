@@ -1,0 +1,8 @@
+<mat-card class="map-card">
+  <mat-card-title>Aktuelle Maschinenkonfigurationen</mat-card-title>
+  <ng-container *ngIf="componentDataReady">
+    <google-chart
+            [data]="componentData">
+    </google-chart>
+  </ng-container>
+</mat-card>
