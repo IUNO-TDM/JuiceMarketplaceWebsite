@@ -4,6 +4,6 @@ export class Protocol {
     sourcetimestamp: Date;
     clientid: string;
     createdby: string;
-    createdat: Date;
+    createat: Date;
 }
 

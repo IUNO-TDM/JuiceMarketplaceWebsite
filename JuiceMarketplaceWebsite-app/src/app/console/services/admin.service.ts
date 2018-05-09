@@ -50,4 +50,18 @@ export class AdminService {
         return this.getLastProtocols('/recipe', fromDate, toDate);
     }
 
+    getRecipeProtocols(from: Date, to: Date, limit: number): Observable<Protocol[]> {
+        const fromDate = moment.utc([from.getFullYear(), from.getMonth(), from.getDate(), from.getHours(), from.getMinutes(), from.getSeconds()]);
+        const toDate = moment.utc([to.getFullYear(), to.getMonth(), to.getDate(), to.getHours(), to.getMinutes(), to.getSeconds()]);
+
+        return this.getProtocols('/recipes', fromDate, toDate, limit);
+    }
+
+    getLastRecipeProtocols(from: Date, to: Date): Observable<Protocol[]> {
+        const fromDate = moment.utc([from.getFullYear(), from.getMonth(), from.getDate(), from.getHours(), from.getMinutes(), from.getSeconds()]);
+        const toDate = moment.utc([to.getFullYear(), to.getMonth(), to.getDate(), to.getHours(), to.getMinutes(), to.getSeconds()]);
+
+        return this.getLastProtocols('/recipes', fromDate, toDate);
+    }
+
 }
