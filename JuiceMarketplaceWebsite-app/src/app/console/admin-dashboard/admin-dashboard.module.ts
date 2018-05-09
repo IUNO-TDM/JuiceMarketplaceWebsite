@@ -4,9 +4,11 @@ import {ConnectedClientsComponent} from './connected-clients/connected-clients.c
 import {AdminDashboardComponent} from './admin-dashboard.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {MatCardModule, MatSelectModule} from "@angular/material";
+import {MatDatepickerModule} from '@angular/material/datepicker';
 import {Ng2GoogleChartsModule} from "ng2-google-charts";
 import {AdminDashboardRoutingModule} from "./admin-dashboard-routing.module";
-import { ClientMapComponent } from './client-map/client-map.component';
+import {ClientMapComponent} from './client-map/client-map.component';
+import {ClientRequestsComponent} from './client-requests/client-requests.component';
 
 @NgModule({
     imports: [
@@ -15,19 +17,19 @@ import { ClientMapComponent } from './client-map/client-map.component';
         MatCardModule,
         MatSelectModule,
         Ng2GoogleChartsModule,
-        AdminDashboardRoutingModule
+        AdminDashboardRoutingModule,
+        MatDatepickerModule
     ],
     declarations: [
         ConnectedClientsComponent,
         AdminDashboardComponent,
-        ClientMapComponent
+        ClientMapComponent,
+        ClientRequestsComponent
     ],
     bootstrap: [
         AdminDashboardComponent
     ],
-    providers:[
-
-    ]
+    providers: []
 })
 export class AdminDashboardModule {
 }
