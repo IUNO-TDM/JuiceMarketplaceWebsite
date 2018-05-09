@@ -1,22 +1,21 @@
 <mat-card>
     <mat-card-title>Maschinenaktivität am Marktplatz</mat-card-title>
     <mat-form-field>
-        <mat-select [(value)]="connectedChartOption" (change)="acquireConnectionProtocol()" >
+        <mat-select [(value)]="connectedChartOption" (change)="resetScope()">
             <mat-option value="day">Tag</mat-option>
             <mat-option value="week">Woche</mat-option>
             <mat-option value="month">Monat</mat-option>
             <mat-option value="year">Jahr</mat-option>
         </mat-select>
     </mat-form-field>
+    <button mat-button (click)="pastData()">Früher</button>
+    <button mat-button (click)="futureData()">Später</button>
+    <mat-card-subtitle>Von: {{scopeFromLabel}} Bis: {{scopeToLabel}}</mat-card-subtitle>
     <ng-container *ngIf="!connectedChartDisabled">
-        <google-chart #timelinechart [data]="machinesConnectedData"></google-chart>
+        <google-chart [data]="machinesConnectedData"></google-chart>
     </ng-container>
 
     <ng-container *ngIf="connectedChartDisabled">
         <p>No Data to be displayed</p>
     </ng-container>
 </mat-card>
-
-
-    <!--<google-chart [data]="machinesGeolocationData"></google-chart>-->
-    <!--<google-chart [data]="componentConfigurationData"></google-chart>-->

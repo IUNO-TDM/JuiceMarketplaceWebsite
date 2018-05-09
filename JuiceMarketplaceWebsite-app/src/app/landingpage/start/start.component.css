@@ -125,3 +125,70 @@ hr {
 .logo-env {
     text-align: center;
 }
+
+.trumpf-logo {
+    width: 150px;
+}
+
+.avatar {
+    box-shadow: 3px 3px 5px #888;
+    border-radius: 75px;
+    margin-top: 20px;
+    width: 150px;
+    height: auto;
+}
+
+.avatar:hover {
+    box-shadow: 10px 10px 50px #888;
+    cursor: pointer;
+}
+
+.developers {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.developer {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    width: 300px;
+}
+
+.developer-link {
+    color: #0000EE;
+    white-space:nowrap;
+}
+
+.developer-link:hover{
+    cursor: pointer;
+}
+
+.developer-name {
+    text-align: center;
+    display: none;
+}
+
+.quotes {
+    order: -1;
+}
+
+.quote {
+    padding: 15px;
+    border-radius: 2px;
+    background: white;
+    color: rgba(0, 0, 0, 0.87);
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+.onTop {
+    order: -2;
+}
+
+.inactive {
+    /*opacity: 0.3;*/
+}

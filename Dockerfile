@@ -1,4 +1,4 @@
-FROM node:boron
+FROM node:9
 RUN npm install pm2 -g
 
 # Configure log rotate
