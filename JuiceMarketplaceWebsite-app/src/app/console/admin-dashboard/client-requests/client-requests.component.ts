@@ -5,6 +5,8 @@ import {AdminService} from "../../services/admin.service";
 import {Client} from "../../models/Client";
 import * as moment from "moment";
 import {Observable} from "rxjs/Observable";
+import {MatDatepickerInputEvent} from "@angular/material";
+import {FormControl} from "@angular/forms";
 
 @Component({
     selector: 'app-client-requests',
@@ -17,13 +19,21 @@ export class ClientRequestsComponent implements OnInit {
     constructor(private adminService: AdminService, private clientService: ClientService) {
     }
 
+
+    public dateControl = new FormControl(new Date());
     public requestDataReady: boolean = false;
     public requestData: any;
 
 
     ngOnInit() {
-        const fromDate = moment().startOf('day').toDate();
-        const toDate = moment().toDate();
+        this.updateChartData();
+    }
+
+    private updateChartData() {
+        const momentDate = moment(this.dateControl.value);
+
+        const fromDate = momentDate.startOf('day').toDate();
+        const toDate = momentDate.endOf('day').toDate();
 
         const lastRecipesObserver = this.adminService.getLastRecipeProtocols(fromDate, toDate);
         const recipesObserver = this.adminService.getRecipeProtocols(fromDate, toDate, 1000);
@@ -56,7 +66,7 @@ export class ClientRequestsComponent implements OnInit {
             dataTable: tableData,
             options: {
                 title: 'Rezeptabfragen am Marktplatz',
-                legend: {position: 'right'},
+                legend: {position: 'bottom'},
                 pointSize: 10,
                 vAxis: {
                     minValue: 0,
@@ -68,6 +78,7 @@ export class ClientRequestsComponent implements OnInit {
                     maxValue: 25,
                     ticks: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
                 },
+                // chartArea: {width: '70%'},
                 series: {
                     0: {
                         'fill-color': '#000080'
@@ -108,7 +119,6 @@ export class ClientRequestsComponent implements OnInit {
 
         this.requestDataReady = true;
     }
-
 
     private createTicks(nClients: number): number[] {
         let ticks: number[] = [];
@@ -161,5 +171,11 @@ export class ClientRequestsComponent implements OnInit {
         }
 
         return row;
+    }
+
+    public onDateChanged(event: MatDatepickerInputEvent<Date>) {
+        this.requestDataReady = false;
+
+        this.updateChartData();
     }
 }
