@@ -36,7 +36,6 @@ export class ClientConfigurationsComponent implements OnInit {
             const components = result.components;
             const protocols = result.protocols;
 
-
             const dataTable = [
                 ['From', 'To', 'Weight'],
             ];
