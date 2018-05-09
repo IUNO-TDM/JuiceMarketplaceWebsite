@@ -14,4 +14,8 @@
                 [data]="requestData">
         </google-chart>
     </ng-container>
+    <ng-container *ngIf="!requestDataReady">
+        <p>No Data to be displayed</p>
+    </ng-container>
+
 </mat-card>
