@@ -1,0 +1,10 @@
+<mat-card class="map-card">
+    <ng-container *ngIf="requestDataReady">
+        <google-chart
+                [data]="requestData">
+        </google-chart>
+    </ng-container>
+    <!--<input [matDatepicker]="myDatepicker">-->
+    <!--<mat-datepicker-toggle [for]="myDatepicker"></mat-datepicker-toggle>-->
+    <!--<mat-datepicker #myDatepicker></mat-datepicker>-->
+</mat-card>
