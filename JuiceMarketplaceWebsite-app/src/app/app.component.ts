@@ -32,8 +32,9 @@ export class AppComponent implements OnInit, OnDestroy {
         private activatedRoute: ActivatedRoute,
         private layoutService: LayoutService,
         private userService: UserService,
-        private ccService: NgcCookieConsentService) {
-        layoutService.layoutProperties.subscribe(layoutProperties => {
+        private ccService: NgcCookieConsentService,
+        ) {        
+            layoutService.layoutProperties.subscribe(layoutProperties => {
             this.toolbarMenuVisible = !layoutProperties.isSmallLayout
             setTimeout(() => {
                 this.updateMenuState()

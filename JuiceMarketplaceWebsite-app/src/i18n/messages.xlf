@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="de" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="57b8728de504ae17b0de35dd3731abf992e9db9d" datatype="html">
+        <source>Start</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Sidebar</note>
+        <note priority="1" from="meaning">link to start</note>
+      </trans-unit>
+      <trans-unit id="d3e293ac64992c5344048677c2281731b38b4987" datatype="html">
+        <source>Marktplatz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Sidebar</note>
+        <note priority="1" from="meaning">link to marketplace</note>
+      </trans-unit>
+      <trans-unit id="35cbc965e5fb57c3a1a4a2df93d4ce003e8864c2" datatype="html">
+        <source>Statistiken</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Sidebar</note>
+        <note priority="1" from="meaning">link to statistics</note>
+      </trans-unit>
+      <trans-unit id="cd75d37100383c2c196f9f2b58926afb6fe6c636" datatype="html">
+        <source>Dashboard</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">Sidebar</note>
+        <note priority="1" from="meaning">link to console/dashboard</note>
+      </trans-unit>
+      <trans-unit id="6b16f32d05491b220fd649d9e9bd84a9d10ae104" datatype="html">
+        <source>Neues Getränk anlegen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">Sidebar</note>
+        <note priority="1" from="meaning">link to console/new drink</note>
+      </trans-unit>
+      <trans-unit id="5aa9d6c7cdd31a482402ae74f314b98ad7858ead" datatype="html">
+        <source>Getränke verwalten</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">Sidebar</note>
+        <note priority="1" from="meaning">link to console/manage drinks</note>
+      </trans-unit>
+      <trans-unit id="4fc0481716e9d3e3d0dfc11fa4ab8be2b1166412" datatype="html">
+        <source>Guthaben verwalten</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <note priority="1" from="description">Sidebar</note>
+        <note priority="1" from="meaning">link to console/manage credit</note>
+      </trans-unit>
+      <trans-unit id="d3d6337957be71fc37eac4a3c0338f835daf6fa4" datatype="html">
+        <source>Marktplatz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b1875fdd47821b247985a5c0e4110b3c6d4af7f7" datatype="html">
+        <source>Statistiken</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aff435c7d519c222e17fccf410b6502987d569c9" datatype="html">
+        <source>Zutat hinzufügen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8a1c17703a2dce001448150138ef80e972db2807" datatype="html">
+        <source>Zutat hier ablegen&lt;br>um diese zu entfernen.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="479fabd48cae67a01dc0b193062b7513a2a3f994" datatype="html">
+        <source>Suchen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a6b209bf77d2cb396b8e4392de1dbffdbd23a86d" datatype="html">
+        <source>Vorgeschlagene Komponenten</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="96e0f9bbdfdb9b22fd016df250426b9fafffd72a" datatype="html">
+        <source>Installierte Komponenten</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dcd247d6de74ff363c92b4d9177b7966f68c7e90" datatype="html">
+        <source>Alle Komponenten</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3ad1defdbee8dee83b86423a18809e5170c029b4" datatype="html">
+        <source>Keine Komponenten gefunden.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1b24932d0f2269e4b41d0f936fdb5de1b94da401" datatype="html">
+        <source>Abbrechen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="687f15d52bf8c0fab17d6b0530dfcff8f3ce4a3c" datatype="html">
+        <source>Neues Getränk anlegen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="95880c9da30bff155df2d81b5b01c405ed9f956b" datatype="html">
+        <source>Rezeptur</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6f9cbb28bdc23b92465369626d0b78e5e19f77b0" datatype="html">
+        <source>Zutat per&lt;br>Drag &amp; Drop&lt;br>hinzufügen.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="09cade1c8e483a96553bda8009dbfc391f43f7be" datatype="html">
+        <source>Hier tippen um Zutat&lt;br>hinzuzufügen.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a0e4087927b592497bd24dc5f123a37830a55533" datatype="html">
+        <source>Zutat</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="77134c293828bbe6d663d26f75252663f46c7ca4" datatype="html">
+        <source>Menge</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="49d7e39875153c37e6197dad6c97a71d600edc1f" datatype="html">
+        <source>Es wurden noch keine Zutaten&lt;br>hinzugefügt.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

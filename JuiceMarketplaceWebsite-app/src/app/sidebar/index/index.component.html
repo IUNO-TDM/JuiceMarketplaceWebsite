@@ -1,15 +1,9 @@
 <ng-container *ngIf="showTopItems">
     <div fxLayout="column" fxLayoutAlign="">
-        <button (click)="openLandingPage()" mat-button class="nav-button index">Start
-            <span flex></span>
-        </button>
-        <button (click)="openConsole()" mat-button class="nav-button index">Marktplatz
-            <span flex></span>
-        </button>
+        <button (click)="openLandingPage()" mat-button class="nav-button index" i18n="link to start|Sidebar">Start</button>
+        <button (click)="openConsole()" mat-button class="nav-button index" i18n="link to marketplace|Sidebar">Marktplatz</button>
         <ng-container *ngTemplateOutlet="console"></ng-container>
-        <button (click)="openStatistics()" mat-button class="nav-button index">Statistiken
-            <span flex></span>
-        </button>
+        <button (click)="openStatistics()" mat-button class="nav-button index" i18n="link to statistics|Sidebar">Statistiken</button>
         <!--<app-statistics></app-statistics>-->
         <!--<button (click)="openNews()" mat-button class="nav-button index">Neuigkeiten-->
         <!--<span flex></span>-->
@@ -23,17 +17,9 @@
 </ng-container>
 <ng-template #console>
     <div *ngIf="showConsoleItems()" fxLayout="column" fxLayoutAlign="">
-        <button (click)="openDashboard()" mat-button class="nav-button">Dashboard
-            <span flex></span>
-        </button>
-        <button (click)="openCreateRecipe()" mat-button class="nav-button">Neues Getränk anlegen
-            <span flex></span>
-        </button>
-        <button (click)="openRecipes()" mat-button class="nav-button">Getränke verwalten
-            <span flex></span>
-        </button>
-        <button (click)="openVault()" mat-button class="nav-button">Guthaben verwalten
-            <span flex></span>
-        </button>
+        <button (click)="openDashboard()" mat-button class="nav-button" i18n="link to console/dashboard|Sidebar">Dashboard</button>
+        <button (click)="openCreateRecipe()" mat-button class="nav-button" i18n="link to console/new drink|Sidebar">Neues Getränk anlegen</button>
+        <button (click)="openRecipes()" mat-button class="nav-button" i18n="link to console/manage drinks|Sidebar">Getränke verwalten</button>
+        <button (click)="openVault()" mat-button class="nav-button" i18n="link to console/manage credit|Sidebar">Guthaben verwalten</button>
     </div>
 </ng-template>
