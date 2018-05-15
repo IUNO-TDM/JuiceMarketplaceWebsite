@@ -9,7 +9,8 @@
     "snyk-protect": "snyk protect",
     "prepublish": "npm run snyk-protect",
     "lint": "tslint ./src/**/*.ts -t verbose",
-    "extract-i18n": "ng xi18n --output-path src/i18n && xliffmerge --profile xliffmerge.json de en"
+    "extract-i18n": "ng xi18n --output-path src/i18n && for i in de en; do xliffmerge --profile xliffmerge.json de $i; done",
+    "build-i18n": "for i in de en; do ng build --prod --build-optimizer --aot --base-href=/$i/ --outputPath=dist/$i --i18nFile=src/i18n/messages.$i.xlf --i18nFormat=xlf --locale=$i; done"
   },
   "dependencies": {
     "@angular/animations": "^5.2.9",

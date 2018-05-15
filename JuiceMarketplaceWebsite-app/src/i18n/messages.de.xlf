@@ -11,63 +11,57 @@
       <target xml:space="preserve">Statistiken</target>
       
     <context-group purpose="location"><context context-type="sourcefile">app/app.component.ts</context><context context-type="linenumber">18</context></context-group></trans-unit>
-  <trans-unit id="57b8728de504ae17b0de35dd3731abf992e9db9d" datatype="html">
-        <source>Start</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
-          <context context-type="linenumber">3</context>
-        </context-group>
-        <note priority="1" from="description">Sidebar</note>
-        <note priority="1" from="meaning">link to start</note>
-      <target state="final">Start</target></trans-unit><trans-unit id="d3e293ac64992c5344048677c2281731b38b4987" datatype="html">
-        <source>Marktplatz</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
-          <context context-type="linenumber">4</context>
-        </context-group>
-        <note priority="1" from="description">Sidebar</note>
-        <note priority="1" from="meaning">link to marketplace</note>
-      <target state="final">Marktplatz</target></trans-unit><trans-unit id="35cbc965e5fb57c3a1a4a2df93d4ce003e8864c2" datatype="html">
-        <source>Statistiken</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
-          <context context-type="linenumber">6</context>
-        </context-group>
-        <note priority="1" from="description">Sidebar</note>
-        <note priority="1" from="meaning">link to statistics</note>
-      <target state="final">Statistiken</target></trans-unit><trans-unit id="cd75d37100383c2c196f9f2b58926afb6fe6c636" datatype="html">
-        <source>Dashboard</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
-          <context context-type="linenumber">20</context>
-        </context-group>
-        <note priority="1" from="description">Sidebar</note>
-        <note priority="1" from="meaning">link to console/dashboard</note>
-      <target state="final">Dashboard</target></trans-unit><trans-unit id="6b16f32d05491b220fd649d9e9bd84a9d10ae104" datatype="html">
-        <source>Neues Getränk anlegen</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
-          <context context-type="linenumber">21</context>
-        </context-group>
-        <note priority="1" from="description">Sidebar</note>
-        <note priority="1" from="meaning">link to console/new drink</note>
-      <target state="final">Neues Getränk anlegen</target></trans-unit><trans-unit id="5aa9d6c7cdd31a482402ae74f314b98ad7858ead" datatype="html">
-        <source>Getränke verwalten</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
-          <context context-type="linenumber">22</context>
-        </context-group>
-        <note priority="1" from="description">Sidebar</note>
-        <note priority="1" from="meaning">link to console/manage drinks</note>
-      <target state="final">Getränke verwalten</target></trans-unit><trans-unit id="4fc0481716e9d3e3d0dfc11fa4ab8be2b1166412" datatype="html">
-        <source>Guthaben verwalten</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
-          <context context-type="linenumber">23</context>
-        </context-group>
-        <note priority="1" from="description">Sidebar</note>
-        <note priority="1" from="meaning">link to console/manage credit</note>
-      <target state="final">Guthaben verwalten</target></trans-unit></body></file>
+  </body></file>
+  <file original="app/sidebar/index/index.component.ts" datatype="plaintext" source-language="de" target-language="de"><body>
+    <trans-unit id="57b8728de504ae17b0de35dd3731abf992e9db9d" approved="yes">
+      <source xml:space="preserve">Start</source>
+      <target xml:space="preserve">Start</target>
+      
+      <note from="translator">link to start</note>
+    <context-group purpose="location"><context context-type="sourcefile">app/sidebar/index/index.component.ts</context><context context-type="linenumber">3</context></context-group><note from="description" priority="1">Sidebar</note><note from="meaning" priority="1">link to start</note></trans-unit>
+    <trans-unit id="d3e293ac64992c5344048677c2281731b38b4987" approved="yes">
+      <source xml:space="preserve">Marktplatz</source>
+      <target xml:space="preserve">Marktplatz</target>
+      
+      <note from="translator">link to marketplace</note>
+    <context-group purpose="location"><context context-type="sourcefile">app/sidebar/index/index.component.ts</context><context context-type="linenumber">4</context></context-group><note from="description" priority="1">Sidebar</note><note from="meaning" priority="1">link to marketplace</note></trans-unit>
+    <trans-unit id="35cbc965e5fb57c3a1a4a2df93d4ce003e8864c2" approved="yes">
+      <source xml:space="preserve">Statistiken</source>
+      <target xml:space="preserve">Statistiken</target>
+      
+      <note from="translator">link to statistics</note>
+    <context-group purpose="location"><context context-type="sourcefile">app/sidebar/index/index.component.ts</context><context context-type="linenumber">6</context></context-group><note from="description" priority="1">Sidebar</note><note from="meaning" priority="1">link to statistics</note></trans-unit>
+    <trans-unit id="cd75d37100383c2c196f9f2b58926afb6fe6c636" approved="yes">
+      <source xml:space="preserve">Dashboard</source>
+      <target xml:space="preserve">Dashboard</target>
+      
+      <note from="translator">link to console/dashboard</note>
+    <context-group purpose="location"><context context-type="sourcefile">app/sidebar/index/index.component.ts</context><context context-type="linenumber">20</context></context-group><note from="description" priority="1">Sidebar</note><note from="meaning" priority="1">link to console/dashboard</note></trans-unit>
+    <trans-unit id="6b16f32d05491b220fd649d9e9bd84a9d10ae104" approved="yes">
+      <source xml:space="preserve">Neues Getränk anlegen</source>
+      <target xml:space="preserve">Neues Getränk anlegen</target>
+      
+      <note from="translator">link to console/new drink</note>
+    <context-group purpose="location"><context context-type="sourcefile">app/sidebar/index/index.component.ts</context><context context-type="linenumber">21</context></context-group><note from="description" priority="1">Sidebar</note><note from="meaning" priority="1">link to console/new drink</note></trans-unit>
+    <trans-unit id="5aa9d6c7cdd31a482402ae74f314b98ad7858ead" approved="yes">
+      <source xml:space="preserve">Getränke verwalten</source>
+      <target xml:space="preserve">Getränke verwalten</target>
+      
+      <note from="translator">link to console/manage drinks</note>
+    <context-group purpose="location"><context context-type="sourcefile">app/sidebar/index/index.component.ts</context><context context-type="linenumber">22</context></context-group><note from="description" priority="1">Sidebar</note><note from="meaning" priority="1">link to console/manage drinks</note></trans-unit>
+    <trans-unit id="4fc0481716e9d3e3d0dfc11fa4ab8be2b1166412" approved="yes">
+      <source xml:space="preserve">Guthaben verwalten</source>
+      <target xml:space="preserve">Guthaben verwalten</target>
+      
+      <note from="translator">link to console/manage credit</note>
+    <context-group purpose="location"><context context-type="sourcefile">app/sidebar/index/index.component.ts</context><context context-type="linenumber">23</context></context-group><note from="description" priority="1">Sidebar</note><note from="meaning" priority="1">link to console/manage credit</note></trans-unit>
+    <trans-unit id="15d67be9d2ddd47737c42f117f55cd6e075da37c" approved="yes">
+      <source xml:space="preserve">Admin Dashboard</source>
+      <target xml:space="preserve">Admin Dashboard</target>
+      
+      <note from="translator">link to admin dashboard/admin dashboard</note>
+    <context-group purpose="location"><context context-type="sourcefile">app/sidebar/index/index.component.ts</context><context context-type="linenumber">24</context></context-group><note from="description" priority="1">Sidebar</note><note from="meaning" priority="1">link to admin dashboard/admin dashboard</note></trans-unit>
+  </body></file>
   <file original="app/console/component-list-dialog/component-list-dialog.component.ts" datatype="plaintext" source-language="de" target-language="de"><body>
     <trans-unit id="aff435c7d519c222e17fccf410b6502987d569c9" approved="yes">
       <source xml:space="preserve">Zutat hinzufügen</source>

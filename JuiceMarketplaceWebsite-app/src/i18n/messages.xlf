@@ -65,6 +65,15 @@
         <note priority="1" from="description">Sidebar</note>
         <note priority="1" from="meaning">link to console/manage credit</note>
       </trans-unit>
+      <trans-unit id="15d67be9d2ddd47737c42f117f55cd6e075da37c" datatype="html">
+        <source>Admin Dashboard</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">Sidebar</note>
+        <note priority="1" from="meaning">link to admin dashboard/admin dashboard</note>
+      </trans-unit>
       <trans-unit id="d3d6337957be71fc37eac4a3c0338f835daf6fa4" datatype="html">
         <source>Marktplatz</source>
         <context-group purpose="location">
