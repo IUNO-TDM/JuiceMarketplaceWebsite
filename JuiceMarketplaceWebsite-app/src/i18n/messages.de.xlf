@@ -104,15 +104,9 @@
         </context-group>
       <target state="final">Umsatzverlauf im letzten Monat</target></trans-unit><trans-unit id="6da8dd99b289bd6221d05270a76f46695793e396" datatype="html">
         <source>Keine Daten vorhanden</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context>
-          <context context-type="linenumber">14</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context>
-          <context context-type="linenumber">26</context>
-        </context-group>
-      <target state="final">Keine Daten vorhanden</target></trans-unit><trans-unit id="f13fb36aa96507264269eaa2bab3204d997d9c77" datatype="html">
+        
+        
+      <target state="final">Keine Daten vorhanden</target><context-group purpose="location"><context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context><context context-type="linenumber">14</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context><context context-type="linenumber">26</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/statistics/overview/overview.component.ts</context><context context-type="linenumber">11</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/statistics/overview/overview.component.ts</context><context context-type="linenumber">23</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/statistics/overview/overview.component.ts</context><context context-type="linenumber">38</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/statistics/overview/overview.component.ts</context><context context-type="linenumber">50</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/statistics/overview/overview.component.ts</context><context context-type="linenumber">61</context></context-group></trans-unit><trans-unit id="f13fb36aa96507264269eaa2bab3204d997d9c77" datatype="html">
         <source>Top 5 im letzten Monat</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context>
@@ -311,7 +305,37 @@
           <context context-type="sourcefile">app/console/vault-testnet-help-dialog/vault-testnet-help-dialog.component.ts</context>
           <context context-type="linenumber">34</context>
         </context-group>
-      <target state="final">OK danke!</target></trans-unit></body>
+      <target state="final">OK danke!</target></trans-unit><trans-unit id="7fe5242d9b419adf0370f14adcdd41fe132b710c" datatype="html">
+        <source>Lizenzverkäufe im Tagesverlauf</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      <target state="final">Lizenzverkäufe im Tagesverlauf</target></trans-unit><trans-unit id="c6fb8b06d07e90841651b619e83e17396c7d8715" datatype="html">
+        <source>Lizenzverkäufe im letzten Monat</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      <target state="final">Lizenzverkäufe im letzten Monat</target></trans-unit><trans-unit id="961d9af389fd94425aecfa16ea9df6b3a4cc276c" datatype="html">
+        <source>Die beliebtesten Zutaten</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      <target state="final">Die beliebtesten Zutaten</target></trans-unit><trans-unit id="017df1a1f452b8592e6babc821507b400873aa9d" datatype="html">
+        <source>Die beliebtesten Rezepte aller Zeiten</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      <target state="final">Die beliebtesten Rezepte aller Zeiten</target></trans-unit><trans-unit id="89ea7601029a7cc9366d93185997891359fae352" datatype="html">
+        <source>Die beliebtesten Rezepte heute</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      <target state="final">Die beliebtesten Rezepte heute</target></trans-unit></body>
   </file>
   <file original="app/console/create-recipe/create-recipe.component.ts" datatype="plaintext" source-language="de" target-language="de">
     <body>

@@ -89,8 +89,8 @@
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
           <context context-type="linenumber">119</context>
         </context-group>
-        <target state="translated">You have already reached your limit of                                                                                
-          <x id="INTERPOLATION" equiv-text="{{recipeLimit}}"/> recipes.                                                                                
+        <target state="translated">You have already reached your limit of                                                                                          
+          <x id="INTERPOLATION" equiv-text="{{recipeLimit}}"/> recipes.                                                                                          
           <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
         </target>
       </trans-unit>
@@ -182,6 +182,7 @@
       </trans-unit>
       <trans-unit id="6da8dd99b289bd6221d05270a76f46695793e396" datatype="html">
         <source>Keine Daten vorhanden</source>
+        <target state="translated">No data available</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context>
           <context context-type="linenumber">14</context>
@@ -190,7 +191,26 @@
           <context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context>
           <context context-type="linenumber">26</context>
         </context-group>
-        <target state="translated">No data available</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="f13fb36aa96507264269eaa2bab3204d997d9c77" datatype="html">
         <source>Top 5 im letzten Monat</source>
@@ -317,11 +337,11 @@
           <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
           <context context-type="linenumber">5</context>
         </context-group>
-        <target state="translated">There are                     
-          <x id="INTERPOLATION" equiv-text="{{wallet.confirmed/100000 | number:'1.0-5'}}"/> IUNO in your wallet ready to pay out.                    
-          <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>This corresponds to                     
+        <target state="translated">There are                               
+          <x id="INTERPOLATION" equiv-text="{{wallet.confirmed/100000 | number:'1.0-5'}}"/> IUNO in your wallet ready to pay out.                              
+          <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>This corresponds to                               
           <x id="INTERPOLATION_1" equiv-text="{{wallet.confirmed / unitFactor | number:'1.0-5'}}"/>
-          <x id="INTERPOLATION_2" equiv-text="{{unitName}}"/> in Bitcoin Testnet.                
+          <x id="INTERPOLATION_2" equiv-text="{{unitName}}"/> in Bitcoin Testnet.                        
         </target>
       </trans-unit>
       <trans-unit id="3f37bfe901c665205c03967962726ada2006bede" datatype="html">
@@ -333,9 +353,9 @@
           <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
           <context context-type="linenumber">11</context>
         </context-group>
-        <target state="translated">Currently                     
+        <target state="translated">Currently                               
           <x id="INTERPOLATION" equiv-text="{{(wallet.unconfirmed-wallet.confirmed) / unitFactor | number: '1.0-8'}}"/>
-          <x id="INTERPOLATION_1" equiv-text="{{unitName}}"/> of them are still unconfirmed. As soon as these transactions are confirmed in the blockchain, you can also pay out this credit.                
+          <x id="INTERPOLATION_1" equiv-text="{{unitName}}"/> of them are still unconfirmed. As soon as these transactions are confirmed in the blockchain, you can also pay out this credit.                        
         </target>
       </trans-unit>
       <trans-unit id="a23cdc12e71493323709959ee1cccb56087fdc2f" datatype="html">
@@ -355,8 +375,8 @@
           <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
           <context context-type="linenumber">34</context>
         </context-group>
-        <target state="translated">min.                     
-          <x id="INTERPOLATION" equiv-text="{{6000/unitFactor | number: '1.0-8'}}"/>, max.                                            
+        <target state="translated">min.                               
+          <x id="INTERPOLATION" equiv-text="{{6000/unitFactor | number: '1.0-8'}}"/>, max.                                                      
           <x id="INTERPOLATION_1" equiv-text="{{(wallet.confirmed-transactionFee)/unitFactor | number: '1.0-8'}}"/>
         </target>
       </trans-unit>
@@ -372,10 +392,10 @@
           <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
           <context context-type="linenumber">65</context>
         </context-group>
-        <target state="translated">The transaction fee is                     
+        <target state="translated">The transaction fee is                               
           <x id="INTERPOLATION" equiv-text="{{transactionFee / unitFactor | number:'1.0-8'}}"/>
           <x id="INTERPOLATION_1" equiv-text="{{unitName}}"/>
-          <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/> and the remaining balance in the Wallet is                     
+          <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/> and the remaining balance in the Wallet is                               
           <x id="INTERPOLATION_2" equiv-text="{{remaining / unitFactor | number:'1.0-8'}}"/>
           <x id="INTERPOLATION_1" equiv-text="{{unitName}}"/>
         </target>
@@ -415,7 +435,7 @@
       </trans-unit>
       <trans-unit id="9706ede4f0e4ad095a8dae68bdc32a482b021881" datatype="html">
         <source>
-          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>Die Währung in unserem Demonstrator nennt sich IUNO. Hinter den IUNOs steckt technisch das Bitcoin Testnet. Diese Variante von Bitcoin ist zum Testen und zum Entwickeln mit der Bitcoin-Technik gedacht. Einen realen Wert,        den man beispielsweise in Euros ausdrücken könnte, gibt es nicht. Jedoch kann man damit Cocktails an unseren        Saftmischmaschinen bezahlen.
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>Die Währung in unserem Demonstrator nennt sich IUNO. Hinter den IUNOs steckt technisch das Bitcoin Testnet.        Diese Variante von Bitcoin ist zum Testen und zum Entwickeln mit der Bitcoin-Technik gedacht. Einen realen Wert,        den man beispielsweise in Euros ausdrücken könnte, gibt es nicht. Jedoch kann man damit Cocktails an unseren        Saftmischmaschinen bezahlen.
           <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
           <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>        Für dich als Technologiedatenhersteller speichern wir deine IUNOs, die du mit Lizenzverkäufen erhalten hast.        Wenn du willst, kannst du dir dein Guthaben gerne an deine Bitcoin-Wallet schicken. Dazu benötigst du eine        Bitcoin-Wallet, die mit dem Bitcoin-Testnet zusammenarbeitet.
           <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
@@ -427,11 +447,11 @@
           <context context-type="linenumber">3</context>
         </context-group>
         <target state="translated">
-          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>The currency in our demonstrator is called IUNO. Behind the IUNOs is technically the Bitcoin Testnet. This variant of Bitcoin is intended for testing and development with the Bitcoin technology. There is no real value that could be expressed in euros, for example. However, it can be used to pay for cocktails on our juice mixers.
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>The currency in our demonstrator is called IUNO. Behind the IUNOs is technically the Bitcoin Testnet. This variant of Bitcoin is intended for testing and development with the Bitcoin technology. There is no real value that could be expressed in euros, for example. However, it can be used to pay for cocktails on our juice mixers.          
           <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
-          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>For you as a technology data manufacturer, we store the IUNOs you received with license sales. If you want, you can send your credit to your Bitcoin Wallet. To do this, you need a Bitcoin Wallet that works with the Bitcoin Testnet.
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>For you as a technology data manufacturer, we store the IUNOs you received with license sales. If you want, you can send your credit to your Bitcoin Wallet. To do this, you need a Bitcoin Wallet that works with the Bitcoin Testnet.          
           <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
-          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>We can recommend the following apps:
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>We can recommend the following apps:          
           <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
         </target>
       </trans-unit>
@@ -458,6 +478,46 @@
           <context context-type="linenumber">34</context>
         </context-group>
         <target state="translated">OK thanks!</target>
+      </trans-unit>
+      <trans-unit id="7fe5242d9b419adf0370f14adcdd41fe132b710c" datatype="html">
+        <source>Lizenzverkäufe im Tagesverlauf</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <target state="translated">License sales during the day</target>
+      </trans-unit>
+      <trans-unit id="c6fb8b06d07e90841651b619e83e17396c7d8715" datatype="html">
+        <source>Lizenzverkäufe im letzten Monat</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <target state="translated">License sales last month</target>
+      </trans-unit>
+      <trans-unit id="961d9af389fd94425aecfa16ea9df6b3a4cc276c" datatype="html">
+        <source>Die beliebtesten Zutaten</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <target state="translated">Most popular ingredients</target>
+      </trans-unit>
+      <trans-unit id="017df1a1f452b8592e6babc821507b400873aa9d" datatype="html">
+        <source>Die beliebtesten Rezepte aller Zeiten</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <target state="translated">Most popular recipes of all time</target>
+      </trans-unit>
+      <trans-unit id="89ea7601029a7cc9366d93185997891359fae352" datatype="html">
+        <source>Die beliebtesten Rezepte heute</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+        <target state="translated">Most popular recipes today</target>
       </trans-unit>
     </body>
   </file>
