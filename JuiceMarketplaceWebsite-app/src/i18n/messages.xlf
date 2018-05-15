@@ -237,6 +237,10 @@
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
           <context context-type="linenumber">80</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="c51da9899fe9350fcc3f226a107341458a8a7640" datatype="html">
         <source>Lizenzgebühr</source>
@@ -271,6 +275,63 @@
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
           <context context-type="linenumber">119</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="adf103f42182c40380a2cca83020ede8447094b4" datatype="html">
+        <source>Getränke verwalten</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3429fc92395f38a5334be81250393b9a44c7032c" datatype="html">
+        <source>Übersicht</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="09cbfc10bc71f313d520d4e35f490933156063f1" datatype="html">
+        <source>Derzeit ist die Anzahl an Rezepten pro Benutzer
+                begrenzt. Bitte lösche ein bestehendes Rezept, falls du weitere auf dem Marktplatz veröffentlichen möchtest.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8ba9fb62241ddd224c66b8810393bc63550c3a2c" datatype="html">
+        <source>Keine Getränke vorhanden</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e5a795950a259aa059579d6efc2d2a101f47919b" datatype="html">
+        <source>Getränkename</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="12c40a8175a7959c9dab6ecd34f858c6901418b8" datatype="html">
+        <source>Lizenzgebühr (IUNOs)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="eda0838277daa4775a86e9b08c747922f33c0666" datatype="html">
+        <source>Aktion</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a813fd43c9a1b211fe541045d263d2c500c80f0f" datatype="html">
+        <source>Löschen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
+          <context context-type="linenumber">44</context>
         </context-group>
       </trans-unit>
     </body>

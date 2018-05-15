@@ -26,7 +26,7 @@
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
           <context context-type="linenumber">66</context>
         </context-group>
-        <target state="new">Product details</target>
+        <target state="translated">Product details</target>
       </trans-unit>
       <trans-unit id="b7f6cd735e8b660a6ec3d3dfb09de14ab32a10c8" datatype="html">
         <source>Titel</source>
@@ -34,15 +34,19 @@
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
           <context context-type="linenumber">75</context>
         </context-group>
-        <target state="new">Titel</target>
+        <target state="translated">Titel</target>
       </trans-unit>
       <trans-unit id="f09ad66c1ebf16217ba1a1072be7a98de2d95eac" datatype="html">
         <source>Beschreibung</source>
+        <target state="translated">Description</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
           <context context-type="linenumber">80</context>
         </context-group>
-        <target state="new">Description</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="c51da9899fe9350fcc3f226a107341458a8a7640" datatype="html">
         <source>Lizenzgebühr</source>
@@ -50,7 +54,7 @@
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
           <context context-type="linenumber">84</context>
         </context-group>
-        <target state="new">Licence fee</target>
+        <target state="translated">Licence fee</target>
       </trans-unit>
       <trans-unit id="5ccc633c2e84a1ddb8f59dec8affa3af4aed7988" datatype="html">
         <source>Bild</source>
@@ -58,7 +62,7 @@
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
           <context context-type="linenumber">100</context>
         </context-group>
-        <target state="new">Image</target>
+        <target state="translated">Image</target>
       </trans-unit>
       <trans-unit id="05d6def11b80c405276ad18c4fc5183e8cea4f75" datatype="html">
         <source>Speichern</source>
@@ -66,7 +70,7 @@
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
           <context context-type="linenumber">111</context>
         </context-group>
-        <target state="new">Save</target>
+        <target state="translated">Save</target>
       </trans-unit>
       <trans-unit id="367e537f73ef5d6874808117f0d8376a5aab6811" datatype="html">
         <source>Rezeptlimit erreicht!</source>
@@ -74,7 +78,7 @@
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
           <context context-type="linenumber">118</context>
         </context-group>
-        <target state="new">Recipe limit reached!</target>
+        <target state="translated">Recipe limit reached!</target>
       </trans-unit>
       <trans-unit id="4559397c7f60abaeb0efeb4c290db73d3d6a5d92" datatype="html">
         <source>Sie haben bereits ihr Limit von 
@@ -85,10 +89,74 @@
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
           <context context-type="linenumber">119</context>
         </context-group>
-        <target state="new">You have already reached your limit of
-          <x id="INTERPOLATION" equiv-text="{{recipeLimit}}"/> recipes.
+        <target state="translated">You have already reached your limit of                    
+          <x id="INTERPOLATION" equiv-text="{{recipeLimit}}"/> recipes.                    
           <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
         </target>
+      </trans-unit>
+      <trans-unit id="adf103f42182c40380a2cca83020ede8447094b4" datatype="html">
+        <source>Getränke verwalten</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <target state="translated">Manage drinks</target>
+      </trans-unit>
+      <trans-unit id="3429fc92395f38a5334be81250393b9a44c7032c" datatype="html">
+        <source>Übersicht</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <target state="translated">Overview</target>
+      </trans-unit>
+      <trans-unit id="09cbfc10bc71f313d520d4e35f490933156063f1" datatype="html">
+        <source>Derzeit ist die Anzahl an Rezepten pro Benutzer begrenzt. Bitte lösche ein bestehendes Rezept, falls du weitere auf dem Marktplatz veröffentlichen möchtest.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <target state="translated">Currently, the number of recipes per user is limited. Please delete an existing recipe if you want to publish more on the marketplace.</target>
+      </trans-unit>
+      <trans-unit id="8ba9fb62241ddd224c66b8810393bc63550c3a2c" datatype="html">
+        <source>Keine Getränke vorhanden</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <target state="translated">No drinks available</target>
+      </trans-unit>
+      <trans-unit id="e5a795950a259aa059579d6efc2d2a101f47919b" datatype="html">
+        <source>Getränkename</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <target state="translated">Drink name</target>
+      </trans-unit>
+      <trans-unit id="12c40a8175a7959c9dab6ecd34f858c6901418b8" datatype="html">
+        <source>Lizenzgebühr (IUNOs)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <target state="translated">Licence fee (IUNOs)</target>
+      </trans-unit>
+      <trans-unit id="eda0838277daa4775a86e9b08c747922f33c0666" datatype="html">
+        <source>Aktion</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <target state="translated">Action</target>
+      </trans-unit>
+      <trans-unit id="a813fd43c9a1b211fe541045d263d2c500c80f0f" datatype="html">
+        <source>Löschen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <target state="translated">Delete</target>
       </trans-unit>
     </body>
   </file>
