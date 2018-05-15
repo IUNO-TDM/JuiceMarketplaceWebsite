@@ -88,6 +88,20 @@
           <context context-type="linenumber">18</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="c47b6066a02b6434f0cd861e792d9ceebbe59235" datatype="html">
+        <source>Datenschutz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/footer/footer.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="140d9a7d0795beace6491c45566f6dd295e94999" datatype="html">
+        <source>Impressum</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/footer/footer.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="aff435c7d519c222e17fccf410b6502987d569c9" datatype="html">
         <source>Zutat hinzufügen</source>
         <context-group purpose="location">
@@ -167,6 +181,10 @@
           <context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context>
           <context context-type="linenumber">21</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="687f15d52bf8c0fab17d6b0530dfcff8f3ce4a3c" datatype="html">
         <source>Neues Getränk anlegen</source>
@@ -174,6 +192,7 @@
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
           <context context-type="linenumber">4</context>
         </context-group>
+        <note priority="1" from="description">headline</note>
       </trans-unit>
       <trans-unit id="95880c9da30bff155df2d81b5b01c405ed9f956b" datatype="html">
         <source>Rezeptur</source>
@@ -283,6 +302,7 @@
           <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
           <context context-type="linenumber">1</context>
         </context-group>
+        <note priority="1" from="description">headline</note>
       </trans-unit>
       <trans-unit id="3429fc92395f38a5334be81250393b9a44c7032c" datatype="html">
         <source>Übersicht</source>
@@ -326,12 +346,190 @@
           <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
           <context context-type="linenumber">42</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault/vault.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="a813fd43c9a1b211fe541045d263d2c500c80f0f" datatype="html">
         <source>Löschen</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
           <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f65253954b66e929a8b4d5ecaf61f9129f8cec64" datatype="html">
+        <source>Dashboard</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">headline</note>
+      </trans-unit>
+      <trans-unit id="38d0c576b0220019bdf34da5d5d1a9dc4734ee15" datatype="html">
+        <source>Umsatzverlauf im letzten Monat</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6da8dd99b289bd6221d05270a76f46695793e396" datatype="html">
+        <source>Keine Daten vorhanden</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f13fb36aa96507264269eaa2bab3204d997d9c77" datatype="html">
+        <source>Top 5 im letzten Monat</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2a586421a7737029d4d52290e9e7a827fa6f0523" datatype="html">
+        <source>Lizenzverkäufe heute</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0f116bcebf0ff208a58f0349381ccffa5171e53f" datatype="html">
+        <source>Meistverkauftes Getränk</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="44552049e4bba7349026807493f7663f1cf25a2d" datatype="html">
+        <source>Aktueller Kontostand</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ea6c9eed6d5dd4338b4822373651d67f37ea7150" datatype="html">
+        <source>Auszahlung von Guthaben veranlassen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">title</note>
+      </trans-unit>
+      <trans-unit id="bb98b916f3ac89322820c9d5487d6c87706b5a8e" datatype="html">
+        <source>Es sind <x id="INTERPOLATION" equiv-text="{{wallet.confirmed/100000 | number:'1.0-5'}}"/> IUNO in Ihrem Wallet zur Auszahlung bereit.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+            Dies entspricht <x id="INTERPOLATION_1" equiv-text="{{wallet.confirmed / unitFactor | number:'1.0-5'}}"/> <x id="INTERPOLATION_2" equiv-text="{{unitName}}"/> im Bitcoin Testnet.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3f37bfe901c665205c03967962726ada2006bede" datatype="html">
+        <source>Aktuell sind davon noch <x id="INTERPOLATION" equiv-text="{{(wallet.unconfirmed-wallet.confirmed) / unitFactor | number: '1.0-8'}}"/>
+            <x id="INTERPOLATION_1" equiv-text="{{unitName}}"/> unbestätigt.
+            Sobald diese Transaktionen in der Blockchain bestätigt sind, kann man auch dieses Guthaben auszahlen.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a23cdc12e71493323709959ee1cccb56087fdc2f" datatype="html">
+        <source>Wallet leeren</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5b919212544398c7e314b427a0f83f8f0ade5180" datatype="html">
+        <source>Auszahladresse</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="21e0fda1c079d2740c574dc3b63b4249a7b79ca3" datatype="html">
+        <source>Auszahlbetrag</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8d7fb4498230a1a42bf29edb7855134bb49f21c6" datatype="html">
+        <source>min. <x id="INTERPOLATION" equiv-text="{{6000/unitFactor | number: '1.0-8'}}"/>, max.
+                        <x id="INTERPOLATION_1" equiv-text="{{(wallet.confirmed-transactionFee)/unitFactor | number: '1.0-8'}}"/>
+                    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="10f2cfe2080e00cee322f5a4227ff967e5cee597" datatype="html">
+        <source>Die Transaktionsgebühr beträgt <x id="INTERPOLATION" equiv-text="{{transactionFee / unitFactor | number:'1.0-8'}}"/> <x id="INTERPOLATION_1" equiv-text="{{unitName}}"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+            und das Restguthaben im Wallet <x id="INTERPOLATION_2" equiv-text="{{remaining / unitFactor | number:'1.0-8'}}"/> <x id="INTERPOLATION_1" equiv-text="{{unitName}}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7902b69333172d210bf736b62e3408550de0d56a" datatype="html">
+        <source>Auszahlen!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="69f028470ae528627d013f54fb9b7d1c89f1a75e" datatype="html">
+        <source>Guthaben verwalten</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault/vault.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">headline</note>
+      </trans-unit>
+      <trans-unit id="b3b404bc704c40aa6658654b3944a22bc68f8481" datatype="html">
+        <source>Guthaben im Bitcoin Vault</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault/vault.component.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6f095e045f0e5d0744436162c6ff6df51d7bc83f" datatype="html">
+        <source>Kein Guthaben im Bitcoin Vault gespeichert.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault/vault.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a7cfbc126999f19af79727d5b0229ef2da2c5250" datatype="html">
+        <source>Wallet ID</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault/vault.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9e8ef231aa8b617100934ac9bebacbe27dc1451a" datatype="html">
+        <source>Guthaben (incl. unbestätigte Mittel) (IUNO)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault/vault.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="641ab9be9977e1cc90392463a71919e9017c1184" datatype="html">
+        <source>Bestätigtes Guthaben (IUNO)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault/vault.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="133c17cdad17236bbf4fa9621616d31a73c93a4b" datatype="html">
+        <source>Auszahlung</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault/vault.component.ts</context>
+          <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
     </body>
