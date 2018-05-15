@@ -14,12 +14,8 @@ import { Recipe } from 'tdm-common'
 import { Cocktail } from 'tdm-common'
 import { CocktailComponent } from 'tdm-common'
 import { ComponentService } from 'tdm-common'
-<<<<<<< HEAD
 import { ComponentListComponent, DragAndDropService, BeakerComponent } from 'cocktail-configurator'
 import { Subscription } from 'rxjs';
-=======
-import { BeakerComponent, ComponentListDialogComponent } from 'cocktail-configurator'
->>>>>>> b9109eef6c4b59a7e4fff04923dbeb5d728f0841
 import { LayoutService } from '../../services/layout.service';
 import { ComponentListDialogComponent } from '../component-list-dialog/component-list-dialog.component';
 
