@@ -63,7 +63,7 @@
         <!-- <mat-card fxFill class="iuno-card mat-elevation-z2"> -->
         <mat-card-header>
             <mat-card-title>
-                <span class="card-title">Produktdetails</span>
+                <span class="card-title" i18n>Produktdetails</span>
             </mat-card-title>
         </mat-card-header>
         <mat-card-content fxLayout="row">
@@ -72,16 +72,16 @@
                     <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center" class="productdetails">
                         <!-- recipe title -->
                         <mat-form-field fxFlexFill>
-                            <input matInput [(ngModel)]="recipeName" placeholder="Titel">
+                            <input matInput [(ngModel)]="recipeName" placeholder="Titel" i18n-placeholder>
                         </mat-form-field>
 
                         <!-- recipe description -->
                         <mat-form-field fxFlexFill>
-                            <textarea matInput [(ngModel)]="recipeDescription" placeholder="Beschreibung" style="width: 100%; height: 100px;"></textarea>
+                            <textarea matInput [(ngModel)]="recipeDescription" placeholder="Beschreibung" style="width: 100%; height: 100px;" i18n-placeholder></textarea>
                         </mat-form-field>
                         <!-- recipe license fee -->
                         <mat-form-field fxFlexFill>
-                            <mat-select placeholder="Lizenzgebühr" [(ngModel)]="recipeLicenseFee" name="licenseFee">
+                            <mat-select placeholder="Lizenzgebühr" [(ngModel)]="recipeLicenseFee" name="licenseFee" i18n-placeholder>
                                 <mat-option *ngFor="let fee of licenseFees" [value]="fee">
                                     {{fee | number:'1.2-2'}} IUNO
                                 </mat-option>
@@ -97,7 +97,7 @@
     <mat-card class="iuno-card">
         <mat-card-header>
             <mat-card-title>
-                <span class="card-title">Bild</span>
+                <span class="card-title" i18n>Bild</span>
             </mat-card-title>
         </mat-card-header>
         <mat-card-content>
@@ -108,22 +108,15 @@
         </mat-card-content>
     </mat-card>
     <div fxLayoutAlign="center center">
-        <button (click)="actionSaveRecipe()" mat-raised-button color="primary" class="mat-elevation-z1">
-            Speichern
-        </button>
+        <button (click)="actionSaveRecipe()" mat-raised-button color="primary" class="mat-elevation-z1" i18n>Speichern</button>
     </div>
 
 </div>
 
 <div *ngIf="recipesLeft < 1">
     <mat-card class="iuno-card">
-        <mat-card-header>
-            Rezeptlimit erreicht!
-        </mat-card-header>
-        <mat-card-content>
-            Sie haben bereits ihr Limit von {{recipeLimit}} Rezepten am Marktplatz erreicht.
-            <br>
-        </mat-card-content>
+        <mat-card-header i18n>Rezeptlimit erreicht!</mat-card-header>
+        <mat-card-content i18n>Sie haben bereits ihr Limit von {{recipeLimit}} Rezepten am Marktplatz erreicht.<br></mat-card-content>
         <!-- <mat-card-actions>
                 <div fxFlex="100" fxLayoutAlign="center center">
                     <button (click)="actionSaveRecipe()" mat-raised-button color="primary" class="mat-elevation-z1">

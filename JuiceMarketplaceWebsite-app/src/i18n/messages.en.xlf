@@ -1,150 +1,339 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:trolltech="urn:trolltech:names:ts:document:1.0">
-  <file original="app/app.component.ts" datatype="plaintext" source-language="de" target-language="en"><body>
-    <trans-unit id="d3d6337957be71fc37eac4a3c0338f835daf6fa4" approved="yes">
-      <source xml:space="preserve">Marktplatz</source>
-      <target xml:space="preserve">Marketplace</target>
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/app.component.ts</context><context context-type="linenumber">17</context></context-group></trans-unit>
-    <trans-unit id="b1875fdd47821b247985a5c0e4110b3c6d4af7f7" approved="yes">
-      <source xml:space="preserve">Statistiken</source>
-      <target xml:space="preserve">Statistics</target>
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/app.component.ts</context><context context-type="linenumber">18</context></context-group></trans-unit>
-  </body></file>
-  <file original="app/sidebar/index/index.component.ts" datatype="plaintext" source-language="de" target-language="en"><body>
-    <trans-unit id="15d67be9d2ddd47737c42f117f55cd6e075da37c" approved="yes">
-      <source xml:space="preserve">Admin Dashboard</source>
-      <target xml:space="preserve">Admin Dashboard</target>
-      
-      <note from="translator">link to admin dashboard/admin dashboard</note>
-    <context-group purpose="location"><context context-type="sourcefile">app/sidebar/index/index.component.ts</context><context context-type="linenumber">24</context></context-group><note from="description" priority="1">Sidebar</note><note from="meaning" priority="1">link to admin dashboard/admin dashboard</note></trans-unit>
-    <trans-unit id="57b8728de504ae17b0de35dd3731abf992e9db9d" approved="yes">
-      <source xml:space="preserve">Start</source>
-      <target xml:space="preserve">Start</target>
-      
-      <note from="translator">link to start</note>
-    <context-group purpose="location"><context context-type="sourcefile">app/sidebar/index/index.component.ts</context><context context-type="linenumber">3</context></context-group><note from="description" priority="1">Sidebar</note><note from="meaning" priority="1">link to start</note></trans-unit>
-    <trans-unit id="d3e293ac64992c5344048677c2281731b38b4987" approved="yes">
-      <source xml:space="preserve">Marktplatz</source>
-      <target xml:space="preserve">Marketplace</target>
-      
-      <note from="translator">link to marketplace</note>
-    <context-group purpose="location"><context context-type="sourcefile">app/sidebar/index/index.component.ts</context><context context-type="linenumber">4</context></context-group><note from="description" priority="1">Sidebar</note><note from="meaning" priority="1">link to marketplace</note></trans-unit>
-    <trans-unit id="35cbc965e5fb57c3a1a4a2df93d4ce003e8864c2" approved="yes">
-      <source xml:space="preserve">Statistiken</source>
-      <target xml:space="preserve">Statistics</target>
-      
-      <note from="translator">link to statistics</note>
-    <context-group purpose="location"><context context-type="sourcefile">app/sidebar/index/index.component.ts</context><context context-type="linenumber">6</context></context-group><note from="description" priority="1">Sidebar</note><note from="meaning" priority="1">link to statistics</note></trans-unit>
-    <trans-unit id="cd75d37100383c2c196f9f2b58926afb6fe6c636" approved="yes">
-      <source xml:space="preserve">Dashboard</source>
-      <target xml:space="preserve">Dashboard</target>
-      
-      <note from="translator">link to console/dashboard</note>
-    <context-group purpose="location"><context context-type="sourcefile">app/sidebar/index/index.component.ts</context><context context-type="linenumber">20</context></context-group><note from="description" priority="1">Sidebar</note><note from="meaning" priority="1">link to console/dashboard</note></trans-unit>
-    <trans-unit id="6b16f32d05491b220fd649d9e9bd84a9d10ae104" approved="yes">
-      <source xml:space="preserve">Neues Getränk anlegen</source>
-      <target xml:space="preserve">Create new drink</target>
-      
-      <note from="translator">link to console/new drink</note>
-    <context-group purpose="location"><context context-type="sourcefile">app/sidebar/index/index.component.ts</context><context context-type="linenumber">21</context></context-group><note from="description" priority="1">Sidebar</note><note from="meaning" priority="1">link to console/new drink</note></trans-unit>
-    <trans-unit id="5aa9d6c7cdd31a482402ae74f314b98ad7858ead" approved="yes">
-      <source xml:space="preserve">Getränke verwalten</source>
-      <target xml:space="preserve">Manage drinks</target>
-      
-      <note from="translator">link to console/manage drinks</note>
-    <context-group purpose="location"><context context-type="sourcefile">app/sidebar/index/index.component.ts</context><context context-type="linenumber">22</context></context-group><note from="description" priority="1">Sidebar</note><note from="meaning" priority="1">link to console/manage drinks</note></trans-unit>
-    <trans-unit id="4fc0481716e9d3e3d0dfc11fa4ab8be2b1166412" approved="yes">
-      <source xml:space="preserve">Guthaben verwalten</source>
-      <target xml:space="preserve">Manage credit</target>
-      
-      <note from="translator">link to console/manage credit</note>
-    <context-group purpose="location"><context context-type="sourcefile">app/sidebar/index/index.component.ts</context><context context-type="linenumber">23</context></context-group><note from="description" priority="1">Sidebar</note><note from="meaning" priority="1">link to console/manage credit</note></trans-unit>
-  </body></file>
-  <file original="app/console/component-list-dialog/component-list-dialog.component.ts" datatype="plaintext" source-language="de" target-language="en"><body>
-    <trans-unit id="aff435c7d519c222e17fccf410b6502987d569c9" approved="yes">
-      <source xml:space="preserve">Zutat hinzufügen</source>
-      <target xml:space="preserve">Add Component</target>
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context><context context-type="linenumber">2</context></context-group></trans-unit>
-    <trans-unit id="8a1c17703a2dce001448150138ef80e972db2807" approved="yes">
-      <source xml:space="preserve">Zutat hier ablegen&lt;br>um diese zu entfernen.</source>
-      <target xml:space="preserve">Drop component here&lt;br>to remove it.</target>
-      
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context><context context-type="linenumber">11</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">32</context></context-group></trans-unit>
-    <trans-unit id="479fabd48cae67a01dc0b193062b7513a2a3f994" approved="yes">
-      <source xml:space="preserve">Suchen</source>
-      <target xml:space="preserve">Search</target>
-      
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context><context context-type="linenumber">12</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">33</context></context-group></trans-unit>
-    <trans-unit id="a6b209bf77d2cb396b8e4392de1dbffdbd23a86d" approved="yes">
-      <source xml:space="preserve">Vorgeschlagene Komponenten</source>
-      <target xml:space="preserve">Recommended Components</target>
-      
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context><context context-type="linenumber">13</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">34</context></context-group></trans-unit>
-    <trans-unit id="96e0f9bbdfdb9b22fd016df250426b9fafffd72a" approved="yes">
-      <source xml:space="preserve">Installierte Komponenten</source>
-      <target xml:space="preserve">Installed Components</target>
-      
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context><context context-type="linenumber">14</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">35</context></context-group></trans-unit>
-    <trans-unit id="dcd247d6de74ff363c92b4d9177b7966f68c7e90" approved="yes">
-      <source xml:space="preserve">Alle Komponenten</source>
-      <target xml:space="preserve">Available Components</target>
-      
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context><context context-type="linenumber">15</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">36</context></context-group></trans-unit>
-    <trans-unit id="3ad1defdbee8dee83b86423a18809e5170c029b4" approved="yes">
-      <source xml:space="preserve">Keine Komponenten gefunden.</source>
-      <target xml:space="preserve">No components found.</target>
-      
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context><context context-type="linenumber">16</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">37</context></context-group></trans-unit>
-    <trans-unit id="1b24932d0f2269e4b41d0f936fdb5de1b94da401" approved="yes">
-      <source xml:space="preserve">Abbrechen</source>
-      <target xml:space="preserve">Cancel</target>
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context><context context-type="linenumber">21</context></context-group></trans-unit>
-  </body></file>
-  <file original="app/console/create-recipe/create-recipe.component.ts" datatype="plaintext" source-language="de" target-language="en"><body>
-    <trans-unit id="687f15d52bf8c0fab17d6b0530dfcff8f3ce4a3c" approved="yes">
-      <source xml:space="preserve">Neues Getränk anlegen</source>
-      <target xml:space="preserve">Create new drink</target>
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">4</context></context-group></trans-unit>
-    <trans-unit id="95880c9da30bff155df2d81b5b01c405ed9f956b" approved="yes">
-      <source xml:space="preserve">Rezeptur</source>
-      <target xml:space="preserve">Recipe</target>
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">17</context></context-group></trans-unit>
-    <trans-unit id="6f9cbb28bdc23b92465369626d0b78e5e19f77b0" approved="yes">
-      <source xml:space="preserve">Zutat per&lt;br>Drag &amp; Drop&lt;br>hinzufügen.</source>
-      <target xml:space="preserve">Add ingredient by&lt;br>drag &amp; drop.</target>
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">45</context></context-group></trans-unit>
-    <trans-unit id="09cade1c8e483a96553bda8009dbfc391f43f7be" approved="yes">
-      <source xml:space="preserve">Hier tippen um Zutat&lt;br>hinzuzufügen.</source>
-      <target xml:space="preserve">Tap here to&lt;br>add ingredient.</target>
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">46</context></context-group></trans-unit>
-    <trans-unit id="a0e4087927b592497bd24dc5f123a37830a55533" approved="yes">
-      <source xml:space="preserve">Zutat</source>
-      <target xml:space="preserve">Ingredient</target>
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">54</context></context-group></trans-unit>
-    <trans-unit id="77134c293828bbe6d663d26f75252663f46c7ca4" approved="yes">
-      <source xml:space="preserve">Menge</source>
-      <target xml:space="preserve">Amount</target>
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">55</context></context-group></trans-unit>
-    <trans-unit id="49d7e39875153c37e6197dad6c97a71d600edc1f" approved="yes">
-      <source xml:space="preserve">Es wurden noch keine Zutaten&lt;br>hinzugefügt.</source>
-      <target xml:space="preserve">No ingredients have been&lt;br>added yet.</target>
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">56</context></context-group></trans-unit>
-  </body></file>
+<xliff version="1.2" 
+  xmlns="urn:oasis:names:tc:xliff:document:1.2" 
+  xmlns:trolltech="urn:trolltech:names:ts:document:1.0">
+  <file original="app/app.component.ts" datatype="plaintext" source-language="de" target-language="en">
+    <body>
+      <trans-unit id="d3d6337957be71fc37eac4a3c0338f835daf6fa4" approved="yes">
+        <source xml:space="preserve">Marktplatz</source>
+        <target xml:space="preserve">Marketplace</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b1875fdd47821b247985a5c0e4110b3c6d4af7f7" approved="yes">
+        <source xml:space="preserve">Statistiken</source>
+        <target xml:space="preserve">Statistics</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="da27c106262f920eec6fb5ce72255a68ada2210c" datatype="html">
+        <source>Produktdetails</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+        <target state="new">Product details</target>
+      </trans-unit>
+      <trans-unit id="b7f6cd735e8b660a6ec3d3dfb09de14ab32a10c8" datatype="html">
+        <source>Titel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+        <target state="new">Titel</target>
+      </trans-unit>
+      <trans-unit id="f09ad66c1ebf16217ba1a1072be7a98de2d95eac" datatype="html">
+        <source>Beschreibung</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">80</context>
+        </context-group>
+        <target state="new">Description</target>
+      </trans-unit>
+      <trans-unit id="c51da9899fe9350fcc3f226a107341458a8a7640" datatype="html">
+        <source>Lizenzgebühr</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+        <target state="new">Licence fee</target>
+      </trans-unit>
+      <trans-unit id="5ccc633c2e84a1ddb8f59dec8affa3af4aed7988" datatype="html">
+        <source>Bild</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">100</context>
+        </context-group>
+        <target state="new">Image</target>
+      </trans-unit>
+      <trans-unit id="05d6def11b80c405276ad18c4fc5183e8cea4f75" datatype="html">
+        <source>Speichern</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">111</context>
+        </context-group>
+        <target state="new">Save</target>
+      </trans-unit>
+      <trans-unit id="367e537f73ef5d6874808117f0d8376a5aab6811" datatype="html">
+        <source>Rezeptlimit erreicht!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">118</context>
+        </context-group>
+        <target state="new">Recipe limit reached!</target>
+      </trans-unit>
+      <trans-unit id="4559397c7f60abaeb0efeb4c290db73d3d6a5d92" datatype="html">
+        <source>Sie haben bereits ihr Limit von 
+          <x id="INTERPOLATION" equiv-text="{{recipeLimit}}"/> Rezepten am Marktplatz erreicht.
+          <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">119</context>
+        </context-group>
+        <target state="new">You have already reached your limit of
+          <x id="INTERPOLATION" equiv-text="{{recipeLimit}}"/> recipes.
+          <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+        </target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="app/sidebar/index/index.component.ts" datatype="plaintext" source-language="de" target-language="en">
+    <body>
+      <trans-unit id="15d67be9d2ddd47737c42f117f55cd6e075da37c" approved="yes">
+        <source xml:space="preserve">Admin Dashboard</source>
+        <target xml:space="preserve">Admin Dashboard</target>
+        <note from="translator">link to admin dashboard/admin dashboard</note>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note from="description" priority="1">Sidebar</note>
+        <note from="meaning" priority="1">link to admin dashboard/admin dashboard</note>
+      </trans-unit>
+      <trans-unit id="57b8728de504ae17b0de35dd3731abf992e9db9d" approved="yes">
+        <source xml:space="preserve">Start</source>
+        <target xml:space="preserve">Start</target>
+        <note from="translator">link to start</note>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note from="description" priority="1">Sidebar</note>
+        <note from="meaning" priority="1">link to start</note>
+      </trans-unit>
+      <trans-unit id="d3e293ac64992c5344048677c2281731b38b4987" approved="yes">
+        <source xml:space="preserve">Marktplatz</source>
+        <target xml:space="preserve">Marketplace</target>
+        <note from="translator">link to marketplace</note>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note from="description" priority="1">Sidebar</note>
+        <note from="meaning" priority="1">link to marketplace</note>
+      </trans-unit>
+      <trans-unit id="35cbc965e5fb57c3a1a4a2df93d4ce003e8864c2" approved="yes">
+        <source xml:space="preserve">Statistiken</source>
+        <target xml:space="preserve">Statistics</target>
+        <note from="translator">link to statistics</note>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note from="description" priority="1">Sidebar</note>
+        <note from="meaning" priority="1">link to statistics</note>
+      </trans-unit>
+      <trans-unit id="cd75d37100383c2c196f9f2b58926afb6fe6c636" approved="yes">
+        <source xml:space="preserve">Dashboard</source>
+        <target xml:space="preserve">Dashboard</target>
+        <note from="translator">link to console/dashboard</note>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note from="description" priority="1">Sidebar</note>
+        <note from="meaning" priority="1">link to console/dashboard</note>
+      </trans-unit>
+      <trans-unit id="6b16f32d05491b220fd649d9e9bd84a9d10ae104" approved="yes">
+        <source xml:space="preserve">Neues Getränk anlegen</source>
+        <target xml:space="preserve">Create new drink</target>
+        <note from="translator">link to console/new drink</note>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note from="description" priority="1">Sidebar</note>
+        <note from="meaning" priority="1">link to console/new drink</note>
+      </trans-unit>
+      <trans-unit id="5aa9d6c7cdd31a482402ae74f314b98ad7858ead" approved="yes">
+        <source xml:space="preserve">Getränke verwalten</source>
+        <target xml:space="preserve">Manage drinks</target>
+        <note from="translator">link to console/manage drinks</note>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note from="description" priority="1">Sidebar</note>
+        <note from="meaning" priority="1">link to console/manage drinks</note>
+      </trans-unit>
+      <trans-unit id="4fc0481716e9d3e3d0dfc11fa4ab8be2b1166412" approved="yes">
+        <source xml:space="preserve">Guthaben verwalten</source>
+        <target xml:space="preserve">Manage credit</target>
+        <note from="translator">link to console/manage credit</note>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <note from="description" priority="1">Sidebar</note>
+        <note from="meaning" priority="1">link to console/manage credit</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="app/console/component-list-dialog/component-list-dialog.component.ts" datatype="plaintext" source-language="de" target-language="en">
+    <body>
+      <trans-unit id="aff435c7d519c222e17fccf410b6502987d569c9" approved="yes">
+        <source xml:space="preserve">Zutat hinzufügen</source>
+        <target xml:space="preserve">Add Component</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8a1c17703a2dce001448150138ef80e972db2807" approved="yes">
+        <source xml:space="preserve">Zutat hier ablegen&lt;br>um diese zu entfernen.</source>
+        <target xml:space="preserve">Drop component here&lt;br>to remove it.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="479fabd48cae67a01dc0b193062b7513a2a3f994" approved="yes">
+        <source xml:space="preserve">Suchen</source>
+        <target xml:space="preserve">Search</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a6b209bf77d2cb396b8e4392de1dbffdbd23a86d" approved="yes">
+        <source xml:space="preserve">Vorgeschlagene Komponenten</source>
+        <target xml:space="preserve">Recommended Components</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="96e0f9bbdfdb9b22fd016df250426b9fafffd72a" approved="yes">
+        <source xml:space="preserve">Installierte Komponenten</source>
+        <target xml:space="preserve">Installed Components</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dcd247d6de74ff363c92b4d9177b7966f68c7e90" approved="yes">
+        <source xml:space="preserve">Alle Komponenten</source>
+        <target xml:space="preserve">Available Components</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3ad1defdbee8dee83b86423a18809e5170c029b4" approved="yes">
+        <source xml:space="preserve">Keine Komponenten gefunden.</source>
+        <target xml:space="preserve">No components found.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1b24932d0f2269e4b41d0f936fdb5de1b94da401" approved="yes">
+        <source xml:space="preserve">Abbrechen</source>
+        <target xml:space="preserve">Cancel</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="app/console/create-recipe/create-recipe.component.ts" datatype="plaintext" source-language="de" target-language="en">
+    <body>
+      <trans-unit id="687f15d52bf8c0fab17d6b0530dfcff8f3ce4a3c" approved="yes">
+        <source xml:space="preserve">Neues Getränk anlegen</source>
+        <target xml:space="preserve">Create new drink</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="95880c9da30bff155df2d81b5b01c405ed9f956b" approved="yes">
+        <source xml:space="preserve">Rezeptur</source>
+        <target xml:space="preserve">Recipe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6f9cbb28bdc23b92465369626d0b78e5e19f77b0" approved="yes">
+        <source xml:space="preserve">Zutat per&lt;br>Drag &amp; Drop&lt;br>hinzufügen.</source>
+        <target xml:space="preserve">Add ingredient by&lt;br>drag &amp; drop.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="09cade1c8e483a96553bda8009dbfc391f43f7be" approved="yes">
+        <source xml:space="preserve">Hier tippen um Zutat&lt;br>hinzuzufügen.</source>
+        <target xml:space="preserve">Tap here to&lt;br>add ingredient.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a0e4087927b592497bd24dc5f123a37830a55533" approved="yes">
+        <source xml:space="preserve">Zutat</source>
+        <target xml:space="preserve">Ingredient</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="77134c293828bbe6d663d26f75252663f46c7ca4" approved="yes">
+        <source xml:space="preserve">Menge</source>
+        <target xml:space="preserve">Amount</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="49d7e39875153c37e6197dad6c97a71d600edc1f" approved="yes">
+        <source xml:space="preserve">Es wurden noch keine Zutaten&lt;br>hinzugefügt.</source>
+        <target xml:space="preserve">No ingredients have been&lt;br>added yet.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
 </xliff>
