@@ -3,9 +3,14 @@ import {CommonModule} from '@angular/common';
 import {ConnectedClientsComponent} from './connected-clients/connected-clients.component';
 import {AdminDashboardComponent} from './admin-dashboard.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
-import {MatCardModule, MatSelectModule} from "@angular/material";
+import {MatCardModule, MatInputModule, MatNativeDateModule, MatSelectModule} from "@angular/material";
+import {MatDatepickerModule} from '@angular/material/datepicker';
 import {Ng2GoogleChartsModule} from "ng2-google-charts";
 import {AdminDashboardRoutingModule} from "./admin-dashboard-routing.module";
+import {ClientMapComponent} from './client-map/client-map.component';
+import {ClientRequestsComponent} from './client-requests/client-requests.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { ClientConfigurationsComponent } from './client-configurations/client-configurations.component';
 
 @NgModule({
     imports: [
@@ -14,18 +19,24 @@ import {AdminDashboardRoutingModule} from "./admin-dashboard-routing.module";
         MatCardModule,
         MatSelectModule,
         Ng2GoogleChartsModule,
-        AdminDashboardRoutingModule
+        AdminDashboardRoutingModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatInputModule,
+        FormsModule,
+        ReactiveFormsModule
     ],
     declarations: [
         ConnectedClientsComponent,
-        AdminDashboardComponent
+        AdminDashboardComponent,
+        ClientMapComponent,
+        ClientRequestsComponent,
+        ClientConfigurationsComponent
     ],
     bootstrap: [
         AdminDashboardComponent
     ],
-    providers:[
-
-    ]
+    providers: []
 })
 export class AdminDashboardModule {
 }

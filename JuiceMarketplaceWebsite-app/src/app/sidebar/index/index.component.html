@@ -21,5 +21,6 @@
         <button (click)="openCreateRecipe()" mat-button class="nav-button" i18n="link to console/new drink|Sidebar">Neues Getränk anlegen</button>
         <button (click)="openRecipes()" mat-button class="nav-button" i18n="link to console/manage drinks|Sidebar">Getränke verwalten</button>
         <button (click)="openVault()" mat-button class="nav-button" i18n="link to console/manage credit|Sidebar">Guthaben verwalten</button>
+        <button *ngIf="isAdmin" (click)="openAdminDashboard()" mat-button class="nav-button" i18n="link to admin dashboard/admin dashboard|Sidebar">Admin Dashboard</button>
     </div>
 </ng-template>

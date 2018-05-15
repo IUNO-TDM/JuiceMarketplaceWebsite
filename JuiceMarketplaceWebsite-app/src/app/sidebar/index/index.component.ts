@@ -1,6 +1,6 @@
-import {Component, OnInit, Input} from '@angular/core';
-import {Router, NavigationEnd} from '@angular/router';
-import {UserService, User} from '../../console/services/user.service';
+import {Component, Input, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {UserService} from '../../console/services/user.service';
 
 @Component({
     selector: 'app-index',
@@ -8,8 +8,9 @@ import {UserService, User} from '../../console/services/user.service';
     styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
-    @Input() showTopItems: boolean = false
-    loggedIn: boolean = false
+    @Input() showTopItems: boolean = false;
+    loggedIn: boolean = false;
+    public isAdmin: boolean = false;
 
     constructor(private userService: UserService, private router: Router) {
         this.userService.isLoggedIn().subscribe(loggedIn => {
@@ -18,13 +19,13 @@ export class IndexComponent implements OnInit {
     }
 
     isMenuAvailable(): boolean {
-        var menuAvailable = this.showTopItems
-        menuAvailable = menuAvailable || this.showConsoleItems()
+        let menuAvailable = this.showTopItems;
+        menuAvailable = menuAvailable || this.showConsoleItems();
         return menuAvailable
     }
 
     showConsoleItems() {
-        var showItems = false
+        let showItems = false;
         if (this.showTopItems) {
             if (this.loggedIn) {
                 showItems = true
@@ -38,6 +39,9 @@ export class IndexComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.userService.isAdmin().subscribe(isAdmin => {
+            this.isAdmin = isAdmin;
+        });
     }
 
     // ------------------------
@@ -83,5 +87,9 @@ export class IndexComponent implements OnInit {
 
     openVault() {
         this.router.navigateByUrl('/console/vault')
+    }
+
+    openAdminDashboard() {
+        this.router.navigateByUrl('/console/admin-dashboard');
     }
 }
