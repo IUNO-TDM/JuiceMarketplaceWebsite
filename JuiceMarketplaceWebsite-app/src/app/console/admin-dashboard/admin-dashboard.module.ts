@@ -6,6 +6,7 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 import {MatCardModule, MatSelectModule} from "@angular/material";
 import {Ng2GoogleChartsModule} from "ng2-google-charts";
 import {AdminDashboardRoutingModule} from "./admin-dashboard-routing.module";
+import {VisualizationSocket} from "../services/visualization-socket.service";
 
 @NgModule({
     imports: [
@@ -24,7 +25,7 @@ import {AdminDashboardRoutingModule} from "./admin-dashboard-routing.module";
         AdminDashboardComponent
     ],
     providers:[
-
+        VisualizationSocket
     ]
 })
 export class AdminDashboardModule {
