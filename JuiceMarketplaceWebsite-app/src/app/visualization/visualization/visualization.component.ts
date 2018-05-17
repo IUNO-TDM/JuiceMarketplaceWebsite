@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import {VisualizationSocketService} from "../../services/visualization-socket.service";
+import {VisualizationSocketService} from "../services/visualization-socket.service";
 
 @Component({
-  selector: 'app-marketplace-visualization',
-  templateUrl: './marketplace-visualization.component.html',
-  styleUrls: ['./marketplace-visualization.component.css'],
-    providers: [VisualizationSocketService]
+  selector: 'app-visualization',
+  templateUrl: './visualization.component.html',
+  styleUrls: ['./visualization.component.css'],
+    providers:[VisualizationSocketService]
 })
-export class MarketplaceVisualizationComponent implements OnInit {
+export class VisualizationComponent implements OnInit {
 
   constructor(private visualizationSocketService: VisualizationSocketService) { }
 

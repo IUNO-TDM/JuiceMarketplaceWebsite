@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {ActivatedRouteSnapshot, CanActivate, Router} from '@angular/router';
 import {Observable} from 'rxjs/Observable';
+import 'rxjs/add/operator/mergeMap';
 
 @Injectable()
 export class UserService {
@@ -13,7 +14,7 @@ export class UserService {
     }
 
     isLoggedIn(): Observable<boolean> {
-        return this.http.get<boolean>("/auth/loggedin", { headers: { 'Cache-Control' : 'no-cache' } } ).flatMap(loggedin => {
+        return this.http.get<boolean>("/auth/loggedin", { headers: { 'Cache-Control' : 'no-cache' } } ).mergeMap(loggedin => {
             return Observable.of(loggedin);
         })
     }
@@ -43,7 +44,7 @@ export class AccessGuard implements CanActivate {
     }
 
     canActivate(route: ActivatedRouteSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-        return this.http.get<boolean>("/auth/loggedin").flatMap(loggedin => {
+        return this.http.get<boolean>("/auth/loggedin").mergeMap(loggedin => {
             if (!loggedin) {
                 window.location.href = "/";
             }
@@ -52,7 +53,7 @@ export class AccessGuard implements CanActivate {
     }
 
     guardLoggedIn(): Observable<boolean> {
-        return this.http.get<boolean>("/auth/loggedin").flatMap(loggedin => {
+        return this.http.get<boolean>("/auth/loggedin").mergeMap(loggedin => {
             if (!loggedin) {
                 window.location.href = "/";
             }

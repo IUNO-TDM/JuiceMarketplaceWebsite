@@ -6,8 +6,7 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 import {MatCardModule, MatSelectModule} from "@angular/material";
 import {Ng2GoogleChartsModule} from "ng2-google-charts";
 import {AdminDashboardRoutingModule} from "./admin-dashboard-routing.module";
-import {VisualizationSocket} from "../services/visualization-socket.service";
-import { MarketplaceVisualizationComponent } from './marketplace-visualization/marketplace-visualization.component';
+import {VisualizationSocket} from "../../visualization/services/visualization-socket.service";
 
 @NgModule({
     imports: [
@@ -20,8 +19,7 @@ import { MarketplaceVisualizationComponent } from './marketplace-visualization/m
     ],
     declarations: [
         ConnectedClientsComponent,
-        AdminDashboardComponent,
-        MarketplaceVisualizationComponent
+        AdminDashboardComponent
     ],
     bootstrap: [
         AdminDashboardComponent

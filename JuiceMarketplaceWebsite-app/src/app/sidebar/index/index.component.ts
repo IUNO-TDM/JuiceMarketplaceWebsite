@@ -30,7 +30,7 @@ export class IndexComponent implements OnInit {
                 showItems = true
             }
         } else {
-            if (this.router.url.startsWith('/console')) {
+            if (this.router.url.startsWith('/website/console')) {
                 showItems = true
             }
         }
@@ -50,38 +50,38 @@ export class IndexComponent implements OnInit {
     openConsole() {
         this.userService.isLoggedIn().subscribe(loggedin => {
             if (loggedin) {
-                this.router.navigateByUrl('/console');
+                this.router.navigateByUrl('/website/console');
             } else {
-                document.cookie = "redirectTo=/console";
+                document.cookie = "redirectTo=/website/console";
                 window.location.href = "/auth/iuno";
             }
         })
     }
 
     openStatistics() {
-        this.router.navigateByUrl('/statistics')
+        this.router.navigateByUrl('/website/statistics')
     }
 
     openNews() {
-        this.router.navigateByUrl('/news')
+        this.router.navigateByUrl('/website/news')
     }
 
     // ------------------------
     //  Console
     // ------------------------
     openDashboard() {
-        this.router.navigateByUrl('/console/dashboard')
+        this.router.navigateByUrl('/website/console/dashboard')
     }
 
     openCreateRecipe() {
-        this.router.navigateByUrl('/console/create-recipe')
+        this.router.navigateByUrl('/website/console/create-recipe')
     }
 
     openRecipes() {
-        this.router.navigateByUrl('/console/recipes')
+        this.router.navigateByUrl('/website/console/recipes')
     }
 
     openVault() {
-        this.router.navigateByUrl('/console/vault')
+        this.router.navigateByUrl('/website/console/vault')
     }
 }
