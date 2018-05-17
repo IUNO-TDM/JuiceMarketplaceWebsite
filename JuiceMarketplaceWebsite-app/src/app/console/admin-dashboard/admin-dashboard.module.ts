@@ -7,6 +7,7 @@ import {MatCardModule, MatSelectModule} from "@angular/material";
 import {Ng2GoogleChartsModule} from "ng2-google-charts";
 import {AdminDashboardRoutingModule} from "./admin-dashboard-routing.module";
 import {VisualizationSocket} from "../services/visualization-socket.service";
+import { MarketplaceVisualizationComponent } from './marketplace-visualization/marketplace-visualization.component';
 
 @NgModule({
     imports: [
@@ -19,7 +20,8 @@ import {VisualizationSocket} from "../services/visualization-socket.service";
     ],
     declarations: [
         ConnectedClientsComponent,
-        AdminDashboardComponent
+        AdminDashboardComponent,
+        MarketplaceVisualizationComponent
     ],
     bootstrap: [
         AdminDashboardComponent
