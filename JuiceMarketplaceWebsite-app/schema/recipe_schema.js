@@ -193,8 +193,7 @@ self.Recipe_Body = {
         },
         licenseFee: {
             type: "integer",
-            minimum: 0,
-            maximum: Number.MAX_SAFE_INTEGER
+            enum: [25000, 50000, 75000, 100000]
         },
         program: {
             type: "object",
