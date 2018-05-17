@@ -14,8 +14,10 @@ import { Recipe } from 'tdm-common'
 import { Cocktail } from 'tdm-common'
 import { CocktailComponent } from 'tdm-common'
 import { ComponentService } from 'tdm-common'
-import { BeakerComponent, ComponentListDialogComponent } from 'cocktail-configurator'
+import { ComponentListComponent, DragAndDropService, BeakerComponent } from 'cocktail-configurator'
+import { Subscription } from 'rxjs';
 import { LayoutService } from '../../services/layout.service';
+import { ComponentListDialogComponent } from '../component-list-dialog/component-list-dialog.component';
 
 @Component({
     selector: 'app-create-recipe',

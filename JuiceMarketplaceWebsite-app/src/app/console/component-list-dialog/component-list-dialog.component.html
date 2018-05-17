@@ -1,0 +1,23 @@
+<div>
+  <h2 mat-dialog-title i18n>Zutat hinzufügen</h2>
+  <mat-dialog-content>
+      <cocktail-component-list draggable="false" [showRecommended]="showRecommended" [showInstalled]="showInstalled" [showAvailable]="showAvailable" (onComponentSelected)="onComponentSelected($event)"
+      i18n-removeComponentText
+      i18n-searchComponentTitle
+      i18n-recommendedComponentsTitle
+      i18n-installedComponentsTitle
+      i18n-availableComponentsTitle
+      i18n-emptySearchResultText
+      removeComponentText="Zutat hier ablegen<br>um diese zu entfernen."
+      searchComponentTitle="Suchen"
+      recommendedComponentsTitle="Vorgeschlagene Komponenten"
+      installedComponentsTitle="Installierte Komponenten"
+      availableComponentsTitle="Alle Komponenten"
+      emptySearchResultText="Keine Komponenten gefunden."
+      >
+></cocktail-component-list>
+  </mat-dialog-content>
+  <mat-dialog-actions fxLayoutAlign="center">
+    <button mat-raised-button (click)="onCancel()" i18n>Abbrechen</button>
+  </mat-dialog-actions>
+</div>
