@@ -104,7 +104,6 @@ export class CreateRecipeComponent implements OnInit {
                 const recipe = new Recipe();
 
                 recipe.title = this.recipeName;
-                recipe.licenseFee = this.recipeLicenseFee * 100000;
                 recipe.description = this.recipeDescription.trim();
                 recipe.imageRef = this.recipeImagePicker.getSelectedImage();
                 recipe.backgroundColor = this.recipeImagePicker.backgroundColor;
@@ -116,6 +115,11 @@ export class CreateRecipeComponent implements OnInit {
                 if (valid && recipe.description.length < 1) {
                     alert("Bitte geben Sie eine Beschreibung mit mindestens einem Zeichen ein.");
                     valid = false;
+                }
+                if (valid && this.licenseFees.indexOf(this.recipeLicenseFee) < 0) {
+                    alert("Bitte wählen Sie eine Lizenzgebühr aus.");
+                    valid = false;
+                    recipe.licenseFee = this.recipeLicenseFee * 100000;
                 }
                 if (valid && recipe.licenseFee == -1) {
                     alert("Bitte wählen Sie eine Lizenzgebühr aus.");
