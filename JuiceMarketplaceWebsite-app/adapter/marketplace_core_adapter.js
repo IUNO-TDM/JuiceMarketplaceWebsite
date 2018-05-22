@@ -28,7 +28,7 @@ function buildOptionsForRequest(method, protocol, host, port, path, qs) {
 
 //<editor-fold desc="Components">
 // Get all Components
-self.getAllComponents = function (accessToken, callback) {
+self.getAllComponents = function (accessToken, language, callback) {
     if (typeof(callback) !== 'function') {
 
         callback = function () {
@@ -36,7 +36,7 @@ self.getAllComponents = function (accessToken, callback) {
         }
     }
 
-    const options = buildOptionsForRequest(
+    const options = buildOptionsForRequest( //TODO: add language to request
         'GET',
         CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PROTOCOL,
         CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.HOST,

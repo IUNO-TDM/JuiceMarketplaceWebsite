@@ -102,6 +102,20 @@
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="a3e515a387b2443634e5de844006c95abce05794" datatype="html">
+        <source>Anmelden / Registrieren</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/account/account.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="df0f8a49440c7127bd20461526dd1b39f2011e20" datatype="html">
+        <source>Anmelden</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/account/account.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="aff435c7d519c222e17fccf410b6502987d569c9" datatype="html">
         <source>Zutat hinzufügen</source>
         <context-group purpose="location">

@@ -24,4 +24,15 @@ self.Components_Body = {
     additionalProperties: false
 };
 
+self.Components_Query = {
+    type: 'object',
+    properties: {
+        lang: {
+            type: 'string',
+            enum: ['de', 'en']
+        }
+    },
+    additionalProperties: false
+};
+
 module.exports = self;

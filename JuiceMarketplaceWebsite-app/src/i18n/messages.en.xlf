@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xliff version="1.2" 
-  xmlns="urn:oasis:names:tc:xliff:document:1.2" 
-  xmlns:trolltech="urn:trolltech:names:ts:document:1.0">
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:trolltech="urn:trolltech:names:ts:document:1.0">
   <file original="app/app.component.ts" datatype="plaintext" source-language="de" target-language="en">
     <body>
       <trans-unit id="d3d6337957be71fc37eac4a3c0338f835daf6fa4" approved="yes">
@@ -81,10 +79,7 @@
         <target state="translated">Recipe limit reached!</target>
       </trans-unit>
       <trans-unit id="4559397c7f60abaeb0efeb4c290db73d3d6a5d92" datatype="html">
-        <source>Sie haben bereits ihr Limit von 
-          <x id="INTERPOLATION" equiv-text="{{recipeLimit}}"/> Rezepten am Marktplatz erreicht.
-          <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-        </source>
+        <source>Sie haben bereits ihr Limit von <x id="INTERPOLATION" equiv-text="{{recipeLimit}}"/> Rezepten am Marktplatz erreicht.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
           <context context-type="linenumber">119</context>
@@ -112,7 +107,8 @@
         <target state="translated">Overview</target>
       </trans-unit>
       <trans-unit id="09cbfc10bc71f313d520d4e35f490933156063f1" datatype="html">
-        <source>Derzeit ist die Anzahl an Rezepten pro Benutzer                begrenzt. Bitte lösche ein bestehendes Rezept, falls du weitere auf dem Marktplatz veröffentlichen möchtest.</source>
+        <source>Derzeit ist die Anzahl an Rezepten pro Benutzer
+                begrenzt. Bitte lösche ein bestehendes Rezept, falls du weitere auf dem Marktplatz veröffentlichen möchtest.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
           <context context-type="linenumber">10</context>
@@ -327,12 +323,8 @@
         <target state="translated">Initiate payment of credit balances</target>
       </trans-unit>
       <trans-unit id="bb98b916f3ac89322820c9d5487d6c87706b5a8e" datatype="html">
-        <source>Es sind 
-          <x id="INTERPOLATION" equiv-text="{{wallet.confirmed/100000 | number:'1.0-5'}}"/> IUNO in Ihrem Wallet zur Auszahlung bereit.
-          <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>            Dies entspricht 
-          <x id="INTERPOLATION_1" equiv-text="{{wallet.confirmed / unitFactor | number:'1.0-5'}}"/>
-          <x id="INTERPOLATION_2" equiv-text="{{unitName}}"/> im Bitcoin Testnet.
-        </source>
+        <source>Es sind <x id="INTERPOLATION" equiv-text="{{wallet.confirmed/100000 | number:'1.0-5'}}"/> IUNO in Ihrem Wallet zur Auszahlung bereit.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+            Dies entspricht <x id="INTERPOLATION_1" equiv-text="{{wallet.confirmed / unitFactor | number:'1.0-5'}}"/> <x id="INTERPOLATION_2" equiv-text="{{unitName}}"/> im Bitcoin Testnet.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
           <context context-type="linenumber">5</context>
@@ -345,10 +337,9 @@
         </target>
       </trans-unit>
       <trans-unit id="3f37bfe901c665205c03967962726ada2006bede" datatype="html">
-        <source>Aktuell sind davon noch 
-          <x id="INTERPOLATION" equiv-text="{{(wallet.unconfirmed-wallet.confirmed) / unitFactor | number: '1.0-8'}}"/>
-          <x id="INTERPOLATION_1" equiv-text="{{unitName}}"/> unbestätigt.            Sobald diese Transaktionen in der Blockchain bestätigt sind, kann man auch dieses Guthaben auszahlen.
-        </source>
+        <source>Aktuell sind davon noch <x id="INTERPOLATION" equiv-text="{{(wallet.unconfirmed-wallet.confirmed) / unitFactor | number: '1.0-8'}}"/>
+            <x id="INTERPOLATION_1" equiv-text="{{unitName}}"/> unbestätigt.
+            Sobald diese Transaktionen in der Blockchain bestätigt sind, kann man auch dieses Guthaben auszahlen.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
           <context context-type="linenumber">11</context>
@@ -367,10 +358,9 @@
         <target state="translated">Empty Wallet</target>
       </trans-unit>
       <trans-unit id="8d7fb4498230a1a42bf29edb7855134bb49f21c6" datatype="html">
-        <source>min. 
-          <x id="INTERPOLATION" equiv-text="{{6000/unitFactor | number: '1.0-8'}}"/>, max.                        
-          <x id="INTERPOLATION_1" equiv-text="{{(wallet.confirmed-transactionFee)/unitFactor | number: '1.0-8'}}"/>
-        </source>
+        <source>min. <x id="INTERPOLATION" equiv-text="{{6000/unitFactor | number: '1.0-8'}}"/>, max.
+                        <x id="INTERPOLATION_1" equiv-text="{{(wallet.confirmed-transactionFee)/unitFactor | number: '1.0-8'}}"/>
+                    </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
           <context context-type="linenumber">34</context>
@@ -381,13 +371,8 @@
         </target>
       </trans-unit>
       <trans-unit id="10f2cfe2080e00cee322f5a4227ff967e5cee597" datatype="html">
-        <source>Die Transaktionsgebühr beträgt 
-          <x id="INTERPOLATION" equiv-text="{{transactionFee / unitFactor | number:'1.0-8'}}"/>
-          <x id="INTERPOLATION_1" equiv-text="{{unitName}}"/>
-          <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>            und das Restguthaben im Wallet 
-          <x id="INTERPOLATION_2" equiv-text="{{remaining / unitFactor | number:'1.0-8'}}"/>
-          <x id="INTERPOLATION_1" equiv-text="{{unitName}}"/>
-        </source>
+        <source>Die Transaktionsgebühr beträgt <x id="INTERPOLATION" equiv-text="{{transactionFee / unitFactor | number:'1.0-8'}}"/> <x id="INTERPOLATION_1" equiv-text="{{unitName}}"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+            und das Restguthaben im Wallet <x id="INTERPOLATION_2" equiv-text="{{remaining / unitFactor | number:'1.0-8'}}"/> <x id="INTERPOLATION_1" equiv-text="{{unitName}}"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
           <context context-type="linenumber">65</context>
@@ -434,14 +419,18 @@
         <target state="translated">Information on the currency IUNO</target>
       </trans-unit>
       <trans-unit id="9706ede4f0e4ad095a8dae68bdc32a482b021881" datatype="html">
-        <source>
-          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>Die Währung in unserem Demonstrator nennt sich IUNO. Hinter den IUNOs steckt technisch das Bitcoin Testnet.        Diese Variante von Bitcoin ist zum Testen und zum Entwickeln mit der Bitcoin-Technik gedacht. Einen realen Wert,        den man beispielsweise in Euros ausdrücken könnte, gibt es nicht. Jedoch kann man damit Cocktails an unseren        Saftmischmaschinen bezahlen.
-          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
-          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>        Für dich als Technologiedatenhersteller speichern wir deine IUNOs, die du mit Lizenzverkäufen erhalten hast.        Wenn du willst, kannst du dir dein Guthaben gerne an deine Bitcoin-Wallet schicken. Dazu benötigst du eine        Bitcoin-Wallet, die mit dem Bitcoin-Testnet zusammenarbeitet.
-          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
-          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>        Folgende Apps können wir dazu empfehlen:    
-          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
-        </source>
+        <source><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>Die Währung in unserem Demonstrator nennt sich IUNO. Hinter den IUNOs steckt technisch das Bitcoin Testnet.
+        Diese Variante von Bitcoin ist zum Testen und zum Entwickeln mit der Bitcoin-Technik gedacht. Einen realen Wert,
+        den man beispielsweise in Euros ausdrücken könnte, gibt es nicht. Jedoch kann man damit Cocktails an unseren
+        Saftmischmaschinen bezahlen.<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+    <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+        Für dich als Technologiedatenhersteller speichern wir deine IUNOs, die du mit Lizenzverkäufen erhalten hast.
+        Wenn du willst, kannst du dir dein Guthaben gerne an deine Bitcoin-Wallet schicken. Dazu benötigst du eine
+        Bitcoin-Wallet, die mit dem Bitcoin-Testnet zusammenarbeitet.<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+    <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+        Folgende Apps können wir dazu empfehlen:
+    <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/vault-testnet-help-dialog/vault-testnet-help-dialog.component.ts</context>
           <context context-type="linenumber">3</context>
@@ -519,7 +508,19 @@
         </context-group>
         <target state="translated">Most popular recipes today</target>
       </trans-unit>
-    </body>
+    <trans-unit id="a3e515a387b2443634e5de844006c95abce05794" datatype="html">
+        <source>Anmelden / Registrieren</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/account/account.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      <target state="translated">Login / Signup</target></trans-unit><trans-unit id="df0f8a49440c7127bd20461526dd1b39f2011e20" datatype="html">
+        <source>Anmelden</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/account/account.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      <target state="translated">Login</target></trans-unit></body>
   </file>
   <file original="app/sidebar/index/index.component.ts" datatype="plaintext" source-language="de" target-language="en">
     <body>

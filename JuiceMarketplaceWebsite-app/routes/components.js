@@ -12,13 +12,21 @@ const validator = new Validator({allErrors: true});
 const validate = validator.validate;
 const validation_schema = require('../schema/components_schema');
 
+function getLanguageFromRequest(req) {
+    var language = req.query['lang']
+    if (!language) {
+        language = 'en'
+    }
+    return language
+}
+
 router.get('/', validate({
-    query: validation_schema.Empty,
+    query: validation_schema.Components_Query,
     body: validation_schema.Empty
 }), function (req, res, next) {
     const accessToken = req.user.token.accessToken;
-
-    marketplaceCore.getAllComponents(accessToken, function (err, components) {
+    const language = getLanguageFromRequest(req)
+    marketplaceCore.getAllComponents(accessToken, language, function (err, components) {
 
         if (err) {
             next(err);
@@ -69,7 +77,7 @@ router.post('/', validate({
 
 
 router.get('/:id', validate({
-    query: validation_schema.Empty,
+    query: validation_schema.Components_Query,
     body: validation_schema.Empty
 }), function (req, res, next) {
     logger.warn('[routes/components] NOT IMPLEMENTED YET');

@@ -1,4 +1,4 @@
-import { Injectable, ViewChild, ElementRef, HostListener, OnDestroy } from '@angular/core';
+import { Injectable, ViewChild, ElementRef, HostListener, OnDestroy, Inject, LOCALE_ID } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -84,7 +84,6 @@ export class CreateRecipeComponent implements OnInit {
 
     ngOnInit() {
         this.spinnerCounter += 1;
-
         var rc = this.recipeService.getRecipeCount();
         var rl = this.recipeService.getRecipeLimit();
         rl.subscribe(limit => this.recipeLimit = limit);
