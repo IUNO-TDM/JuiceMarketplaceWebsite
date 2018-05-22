@@ -613,6 +613,13 @@
           <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="e7bb3084327f26b44499f31f24f9520ac8040242" datatype="html">
+        <source>./assets/images/tdm_text_de.svg</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="98f065ce54317107fa7ea7fb726d44b3e8e7265a" datatype="html">
         <source>
                 Der Technologiedatenmarktplatz<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>

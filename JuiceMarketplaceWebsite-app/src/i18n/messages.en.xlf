@@ -32,7 +32,7 @@
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
           <context context-type="linenumber">75</context>
         </context-group>
-        <target state="translated">Titel</target>
+        <target state="translated">Title</target>
       </trans-unit>
       <trans-unit id="f09ad66c1ebf16217ba1a1072be7a98de2d95eac" datatype="html">
         <source>Beschreibung</source>
@@ -781,7 +781,13 @@
                 Klaus Bauer is the head of basic technologies at TRUMPF and is the visionary of the Technology Data Marketplace.
                 <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
                 He described the ideas of this marketplace in the implementation recommendations of Industrie 4.0 and the Smart Service world.
-                </target></trans-unit></body>
+                </target></trans-unit><trans-unit id="e7bb3084327f26b44499f31f24f9520ac8040242" datatype="html">
+        <source>./assets/images/tdm_text_de.svg</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      <target state="translated">./assets/images/tdm_text_en.svg</target></trans-unit></body>
   </file>
   <file original="app/sidebar/index/index.component.ts" datatype="plaintext" source-language="de" target-language="en">
     <body>

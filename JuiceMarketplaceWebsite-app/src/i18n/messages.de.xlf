@@ -622,7 +622,13 @@
                 Klaus Bauer leitet den Bereich Basistechnologien bei TRUMPF und ist Visionsgeber des Technologiedatenmarktplatz.
                 <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
                 Er beschrieb die Ideen dieses Marktplatzes bereits in den Umsetzungsempfehlungen von Industrie 4.0 und der Smart Service Welt.
-                </target></trans-unit></body>
+                </target></trans-unit><trans-unit id="e7bb3084327f26b44499f31f24f9520ac8040242" datatype="html">
+        <source>./assets/images/tdm_text_de.svg</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      <target state="final">./assets/images/tdm_text_de.svg</target></trans-unit></body>
   </file>
   <file original="app/console/create-recipe/create-recipe.component.ts" datatype="plaintext" source-language="de" target-language="de">
     <body>
