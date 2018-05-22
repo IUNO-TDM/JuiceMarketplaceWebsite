@@ -23,10 +23,7 @@ router.get('/revenue', validate({
             req.query['detail'],
             token, function (err, data) {
                 if (err) {
-                    res.status(500);
-                    res.send('Error when requesting data from the marketplace core');
-
-                    return;
+                    return next(err);
                 }
 
                 res.json(data);
@@ -48,10 +45,7 @@ router.get('/recipes/history', validate({
             req.query['to'],
             token, function (err, data) {
                 if (err) {
-                    res.status(500);
-                    res.send('Error when requesting data from the marketplace core');
-
-                    return;
+                    return next(err);
                 }
 
                 res.json(data);
@@ -74,10 +68,7 @@ router.get('/recipes/top', validate({
             parseInt(req.query['limit']),
             token, function (err, data) {
                 if (err) {
-                    res.status(500);
-                    res.send('Error when requesting data from the marketplace core');
-
-                    return;
+                    return next(err);
                 }
 
                 res.json(data);
@@ -100,10 +91,7 @@ router.get('/components/top', validate({
             parseInt(req.query['limit']),
             token, function (err, data) {
                 if (err) {
-                    res.status(500);
-                    res.send('Error when requesting data from the marketplace core');
-
-                    return;
+                    return next(err);
                 }
 
                 res.json(data);

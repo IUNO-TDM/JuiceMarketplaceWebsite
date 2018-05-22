@@ -490,7 +490,7 @@ function doRequest(options, callback) {
 
         if (r && r.statusCode !== 200) {
             const err = {
-                status: r.statusCode,
+                statusCode: r.statusCode,
                 message: jsonData
             };
             logger.warn('Call not successful: Options: ' + JSON.stringify(options) + ' Error: ' + JSON.stringify(err));

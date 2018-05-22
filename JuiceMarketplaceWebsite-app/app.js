@@ -112,7 +112,7 @@ if (app.get('env') === 'development') {
         }
 
         console.error(err.stack);
-        res.status(err.status || 500);
+        res.status(err.statusCode || 500);
         res.json({
             message: err.message,
             error: err
@@ -120,14 +120,10 @@ if (app.get('env') === 'development') {
     });
 } else {
     app.use(function (err, req, res, next) {
-        console.error(err.stack);
+        console.error(err);
         // Send error details to the client only when the status is 4XX
-        if (err.status && err.status >= 400 && err.status < 500) {
-            res.status(err.status);
-            res.json({
-                message: err.message,
-                error: err
-            });
+        if (err.statusCode && err.statusCode >= 400 && err.statusCode < 500) {
+            res.sendStatus(err.statusCode);
         }
         else {
             res.status(500);
