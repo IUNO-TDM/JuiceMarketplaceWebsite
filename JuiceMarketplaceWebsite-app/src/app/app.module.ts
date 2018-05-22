@@ -20,12 +20,15 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {NgcCookieConsentConfig, NgcCookieConsentModule} from 'ngx-cookieconsent';
 
-import {registerLocaleData} from "@angular/common";
-import localeDe from '@angular/common/locales/de';
 import { IndexComponent } from './sidebar/index/index.component';
 import { LayoutService } from './services/layout.service';
 
+// i18n
+import {registerLocaleData} from "@angular/common";
+import localeDe from '@angular/common/locales/de';
+import localeEn from '@angular/common/locales/en';
 registerLocaleData(localeDe, 'de');
+registerLocaleData(localeDe, 'en');
 
 const cookieConfig: NgcCookieConsentConfig = {
     "cookie": {
@@ -74,13 +77,13 @@ const cookieConfig: NgcCookieConsentConfig = {
         MatMenuModule,
         FlexLayoutModule,
         ConsoleModule,
-        BrowserModule
+        BrowserModule,
     ],
     providers: [
         LayoutService,
         {
             provide: LOCALE_ID,
-            useValue: 'de'
+            useValue: 'en'
         }
         ],
     bootstrap: [AppComponent]
