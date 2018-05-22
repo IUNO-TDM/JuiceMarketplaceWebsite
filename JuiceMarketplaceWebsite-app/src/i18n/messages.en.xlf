@@ -520,7 +520,268 @@
           <context context-type="sourcefile">app/account/account.component.ts</context>
           <context context-type="linenumber">19</context>
         </context-group>
-      <target state="translated">Login</target></trans-unit></body>
+      <target state="translated">Login</target></trans-unit><trans-unit id="98f065ce54317107fa7ea7fb726d44b3e8e7265a" datatype="html">
+        <source>
+                Der Technologiedatenmarktplatz<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                für die<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Lizenz zum Mixen
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">intro text</note>
+      <target state="translated">
+                The Technology Data Marketplace<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                for the<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                license to mix
+            </target></trans-unit><trans-unit id="3f12ced55bd8d55d5cadadb4850d06e292f67c20" datatype="html">
+        <source>Was macht IUNO?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <note priority="1" from="description">IUNO</note>
+        <note priority="1" from="meaning">section header</note>
+      <target state="translated">What does IUNO?</target></trans-unit><trans-unit id="9c60b5fd625b6b10cb591b42ed7a07e0fdbc21f5" datatype="html">
+        <source>
+                Im Forschungsvorhaben IUNO, dem Nationalen Referenzprojekt zur IT-Sicherheit in Industrie 4.0, werden
+                Bedrohungen und Risiken für die intelligente Fabrik identifiziert, Schutzmaßnahmen entwickelt und
+                exemplarisch in vier Anwendungsfällen umgesetzt.
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <note priority="1" from="description">IUNO</note>
+        <note priority="1" from="meaning">section</note>
+      <target state="translated">
+                The IUNO research project, the national reference project on IT security in industry 4.0, identifies threats and risks for the intelligent factory, develops protective measures and implements them in four application cases.
+            </target></trans-unit><trans-unit id="cbb6079284144cac1ac7cd4c44f242f0f37cbe97" datatype="html">
+        <source>Technologiedatenmarktplatz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+        <note priority="1" from="description">Technologiedatenmarktplatz</note>
+        <note priority="1" from="meaning">section header</note>
+      <target state="translated">Technology Data Marketplace</target></trans-unit><trans-unit id="859febd8a92c46a05920275d04b7f0a7a86c8fbf" datatype="html">
+        <source>
+                Der Technologiedatenmarktplatz ermöglicht Daten bedarfsgerecht zu handeln, die für einen
+                Herstellungsprozeß benötigt werden. Für den bedarfsgerechten Handel ist es notwendig, daß die
+                gehandelten Daten auch nur wie gekauft verwendet werden, sprich pro Stück oder pro Zeiteinheit. Der
+                erarbeitete Demonstrator gewährt diese Sicherheit über die lizenzgerechte Nutzung der gehandelten Daten.
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+        <note priority="1" from="description">Technologiedatenmarktplatz</note>
+        <note priority="1" from="meaning">section</note>
+      <target state="translated">
+                The Technology Data Marketplace makes it possible to trade data required for a production process. For trading according to demand, it is necessary that the traded data is only used as purchased, i.e. per piece or per unit of time. The developed demonstrator guarantees this security about the license-fair use of the traded data.
+            </target></trans-unit><trans-unit id="e9e61cddcc667445059d1706cff6f2720beb4048" datatype="html">
+        <source>Warum Cocktailrezepte?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+        <note priority="1" from="description">Warum Cocktailrezepte</note>
+        <note priority="1" from="meaning">section header</note>
+      <target state="translated">Why cocktail recipes?</target></trans-unit><trans-unit id="8e08d99b6f96f481d4ba8e1f41cc4bd20aaeb1b8" datatype="html">
+        <source>
+                IUNO hat als nationales Referenzprojekt zur IT-Sicherheit in der Industrie 4.0 Leuchtturmcharakter. Es
+                muß in der Öffentlichkeit weithin sichtbar sein, um mit den Inhalten und Ergebnissen eine möglichst
+                großes Publikum zu erreichen. Dazu benötigt es eine Demonstratormaschine, die auf Messen und Vorträgen
+                leicht gezeigt werden kann und das Thema anschaulich transportiert. Aus diesem Grund der
+                Technologiedatenmarktplatz an einer Cocktailmischmaschine veranschaulicht. Diese Maschine erweckt
+                genügend Aufmerksamkeit und ermöglicht damit den Transfer des sehr trockenen Themas IT-Sicherheit.
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+        <note priority="1" from="description">Warum Cocktailrezepte</note>
+        <note priority="1" from="meaning">section</note>
+      <target state="translated">
+                IUNO is a flagship project as a national reference project for IT security in Industry 4.0. It must be widely visible in the public in order to reach the widest possible audience with the contents and results. For this it needs a demonstrator machine, which can be easily shown at fairs and lectures and clearly conveys the subject. For this reason, the technology data marketplace is illustrated on a cocktail blender. This machine attracts enough attention, allowing the transfer of the very dry IT security issue.
+            </target></trans-unit><trans-unit id="c82b8429a1804cf10fca528683230dbf431e92b7" datatype="html">
+        <source>Der Marktplatz ist live!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">95</context>
+        </context-group>
+        <note priority="1" from="description">Marktplatz ist live</note>
+        <note priority="1" from="meaning">section header</note>
+      <target state="translated">The marketplace is live!</target></trans-unit><trans-unit id="ba3224d55e372ae154febe89dcddf330a389eca8" datatype="html">
+        <source>
+                Der Marktplatz wird mittlerweile von mehreren Maschinen bei den verschiedenen Projektpartnern genutzt.
+                Dies zeigen unsere live <x id="START_LINK" ctype="x-a" equiv-text="&lt;a>"/>Dashboards<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/>.
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">96</context>
+        </context-group>
+        <note priority="1" from="description">Marktplatz ist live</note>
+        <note priority="1" from="meaning">section</note>
+      <target state="translated">
+                The marketplace is now used by several machines in the various project partners. This is shown by our live <x id="START_LINK" ctype="x-a" equiv-text="&lt;a>"/>Dashboards<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/>.
+            </target></trans-unit><trans-unit id="6591f10ed53e8f03c25bdc47ced8ae5a1e024dbf" datatype="html">
+        <source>Lust am Ausprobieren?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">114</context>
+        </context-group>
+        <note priority="1" from="description">Lust am Ausprobieren</note>
+        <note priority="1" from="meaning">section header</note>
+      <target state="translated">Feel like trying?</target></trans-unit><trans-unit id="410c4f0bda410720af03e09bb2b4f955ef97c252" datatype="html">
+        <source>
+                Das ganze Projekt ist OpenSource und steht auf Github zur Verfügung.
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">115</context>
+        </context-group>
+        <note priority="1" from="description">Lust am Ausprobieren</note>
+        <note priority="1" from="meaning">section</note>
+      <target state="translated">
+                The whole project is open source and is available on Github.
+            </target></trans-unit><trans-unit id="9a91ff40b4d1054dc6b80476687e52ab3c5975f3" datatype="html">
+        <source>
+                Und wenn Sie selbst eine Maschine bauen möchten, dann wenden Sie sich gerne an uns.
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">121</context>
+        </context-group>
+        <note priority="1" from="description">Lust am Ausprobieren</note>
+        <note priority="1" from="meaning">section add</note>
+      <target state="translated">
+                And if you want to build a machine yourself, feel free to contact us.
+            </target></trans-unit><trans-unit id="f1251e2b4609fb43cbab117132519bfc05602aa7" datatype="html">
+        <source>Über uns</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">131</context>
+        </context-group>
+        <note priority="1" from="description">Team</note>
+        <note priority="1" from="meaning">section header</note>
+      <target state="translated">About us</target></trans-unit><trans-unit id="193efcf00bd5896bdb0b3d811ae113c1523f4a6b" datatype="html">
+        <source>Das Team hinter dem Projekt:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">133</context>
+        </context-group>
+        <note priority="1" from="description">Team</note>
+        <note priority="1" from="meaning">section</note>
+      <target state="translated">The team behind the project:</target></trans-unit><trans-unit id="3644dfd10f2f105f1e2d1a39860a97396cf2f52a" datatype="html">
+        <source>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Experte für Industrie 4.0 Kommunikation und Security
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Hans-Peter Bock ist Architekt, Ideengeber und Leiter der Entwicklung des Technologiedatenmarktplatz-Ökosystems.
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">159</context>
+        </context-group>
+        <note priority="1" from="description">Team - hpbock</note>
+        <note priority="1" from="meaning">section</note>
+      <target state="translated">
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Expert for Industry 4.0 Communication and Security
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Hans-Peter Bock is architect, creator of ideas and head of the development of the Technology Data Marketplace ecosystem.
+                </target></trans-unit><trans-unit id="138c447f93455e68a7816388293a3ec078e36c80" datatype="html">
+        <source>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                System Developer for New Technologies
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Manuel Beuttler hat im Projekt den Überblick über das Zusammenspiel der verschiedenen Komponenten.
+                Er verantwortet die Web-Services, sowie Spezifikation und Absicherung der Schnittstellen.
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">176</context>
+        </context-group>
+        <note priority="1" from="description">Team - mbeuttler</note>
+        <note priority="1" from="meaning">section</note>
+      <target state="translated">
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                System Developer for New Technologies
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Manuel Beuttler has an overview of the interaction of the various components in the project. He is responsible for the web services, as well as specification and protection of the interfaces.
+                </target></trans-unit><trans-unit id="72aeb28d126937e4b27abaebd901e0e1be7ad9ac" datatype="html">
+        <source>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                System Architect for Enabling Technologies
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Christan Görg entwickelt das Bezahlsystem hinter dem Technologiedatenmarktplatz
+                und verantwortet den sicheren Umgang mit Technologiedaten auf der Maschinen-Steuerung.
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">193</context>
+        </context-group>
+        <note priority="1" from="description">Team - cgoerg</note>
+        <note priority="1" from="meaning">section</note>
+      <target state="translated">
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                System Architect for Enabling Technologies
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Christan Görg develops the payment system behind the technology data marketplace and is responsible for the secure handling of technology data on the machine control system.
+                </target></trans-unit><trans-unit id="703e286e320549b880e78248df81aeec4b25680e" datatype="html">
+        <source>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                System Architect for Big Data and Analytics
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Marcel Ely Gomes arbeitet am Herzen des Technologiedaten Marktplatz.
+                Er verantwortet das Datenbankdesign und entwickelt die Datenbank spezifischen Sicherheitskonzepte.
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">210</context>
+        </context-group>
+        <note priority="1" from="description">Team - mgomes</note>
+        <note priority="1" from="meaning">section</note>
+      <target state="translated">
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                System Architect for Big Data and Analytics
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Marcel Ely Gomes works at the heart of the Technology Data Marketplace. He is responsible for the database design and develops the database specific security concepts.
+                </target></trans-unit><trans-unit id="d2542323b64d2177b921df4afe86691d271e9bac" datatype="html">
+        <source>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Experte für Informations- und Kommunikationstechnologien in Produktionsnetzwerken
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Klaus Bauer leitet den Bereich Basistechnologien bei TRUMPF und ist Visionsgeber des Technologiedatenmarktplatz.
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Er beschrieb die Ideen dieses Marktplatzes bereits in den Umsetzungsempfehlungen von Industrie 4.0 und der Smart Service Welt.
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">227</context>
+        </context-group>
+        <note priority="1" from="description">Team - kbauer</note>
+        <note priority="1" from="meaning">section</note>
+      <target state="translated">
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Experte für Informations- und Kommunikationstechnologien in Produktionsnetzwerken
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Klaus Bauer is the head of basic technologies at TRUMPF and is the visionary of the Technology Data Marketplace.
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                He described the ideas of this marketplace in the implementation recommendations of Industrie 4.0 and the Smart Service world.
+                </target></trans-unit></body>
   </file>
   <file original="app/sidebar/index/index.component.ts" datatype="plaintext" source-language="de" target-language="en">
     <body>
