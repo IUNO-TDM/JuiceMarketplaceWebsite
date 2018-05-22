@@ -1,0 +1,136 @@
+
+
+div {
+    /*opacity: 0.8;*/
+}
+#svgContainer {
+    z-index: -10;
+    position: absolute;
+    /*background-color: silver;*/
+    /*opacity: 0.5;*/
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#outer {
+    margin: 0 auto;
+    width: 80%;
+}
+
+#teal {
+    width: 6em;
+    height: 6em;
+    background-color: teal;
+    margin-left: 10%;
+}
+
+#orange {
+    height: 4em;
+    width: 35%;
+    padding: 2em 8em;
+    margin-left: 8em;
+    margin-top: 6em;
+    background-color: orange;
+}
+
+#red {
+    width: 6em;
+    height: 4em;
+    margin-left: 30%;
+    padding: 4em 3em;
+    background-color: red;
+}
+
+#aqua {
+    width: 5em;
+    height: 5em;
+    margin-left: 15%;
+    background-color: aqua;
+}
+
+#purple {
+    width: 15em;
+    height: 5em;
+    background-color: purple;
+}
+
+#green {
+    width: 5em;
+    height: 7em;
+    margin-top: 2em;
+    margin-left: 50%;
+    background-color: green;
+}
+
+.visualizerContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.upperTwoThirds {
+    width: 100%;
+}
+
+.lowerThird {
+    width: 100%;
+}
+
+.tdh-container {
+}
+
+.tdm-container {
+}
+
+.lc {
+    background-color: darkturquoise;
+    height: 80%;
+    width: 80%;
+}
+
+.btc {
+    background-color: orange;
+    height: 80%;
+    width: 80%;
+}
+
+.machine-container {
+}
+
+.tdm {
+
+    background-color: greenyellow;
+    height: 50%;
+    width: 50%;
+}
+
+.machine {
+
+    background-color: darkmagenta;
+    height: 80%;
+    width: 80%;
+
+}
+
+.tdh {
+
+    background-color: yellow;
+
+    height: 80%;
+    width: 80%;
+}
+
+
+.machine-svg {
+    width: 100%;
+    height: 100%;
+    background-color: orange;
+}
+
+
+.tdh-svg {
+    width: 100%;
+    height: 100%;
+    background-color: orange;
+}

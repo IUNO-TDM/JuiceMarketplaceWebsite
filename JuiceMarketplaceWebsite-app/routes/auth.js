@@ -62,8 +62,8 @@ module.exports = function (passport) {
     }), function (req, res, next) {
 
         passport.authenticate('iuno', {
-            successRedirect: '/console',
-            failureRedirect: '/',
+            successRedirect: '/website/console',
+            failureRedirect: '/website',
             failureFlash: true
         })(req, res, next);
     });

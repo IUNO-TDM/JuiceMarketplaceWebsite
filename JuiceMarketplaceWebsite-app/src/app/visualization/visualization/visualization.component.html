@@ -1,3 +1,76 @@
-<p>
-  visualization works!
-</p>
+<div #svgContainer id="svgContainer">
+  <svg #svg1 id="svg1" width="0" height="0">
+  </svg>
+</div>
+
+<div #container class="visualizerContainer" fxLayout="column">
+  <div class="upperTwoThirds" fxFlex="66" fxLayout="row">
+    <div class="tdhs-container" fxFlex="15" fxLayout="column">
+      <div class="tdh-spacer" fxFlex="20">
+        <button (click)="animate()">animate</button>
+        <button (click)="animateMachine1()">animate Machine</button>
+        <button (click)="addTransaction()">addTransaction</button>
+        <select [(ngModel)]="elementToAnimate">
+          <option value="rectangle">rectangle</option>
+          <option value="circle">circle</option>
+          <option value="star">star</option>
+          <option value="bitcoin">bitcoin</option>
+          <option value="licenseOrder">licenseOrder</option>
+          <option value="offer">offer</option>
+          <option value="offerrequest">offerrequest</option>
+          <option value="license">license</option>
+        </select>
+        <select [(ngModel)]="pathToAnimate">
+          <option value="path1">path1</option>
+          <option value="path2">path2</option>
+          <option value="path3">path3</option>
+          <option value="path4">path4</option>
+          <option value="path5">path5</option>
+          <option value="path6">path6</option>
+          <option value="path7">path7</option>
+        </select>
+        Reverse: <input type="checkbox" name="animationReversed" [(ngModel)]="animationReversed">
+      </div>
+      <div class="tdh-container" fxFlex="*"  fxLayout="row" fxLayoutAlign="center center">
+        <div #tdh1 id="tdh1" class="tdh">
+          <svg #tdh1svg id="tdh1svg" class="tdh-svg"></svg></div>
+      </div>
+      <div class="tdh-container" fxFlex="*"  fxLayout="row" fxLayoutAlign="center center">
+        <div #tdh2 id="tdh2"  class="tdh">
+          <svg #tdh2svg id="tdh2svg" class="tdh-svg"></svg></div></div>
+    </div>
+    <div class="tdm-container" fxFlex="*" fxLayout="row" fxLayoutAlign="center center">
+      <div #tdm id="tdm" class="tdm">tdm</div>
+    </div>
+    <div class="lc-btc-container" fxFlex="25" fxLayout="column">
+      <div class="lc-container" fxFlex="*" fxLayout="row" fxLayoutAlign="center center">
+        <div #lc id="lc" class="lc">lc</div>
+      </div>
+      <div class="btc-container" fxFlex="*" fxLayout="row" fxLayoutAlign="center center">
+        <div #btc id="btc"  class="btc">
+          <app-blockexplorer #blockexplorer></app-blockexplorer>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="lowerThird" fxFlex="34" fxLayout="row">
+    <div class="bottom-spacer" fxFlex="20"></div>
+    <div class="machine-container" fxFlex="*" fxLayout="row" fxLayoutAlign="center center">
+      <div #machine1 id="machine1" class="machine">
+        <svg #machine1svg id="machine1svg" class="machine-svg"></svg>
+      </div>
+    </div>
+    <div class="machine-container" fxFlex="*" fxLayout="row" fxLayoutAlign="center center">
+      <div #machine2 id="machine2" class="machine">
+        <svg #machine2svg id="machine2svg" class="machine-svg"></svg>
+      </div>
+    </div>
+    <div class="machine-container" fxFlex="*" fxLayout="row" fxLayoutAlign="center center">
+      <div #machine3 id="machine3" class="machine">
+        <svg #machine3svg id="machine3svg" class="machine-svg"></svg>
+      </div>
+    </div>
+    <div class="bottom-spacer" fxFlex="20"></div>
+  </div>
+</div>
