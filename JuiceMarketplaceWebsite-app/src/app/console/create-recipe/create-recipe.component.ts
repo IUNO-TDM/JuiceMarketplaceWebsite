@@ -2,7 +2,7 @@ import { Injectable, ViewChild, ElementRef, HostListener, OnDestroy, Inject, LOC
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router, ActivatedRoute } from '@angular/router';
-import { MatDialog } from '@angular/material';
+import { MatDialog, ErrorStateMatcher } from '@angular/material';
 // import * as $ from 'jquery';
 
 import { RecipeService } from '../services/recipe.service';
@@ -18,6 +18,17 @@ import { ComponentListComponent, DragAndDropService, BeakerComponent } from 'coc
 import { Subscription } from 'rxjs';
 import { LayoutService } from '../../services/layout.service';
 import { ComponentListDialogComponent } from '../component-list-dialog/component-list-dialog.component';
+// import { FormControl, FormGroupDirective, NgForm, FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+/** Error when invalid control is dirty, touched, or submitted. */
+// export class RecipeErrorStateMatcher implements ErrorStateMatcher {
+//     isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+//         console.log(control)
+//         return true
+//         //   const isSubmitted = form && form.submitted;
+//         //   return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+//     }
+// }
 
 @Component({
     selector: 'app-create-recipe',
@@ -36,6 +47,9 @@ export class CreateRecipeComponent implements OnInit {
             })
         }
     }
+    // recipeForm: FormGroup
+    // errorStateMatcher = new RecipeErrorStateMatcher();
+    errorFields: any;
 
     cocktail: Cocktail;
     components: CocktailComponent[] = [];
@@ -62,7 +76,20 @@ export class CreateRecipeComponent implements OnInit {
         private activatedRoute: ActivatedRoute,
         private accessGuard: AccessGuard,
         private layoutService: LayoutService,
-        private componentService: ComponentService) {
+        private componentService: ComponentService,
+        // private builder: FormBuilder
+    ) {
+        // this.recipeForm = this.builder.group({
+        //     title: ['', Validators.required],
+        //     description: ['', Validators.required],
+        //     licenseFee: [-1, Validators.required]
+        // })
+        this.errorFields = {
+            program: false,
+            title: false,
+            description: false,
+            licenseFee: false
+        }
 
         this.cocktail = new Cocktail();
         this.cocktail.amount = 100;
@@ -78,7 +105,7 @@ export class CreateRecipeComponent implements OnInit {
             if (this.beaker) {
                 this.beaker.setEditMode(editMode)
             }
-            
+
         })
     }
 
@@ -105,29 +132,44 @@ export class CreateRecipeComponent implements OnInit {
 
                 recipe.title = this.recipeName;
                 recipe.description = this.recipeDescription.trim();
+                recipe.licenseFee = this.recipeLicenseFee * 100000;
                 recipe.imageRef = this.recipeImagePicker.getSelectedImage();
                 recipe.backgroundColor = this.recipeImagePicker.backgroundColor;
 
-                if (valid && recipe.title.trim().length < 1) {
-                    alert("Bitte geben Sie einen Titel mit mindestens einem Zeichen ein.");
+                var anchorName = null
+
+                if (recipe.title.trim().length < 1) {
+                    anchorName = "#detailsCard"
+                    // this.recipeForm.controls['title'].setErrors({error: true})
+                    this.errorFields.title = true
                     valid = false;
+                    // this.router.navigateByUrl("#recipeName")
+                } else {
+                    this.errorFields.title = false
                 }
-                if (valid && recipe.description.length < 1) {
-                    alert("Bitte geben Sie eine Beschreibung mit mindestens einem Zeichen ein.");
+                if (recipe.description.length < 1) {
+                    anchorName = "#detailsCard"
+                    this.errorFields.description = true
+                    // alert("Bitte geben Sie eine Beschreibung mit mindestens einem Zeichen ein.");
                     valid = false;
+                } else {
+                    this.errorFields.description = false
                 }
-                if (valid && this.licenseFees.indexOf(this.recipeLicenseFee) < 0) {
-                    alert("Bitte wählen Sie eine Lizenzgebühr aus.");
+                if (this.licenseFees.indexOf(this.recipeLicenseFee) < 0) {
+                    anchorName = "#detailsCard"
+                    this.errorFields.licenseFee = true
+                    // alert("Bitte wählen Sie eine Lizenzgebühr aus.");
                     valid = false;
-                    recipe.licenseFee = this.recipeLicenseFee * 100000;
+                } else {
+                    this.errorFields.licenseFee = false
                 }
-                if (valid && recipe.licenseFee == -1) {
-                    alert("Bitte wählen Sie eine Lizenzgebühr aus.");
+                if ((this.cocktail.layers.length == 0 || this.cocktail.layers[0].components.length == 0)) {
+                    anchorName = "#programCard"
+                    this.errorFields.program = true
+                    // alert("Bitte fügen Sie mindestens eine Zutat hinzu.");
                     valid = false;
-                }
-                if (valid && (this.cocktail.layers.length == 0 || this.cocktail.layers[0].components.length == 0)) {
-                    alert("Bitte fügen Sie mindestens eine Zutat hinzu.");
-                    valid = false;
+                } else {
+                    this.errorFields.program = false
                 }
                 if (valid) {
                     this.spinnerCounter += 1;
@@ -135,8 +177,6 @@ export class CreateRecipeComponent implements OnInit {
                     let machineProgram = this.cocktail.getMachineProgram();
 
                     recipe.program = machineProgram;
-                    console.log("Recipe:");
-                    console.log(recipe);
 
                     this.http.post('/api/users/me/recipes', recipe).subscribe(
                         data => {
@@ -157,6 +197,16 @@ export class CreateRecipeComponent implements OnInit {
                             }
                         }
                     );
+                } else {
+                    if (anchorName) {
+                        let target = document.querySelector(anchorName)
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        })
+                        // remove anchor jump from backstack
+                        // history.pushState(null, null, anchorName)
+                }
                 }
             }
         });

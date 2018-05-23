@@ -131,7 +131,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="linenumber">30</context>
         </context-group>
       </trans-unit>
       <trans-unit id="479fabd48cae67a01dc0b193062b7513a2a3f994" datatype="html">
@@ -142,7 +142,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">33</context>
+          <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="a6b209bf77d2cb396b8e4392de1dbffdbd23a86d" datatype="html">
@@ -153,7 +153,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">34</context>
+          <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="96e0f9bbdfdb9b22fd016df250426b9fafffd72a" datatype="html">
@@ -164,7 +164,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">35</context>
+          <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="dcd247d6de74ff363c92b4d9177b7966f68c7e90" datatype="html">
@@ -175,7 +175,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">36</context>
+          <context context-type="linenumber">32</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3ad1defdbee8dee83b86423a18809e5170c029b4" datatype="html">
@@ -186,7 +186,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">37</context>
+          <context context-type="linenumber">32</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1b24932d0f2269e4b41d0f936fdb5de1b94da401" datatype="html">
@@ -215,60 +215,96 @@
           <context context-type="linenumber">17</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="929c58d8fcf868463089f85b8ded8f2c507bba34" datatype="html">
+        <source>Bitte fügen Sie mindestens eine Zutat hinzu!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">create recipe - recipe missing</note>
+        <note priority="1" from="meaning">error</note>
+      </trans-unit>
       <trans-unit id="6f9cbb28bdc23b92465369626d0b78e5e19f77b0" datatype="html">
         <source>Zutat per&lt;br>Drag &amp; Drop&lt;br>hinzufügen.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">45</context>
+          <context context-type="linenumber">37</context>
         </context-group>
       </trans-unit>
       <trans-unit id="09cade1c8e483a96553bda8009dbfc391f43f7be" datatype="html">
         <source>Hier tippen um Zutat&lt;br>hinzuzufügen.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">46</context>
+          <context context-type="linenumber">38</context>
         </context-group>
       </trans-unit>
       <trans-unit id="a0e4087927b592497bd24dc5f123a37830a55533" datatype="html">
         <source>Zutat</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">54</context>
+          <context context-type="linenumber">41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="77134c293828bbe6d663d26f75252663f46c7ca4" datatype="html">
         <source>Menge</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">55</context>
+          <context context-type="linenumber">42</context>
         </context-group>
       </trans-unit>
       <trans-unit id="49d7e39875153c37e6197dad6c97a71d600edc1f" datatype="html">
         <source>Es wurden noch keine Zutaten&lt;br>hinzugefügt.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">56</context>
+          <context context-type="linenumber">42</context>
         </context-group>
       </trans-unit>
       <trans-unit id="da27c106262f920eec6fb5ce72255a68ada2210c" datatype="html">
         <source>Produktdetails</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">66</context>
+          <context context-type="linenumber">51</context>
         </context-group>
+      </trans-unit>
+      <trans-unit id="44b31522e166a2d7810a8bfa423d96821d6ea075" datatype="html">
+        <source>Bitte geben Sie einen Titel ein!<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+        <note priority="1" from="description">create recipe - title missing</note>
+        <note priority="1" from="meaning">error</note>
+      </trans-unit>
+      <trans-unit id="bb7f2c6d36d56722bd195c6846ba9b835a3131dd" datatype="html">
+        <source>Bitte geben Sie einen Beschreibungstext ein!<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+        <note priority="1" from="description">create recipe - description missing</note>
+        <note priority="1" from="meaning">error</note>
+      </trans-unit>
+      <trans-unit id="4c2d2c433d34adbe8148d961e3f8e014ef7f29de" datatype="html">
+        <source>Bitte wählen Sie eine Lizenzgebühr aus!<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+        <note priority="1" from="description">create recipe - license fee missing</note>
+        <note priority="1" from="meaning">error</note>
       </trans-unit>
       <trans-unit id="b7f6cd735e8b660a6ec3d3dfb09de14ab32a10c8" datatype="html">
         <source>Titel</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">75</context>
+          <context context-type="linenumber">65</context>
         </context-group>
       </trans-unit>
       <trans-unit id="f09ad66c1ebf16217ba1a1072be7a98de2d95eac" datatype="html">
         <source>Beschreibung</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">80</context>
+          <context context-type="linenumber">71</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
@@ -279,35 +315,37 @@
         <source>Lizenzgebühr</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">84</context>
+          <context context-type="linenumber">77</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5ccc633c2e84a1ddb8f59dec8affa3af4aed7988" datatype="html">
         <source>Bild</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">100</context>
+          <context context-type="linenumber">94</context>
         </context-group>
       </trans-unit>
       <trans-unit id="05d6def11b80c405276ad18c4fc5183e8cea4f75" datatype="html">
         <source>Speichern</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">111</context>
+          <context context-type="linenumber">105</context>
         </context-group>
       </trans-unit>
       <trans-unit id="367e537f73ef5d6874808117f0d8376a5aab6811" datatype="html">
         <source>Rezeptlimit erreicht!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">118</context>
+          <context context-type="linenumber">112</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="4559397c7f60abaeb0efeb4c290db73d3d6a5d92" datatype="html">
-        <source>Sie haben bereits ihr Limit von <x id="INTERPOLATION" equiv-text="{{recipeLimit}}"/> Rezepten am Marktplatz erreicht.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/></source>
+      <trans-unit id="7484f7eceaccef965e94c427c0ec0dc181735c4c" datatype="html">
+        <source>Sie haben bereits ihr Limit von <x id="INTERPOLATION" equiv-text="{{recipeLimit}}"/> Rezepten am Marktplatz erreicht.
+            <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+        </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">119</context>
+          <context context-type="linenumber">113</context>
         </context-group>
       </trans-unit>
       <trans-unit id="adf103f42182c40380a2cca83020ede8447094b4" datatype="html">

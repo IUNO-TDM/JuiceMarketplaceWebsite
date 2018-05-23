@@ -2,6 +2,14 @@
     /*width: 700px;*/
 }
 
+/* .error {
+    color: #f33;
+    font-weight: 700;
+    text-align: left;
+    width: 100%;
+    margin-top: -1.5em;
+}
+ */
 app-recipe-image-picker {
     width: 400px;
     max-height: 100%;
