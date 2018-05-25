@@ -31,34 +31,27 @@ import {timer} from "rxjs/observable/timer";
 })
 export class BlockexplorerComponent implements OnInit {
 
-  transactions = new Array<Transaction>();
-  timer: Observable<any>;
+  transactionIds = new Array<string>();
+  transactions = {};
+
+  // transactions = new Array<Transaction>();
+  // timer: Observable<any>;
   TRANSACTION_TIMEOUT = 10 * 1000;
 
   constructor() {
   }
 
   ngOnInit() {
-    this.timer = timer(1000, 1000);
-    this.timer.subscribe(() => {
-        const txToBeRemoved = new Array<Transaction>();
-        for (const tx of this.transactions) {
-          if ((new Date().getTime() - tx.date.getTime()) > this.TRANSACTION_TIMEOUT) {
-            txToBeRemoved.push(tx);
-          }
-        }
-
-        for (const tx of txToBeRemoved) {
-          const index = this.transactions.indexOf(tx);
-          this.transactions.splice(index, 1);
-        }
-      }
-    );
   }
 
 
   addTransaction(transaction: Transaction) {
-    this.transactions.splice(0, 0, transaction);
+    if(this.transactionIds.indexOf(transaction.tx) === -1){
+      this.transactionIds.splice(0,0,transaction.tx);
+    }
+    this.transactions[transaction.tx] = transaction;
   }
+
+
 
 }

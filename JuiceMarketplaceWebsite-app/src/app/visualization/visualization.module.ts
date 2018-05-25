@@ -6,12 +6,14 @@ import {VisualizationRoutingModule} from "./visualization-routing.module";
 import {VisualizationComponent} from "./visualization/visualization.component";
 import {BlockexplorerComponent} from "./visualization/blockexplorer/blockexplorer.component";
 import {FormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
     imports: [
         CommonModule,
         FlexLayoutModule,
         VisualizationRoutingModule,
+        HttpClientModule,
         FormsModule
     ],
     declarations: [VisualizationComponent, BlockexplorerComponent],

@@ -1,5 +1,5 @@
 <div #blockexplorercontainer class="blockexplorer-container" >
-  <div class="blockexplorer-transaction" *ngFor="let tx of transactions" @easeInOut>
-    {{tx.tx}} {{tx.date.toTimeString()}}
+  <div class="blockexplorer-transaction" *ngFor="let tx of transactionIds" @easeInOut>
+    {{transactions[tx].tx}} {{transactions[tx].state}} {{transactions[tx].depth}}
   </div>
 </div>

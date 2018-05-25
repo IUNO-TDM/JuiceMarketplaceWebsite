@@ -19,8 +19,8 @@ export class ConnectedClientsComponent implements OnInit {
 
     }
 
-    connectionObservable1: Observable<Object>;
-    connectionObservable2: Observable<Object>;
+    connectionObservable1: Observable<Array<object>>;
+    connectionObservable2: Observable<Array<object>>;
     connectionObservableC: Observable<Object>;
 
     scopeOffset = 0;

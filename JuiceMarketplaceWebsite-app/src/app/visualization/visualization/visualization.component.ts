@@ -8,12 +8,16 @@ import {Transaction} from './blockexplorer/Transaction';
 declare var Snap: any;
 declare var mina: any;
 import {VisualizationSocketService} from "../services/visualization-socket.service";
+import {AdminService} from "../../console/services/admin.service";
+import * as moment from "moment";
+import {Observable} from "rxjs/Observable";
+import {ClientService} from "../../console/services/client.service";
 
 @Component({
     selector: 'app-visualization',
     templateUrl: './visualization.component.html',
     styleUrls: ['./visualization.component.css'],
-    providers: [VisualizationSocketService]
+    providers: [VisualizationSocketService, AdminService, ClientService]
 })
 export class VisualizationComponent implements OnInit, AfterViewInit {
 
@@ -67,32 +71,135 @@ export class VisualizationComponent implements OnInit, AfterViewInit {
     machine2Connected = false;
     machine3Connected = false;
 
+    connectionObservable: Observable<Array<object>>;
 
-    constructor(private visualizationSocketService: VisualizationSocketService) {
+    clients = {};
+
+
+    payments = {};
+
+    constructor(private visualizationSocketService: VisualizationSocketService, private adminService: AdminService, private clientService: ClientService) {
     }
+
+    machineConnected(clientId: string) {
+
+        const self = this;
+
+        function showClient(clientId: string) {
+            if (!self.clients[clientId]['displayNumber']) {
+                if (!self.machine2Connected) {
+                    self.clients[clientId]['displayNumber'] = 2;
+                } else if (!self.machine1Connected) {
+                    self.clients[clientId]['displayNumber'] = 1;
+                } else if (!self.machine3Connected) {
+                    self.clients[clientId]['displayNumber'] = 3;
+                }
+                self.connectMachine(self.clients[clientId]['displayNumber'], true, self.clients[clientId]);
+            }
+        }
+
+        if (!this.clients.hasOwnProperty(clientId)) {
+            this.clientService.getClient(clientId).subscribe(client => {
+                self.clients[clientId] = client;
+                showClient(clientId);
+            });
+        } else {
+            showClient(clientId);
+        }
+
+    }
+
+    machineDisconnected(clientId: string) {
+        if (this.clients[clientId] && this.clients[clientId]['displayNumber']) {
+            this.connectMachine(this.clients[clientId]['displayNumber'], false, null);
+            delete this.clients[clientId]['displayNumber'];
+        }
+    }
+
 
     ngOnInit() {
 
+        let lcfrom = moment().startOf('day').subtract(1, 'month').toDate();
+        let lcto = moment().endOf('day').toDate();
+
+        this.connectionObservable = this.adminService.getLastConnectionProtocols(lcfrom, lcto);
+        this.connectionObservable.subscribe(list => {
+            for (let event of list) {
+                if (event['payload'] && event['payload']['connected']) {
+                    this.machineConnected(event['clientid']);
+                }
+            }
+        });
+
         this.visualizationSocketService.getUpdates('machineconnection').subscribe(data => {
             console.log("MachineConnection: connected=" + data.connected);
+            if (data.connected) {
+                this.machineConnected(data.clientId);
+            } else {
+                this.machineDisconnected(data.clientId);
+            }
         });
         this.visualizationSocketService.getUpdates('offerrequest').subscribe(data => {
-            console.log("OfferRequest: " + data.items[0].dataId);
+            if (this.clients[data.clientId] && this.clients[data.clientId]['displayNumber']) {
+                this.animateOfferRequest(this.clients[data.clientId]['displayNumber']);
+            }
         });
         this.visualizationSocketService.getUpdates('payment').subscribe(data => {
-            console.log("Payment: " + data.payment.confidenceState);
+            if (this.clients[data.clientId] && this.clients[data.clientId]['displayNumber']) {
+                if(!this.payments[data['payment']['transactionUUID']]){
+                    this.animatePayment1(this.clients[data.clientId]['displayNumber']);
+                    this.payments[data['payment']['transactionUUID']] = data['payment'];
+                }else{
+                    if (data['payment']['depth'] >= 6){
+                        delete this.payments[data['payment']['transactionUUID']]; //TODO not sure if this is correct
+                    }
+                }
+
+            }
         });
         this.visualizationSocketService.getUpdates('payingtransactions').subscribe(data => {
             console.log("PayingTransactions: " + data.transactions[0].transaction);
+            let tx = new Transaction();
+            tx.tx =  data.transactions[0].transaction;
+            tx.state =  data.transactions[0].state.state;
+            tx.depth =  data.transactions[0].state.depthInBlocks;
+            this.blockexplorer.addTransaction(tx);
+
         });
         this.visualizationSocketService.getUpdates('productionState').subscribe(data => {
             console.log("ProductionState: " + data.state.state);
+            if (this.clients[data.clientId] && this.clients[data.clientId]['displayNumber']) {
+                var machine;
+                switch (this.clients[data.clientId]['displayNumber']) {
+                    case 1:
+                        machine = this.machine1SVG;
+                        break;
+                    case 2:
+                        machine = this.machine2SVG;
+                        break;
+                    case 3:
+                        machine = this.machine3SVG;
+                        break;
+                }
+                if (data.state.state === 'startProcessing') {
+                    this.startMachineAnimation(machine);
+                }else if(data.state.state === 'finished' || data.state.state === 'errorProcessing' || data.state.state === 'productionPaused' || data.state.state === 'pumpControlServiceMode'){
+                    this.stopMachineAnimation(machine);
+                }
+            }
         });
         this.visualizationSocketService.getUpdates('licenseAvailable').subscribe(data => {
             console.log("LicenseAvailable: " + data.hsmId);
+            if (this.clients[data.clientId] && this.clients[data.clientId]['displayNumber']) {
+                this.animateLicenseOrder();
+            }
+
         });
         this.visualizationSocketService.getUpdates('licenseupdate').subscribe(data => {
             console.log("LicenseUpdate: " + data.hsmId);
+            if (this.clients[data.clientId] && this.clients[data.clientId]['displayNumber']) {
+                this.animateLicense1(this.clients[data.clientId]['displayNumber']);
+            }
         });
         this.visualizationSocketService.getUpdates('licenseupdateconfirm').subscribe(data => {
             console.log("LicenseUpdateConfirm: " + data.hsmId);
@@ -107,9 +214,6 @@ export class VisualizationComponent implements OnInit, AfterViewInit {
         this.tdh1SVG = Snap('#tdh1svg');
         this.tdh2SVG = Snap('#tdh2svg');
         this.connectAll();
-        this.drawMachine(this.machine1SVG);
-        this.drawMachine(this.machine2SVG);
-        this.drawMachine(this.machine3SVG);
         this.drawTDH(this.tdh1SVG);
         this.drawTDH(this.tdh2SVG);
     }
@@ -146,21 +250,14 @@ export class VisualizationComponent implements OnInit, AfterViewInit {
             this.tdh2.nativeElement, this.tdm.nativeElement);
 
 
-        // SvgDraw.connectElements(this.svgContainer.nativeElement, this.svg1.nativeElement, this.path1.nativeElement,
-        //     this.tdh1.nativeElement, this.tdm.nativeElement);
-        // SvgDraw.connectElements(this.svgContainer.nativeElement, this.svg1.nativeElement, this.path2.nativeElement,
-        //     this.tdh2.nativeElement, this.tdm.nativeElement);
-        // SvgDraw.connectElements(this.svgContainer.nativeElement, this.svg1.nativeElement, this.path3.nativeElement,
-        //     this.machine1.nativeElement, this.tdm.nativeElement);
-        // SvgDraw.connectElements(this.svgContainer.nativeElement, this.svg1.nativeElement, this.path4.nativeElement,
-        //     this.machine2.nativeElement, this.tdm.nativeElement);
-        // SvgDraw.connectElements(this.svgContainer.nativeElement, this.svg1.nativeElement, this.path5.nativeElement,
-        //     this.machine3.nativeElement, this.tdm.nativeElement);
-        // SvgDraw.connectElements(this.svgContainer.nativeElement, this.svg1.nativeElement, this.path7.nativeElement,
-        //     this.btc.nativeElement, this.tdm.nativeElement);
+        for (let clientId in this.clients) {
+            if (this.clients[clientId]['displayNumber']) {
+                this.connectMachine(this.clients[clientId]['displayNumber'], true, this.clients[clientId]);
+            }
+        }
     }
 
-    connectMachine(machine: number, connect: boolean) {
+    connectMachine(machine: number, connect: boolean, client: any) {
         let machineSVG;
         let path_mtdm;
         let path_mtdm_ref;
@@ -191,10 +288,9 @@ export class VisualizationComponent implements OnInit, AfterViewInit {
 
         }
         if (connect) {
-            if(machineConnected){
-                return;
+            if (!machineConnected) {
+                this.drawMachine(machineSVG);
             }
-            this.drawMachine(machineSVG);
             path_mtdm = this.snapSVG.path('M0 0');
             path_mtdm.attr({stroke: '#000', fill: 'none', 'stroke-width': '12px', id: 'path_mtdm_' + machine});
             path_mtdm_ref = document.getElementById('path_mtdm_' + machine);
@@ -202,7 +298,7 @@ export class VisualizationComponent implements OnInit, AfterViewInit {
                 element.nativeElement, this.tdm.nativeElement);
 
         } else {
-            if(!machineConnected){
+            if (!machineConnected) {
                 return;
             }
             this.clearMachine(machineSVG);
@@ -211,12 +307,18 @@ export class VisualizationComponent implements OnInit, AfterViewInit {
         switch (machine) {
             case 1:
                 this.machine1Connected = connect;
+                this.path_m1tdm = path_mtdm;
+                this.path_m1tdm_ref = path_mtdm_ref;
                 break;
             case 2:
                 this.machine2Connected = connect;
+                this.path_m2tdm = path_mtdm;
+                this.path_m2tdm_ref = path_mtdm_ref;
                 break;
             case 3:
                 this.machine3Connected = connect;
+                this.path_m3tdm = path_mtdm;
+                this.path_m3tdm_ref = path_mtdm_ref;
                 break;
         }
 
@@ -231,75 +333,167 @@ export class VisualizationComponent implements OnInit, AfterViewInit {
 
     }
 
-    animate() {
-        if (this.elementToAnimate === 'rectangle') {
-            const animationObject = this.snapSVG.rect(0, 0, 50, 50);
-            animationObject.attr({fill: '#f00', opacity: 0, strokeWidth: 1, stroke: '#ddd'});
-            this.animateObject(animationObject);
-        } else if (this.elementToAnimate === 'circle') {
-            const animationObject = this.snapSVG.circle(0, 0, 25);
-            animationObject.attr({fill: '#f00', opacity: 0, strokeWidth: 1, stroke: '#ddd'});
-            this.animateObject(animationObject);
-        } else if (this.elementToAnimate === 'star') {
-            const animationObject = this.snapSVG.path('M25,0L30.9,19.2L50,19.1L34.5,30.9L40.5,50L25,38.2L9.5,50L15.5,30.9L0,19.1L19.1,19.1Z');
-            animationObject.attr({fill: '#f00', opacity: 0, strokeWidth: 1, stroke: '#ddd'});
-            this.animateObject(animationObject);
-        } else if (this.elementToAnimate === 'bitcoin') {
-            this.loadSVG('assets/visualization/bitcoin.svg', (fragment: any) => {
-                const animationObject = fragment.select('g');
-                this.snapSVG.append(animationObject);
-                this.animateObject(animationObject);
-            });
-        } else if (this.elementToAnimate === 'offer') {
-            this.loadSVG('assets/visualization/offer.svg', (fragment: any) => {
-                const animationObject = fragment.select('g');
-                this.snapSVG.append(animationObject);
-                this.animateObject(animationObject);
-            });
-        } else if (this.elementToAnimate === 'offerrequest') {
-            this.loadSVG('assets/visualization/offerrequest.svg', (fragment: any) => {
-                const animationObject = fragment.select('g');
-                this.snapSVG.append(animationObject);
-                this.animateObject(animationObject);
-            });
-        } else if (this.elementToAnimate === 'licenseOrder') {
-            this.loadSVG('assets/visualization/licenseOrder.svg', (fragment: any) => {
-                const animationObject = fragment.select('g');
-                this.snapSVG.append(animationObject);
-                this.animateObject(animationObject);
-            });
-        } else if (this.elementToAnimate === 'license') {
-            this.loadSVG('assets/visualization/license.svg', (fragment: any) => {
-                const animationObject = fragment.select('g');
-                this.snapSVG.append(animationObject);
-                this.animateObject(animationObject);
-            });
-        }
+    animateOfferRequest(machineNr: number) {
+        this.loadSVG('assets/visualization/offerrequest.svg', (fragment: any) => {
+            const animationObject = fragment.select('g');
+            this.snapSVG.append(animationObject);
+            var path = null;
+            switch (machineNr) {
+                case 1:
+                    path = this.path_m1tdm;
+                    break;
+                case 2:
+                    path = this.path_m2tdm;
+                    break;
+                case 3:
+                    path = this.path_m3tdm;
+                    break;
+            }
+            if (path) {
+                this.animateObject(animationObject, path, false, 2000, () => {
+                    this.animateOffer(machineNr);
+                });
+            }
 
+        });
     }
 
-    animateObject(animationObject: any) {
+    animateOffer(machineNr: number) {
+        this.loadSVG('assets/visualization/offer.svg', (fragment: any) => {
+            const animationObject = fragment.select('g');
+            this.snapSVG.append(animationObject);
+            var path = null;
+            switch (machineNr) {
+                case 1:
+                    path = this.path_m1tdm;
+                    break;
+                case 2:
+                    path = this.path_m2tdm;
+                    break;
+                case 3:
+                    path = this.path_m3tdm;
+                    break;
+            }
+            if (path) {
+                this.animateObject(animationObject, path, true, 2000, () => {
+                    // this.animateOffer(machineNr);
+
+                });
+            }
+
+        });
+    }
+
+    animatePayment1(machineNr: number) {
+        this.loadSVG('assets/visualization/bitcoin.svg', (fragment: any) => {
+            const animationObject = fragment.select('g');
+            this.snapSVG.append(animationObject);
+            var path = null;
+            switch (machineNr) {
+                case 1:
+                    path = this.path_m1tdm;
+                    break;
+                case 2:
+                    path = this.path_m2tdm;
+                    break;
+                case 3:
+                    path = this.path_m3tdm;
+                    break;
+            }
+            if (path) {
+                this.animateObject(animationObject, path, false, 2000, () => {
+                    this.animatePayment2();
+
+                });
+            }
+
+        });
+    }
+
+    animatePayment2() {
+        this.loadSVG('assets/visualization/bitcoin.svg', (fragment: any) => {
+            const animationObject = fragment.select('g');
+            this.snapSVG.append(animationObject);
+            this.animateObject(animationObject, this.path_tdh1tdm, true, 2000, () => {
+                // this.animateOffer(machineNr);
+            });
+
+        });
+    }
+
+    animateLicenseOrder() {
+        this.loadSVG('assets/visualization/licenseOrder.svg', (fragment: any) => {
+            const animationObject = fragment.select('g');
+            this.snapSVG.append(animationObject);
+            this.animateObject(animationObject, this.path_lctdm, true, 2000, () => {
+                // this.animateOffer(machineNr);
+            });
+
+        });
+    }
+    animateLicense1(machineNr: number) {
+        this.loadSVG('assets/visualization/license.svg', (fragment: any) => {
+            const animationObject = fragment.select('g');
+            this.snapSVG.append(animationObject);
+            this.animateObject(animationObject, this.path_lctdm, false, 2000, () => {
+                this.animateLicense2(machineNr);
+            });
+
+        });
+    }
+    animateLicense2(machineNr: number) {
+        this.loadSVG('assets/visualization/license.svg', (fragment: any) => {
+            const animationObject = fragment.select('g');
+            this.snapSVG.append(animationObject);
+
+            var path = null;
+            switch (machineNr) {
+                case 1:
+                    path = this.path_m1tdm;
+                    break;
+                case 2:
+                    path = this.path_m2tdm;
+                    break;
+                case 3:
+                    path = this.path_m3tdm;
+                    break;
+            }
+            if (path) {
+                this.animateObject(animationObject, path, true, 2000, () => {
+                    // this.animatePayment2();
+
+                });
+            }
+        });
+    }
+
+
+
+    animateObject(animationObject: any, animationPath: any, reversed: boolean, duration: number, finished: any) {
 
         const animationObjectCenter = {x: animationObject.getBBox().cx, y: animationObject.getBBox().cy};
-        const animation_path = this.snapSVG.select('#' + this.pathToAnimate);
-        const animation_path_length = Snap.path.getTotalLength(animation_path);
+        // const animation_path = this.snapSVG.select('#' + this.pathToAnimate);
+        const animation_path_length = Snap.path.getTotalLength(animationPath);
 
-        const reversed = this.animationReversed;
-        const firstPoint = this.getAnimationPoint(animation_path, animationObjectCenter, reversed ? animation_path_length : 0, reversed ? -30 : 30);
+        // const reversed = this.animationReversed;
+        const firstPoint = this.getAnimationPoint(animationPath, animationObjectCenter, reversed ? animation_path_length : 0, reversed ? -30 : 30);
         animationObject.transform('translate(' + firstPoint.x + ',' + firstPoint.y + ')');
         const self = this;
         Snap.animate(0, 100, function (step: any) {
             animationObject.attr('opacity', step / 100);
-        }, 500, function () {
+        }, 250, function () {
             Snap.animate(0, animation_path_length, function (step: any) {
                 animationObject.attr('opacity', 1);
-                const moveToPoint = self.getAnimationPoint(animation_path, animationObjectCenter, (reversed ? (animation_path_length - step) : step), (reversed ? -30 : 30));
+                const moveToPoint = self.getAnimationPoint(animationPath, animationObjectCenter, (reversed ? (animation_path_length - step) : step), (reversed ? -30 : 30));
                 animationObject.transform('translate(' + moveToPoint.x + ',' + moveToPoint.y + ')');
-            }, 5000, function () {
+            }, duration, function () {
                 Snap.animate(0, 100, function (step: any) {
                     animationObject.attr('opacity', 1 - step / 100);
-                }, 500, function () {
+                }, 250, function () {
                     animationObject.remove();
+                    if (finished && typeof finished === "function") {
+                        finished();
+                    }
                 });
 
             });
@@ -340,6 +534,10 @@ export class VisualizationComponent implements OnInit, AfterViewInit {
         });
     }
 
+    stopMachineAnimation(machine: any) {
+        machine['animationActive'] = false;
+    }
+
     startMachineAnimation(machine: any) {
         if (machine['animationActive']) {
             return;
@@ -370,24 +568,13 @@ export class VisualizationComponent implements OnInit, AfterViewInit {
         machineAnimation();
     }
 
-    animateMachine1() {
-        this.startMachineAnimation(this.machine1SVG);
-    }
 
-    animateMachine2() {
-        this.startMachineAnimation(this.machine2SVG);
-    }
-
-    animateMachine3() {
-        this.startMachineAnimation(this.machine3SVG);
-    }
-
-    addTransaction() {
-        let tx = new Transaction();
-        tx.tx = 'xsdcfvgbhnjmk';
-        tx.date = new Date();
-        tx.amount = 1;
-        this.blockexplorer.addTransaction(tx);
-    }
+    // addTransaction() {
+    //     let tx = new Transaction();
+    //     tx.tx = 'xsdcfvgbhnjmk';
+    //     tx.date = new Date();
+    //     tx.amount = 1;
+    //     this.blockexplorer.addTransaction(tx);
+    // }
 
 }

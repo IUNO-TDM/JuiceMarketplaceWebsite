@@ -1,5 +1,5 @@
 export class Transaction {
   tx: string;
-  amount: number;
-  date: Date;
+  state: string;
+  depth: number;
 }

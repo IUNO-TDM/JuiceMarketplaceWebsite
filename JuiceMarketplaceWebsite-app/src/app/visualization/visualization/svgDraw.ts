@@ -28,11 +28,11 @@ export class SvgDraw {
 
     let quadrant = 0;
 
-    if (start.cy < end.cy && ((start.cx > end.cx - (end.cy - start.cy)) && (start.cx < end.cx + (end.cy - start.cy)))) {
+    if (start.cy < end.cy && ((start.cx >= end.cx - (end.cy - start.cy)) && (start.cx <= end.cx + (end.cy - start.cy)))) {
       quadrant = 1;
     } else if (start.cx > end.cx && ((start.cy < end.cy + (start.cx - end.cx)) && (start.cy > end.cy - (start.cx - end.cx)))) {
       quadrant = 2;
-    } else if (start.cy > end.cy && ((start.cx < end.cx + (start.cy - end.cy)) && (start.cx > end.cx - (start.cy - end.cy)))) {
+    } else if (start.cy > end.cy && ((start.cx <= end.cx + (start.cy - end.cy)) && (start.cx >= end.cx - (start.cy - end.cy)))) {
       quadrant = 3;
     } else if (start.cx < end.cx && ((start.cy > end.cy - (end.cx - start.cx)) && (start.cx < end.cy + (end.cx - start.cx)))) {
       quadrant = 4;

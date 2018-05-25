@@ -7,29 +7,7 @@
   <div class="upperTwoThirds" fxFlex="66" fxLayout="row">
     <div class="tdhs-container" fxFlex="15" fxLayout="column">
       <div class="tdh-spacer" fxFlex="20">
-        <button (click)="animate()">animate</button>
-        <button (click)="animateMachine1()">animate Machine</button>
-        <button (click)="addTransaction()">addTransaction</button>
-        <select [(ngModel)]="elementToAnimate">
-          <option value="rectangle">rectangle</option>
-          <option value="circle">circle</option>
-          <option value="star">star</option>
-          <option value="bitcoin">bitcoin</option>
-          <option value="licenseOrder">licenseOrder</option>
-          <option value="offer">offer</option>
-          <option value="offerrequest">offerrequest</option>
-          <option value="license">license</option>
-        </select>
-        <select [(ngModel)]="pathToAnimate">
-          <option value="path1">path1</option>
-          <option value="path2">path2</option>
-          <option value="path3">path3</option>
-          <option value="path4">path4</option>
-          <option value="path5">path5</option>
-          <option value="path6">path6</option>
-          <option value="path7">path7</option>
-        </select>
-        Reverse: <input type="checkbox" name="animationReversed" [(ngModel)]="animationReversed">
+
       </div>
       <div class="tdh-container" fxFlex="*"  fxLayout="row" fxLayoutAlign="center center">
         <div #tdh1 id="tdh1" class="tdh">
