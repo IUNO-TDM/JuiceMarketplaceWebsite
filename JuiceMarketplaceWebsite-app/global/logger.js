@@ -146,18 +146,18 @@ logger.logRequestAndResponse = function (err, options, res, data) {
         logger.crit(loggerOutput);
         e = new Error(JSON.stringify(loggerOutput, null, 4));
         if (res) {
-            e.statusCode = res.statusCode;
+            e.status = res.statusCode;
         }
         else {
-            e.statusCode = 500;
+            e.status = 500;
         }
 
 
     }
     else if (res && res.statusCode > 201) {
         logger.warn(loggerOutput);
-        e = new Error(JSON.stringify(loggerOutput, null, 4));
-        e.statusCode = res.statusCode;
+        e = new Error(res.statusMessage);
+        e.status = res.statusCode;
     }
     else {
         logger.debug(loggerOutput);

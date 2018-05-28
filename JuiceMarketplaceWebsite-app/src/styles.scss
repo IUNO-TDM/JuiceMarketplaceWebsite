@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
+// Hack, for details see https://github.com/angular/flex-layout/issues/689
 *[fxlayout='column'] > *[fxFlex] {
     flex-basis: 0.000000001px !important;
 }

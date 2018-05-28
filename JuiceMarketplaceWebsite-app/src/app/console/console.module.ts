@@ -30,6 +30,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {ConsoleRoutingModule} from './console-routing.module';
 // Components
 import {ConsoleComponent} from './console.component';
+import {ComponentListDialogComponent} from './component-list-dialog/component-list-dialog.component'
 import {CreateRecipeComponent} from './create-recipe/create-recipe.component';
 import {RecipesComponent} from './recipes/recipes.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
@@ -76,6 +77,7 @@ import {ComponentService} from 'tdm-common'
     ],
     declarations: [
         ConsoleComponent,
+        ComponentListDialogComponent,
         CreateRecipeComponent,
         RecipesComponent,
         DashboardComponent,
@@ -90,7 +92,11 @@ import {ComponentService} from 'tdm-common'
         {provide: 'componentSourceUrl', useValue: '/api/components'}
     ],
     bootstrap: [ConsoleComponent],
-    entryComponents: [VaultPayoutDialogComponent, VaultTestnetHelpDialogComponent]
+    entryComponents: [
+        VaultPayoutDialogComponent,
+        VaultTestnetHelpDialogComponent,
+        ComponentListDialogComponent,
+    ]
 })
 export class ConsoleModule {
 }
