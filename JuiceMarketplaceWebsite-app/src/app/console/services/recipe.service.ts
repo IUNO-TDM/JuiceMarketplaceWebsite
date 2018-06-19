@@ -1,4 +1,3 @@
-import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 import {Observable} from 'rxjs/Observable';
@@ -6,6 +5,7 @@ import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 import { Recipe } from 'tdm-common';
+import { Injectable } from '@angular/core';
 
 @Injectable()
 export class RecipeService {
@@ -29,7 +29,6 @@ export class RecipeService {
     }
 
     deleteRecipe(recipe: Recipe) {
-        console.log(recipe);
         this.http.delete(this.recipesUrl + "/" + recipe.id, {
             responseType: 'text',
         }).subscribe(response => {

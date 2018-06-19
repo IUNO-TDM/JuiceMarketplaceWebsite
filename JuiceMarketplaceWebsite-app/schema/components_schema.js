@@ -27,11 +27,7 @@ self.Components_Body = {
 self.Components_Query = {
     type: 'object',
     properties: {
-        lang: {
-            type: 'string',
-            enum: ['de', 'en']
-        }
-    },
+        },
     additionalProperties: false
 };
 

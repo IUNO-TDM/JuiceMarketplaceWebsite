@@ -28,21 +28,20 @@ function buildOptionsForRequest(method, protocol, host, port, path, qs) {
 
 //<editor-fold desc="Components">
 // Get all Components
-self.getAllComponents = function (accessToken, language, callback) {
+self.getAllComponents = function (language, accessToken, callback) {
     if (typeof(callback) !== 'function') {
 
         callback = function () {
             logger.info('Callback not registered');
         }
     }
-
     const options = buildOptionsForRequest( //TODO: add language to request
         'GET',
         CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PROTOCOL,
         CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.HOST,
         CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PORT,
         '/components',
-        {}
+        {lang: language}
     );
     options.headers.authorization = 'Bearer ' + accessToken;
 
@@ -59,7 +58,7 @@ self.getAllComponents = function (accessToken, language, callback) {
 
 //<editor-fold desc="Administrate Recipes">
 // Get Recipes
-self.getRecipesForUser = function (userId, accessToken, callback) {
+self.getRecipesForUser = function (language, userId, accessToken, callback) {
 
     if (typeof(callback) !== 'function') {
 
@@ -75,7 +74,8 @@ self.getRecipesForUser = function (userId, accessToken, callback) {
         CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PORT,
         '/technologydata',
         {
-            user: userId
+            user: userId,
+            lang: language
         }
     );
 
@@ -145,13 +145,13 @@ self.deleteRecipe = function (token, recipeID, callback) {
     doRequest(options, callback);
 };
 
-self.getAllRecipes = function (token, params, callback) {
+self.getAllRecipes = function (language, token, params, callback) {
     if (!params) {
         params = {};
     }
 
     params['technology'] = CONFIG.TECHNOLOGY_UUID;
-
+    params['lang'] = language;
 
     const options = buildOptionsForRequest(
         'GET',
@@ -193,7 +193,7 @@ self.getTechnologyDataHistory = function (from, to, token, callback) {
     doRequest(options, callback);
 };
 
-self.getTopComponents = function (from, to, limit, token, callback) {
+self.getTopComponents = function (language, from, to, limit, token, callback) {
 
     const options = buildOptionsForRequest(
         'GET',
@@ -204,7 +204,8 @@ self.getTopComponents = function (from, to, limit, token, callback) {
         {
             from: from,
             to: to,
-            limit: limit
+            limit: limit,
+            lang: language
         }
     );
     options.headers.authorization = 'Bearer ' + token.accessToken;

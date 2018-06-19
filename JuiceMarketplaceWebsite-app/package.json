@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "develop": "nodemon ./app.js",
-    "build": "ng build --prod --build-optimizer",
     "start": "node ./bin/www",
     "snyk-protect": "snyk protect",
     "prepublish": "npm run snyk-protect",

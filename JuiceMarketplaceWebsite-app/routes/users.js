@@ -6,7 +6,6 @@ const express = require('express');
 const router = express.Router();
 const marketplaceCore = require('../adapter/marketplace_core_adapter');
 const authService = require('../adapter/auth_service_adapter');
-const programConverter = require('../services/program_converter');
 const logger = require('../global/logger');
 const helper = require('../services/helper_service');
 const encryption = require('../services/encryption_service');
@@ -91,7 +90,8 @@ router.get('/:id/recipes/count', validate({
     query: validation_schema.Empty,
     body: validation_schema.Empty
 }), function (req, res, next) {
-    marketplaceCore.getRecipesForUser(req.params['id'], req.user.token.accessToken, function (err, recipes) {
+    var language = req.cookies.language;
+    marketplaceCore.getRecipesForUser(language, req.params['id'], req.user.token.accessToken, function (err, recipes) {
         if (err) {
             return next(err);
         }
@@ -106,7 +106,8 @@ router.post('/:id/recipes', validate({
     body: validation_schema_recipe.Recipe_Body
 }), function (req, res, next) {
     // Check if user can still publish recipes or if his limit is reached.
-    marketplaceCore.getRecipesForUser(req.params['id'], req.user.token.accessToken, function (err, recipes) {
+    var language = req.cookies.language;
+    marketplaceCore.getRecipesForUser(language, req.params['id'], req.user.token.accessToken, function (err, recipes) {
         if (err) {
             return next(err);
         }
