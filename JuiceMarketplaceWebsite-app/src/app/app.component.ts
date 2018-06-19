@@ -34,14 +34,6 @@ export class AppComponent implements OnInit, OnDestroy {
         private userService: UserService,
         private ccService: NgcCookieConsentService,
         ) {
-            console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")        
-            console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")        
-            console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")        
-            console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")        
-            console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")        
-            console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")        
-            // document.cookie = "redirectTo=" + this.router.url.toString();
-
             layoutService.layoutProperties.subscribe(layoutProperties => {
             this.toolbarMenuVisible = !layoutProperties.isSmallLayout
             setTimeout(() => {

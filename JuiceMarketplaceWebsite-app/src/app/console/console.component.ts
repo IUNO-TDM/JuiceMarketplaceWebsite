@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, Inject } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatSidenav } from '@angular/material';
 import { UserService, User } from './services/user.service';
@@ -21,7 +21,7 @@ export class ConsoleComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private userService: UserService,
+    private userService: UserService
   ) {
     if (userService.isLoggedIn()) {
 
