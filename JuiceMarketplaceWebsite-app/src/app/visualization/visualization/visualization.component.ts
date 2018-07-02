@@ -204,6 +204,10 @@ export class VisualizationComponent implements OnInit, AfterViewInit {
         this.visualizationSocketService.getUpdates('licenseupdateconfirm').subscribe(data => {
             console.log("LicenseUpdateConfirm: " + data.hsmId);
         });
+        this.visualizationSocketService.getUpdates('newtechnologydata').subscribe(data => {
+            console.log("NewTechnologyData: " + data.technologydataid);
+            this.animateNewTd();
+        });
     }
 
     ngAfterViewInit() {
@@ -431,6 +435,16 @@ export class VisualizationComponent implements OnInit, AfterViewInit {
 
         });
     }
+
+    animateNewTd() {
+        this.loadSVG('assets/visualization/td.svg', (fragment: any) => {
+            const animationObject = fragment.select('g');
+            this.snapSVG.append(animationObject);
+            this.animateObject(animationObject, this.path_tdh1tdm, false, 2000, () => {
+            });
+
+        });
+    }
     animateLicense1(machineNr: number) {
         this.loadSVG('assets/visualization/license.svg', (fragment: any) => {
             const animationObject = fragment.select('g');
@@ -567,14 +581,5 @@ export class VisualizationComponent implements OnInit, AfterViewInit {
 
         machineAnimation();
     }
-
-
-    // addTransaction() {
-    //     let tx = new Transaction();
-    //     tx.tx = 'xsdcfvgbhnjmk';
-    //     tx.date = new Date();
-    //     tx.amount = 1;
-    //     this.blockexplorer.addTransaction(tx);
-    // }
 
 }
