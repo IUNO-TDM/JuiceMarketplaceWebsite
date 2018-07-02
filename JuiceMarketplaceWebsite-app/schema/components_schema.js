@@ -24,4 +24,11 @@ self.Components_Body = {
     additionalProperties: false
 };
 
+self.Components_Query = {
+    type: 'object',
+    properties: {
+        },
+    additionalProperties: false
+};
+
 module.exports = self;

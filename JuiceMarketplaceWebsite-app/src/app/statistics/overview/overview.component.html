@@ -3,24 +3,24 @@
         <mat-card fxFlex.gt-md="50"  class="iuno-card ">
             <mat-card-header>
                 <mat-card-title>
-                    <span class="card-title">Lizenzverkäufe im Tagesverlauf</span>
+                    <span class="card-title" i18n>Lizenzverkäufe im Tagesverlauf</span>
                 </mat-card-title>
             </mat-card-header>
             <mat-card-content >
                 <google-chart *ngIf="hourreports && hourreports.length > 0; else no_hour_reports" [data]="revenuePerHourData"></google-chart>
-                <ng-template #no_hour_reports><p class="nodata">Keine Daten vorhanden</p></ng-template>
+                <ng-template #no_hour_reports><p class="nodata" i18n>Keine Daten vorhanden</p></ng-template>
             </mat-card-content>
         </mat-card>
 
         <mat-card fxFlex.gt-md="50" class="iuno-card ">
             <mat-card-header>
                 <mat-card-title>
-                    <span class="card-title">Lizenzverkäufe im letzten Monat</span>
+                    <span class="card-title" i18n>Lizenzverkäufe im letzten Monat</span>
                 </mat-card-title>
             </mat-card-header>
             <mat-card-content >
                 <google-chart *ngIf="dayreports && dayreports.length > 0; else no_day_reports" [data]="revenuePerDayData"></google-chart>
-                <ng-template #no_day_reports><p class="nodata">Keine Daten vorhanden</p></ng-template>
+                <ng-template #no_day_reports><p class="nodata" i18n>Keine Daten vorhanden</p></ng-template>
             </mat-card-content>
         </mat-card>
 
@@ -30,35 +30,35 @@
         <mat-card fxFlex.gt-md="34" class="iuno-card ">
             <mat-card-header>
                 <mat-card-title>
-                    <span class="card-title">Die beliebtesten Zutaten</span>
+                    <span class="card-title" i18n>Die beliebtesten Zutaten</span>
                 </mat-card-title>
             </mat-card-header>
             <mat-card-content>
                 <google-chart *ngIf="componentreports && componentreports.length > 0; else no_top_components" [data]="topComponentsData"></google-chart>
-                <ng-template #no_top_components><p class="nodata">Keine Daten vorhanden</p></ng-template>
+                <ng-template #no_top_components><p class="nodata" i18n>Keine Daten vorhanden</p></ng-template>
             </mat-card-content>
         </mat-card>
 
         <mat-card fxFlex.gt-md="33" class="iuno-card ">
             <mat-card-header>
                 <mat-card-title>
-                    <span class="card-title">Die beliebtesten Rezepte aller Zeiten</span>
+                    <span class="card-title" i18n>Die beliebtesten Rezepte aller Zeiten</span>
                 </mat-card-title>
             </mat-card-header>
             <mat-card-content>
                 <google-chart *ngIf="allTimeTopRecipes && allTimeTopRecipes.length > 0; else no_all_time_top_recipes" [data]="allTimeTopRecipesData"></google-chart>
-                <ng-template #no_all_time_top_recipes><p class="nodata">Keine Daten vorhanden</p></ng-template>
+                <ng-template #no_all_time_top_recipes><p class="nodata" i18n>Keine Daten vorhanden</p></ng-template>
             </mat-card-content>
         </mat-card>
         <mat-card fxFlex.gt-md="33" class="iuno-card ">
             <mat-card-header>
                 <mat-card-title>
-                    <span class="card-title">Die beliebtesten Rezepte heute</span>
+                    <span class="card-title" i18n>Die beliebtesten Rezepte heute</span>
                 </mat-card-title>
             </mat-card-header>
             <mat-card-content>
                 <google-chart  *ngIf="todayTopRecipes && todayTopRecipes.length > 0; else no_today_top_recipes" [data]="todayTopRecipesData"></google-chart>
-                <ng-template #no_today_top_recipes><p class="nodata">Keine Daten vorhanden</p></ng-template>
+                <ng-template #no_today_top_recipes><p class="nodata" i18n>Keine Daten vorhanden</p></ng-template>
             </mat-card-content>
         </mat-card>
     </div>

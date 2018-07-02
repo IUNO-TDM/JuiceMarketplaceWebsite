@@ -1,156 +1,877 @@
-<?xml version="1.0" encoding="utf-8"?>
-<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:trolltech="urn:trolltech:names:ts:document:1.0">
-  <file original="app/app.component.ts" datatype="plaintext" source-language="de" target-language="de"><body>
-    <trans-unit id="d3d6337957be71fc37eac4a3c0338f835daf6fa4" approved="yes">
-      <source xml:space="preserve">Marktplatz</source>
-      <target xml:space="preserve">Marktplatz</target>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:trolltech="urn:trolltech:names:ts:document:1.0" version="1.2">
+  <file original="app/app.component.ts" datatype="plaintext" source-language="de" target-language="de">
+    <body>
+      <trans-unit id="d3d6337957be71fc37eac4a3c0338f835daf6fa4" approved="yes">
+        <source xml:space="preserve">Marktplatz</source>
+        <target xml:space="preserve">Marktplatz</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b1875fdd47821b247985a5c0e4110b3c6d4af7f7" approved="yes">
+        <source xml:space="preserve">Statistiken</source>
+        <target xml:space="preserve">Statistiken</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="05d6def11b80c405276ad18c4fc5183e8cea4f75" datatype="html">
+        <source>Speichern</source>
+        
+        <target state="final">Speichern</target>
+      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">105</context></context-group></trans-unit>
+      <trans-unit id="367e537f73ef5d6874808117f0d8376a5aab6811" datatype="html">
+        <source>Rezeptlimit erreicht!</source>
+        
+        <target state="final">Rezeptlimit erreicht!</target>
+      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">112</context></context-group></trans-unit>
       
-    <context-group purpose="location"><context context-type="sourcefile">app/app.component.ts</context><context context-type="linenumber">17</context></context-group></trans-unit>
-    <trans-unit id="b1875fdd47821b247985a5c0e4110b3c6d4af7f7" approved="yes">
-      <source xml:space="preserve">Statistiken</source>
-      <target xml:space="preserve">Statistiken</target>
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/app.component.ts</context><context context-type="linenumber">18</context></context-group></trans-unit>
-  <trans-unit id="57b8728de504ae17b0de35dd3731abf992e9db9d" datatype="html">
-        <source>Start</source>
+    <trans-unit id="adf103f42182c40380a2cca83020ede8447094b4" datatype="html">
+        <source>Getränke verwalten</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      <target state="final">Getränke verwalten</target><note from="description" priority="1">headline</note></trans-unit><trans-unit id="3429fc92395f38a5334be81250393b9a44c7032c" datatype="html">
+        <source>Übersicht</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      <target state="final">Übersicht</target></trans-unit><trans-unit id="09cbfc10bc71f313d520d4e35f490933156063f1" datatype="html">
+        <source>Derzeit ist die Anzahl an Rezepten pro Benutzer
+                begrenzt. Bitte lösche ein bestehendes Rezept, falls du weitere auf dem Marktplatz veröffentlichen möchtest.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      <target state="final">Derzeit ist die Anzahl an Rezepten pro Benutzer
+                begrenzt. Bitte lösche ein bestehendes Rezept, falls du weitere auf dem Marktplatz veröffentlichen möchtest.</target></trans-unit><trans-unit id="8ba9fb62241ddd224c66b8810393bc63550c3a2c" datatype="html">
+        <source>Keine Getränke vorhanden</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      <target state="final">Keine Getränke vorhanden</target></trans-unit><trans-unit id="e5a795950a259aa059579d6efc2d2a101f47919b" datatype="html">
+        <source>Getränkename</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      <target state="final">Getränkename</target></trans-unit><trans-unit id="12c40a8175a7959c9dab6ecd34f858c6901418b8" datatype="html">
+        <source>Lizenzgebühr (IUNOs)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      <target state="final">Lizenzgebühr (IUNOs)</target></trans-unit><trans-unit id="eda0838277daa4775a86e9b08c747922f33c0666" datatype="html">
+        <source>Aktion</source>
+        
+      <target state="final">Aktion</target><context-group purpose="location"><context context-type="sourcefile">app/console/recipes/recipes.component.ts</context><context context-type="linenumber">42</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/console/vault/vault.component.ts</context><context context-type="linenumber">21</context></context-group></trans-unit><trans-unit id="a813fd43c9a1b211fe541045d263d2c500c80f0f" datatype="html">
+        <source>Löschen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      <target state="final">Löschen</target></trans-unit><trans-unit id="f65253954b66e929a8b4d5ecaf61f9129f8cec64" datatype="html">
+        <source>Dashboard</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">headline</note>
+      <target state="final">Dashboard</target></trans-unit><trans-unit id="38d0c576b0220019bdf34da5d5d1a9dc4734ee15" datatype="html">
+        <source>Umsatzverlauf im letzten Monat</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      <target state="final">Umsatzverlauf im letzten Monat</target></trans-unit><trans-unit id="6da8dd99b289bd6221d05270a76f46695793e396" datatype="html">
+        <source>Keine Daten vorhanden</source>
+        
+        
+      <target state="final">Keine Daten vorhanden</target><context-group purpose="location"><context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context><context context-type="linenumber">14</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context><context context-type="linenumber">26</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/statistics/overview/overview.component.ts</context><context context-type="linenumber">11</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/statistics/overview/overview.component.ts</context><context context-type="linenumber">23</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/statistics/overview/overview.component.ts</context><context context-type="linenumber">38</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/statistics/overview/overview.component.ts</context><context context-type="linenumber">50</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/statistics/overview/overview.component.ts</context><context context-type="linenumber">61</context></context-group></trans-unit><trans-unit id="f13fb36aa96507264269eaa2bab3204d997d9c77" datatype="html">
+        <source>Top 5 im letzten Monat</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      <target state="final">Top 5 im letzten Monat</target></trans-unit><trans-unit id="2a586421a7737029d4d52290e9e7a827fa6f0523" datatype="html">
+        <source>Lizenzverkäufe heute</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      <target state="final">Lizenzverkäufe heute</target></trans-unit><trans-unit id="0f116bcebf0ff208a58f0349381ccffa5171e53f" datatype="html">
+        <source>Meistverkauftes Getränk</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      <target state="final">Meistverkauftes Getränk</target></trans-unit><trans-unit id="44552049e4bba7349026807493f7663f1cf25a2d" datatype="html">
+        <source>Aktueller Kontostand</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+      <target state="final">Aktueller Kontostand</target></trans-unit><trans-unit id="c47b6066a02b6434f0cd861e792d9ceebbe59235" datatype="html">
+        <source>Datenschutz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/footer/footer.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      <target state="final">Datenschutz</target></trans-unit><trans-unit id="140d9a7d0795beace6491c45566f6dd295e94999" datatype="html">
+        <source>Impressum</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/footer/footer.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      <target state="final">Impressum</target></trans-unit><trans-unit id="69f028470ae528627d013f54fb9b7d1c89f1a75e" datatype="html">
+        <source>Guthaben verwalten</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault/vault.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">headline</note>
+      <target state="final">Guthaben verwalten</target></trans-unit><trans-unit id="b3b404bc704c40aa6658654b3944a22bc68f8481" datatype="html">
+        <source>Guthaben im Bitcoin Vault</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault/vault.component.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      <target state="final">Guthaben im Bitcoin Vault</target></trans-unit><trans-unit id="6f095e045f0e5d0744436162c6ff6df51d7bc83f" datatype="html">
+        <source>Kein Guthaben im Bitcoin Vault gespeichert.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault/vault.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      <target state="final">Kein Guthaben im Bitcoin Vault gespeichert.</target></trans-unit><trans-unit id="a7cfbc126999f19af79727d5b0229ef2da2c5250" datatype="html">
+        <source>Wallet ID</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault/vault.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      <target state="final">Wallet ID</target></trans-unit><trans-unit id="9e8ef231aa8b617100934ac9bebacbe27dc1451a" datatype="html">
+        <source>Guthaben (incl. unbestätigte Mittel) (IUNO)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault/vault.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      <target state="final">Guthaben (incl. unbestätigte Mittel) (IUNO)</target></trans-unit><trans-unit id="641ab9be9977e1cc90392463a71919e9017c1184" datatype="html">
+        <source>Bestätigtes Guthaben (IUNO)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault/vault.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      <target state="final">Bestätigtes Guthaben (IUNO)</target></trans-unit><trans-unit id="133c17cdad17236bbf4fa9621616d31a73c93a4b" datatype="html">
+        <source>Auszahlung</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault/vault.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      <target state="final">Auszahlung</target></trans-unit><trans-unit id="ea6c9eed6d5dd4338b4822373651d67f37ea7150" datatype="html">
+        <source>Auszahlung von Guthaben veranlassen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">title</note>
+      <target state="final">Auszahlung von Guthaben veranlassen</target></trans-unit><trans-unit id="bb98b916f3ac89322820c9d5487d6c87706b5a8e" datatype="html">
+        <source>Es sind <x id="INTERPOLATION" equiv-text="{{wallet.confirmed/100000 | number:'1.0-5'}}"/> IUNO in Ihrem Wallet zur Auszahlung bereit.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+            Dies entspricht <x id="INTERPOLATION_1" equiv-text="{{wallet.confirmed / unitFactor | number:'1.0-5'}}"/> <x id="INTERPOLATION_2" equiv-text="{{unitName}}"/> im Bitcoin Testnet.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      <target state="final">Es sind <x id="INTERPOLATION" equiv-text="{{wallet.confirmed/100000 | number:'1.0-5'}}"/> IUNO in Ihrem Wallet zur Auszahlung bereit.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+            Dies entspricht <x id="INTERPOLATION_1" equiv-text="{{wallet.confirmed / unitFactor | number:'1.0-5'}}"/> <x id="INTERPOLATION_2" equiv-text="{{unitName}}"/> im Bitcoin Testnet.</target></trans-unit><trans-unit id="3f37bfe901c665205c03967962726ada2006bede" datatype="html">
+        <source>Aktuell sind davon noch <x id="INTERPOLATION" equiv-text="{{(wallet.unconfirmed-wallet.confirmed) / unitFactor | number: '1.0-8'}}"/>
+            <x id="INTERPOLATION_1" equiv-text="{{unitName}}"/> unbestätigt.
+            Sobald diese Transaktionen in der Blockchain bestätigt sind, kann man auch dieses Guthaben auszahlen.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      <target state="final">Aktuell sind davon noch <x id="INTERPOLATION" equiv-text="{{(wallet.unconfirmed-wallet.confirmed) / unitFactor | number: '1.0-8'}}"/>
+            <x id="INTERPOLATION_1" equiv-text="{{unitName}}"/> unbestätigt.
+            Sobald diese Transaktionen in der Blockchain bestätigt sind, kann man auch dieses Guthaben auszahlen.</target></trans-unit><trans-unit id="a23cdc12e71493323709959ee1cccb56087fdc2f" datatype="html">
+        <source>Wallet leeren</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      <target state="final">Wallet leeren</target></trans-unit><trans-unit id="8d7fb4498230a1a42bf29edb7855134bb49f21c6" datatype="html">
+        <source>min. <x id="INTERPOLATION" equiv-text="{{6000/unitFactor | number: '1.0-8'}}"/>, max.
+                        <x id="INTERPOLATION_1" equiv-text="{{(wallet.confirmed-transactionFee)/unitFactor | number: '1.0-8'}}"/>
+                    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      <target state="final">min. <x id="INTERPOLATION" equiv-text="{{6000/unitFactor | number: '1.0-8'}}"/>, max.
+                        <x id="INTERPOLATION_1" equiv-text="{{(wallet.confirmed-transactionFee)/unitFactor | number: '1.0-8'}}"/>
+                    </target></trans-unit><trans-unit id="10f2cfe2080e00cee322f5a4227ff967e5cee597" datatype="html">
+        <source>Die Transaktionsgebühr beträgt <x id="INTERPOLATION" equiv-text="{{transactionFee / unitFactor | number:'1.0-8'}}"/> <x id="INTERPOLATION_1" equiv-text="{{unitName}}"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+            und das Restguthaben im Wallet <x id="INTERPOLATION_2" equiv-text="{{remaining / unitFactor | number:'1.0-8'}}"/> <x id="INTERPOLATION_1" equiv-text="{{unitName}}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+      <target state="final">Die Transaktionsgebühr beträgt <x id="INTERPOLATION" equiv-text="{{transactionFee / unitFactor | number:'1.0-8'}}"/> <x id="INTERPOLATION_1" equiv-text="{{unitName}}"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+            und das Restguthaben im Wallet <x id="INTERPOLATION_2" equiv-text="{{remaining / unitFactor | number:'1.0-8'}}"/> <x id="INTERPOLATION_1" equiv-text="{{unitName}}"/></target></trans-unit><trans-unit id="7902b69333172d210bf736b62e3408550de0d56a" datatype="html">
+        <source>Auszahlen!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+      <target state="final">Auszahlen!</target></trans-unit><trans-unit id="5b919212544398c7e314b427a0f83f8f0ade5180" datatype="html">
+        <source>Auszahladresse</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      <target state="final">Auszahladresse</target></trans-unit><trans-unit id="21e0fda1c079d2740c574dc3b63b4249a7b79ca3" datatype="html">
+        <source>Auszahlbetrag</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      <target state="final">Auszahlbetrag</target></trans-unit><trans-unit id="a7574ba7a58e1c89b5ed0fc5325bff999b1e9624" datatype="html">
+        <source>Informationen zur Währung IUNO</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault-testnet-help-dialog/vault-testnet-help-dialog.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">title</note>
+      <target state="final">Informationen zur Währung IUNO</target></trans-unit><trans-unit id="9706ede4f0e4ad095a8dae68bdc32a482b021881" datatype="html">
+        <source><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>Die Währung in unserem Demonstrator nennt sich IUNO. Hinter den IUNOs steckt technisch das Bitcoin Testnet.
+        Diese Variante von Bitcoin ist zum Testen und zum Entwickeln mit der Bitcoin-Technik gedacht. Einen realen Wert,
+        den man beispielsweise in Euros ausdrücken könnte, gibt es nicht. Jedoch kann man damit Cocktails an unseren
+        Saftmischmaschinen bezahlen.<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+    <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+        Für dich als Technologiedatenhersteller speichern wir deine IUNOs, die du mit Lizenzverkäufen erhalten hast.
+        Wenn du willst, kannst du dir dein Guthaben gerne an deine Bitcoin-Wallet schicken. Dazu benötigst du eine
+        Bitcoin-Wallet, die mit dem Bitcoin-Testnet zusammenarbeitet.<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+    <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+        Folgende Apps können wir dazu empfehlen:
+    <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault-testnet-help-dialog/vault-testnet-help-dialog.component.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      <target state="final"><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>Die Währung in unserem Demonstrator nennt sich IUNO. Hinter den IUNOs steckt technisch das Bitcoin Testnet.
+        Diese Variante von Bitcoin ist zum Testen und zum Entwickeln mit der Bitcoin-Technik gedacht. Einen realen Wert,
+        den man beispielsweise in Euros ausdrücken könnte, gibt es nicht. Jedoch kann man damit Cocktails an unseren
+        Saftmischmaschinen bezahlen.<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+    <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+        Für dich als Technologiedatenhersteller speichern wir deine IUNOs, die du mit Lizenzverkäufen erhalten hast.
+        Wenn du willst, kannst du dir dein Guthaben gerne an deine Bitcoin-Wallet schicken. Dazu benötigst du eine
+        Bitcoin-Wallet, die mit dem Bitcoin-Testnet zusammenarbeitet.<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+    <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
+        Folgende Apps können wir dazu empfehlen:
+    <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
+</target></trans-unit><trans-unit id="528d26b5cdcbe4915ab2647216621d1cd1d19a3b" datatype="html">
+        <source>(Nur im Testnet empfehlenswert)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault-testnet-help-dialog/vault-testnet-help-dialog.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      <target state="final">(Nur im Testnet empfehlenswert)</target></trans-unit><trans-unit id="4fe911d4cd8378dd81b654f199a0b99d8ca44946" datatype="html">
+        <source>Bitcoin Wallet für Testnet</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault-testnet-help-dialog/vault-testnet-help-dialog.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      <target state="final">Bitcoin Wallet für Testnet</target></trans-unit><trans-unit id="7f575cba2711e7d28244a724f1c34f88e231a1aa" datatype="html">
+        <source>OK danke!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/vault-testnet-help-dialog/vault-testnet-help-dialog.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      <target state="final">OK danke!</target></trans-unit><trans-unit id="7fe5242d9b419adf0370f14adcdd41fe132b710c" datatype="html">
+        <source>Lizenzverkäufe im Tagesverlauf</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      <target state="final">Lizenzverkäufe im Tagesverlauf</target></trans-unit><trans-unit id="c6fb8b06d07e90841651b619e83e17396c7d8715" datatype="html">
+        <source>Lizenzverkäufe im letzten Monat</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      <target state="final">Lizenzverkäufe im letzten Monat</target></trans-unit><trans-unit id="961d9af389fd94425aecfa16ea9df6b3a4cc276c" datatype="html">
+        <source>Die beliebtesten Zutaten</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      <target state="final">Die beliebtesten Zutaten</target></trans-unit><trans-unit id="017df1a1f452b8592e6babc821507b400873aa9d" datatype="html">
+        <source>Die beliebtesten Rezepte aller Zeiten</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      <target state="final">Die beliebtesten Rezepte aller Zeiten</target></trans-unit><trans-unit id="89ea7601029a7cc9366d93185997891359fae352" datatype="html">
+        <source>Die beliebtesten Rezepte heute</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      <target state="final">Die beliebtesten Rezepte heute</target></trans-unit><trans-unit id="a3e515a387b2443634e5de844006c95abce05794" datatype="html">
+        <source>Anmelden / Registrieren</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/account/account.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      <target state="final">Anmelden / Registrieren</target></trans-unit><trans-unit id="df0f8a49440c7127bd20461526dd1b39f2011e20" datatype="html">
+        <source>Anmelden</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/account/account.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      <target state="final">Anmelden</target></trans-unit><trans-unit id="98f065ce54317107fa7ea7fb726d44b3e8e7265a" datatype="html">
+        <source>
+                Der Technologiedatenmarktplatz<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                für die<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Lizenz zum Mixen
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">intro text</note>
+      <target state="final">
+                Der Technologiedatenmarktplatz<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                für die<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Lizenz zum Mixen
+            </target></trans-unit><trans-unit id="3f12ced55bd8d55d5cadadb4850d06e292f67c20" datatype="html">
+        <source>Was macht IUNO?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <note priority="1" from="description">IUNO</note>
+        <note priority="1" from="meaning">section header</note>
+      <target state="final">Was macht IUNO?</target></trans-unit><trans-unit id="9c60b5fd625b6b10cb591b42ed7a07e0fdbc21f5" datatype="html">
+        <source>
+                Im Forschungsvorhaben IUNO, dem Nationalen Referenzprojekt zur IT-Sicherheit in Industrie 4.0, werden
+                Bedrohungen und Risiken für die intelligente Fabrik identifiziert, Schutzmaßnahmen entwickelt und
+                exemplarisch in vier Anwendungsfällen umgesetzt.
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <note priority="1" from="description">IUNO</note>
+        <note priority="1" from="meaning">section</note>
+      <target state="final">
+                Im Forschungsvorhaben IUNO, dem Nationalen Referenzprojekt zur IT-Sicherheit in Industrie 4.0, werden
+                Bedrohungen und Risiken für die intelligente Fabrik identifiziert, Schutzmaßnahmen entwickelt und
+                exemplarisch in vier Anwendungsfällen umgesetzt.
+            </target></trans-unit><trans-unit id="cbb6079284144cac1ac7cd4c44f242f0f37cbe97" datatype="html">
+        <source>Technologiedatenmarktplatz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+        <note priority="1" from="description">Technologiedatenmarktplatz</note>
+        <note priority="1" from="meaning">section header</note>
+      <target state="final">Technologiedatenmarktplatz</target></trans-unit><trans-unit id="859febd8a92c46a05920275d04b7f0a7a86c8fbf" datatype="html">
+        <source>
+                Der Technologiedatenmarktplatz ermöglicht Daten bedarfsgerecht zu handeln, die für einen
+                Herstellungsprozeß benötigt werden. Für den bedarfsgerechten Handel ist es notwendig, daß die
+                gehandelten Daten auch nur wie gekauft verwendet werden, sprich pro Stück oder pro Zeiteinheit. Der
+                erarbeitete Demonstrator gewährt diese Sicherheit über die lizenzgerechte Nutzung der gehandelten Daten.
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+        <note priority="1" from="description">Technologiedatenmarktplatz</note>
+        <note priority="1" from="meaning">section</note>
+      <target state="final">
+                Der Technologiedatenmarktplatz ermöglicht Daten bedarfsgerecht zu handeln, die für einen
+                Herstellungsprozeß benötigt werden. Für den bedarfsgerechten Handel ist es notwendig, daß die
+                gehandelten Daten auch nur wie gekauft verwendet werden, sprich pro Stück oder pro Zeiteinheit. Der
+                erarbeitete Demonstrator gewährt diese Sicherheit über die lizenzgerechte Nutzung der gehandelten Daten.
+            </target></trans-unit><trans-unit id="e9e61cddcc667445059d1706cff6f2720beb4048" datatype="html">
+        <source>Warum Cocktailrezepte?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+        <note priority="1" from="description">Warum Cocktailrezepte</note>
+        <note priority="1" from="meaning">section header</note>
+      <target state="final">Warum Cocktailrezepte?</target></trans-unit><trans-unit id="8e08d99b6f96f481d4ba8e1f41cc4bd20aaeb1b8" datatype="html">
+        <source>
+                IUNO hat als nationales Referenzprojekt zur IT-Sicherheit in der Industrie 4.0 Leuchtturmcharakter. Es
+                muß in der Öffentlichkeit weithin sichtbar sein, um mit den Inhalten und Ergebnissen eine möglichst
+                großes Publikum zu erreichen. Dazu benötigt es eine Demonstratormaschine, die auf Messen und Vorträgen
+                leicht gezeigt werden kann und das Thema anschaulich transportiert. Aus diesem Grund der
+                Technologiedatenmarktplatz an einer Cocktailmischmaschine veranschaulicht. Diese Maschine erweckt
+                genügend Aufmerksamkeit und ermöglicht damit den Transfer des sehr trockenen Themas IT-Sicherheit.
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+        <note priority="1" from="description">Warum Cocktailrezepte</note>
+        <note priority="1" from="meaning">section</note>
+      <target state="final">
+                IUNO hat als nationales Referenzprojekt zur IT-Sicherheit in der Industrie 4.0 Leuchtturmcharakter. Es
+                muß in der Öffentlichkeit weithin sichtbar sein, um mit den Inhalten und Ergebnissen eine möglichst
+                großes Publikum zu erreichen. Dazu benötigt es eine Demonstratormaschine, die auf Messen und Vorträgen
+                leicht gezeigt werden kann und das Thema anschaulich transportiert. Aus diesem Grund der
+                Technologiedatenmarktplatz an einer Cocktailmischmaschine veranschaulicht. Diese Maschine erweckt
+                genügend Aufmerksamkeit und ermöglicht damit den Transfer des sehr trockenen Themas IT-Sicherheit.
+            </target></trans-unit><trans-unit id="c82b8429a1804cf10fca528683230dbf431e92b7" datatype="html">
+        <source>Der Marktplatz ist live!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">95</context>
+        </context-group>
+        <note priority="1" from="description">Marktplatz ist live</note>
+        <note priority="1" from="meaning">section header</note>
+      <target state="final">Der Marktplatz ist live!</target></trans-unit><trans-unit id="ba3224d55e372ae154febe89dcddf330a389eca8" datatype="html">
+        <source>
+                Der Marktplatz wird mittlerweile von mehreren Maschinen bei den verschiedenen Projektpartnern genutzt.
+                Dies zeigen unsere live <x id="START_LINK" ctype="x-a" equiv-text="&lt;a>"/>Dashboards<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/>.
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">96</context>
+        </context-group>
+        <note priority="1" from="description">Marktplatz ist live</note>
+        <note priority="1" from="meaning">section</note>
+      <target state="final">
+                Der Marktplatz wird mittlerweile von mehreren Maschinen bei den verschiedenen Projektpartnern genutzt.
+                Dies zeigen unsere live <x id="START_LINK" ctype="x-a" equiv-text="&lt;a>"/>Dashboards<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/>.
+            </target></trans-unit><trans-unit id="6591f10ed53e8f03c25bdc47ced8ae5a1e024dbf" datatype="html">
+        <source>Lust am Ausprobieren?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">114</context>
+        </context-group>
+        <note priority="1" from="description">Lust am Ausprobieren</note>
+        <note priority="1" from="meaning">section header</note>
+      <target state="final">Lust am Ausprobieren?</target></trans-unit><trans-unit id="410c4f0bda410720af03e09bb2b4f955ef97c252" datatype="html">
+        <source>
+                Das ganze Projekt ist OpenSource und steht auf Github zur Verfügung.
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">115</context>
+        </context-group>
+        <note priority="1" from="description">Lust am Ausprobieren</note>
+        <note priority="1" from="meaning">section</note>
+      <target state="final">
+                Das ganze Projekt ist OpenSource und steht auf Github zur Verfügung.
+            </target></trans-unit><trans-unit id="9a91ff40b4d1054dc6b80476687e52ab3c5975f3" datatype="html">
+        <source>
+                Und wenn Sie selbst eine Maschine bauen möchten, dann wenden Sie sich gerne an uns.
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">121</context>
+        </context-group>
+        <note priority="1" from="description">Lust am Ausprobieren</note>
+        <note priority="1" from="meaning">section add</note>
+      <target state="final">
+                Und wenn Sie selbst eine Maschine bauen möchten, dann wenden Sie sich gerne an uns.
+            </target></trans-unit><trans-unit id="f1251e2b4609fb43cbab117132519bfc05602aa7" datatype="html">
+        <source>Über uns</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">131</context>
+        </context-group>
+        <note priority="1" from="description">Team</note>
+        <note priority="1" from="meaning">section header</note>
+      <target state="final">Über uns</target></trans-unit><trans-unit id="193efcf00bd5896bdb0b3d811ae113c1523f4a6b" datatype="html">
+        <source>Das Team hinter dem Projekt:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">133</context>
+        </context-group>
+        <note priority="1" from="description">Team</note>
+        <note priority="1" from="meaning">section</note>
+      <target state="final">Das Team hinter dem Projekt:</target></trans-unit><trans-unit id="3644dfd10f2f105f1e2d1a39860a97396cf2f52a" datatype="html">
+        <source>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Experte für Industrie 4.0 Kommunikation und Security
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Hans-Peter Bock ist Architekt, Ideengeber und Leiter der Entwicklung des Technologiedatenmarktplatz-Ökosystems.
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">159</context>
+        </context-group>
+        <note priority="1" from="description">Team - hpbock</note>
+        <note priority="1" from="meaning">section</note>
+      <target state="final">
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Experte für Industrie 4.0 Kommunikation und Security
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Hans-Peter Bock ist Architekt, Ideengeber und Leiter der Entwicklung des Technologiedatenmarktplatz-Ökosystems.
+                </target></trans-unit><trans-unit id="138c447f93455e68a7816388293a3ec078e36c80" datatype="html">
+        <source>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                System Developer for New Technologies
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Manuel Beuttler hat im Projekt den Überblick über das Zusammenspiel der verschiedenen Komponenten.
+                Er verantwortet die Web-Services, sowie Spezifikation und Absicherung der Schnittstellen.
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">176</context>
+        </context-group>
+        <note priority="1" from="description">Team - mbeuttler</note>
+        <note priority="1" from="meaning">section</note>
+      <target state="final">
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                System Developer for New Technologies
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Manuel Beuttler hat im Projekt den Überblick über das Zusammenspiel der verschiedenen Komponenten.
+                Er verantwortet die Web-Services, sowie Spezifikation und Absicherung der Schnittstellen.
+                </target></trans-unit><trans-unit id="72aeb28d126937e4b27abaebd901e0e1be7ad9ac" datatype="html">
+        <source>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                System Architect for Enabling Technologies
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Christan Görg entwickelt das Bezahlsystem hinter dem Technologiedatenmarktplatz
+                und verantwortet den sicheren Umgang mit Technologiedaten auf der Maschinen-Steuerung.
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">193</context>
+        </context-group>
+        <note priority="1" from="description">Team - cgoerg</note>
+        <note priority="1" from="meaning">section</note>
+      <target state="final">
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                System Architect for Enabling Technologies
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Christan Görg entwickelt das Bezahlsystem hinter dem Technologiedatenmarktplatz
+                und verantwortet den sicheren Umgang mit Technologiedaten auf der Maschinen-Steuerung.
+                </target></trans-unit><trans-unit id="703e286e320549b880e78248df81aeec4b25680e" datatype="html">
+        <source>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                System Architect for Big Data and Analytics
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Marcel Ely Gomes arbeitet am Herzen des Technologiedaten Marktplatz.
+                Er verantwortet das Datenbankdesign und entwickelt die Datenbank spezifischen Sicherheitskonzepte.
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">210</context>
+        </context-group>
+        <note priority="1" from="description">Team - mgomes</note>
+        <note priority="1" from="meaning">section</note>
+      <target state="final">
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                System Architect for Big Data and Analytics
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Marcel Ely Gomes arbeitet am Herzen des Technologiedaten Marktplatz.
+                Er verantwortet das Datenbankdesign und entwickelt die Datenbank spezifischen Sicherheitskonzepte.
+                </target></trans-unit><trans-unit id="d2542323b64d2177b921df4afe86691d271e9bac" datatype="html">
+        <source>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Experte für Informations- und Kommunikationstechnologien in Produktionsnetzwerken
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Klaus Bauer leitet den Bereich Basistechnologien bei TRUMPF und ist Visionsgeber des Technologiedatenmarktplatz.
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Er beschrieb die Ideen dieses Marktplatzes bereits in den Umsetzungsempfehlungen von Industrie 4.0 und der Smart Service Welt.
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">227</context>
+        </context-group>
+        <note priority="1" from="description">Team - kbauer</note>
+        <note priority="1" from="meaning">section</note>
+      <target state="final">
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Experte für Informations- und Kommunikationstechnologien in Produktionsnetzwerken
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Klaus Bauer leitet den Bereich Basistechnologien bei TRUMPF und ist Visionsgeber des Technologiedatenmarktplatz.
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Er beschrieb die Ideen dieses Marktplatzes bereits in den Umsetzungsempfehlungen von Industrie 4.0 und der Smart Service Welt.
+                </target></trans-unit><trans-unit id="e7bb3084327f26b44499f31f24f9520ac8040242" datatype="html">
+        <source>./assets/images/tdm_text_de.svg</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      <target state="final">./assets/images/tdm_text_de.svg</target></trans-unit><trans-unit id="929c58d8fcf868463089f85b8ded8f2c507bba34" datatype="html">
+        <source>Bitte fügen Sie mindestens eine Zutat hinzu!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">create recipe - recipe missing</note>
+        <note priority="1" from="meaning">error</note>
+      <target state="final">Bitte fügen Sie mindestens eine Zutat hinzu!</target></trans-unit><trans-unit id="44b31522e166a2d7810a8bfa423d96821d6ea075" datatype="html">
+        <source>Bitte geben Sie einen Titel ein!<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+        <note priority="1" from="description">create recipe - title missing</note>
+        <note priority="1" from="meaning">error</note>
+      <target state="final">Bitte geben Sie einen Titel ein!<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/></target></trans-unit><trans-unit id="bb7f2c6d36d56722bd195c6846ba9b835a3131dd" datatype="html">
+        <source>Bitte geben Sie einen Beschreibungstext ein!<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+        <note priority="1" from="description">create recipe - description missing</note>
+        <note priority="1" from="meaning">error</note>
+      <target state="final">Bitte geben Sie einen Beschreibungstext ein!<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/></target></trans-unit><trans-unit id="4c2d2c433d34adbe8148d961e3f8e014ef7f29de" datatype="html">
+        <source>Bitte wählen Sie eine Lizenzgebühr aus!<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+        <note priority="1" from="description">create recipe - license fee missing</note>
+        <note priority="1" from="meaning">error</note>
+      <target state="final">Bitte wählen Sie eine Lizenzgebühr aus!<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/></target></trans-unit><trans-unit id="7484f7eceaccef965e94c427c0ec0dc181735c4c" datatype="html">
+        <source>Sie haben bereits ihr Limit von <x id="INTERPOLATION" equiv-text="{{recipeLimit}}"/> Rezepten am Marktplatz erreicht.
+            <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">113</context>
+        </context-group>
+      <target state="final">Sie haben bereits ihr Limit von <x id="INTERPOLATION" equiv-text="{{recipeLimit}}"/> Rezepten am Marktplatz erreicht.
+            <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+        </target></trans-unit></body>
+  </file>
+  <file original="app/console/create-recipe/create-recipe.component.ts" datatype="plaintext" source-language="de" target-language="de">
+    <body>
+      <trans-unit id="da27c106262f920eec6fb5ce72255a68ada2210c" approved="yes">
+        <source xml:space="preserve">Produktdetails</source>
+        <target xml:space="preserve">Produktdetails</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">51</context></context-group></trans-unit>
+      <trans-unit id="b7f6cd735e8b660a6ec3d3dfb09de14ab32a10c8" approved="yes">
+        <source xml:space="preserve">Titel</source>
+        <target xml:space="preserve">Titel</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">65</context></context-group></trans-unit>
+      <trans-unit id="f09ad66c1ebf16217ba1a1072be7a98de2d95eac" approved="yes">
+        <source xml:space="preserve">Beschreibung</source>
+        <target xml:space="preserve">Beschreibung</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">71</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/console/recipes/recipes.component.ts</context><context context-type="linenumber">27</context></context-group></trans-unit>
+      <trans-unit id="c51da9899fe9350fcc3f226a107341458a8a7640" approved="yes">
+        <source xml:space="preserve">Lizenzgebühr</source>
+        <target xml:space="preserve">Lizenzgebühr</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">77</context></context-group></trans-unit>
+      <trans-unit id="5ccc633c2e84a1ddb8f59dec8affa3af4aed7988" approved="yes">
+        <source xml:space="preserve">Bild</source>
+        <target xml:space="preserve">Bild</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">94</context></context-group></trans-unit>
+      <trans-unit id="687f15d52bf8c0fab17d6b0530dfcff8f3ce4a3c" approved="yes">
+        <source xml:space="preserve">Neues Getränk anlegen</source>
+        <target xml:space="preserve">Neues Getränk anlegen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      <note from="description" priority="1">headline</note></trans-unit>
+      <trans-unit id="95880c9da30bff155df2d81b5b01c405ed9f956b" approved="yes">
+        <source xml:space="preserve">Rezeptur</source>
+        <target xml:space="preserve">Rezeptur</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6f9cbb28bdc23b92465369626d0b78e5e19f77b0" approved="yes">
+        <source xml:space="preserve">Zutat per&lt;br>Drag &amp; Drop&lt;br>hinzufügen.</source>
+        <target xml:space="preserve">Zutat per&lt;br>Drag &amp; Drop&lt;br>hinzufügen.</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">37</context></context-group></trans-unit>
+      <trans-unit id="09cade1c8e483a96553bda8009dbfc391f43f7be" approved="yes">
+        <source xml:space="preserve">Hier tippen um Zutat&lt;br>hinzuzufügen.</source>
+        <target xml:space="preserve">Hier tippen um Zutat&lt;br>hinzuzufügen.</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">38</context></context-group></trans-unit>
+      <trans-unit id="a0e4087927b592497bd24dc5f123a37830a55533" approved="yes">
+        <source xml:space="preserve">Zutat</source>
+        <target xml:space="preserve">Zutat</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">41</context></context-group></trans-unit>
+      <trans-unit id="77134c293828bbe6d663d26f75252663f46c7ca4" approved="yes">
+        <source xml:space="preserve">Menge</source>
+        <target xml:space="preserve">Menge</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">42</context></context-group></trans-unit>
+      <trans-unit id="49d7e39875153c37e6197dad6c97a71d600edc1f" approved="yes">
+        <source xml:space="preserve">Es wurden noch keine Zutaten&lt;br>hinzugefügt.</source>
+        <target xml:space="preserve">Es wurden noch keine Zutaten&lt;br>hinzugefügt.</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">42</context></context-group></trans-unit>
+    </body>
+  </file>
+  <file original="app/sidebar/index/index.component.ts" datatype="plaintext" source-language="de" target-language="de">
+    <body>
+      <trans-unit id="57b8728de504ae17b0de35dd3731abf992e9db9d" approved="yes">
+        <source xml:space="preserve">Start</source>
+        <target xml:space="preserve">Start</target>
+        <note from="translator">link to start</note>
         <context-group purpose="location">
           <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
           <context context-type="linenumber">3</context>
         </context-group>
-        <note priority="1" from="description">Sidebar</note>
-        <note priority="1" from="meaning">link to start</note>
-      <target state="final">Start</target></trans-unit><trans-unit id="d3e293ac64992c5344048677c2281731b38b4987" datatype="html">
-        <source>Marktplatz</source>
+        <note from="description" priority="1">Sidebar</note>
+        <note from="meaning" priority="1">link to start</note>
+      </trans-unit>
+      <trans-unit id="d3e293ac64992c5344048677c2281731b38b4987" approved="yes">
+        <source xml:space="preserve">Marktplatz</source>
+        <target xml:space="preserve">Marktplatz</target>
+        <note from="translator">link to marketplace</note>
         <context-group purpose="location">
           <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
           <context context-type="linenumber">4</context>
         </context-group>
-        <note priority="1" from="description">Sidebar</note>
-        <note priority="1" from="meaning">link to marketplace</note>
-      <target state="final">Marktplatz</target></trans-unit><trans-unit id="35cbc965e5fb57c3a1a4a2df93d4ce003e8864c2" datatype="html">
-        <source>Statistiken</source>
+        <note from="description" priority="1">Sidebar</note>
+        <note from="meaning" priority="1">link to marketplace</note>
+      </trans-unit>
+      <trans-unit id="35cbc965e5fb57c3a1a4a2df93d4ce003e8864c2" approved="yes">
+        <source xml:space="preserve">Statistiken</source>
+        <target xml:space="preserve">Statistiken</target>
+        <note from="translator">link to statistics</note>
         <context-group purpose="location">
           <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
           <context context-type="linenumber">6</context>
         </context-group>
-        <note priority="1" from="description">Sidebar</note>
-        <note priority="1" from="meaning">link to statistics</note>
-      <target state="final">Statistiken</target></trans-unit><trans-unit id="cd75d37100383c2c196f9f2b58926afb6fe6c636" datatype="html">
-        <source>Dashboard</source>
+        <note from="description" priority="1">Sidebar</note>
+        <note from="meaning" priority="1">link to statistics</note>
+      </trans-unit>
+      <trans-unit id="cd75d37100383c2c196f9f2b58926afb6fe6c636" approved="yes">
+        <source xml:space="preserve">Dashboard</source>
+        <target xml:space="preserve">Dashboard</target>
+        <note from="translator">link to console/dashboard</note>
         <context-group purpose="location">
           <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
           <context context-type="linenumber">20</context>
         </context-group>
-        <note priority="1" from="description">Sidebar</note>
-        <note priority="1" from="meaning">link to console/dashboard</note>
-      <target state="final">Dashboard</target></trans-unit><trans-unit id="6b16f32d05491b220fd649d9e9bd84a9d10ae104" datatype="html">
-        <source>Neues Getränk anlegen</source>
+        <note from="description" priority="1">Sidebar</note>
+        <note from="meaning" priority="1">link to console/dashboard</note>
+      </trans-unit>
+      <trans-unit id="6b16f32d05491b220fd649d9e9bd84a9d10ae104" approved="yes">
+        <source xml:space="preserve">Neues Getränk anlegen</source>
+        <target xml:space="preserve">Neues Getränk anlegen</target>
+        <note from="translator">link to console/new drink</note>
         <context-group purpose="location">
           <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
           <context context-type="linenumber">21</context>
         </context-group>
-        <note priority="1" from="description">Sidebar</note>
-        <note priority="1" from="meaning">link to console/new drink</note>
-      <target state="final">Neues Getränk anlegen</target></trans-unit><trans-unit id="5aa9d6c7cdd31a482402ae74f314b98ad7858ead" datatype="html">
-        <source>Getränke verwalten</source>
+        <note from="description" priority="1">Sidebar</note>
+        <note from="meaning" priority="1">link to console/new drink</note>
+      </trans-unit>
+      <trans-unit id="5aa9d6c7cdd31a482402ae74f314b98ad7858ead" approved="yes">
+        <source xml:space="preserve">Getränke verwalten</source>
+        <target xml:space="preserve">Getränke verwalten</target>
+        <note from="translator">link to console/manage drinks</note>
         <context-group purpose="location">
           <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
           <context context-type="linenumber">22</context>
         </context-group>
-        <note priority="1" from="description">Sidebar</note>
-        <note priority="1" from="meaning">link to console/manage drinks</note>
-      <target state="final">Getränke verwalten</target></trans-unit><trans-unit id="4fc0481716e9d3e3d0dfc11fa4ab8be2b1166412" datatype="html">
-        <source>Guthaben verwalten</source>
+        <note from="description" priority="1">Sidebar</note>
+        <note from="meaning" priority="1">link to console/manage drinks</note>
+      </trans-unit>
+      <trans-unit id="4fc0481716e9d3e3d0dfc11fa4ab8be2b1166412" approved="yes">
+        <source xml:space="preserve">Guthaben verwalten</source>
+        <target xml:space="preserve">Guthaben verwalten</target>
+        <note from="translator">link to console/manage credit</note>
         <context-group purpose="location">
           <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
           <context context-type="linenumber">23</context>
         </context-group>
-        <note priority="1" from="description">Sidebar</note>
-        <note priority="1" from="meaning">link to console/manage credit</note>
-      <target state="final">Guthaben verwalten</target></trans-unit></body></file>
-  <file original="app/console/component-list-dialog/component-list-dialog.component.ts" datatype="plaintext" source-language="de" target-language="de"><body>
-    <trans-unit id="aff435c7d519c222e17fccf410b6502987d569c9" approved="yes">
-      <source xml:space="preserve">Zutat hinzufügen</source>
-      <target xml:space="preserve">Zutat hinzufügen</target>
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context><context context-type="linenumber">2</context></context-group></trans-unit>
-    <trans-unit id="8a1c17703a2dce001448150138ef80e972db2807" approved="yes">
-      <source xml:space="preserve">Zutat hier ablegen&lt;br>um diese zu entfernen.</source>
-      <target xml:space="preserve">Zutat hier ablegen&lt;br>um diese zu entfernen.</target>
-      
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context><context context-type="linenumber">11</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">32</context></context-group></trans-unit>
-    <trans-unit id="479fabd48cae67a01dc0b193062b7513a2a3f994" approved="yes">
-      <source xml:space="preserve">Suchen</source>
-      <target xml:space="preserve">Suchen</target>
-      
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context><context context-type="linenumber">12</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">33</context></context-group></trans-unit>
-    <trans-unit id="a6b209bf77d2cb396b8e4392de1dbffdbd23a86d" approved="yes">
-      <source xml:space="preserve">Vorgeschlagene Komponenten</source>
-      <target xml:space="preserve">Vorgeschlagene Komponenten</target>
-      
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context><context context-type="linenumber">13</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">34</context></context-group></trans-unit>
-    <trans-unit id="96e0f9bbdfdb9b22fd016df250426b9fafffd72a" approved="yes">
-      <source xml:space="preserve">Installierte Komponenten</source>
-      <target xml:space="preserve">Installierte Komponenten</target>
-      
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context><context context-type="linenumber">14</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">35</context></context-group></trans-unit>
-    <trans-unit id="dcd247d6de74ff363c92b4d9177b7966f68c7e90" approved="yes">
-      <source xml:space="preserve">Alle Komponenten</source>
-      <target xml:space="preserve">Alle Komponenten</target>
-      
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context><context context-type="linenumber">15</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">36</context></context-group></trans-unit>
-    <trans-unit id="3ad1defdbee8dee83b86423a18809e5170c029b4" approved="yes">
-      <source xml:space="preserve">Keine Komponenten gefunden.</source>
-      <target xml:space="preserve">Keine Komponenten gefunden.</target>
-      
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context><context context-type="linenumber">16</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">37</context></context-group></trans-unit>
-    <trans-unit id="1b24932d0f2269e4b41d0f936fdb5de1b94da401" approved="yes">
-      <source xml:space="preserve">Abbrechen</source>
-      <target xml:space="preserve">Abbrechen</target>
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context><context context-type="linenumber">21</context></context-group></trans-unit>
-  </body></file>
-  <file original="app/console/create-recipe/create-recipe.component.ts" datatype="plaintext" source-language="de" target-language="de"><body>
-    <trans-unit id="687f15d52bf8c0fab17d6b0530dfcff8f3ce4a3c" approved="yes">
-      <source xml:space="preserve">Neues Getränk anlegen</source>
-      <target xml:space="preserve">Neues Getränk anlegen</target>
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">4</context></context-group></trans-unit>
-    <trans-unit id="95880c9da30bff155df2d81b5b01c405ed9f956b" approved="yes">
-      <source xml:space="preserve">Rezeptur</source>
-      <target xml:space="preserve">Rezeptur</target>
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">17</context></context-group></trans-unit>
-    <trans-unit id="6f9cbb28bdc23b92465369626d0b78e5e19f77b0" approved="yes">
-      <source xml:space="preserve">Zutat per&lt;br>Drag &amp; Drop&lt;br>hinzufügen.</source>
-      <target xml:space="preserve">Zutat per&lt;br>Drag &amp; Drop&lt;br>hinzufügen.</target>
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">45</context></context-group></trans-unit>
-    <trans-unit id="09cade1c8e483a96553bda8009dbfc391f43f7be" approved="yes">
-      <source xml:space="preserve">Hier tippen um Zutat&lt;br>hinzuzufügen.</source>
-      <target xml:space="preserve">Hier tippen um Zutat&lt;br>hinzuzufügen.</target>
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">46</context></context-group></trans-unit>
-    <trans-unit id="a0e4087927b592497bd24dc5f123a37830a55533" approved="yes">
-      <source xml:space="preserve">Zutat</source>
-      <target xml:space="preserve">Zutat</target>
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">54</context></context-group></trans-unit>
-    <trans-unit id="77134c293828bbe6d663d26f75252663f46c7ca4" approved="yes">
-      <source xml:space="preserve">Menge</source>
-      <target xml:space="preserve">Menge</target>
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">55</context></context-group></trans-unit>
-    <trans-unit id="49d7e39875153c37e6197dad6c97a71d600edc1f" approved="yes">
-      <source xml:space="preserve">Es wurden noch keine Zutaten&lt;br>hinzugefügt.</source>
-      <target xml:space="preserve">Es wurden noch keine Zutaten&lt;br>hinzugefügt.</target>
-      
-    <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">56</context></context-group></trans-unit>
-  </body></file>
+        <note from="description" priority="1">Sidebar</note>
+        <note from="meaning" priority="1">link to console/manage credit</note>
+      </trans-unit>
+      <trans-unit id="15d67be9d2ddd47737c42f117f55cd6e075da37c" approved="yes">
+        <source xml:space="preserve">Admin Dashboard</source>
+        <target xml:space="preserve">Admin Dashboard</target>
+        <note from="translator">link to admin dashboard/admin dashboard</note>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note from="description" priority="1">Sidebar</note>
+        <note from="meaning" priority="1">link to admin dashboard/admin dashboard</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="app/console/component-list-dialog/component-list-dialog.component.ts" datatype="plaintext" source-language="de" target-language="de">
+    <body>
+      <trans-unit id="aff435c7d519c222e17fccf410b6502987d569c9" approved="yes">
+        <source xml:space="preserve">Zutat hinzufügen</source>
+        <target xml:space="preserve">Zutat hinzufügen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8a1c17703a2dce001448150138ef80e972db2807" approved="yes">
+        <source xml:space="preserve">Zutat hier ablegen&lt;br>um diese zu entfernen.</source>
+        <target xml:space="preserve">Zutat hier ablegen&lt;br>um diese zu entfernen.</target>
+        
+        
+      <context-group purpose="location"><context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context><context context-type="linenumber">11</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">30</context></context-group></trans-unit>
+      <trans-unit id="479fabd48cae67a01dc0b193062b7513a2a3f994" approved="yes">
+        <source xml:space="preserve">Suchen</source>
+        <target xml:space="preserve">Suchen</target>
+        
+        
+      <context-group purpose="location"><context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context><context context-type="linenumber">12</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">31</context></context-group></trans-unit>
+      <trans-unit id="a6b209bf77d2cb396b8e4392de1dbffdbd23a86d" approved="yes">
+        <source xml:space="preserve">Vorgeschlagene Komponenten</source>
+        <target xml:space="preserve">Vorgeschlagene Komponenten</target>
+        
+        
+      <context-group purpose="location"><context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context><context context-type="linenumber">13</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">31</context></context-group></trans-unit>
+      <trans-unit id="96e0f9bbdfdb9b22fd016df250426b9fafffd72a" approved="yes">
+        <source xml:space="preserve">Installierte Komponenten</source>
+        <target xml:space="preserve">Installierte Komponenten</target>
+        
+        
+      <context-group purpose="location"><context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context><context context-type="linenumber">14</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">31</context></context-group></trans-unit>
+      <trans-unit id="dcd247d6de74ff363c92b4d9177b7966f68c7e90" approved="yes">
+        <source xml:space="preserve">Alle Komponenten</source>
+        <target xml:space="preserve">Alle Komponenten</target>
+        
+        
+      <context-group purpose="location"><context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context><context context-type="linenumber">15</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">32</context></context-group></trans-unit>
+      <trans-unit id="3ad1defdbee8dee83b86423a18809e5170c029b4" approved="yes">
+        <source xml:space="preserve">Keine Komponenten gefunden.</source>
+        <target xml:space="preserve">Keine Komponenten gefunden.</target>
+        
+        
+      <context-group purpose="location"><context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context><context context-type="linenumber">16</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">32</context></context-group></trans-unit>
+      <trans-unit id="1b24932d0f2269e4b41d0f936fdb5de1b94da401" approved="yes">
+        <source xml:space="preserve">Abbrechen</source>
+        <target xml:space="preserve">Abbrechen</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context><context context-type="linenumber">21</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context><context context-type="linenumber">76</context></context-group></trans-unit>
+    </body>
+  </file>
 </xliff>

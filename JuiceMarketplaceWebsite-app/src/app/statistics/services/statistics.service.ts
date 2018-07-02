@@ -9,9 +9,8 @@ import {RecipeReport} from "../models/RecipeReport";
 import {by} from "protractor";
 
 @Injectable()
-export class StatisticsService {
+export class StatisticsService {    
     constructor(private http: HttpClient) {
-
     }
 
     getRevenueReport(from: Date, to: Date, byHour: boolean): Observable<RevenueReport[]> {

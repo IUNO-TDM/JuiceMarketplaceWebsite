@@ -12,9 +12,15 @@
     ],
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true,
+    // "strictNullChecks": true,
+    // "noImplicitReturns": true,
+    // "allowUnreachableCode": false,
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    // "suppressExcessPropertyErrors": false,
+    // "alwaysStrict": true,
+    // "allowUnusedLabels": false,
     "allowJs": false
   },
-  "exclude": [
-
-  ]
+  "exclude": []
 }

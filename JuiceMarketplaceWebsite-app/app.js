@@ -15,6 +15,13 @@ const config = require('./config/config_loader');
 
 const app = express();
 
+// app.get(...) - handles GET requests
+// app.put(...) - handles PUT requests
+// app.post(...) - handles POST requests
+// app.use(...) - defines middleware to use
+// app.all(...) - handles ALL requests
+// express.static - middleware that reads all paths in a directory and serves them directly.
+
 app.use('/', contentTypeValidation);
 app.use('*', function (req, res, next) {
     let r = uaParser.parse(req.headers['user-agent']);
@@ -39,7 +46,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 
 
-app.use(express.static(path.join(__dirname, 'dist')));
 app.use('/api/reports', require('./routes/reports'));
 
 // -- CONFIGURE PASSPORT SESSION --
@@ -55,7 +61,6 @@ app.use('/assets/', express.static(path.join(__dirname, 'public')));
 app.use('/auth', require('./routes/auth')(passport));
 app.use('/api/reports', require('./routes/reports'));
 app.use('/coupon', require('./routes/coupon'));
-app.use('/', express.static(path.join(__dirname, 'dist')));
 
 // -- RESTRICTED CONTENT --
 app.use('/api/users', isLoggedIn, require('./routes/users'));
@@ -66,10 +71,40 @@ app.use('/api/components', isLoggedIn, require('./routes/components'));
 // -- RESTRICTED TO ROLES
 app.use('/api/admin/', isAdmin, require('./routes/admin'));
 
-app.all('*', function (req, res, next) {
-    // Just send the index.html for other files to support HTML5Mode
-    res.sendFile(path.join(__dirname, 'dist/index.html'));
-});
+
+// ---------------------------------------------------------------------------
+//   Angular Routing
+// ---------------------------------------------------------------------------
+
+// This route automatically reads all available paths in the dist folder
+// and serves things like /de/polyfills.856a55e4e31639c9ec48.bundle.js
+app.use(express.static(path.join(__dirname, 'dist')));
+
+// This route handles all requests to /de which are not served by the '/' rule.
+// These are especially routes which are angular internal routings.
+app.use('/de', function(req, res) {
+    res.cookie('language', 'de');
+    res.sendFile(path.join(__dirname, 'dist/de/index.html'));
+})
+
+// This route handles all requests to /en which are not served by the '/' rule.
+// These are especially routes which are angular internal routings.
+app.use('/en', function(req, res) {
+    res.cookie('language', 'en');
+    res.sendFile(path.join(__dirname, 'dist/en/index.html'));
+})
+
+// This route selects the preferred language of the browser
+// and redirects the client. If the preferred language is not
+// supported, the browser is redirected to 'en'.
+app.use('/', function(req, res, next) {
+    var preferredLanguage = req.acceptsLanguages('de', 'en')
+    if (!preferredLanguage) {
+        preferredLanguage = 'en'
+    }
+    var targetPath = path.join('/', preferredLanguage, req.path)
+    res.redirect(targetPath)
+})
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

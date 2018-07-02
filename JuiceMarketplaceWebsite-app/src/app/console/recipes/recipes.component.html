@@ -1,18 +1,15 @@
-<h1 class="headline">Getränke verwalten</h1>
+<h1 class="headline" i18n="headline">Getränke verwalten</h1>
 <div fxLayout="column" fxLayoutGap="10px">
     <mat-card fxFlex="100" class="iuno-card">
         <mat-card-header>
             <mat-card-title>
-                <span class="card-title">Übersicht</span>
+                <span class="card-title" i18n>Übersicht</span>
             </mat-card-title>
         </mat-card-header>
         <mat-card-content>
-            <app-message-box type="error" *ngIf="errorMaxRecipes == true">Derzeit ist die Anzahl an Rezepten pro Benutzer
-                begrenzt. Bitte lösche ein bestehendes Rezept, falls du weitere auf dem Marktplatz veröffentlichen möchtest.
-            </app-message-box>
-            <div *ngIf="dataSource.data.length == 0" class="no-recipes-available">
-                Keine Getränke vorhanden
-            </div>
+            <app-message-box type="error" *ngIf="errorMaxRecipes == true" i18n>Derzeit ist die Anzahl an Rezepten pro Benutzer
+                begrenzt. Bitte lösche ein bestehendes Rezept, falls du weitere auf dem Marktplatz veröffentlichen möchtest.</app-message-box>
+            <div *ngIf="dataSource.data.length == 0" class="no-recipes-available" i18n>Keine Getränke vorhanden</div>
             <div *ngIf="dataSource.data.length > 0">
                 <mat-table #table [dataSource]="dataSource">
 
@@ -22,17 +19,17 @@
                     </ng-container>
 
                     <ng-container matColumnDef="name">
-                        <mat-header-cell *matHeaderCellDef>Getränkename</mat-header-cell>
+                        <mat-header-cell *matHeaderCellDef i18n>Getränkename</mat-header-cell>
                         <mat-cell *matCellDef="let recipe"> {{recipe.title}}</mat-cell>
                     </ng-container>
 
                     <ng-container matColumnDef="description">
-                        <mat-header-cell *matHeaderCellDef>Beschreibung</mat-header-cell>
+                        <mat-header-cell *matHeaderCellDef i18n>Beschreibung</mat-header-cell>
                         <mat-cell *matCellDef="let recipe"> {{recipe.description}}</mat-cell>
                     </ng-container>
 
                     <ng-container matColumnDef="licensefee">
-                        <mat-header-cell *matHeaderCellDef>Lizenzgebühr (IUNOs)</mat-header-cell>
+                        <mat-header-cell *matHeaderCellDef i18n>Lizenzgebühr (IUNOs)</mat-header-cell>
                         <mat-cell *matCellDef="let recipe"> {{(recipe.licenseFee / 100000).toFixed(2)  | number:'1.2'}}</mat-cell>
                     </ng-container>
 
@@ -42,9 +39,9 @@
                     </ng-container> -->
 
                     <ng-container matColumnDef="action">
-                        <mat-header-cell *matHeaderCellDef>Aktion</mat-header-cell>
+                        <mat-header-cell *matHeaderCellDef i18n>Aktion</mat-header-cell>
                         <mat-cell *matCellDef="let recipe">
-                            <button (click)="deleteRecipe(recipe)" mat-raised-button color="primary">Löschen</button>
+                            <button (click)="deleteRecipe(recipe)" mat-raised-button color="primary" i18n>Löschen</button>
                         </mat-cell>
                     </ng-container>
 

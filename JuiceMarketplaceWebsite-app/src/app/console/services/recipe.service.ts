@@ -29,7 +29,6 @@ export class RecipeService {
     }
 
     deleteRecipe(recipe: Recipe) {
-        console.log(recipe);
         this.http.delete(this.recipesUrl + "/" + recipe.id, {
             responseType: 'text',
         }).subscribe(response => {
