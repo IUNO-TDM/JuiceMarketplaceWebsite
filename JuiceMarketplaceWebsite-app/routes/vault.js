@@ -8,8 +8,6 @@ const validator = new Validator({allErrors: true});
 const validate = validator.validate;
 const validation_schema = require('../schema/vault_schema');
 
-router.use('/', authenticationService.paramIsEqualToSessionUser('id'));
-
 router.get('/balance', validate({
     query: validation_schema.Empty,
     body: validation_schema.Empty

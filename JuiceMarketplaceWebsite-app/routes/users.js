@@ -6,7 +6,6 @@ const express = require('express');
 const router = express.Router();
 const marketplaceCore = require('../adapter/marketplace_core_adapter');
 const authService = require('../adapter/auth_service_adapter');
-const programConverter = require('../services/program_converter');
 const logger = require('../global/logger');
 const helper = require('../services/helper_service');
 const encryption = require('../services/encryption_service');
@@ -21,8 +20,6 @@ const validator = new Validator({allErrors: true});
 const validate = validator.validate;
 const validation_schema = require('../schema/users_schema');
 const validation_schema_recipe = require('../schema/recipe_schema');
-
-// router.use('/:id', authenticationService.paramIsEqualToSessionUser('id'));
 
 /**
  * Retrieves the user information for the logged in user
