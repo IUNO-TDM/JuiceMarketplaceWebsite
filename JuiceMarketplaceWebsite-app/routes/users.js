@@ -12,6 +12,7 @@ const helper = require('../services/helper_service');
 const encryption = require('../services/encryption_service');
 const recipeLimitService = require('../services/recipe_limit_service');
 const imageService = require('../services/image_service');
+const authenticationService = require('../services/authentication_service');
 
 const CONFIG = require('../config/config_loader');
 
@@ -20,6 +21,8 @@ const validator = new Validator({allErrors: true});
 const validate = validator.validate;
 const validation_schema = require('../schema/users_schema');
 const validation_schema_recipe = require('../schema/recipe_schema');
+
+// router.use('/:id', authenticationService.paramIsEqualToSessionUser('id'));
 
 /**
  * Retrieves the user information for the logged in user
@@ -71,7 +74,7 @@ router.get('/:id', validate({
 /**
  * Returns the limit of recipes the user can publish on the marketplace
  */
-router.get('/:id/recipes/limit', validate({
+router.get('/:id/recipes/limit', authenticationService.paramIsEqualToSessionUser('id'), validate({
     query: validation_schema.Empty,
     body: validation_schema.Empty
 }), function (req, res, next) {
@@ -87,7 +90,7 @@ router.get('/:id/recipes/limit', validate({
 /**
  * Returns the amount of recipes the user already published on the marketplace
  */
-router.get('/:id/recipes/count', validate({
+router.get('/:id/recipes/count', authenticationService.paramIsEqualToSessionUser('id'), validate({
     query: validation_schema.Empty,
     body: validation_schema.Empty
 }), function (req, res, next) {
@@ -101,7 +104,7 @@ router.get('/:id/recipes/count', validate({
 /**
  * Saves a recipe for a specific user
  */
-router.post('/:id/recipes', validate({
+router.post('/:id/recipes', authenticationService.paramIsEqualToSessionUser('id'), validate({
     query: validation_schema.Empty,
     body: validation_schema_recipe.Recipe_Body
 }), function (req, res, next) {
@@ -248,7 +251,7 @@ router.post('/:id/recipes', validate({
 /**
  * Retrieves the user image
  */
-router.get('/:user_id/image', validate({
+router.get('/:user_id/image', authenticationService.paramIsEqualToSessionUser('user_id'), validate({
     query: validation_schema.Empty,
     body: validation_schema.Empty
 }), function (req, res, next) {
@@ -267,7 +270,7 @@ router.get('/:user_id/image', validate({
         res.send(data.imageBuffer);
     });
 });
-router.put('/:user_id/image', validate({
+router.put('/:user_id/image', authenticationService.paramIsEqualToSessionUser('user_id'), validate({
     query: validation_schema.Empty
 }), function (req, res, next) {
     logger.warn('[routes/recipes] NOT IMPLEMENTED YET');
@@ -275,8 +278,8 @@ router.put('/:user_id/image', validate({
 });
 
 
-router.use('/:user_id/recipes', require('./recipes'));
-router.use('/:id/reports', require('./user_reports'));
-router.use('/:id/vault', require('./vault'));
+router.use('/:user_id/recipes', authenticationService.paramIsEqualToSessionUser('user_id'), require('./recipes'));
+router.use('/:id/reports', authenticationService.paramIsEqualToSessionUser('id'), require('./user_reports'));
+router.use('/:id/vault', authenticationService.paramIsEqualToSessionUser('id'), require('./vault'));
 
 module.exports = router;
