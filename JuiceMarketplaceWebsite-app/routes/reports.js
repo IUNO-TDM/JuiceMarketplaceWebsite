@@ -80,12 +80,14 @@ router.get('/components/top', validate({
     query: validation_schema.Top_Query,
     body: validation_schema.Empty
 }), function (req, res, next) {
+    var language = req.cookies.language;
     authService.getPublicToken(function (err, token) {
         if (err) {
             return next(err);
         }
 
         marketplaceCore.getTopComponents(
+            language,
             req.query['from'],
             req.query['to'],
             parseInt(req.query['limit']),

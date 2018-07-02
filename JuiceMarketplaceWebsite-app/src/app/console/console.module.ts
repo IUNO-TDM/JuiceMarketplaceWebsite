@@ -1,10 +1,11 @@
 // Angular
-import {NgModule} from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import {NgModule, LOCALE_ID} from '@angular/core';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 import {HttpModule} from '@angular/http'; // still needed @see https://github.com/angular/angular/issues/19788
+
 // Angular Material
 import {
     MatButtonModule,
@@ -54,6 +55,7 @@ import {ComponentService} from 'tdm-common'
         HttpModule,
         FlexLayoutModule,
         FormsModule,
+        ReactiveFormsModule,
         MatButtonModule,
         MatCheckboxModule,
         MatToolbarModule,

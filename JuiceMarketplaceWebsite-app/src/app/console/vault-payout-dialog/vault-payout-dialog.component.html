@@ -1,26 +1,25 @@
-<h2 mat-dialog-title>Auszahlung von Guthaben veranlassen</h2>
+<h2 mat-dialog-title i18n="title">Auszahlung von Guthaben veranlassen</h2>
 <mat-dialog-content>
     <div fxLayout="column" fxLayoutGap="15px" fxLayoutAlign="center center">
         <div fxFlexFill>
-            Es sind {{wallet.confirmed/100000 | number:'1.0-5'}} IUNO in Ihrem Wallet zur Auszahlung bereit.<br>
-            Dies entspricht {{wallet.confirmed / unitFactor | number:'1.0-5'}} {{unitName}} im Bitcoin Testnet.
+            <ng-container i18n>Es sind {{wallet.confirmed/100000 | number:'1.0-5'}} IUNO in Ihrem Wallet zur Auszahlung bereit.<br>
+            Dies entspricht {{wallet.confirmed / unitFactor | number:'1.0-5'}} {{unitName}} im Bitcoin Testnet.</ng-container>
             <mat-icon (click)="testnetHelp()">help_outline</mat-icon>
         </div>
 
         <div *ngIf="wallet.unconfirmed!= wallet.confirmed" fxFlexFill>
-            Aktuell sind davon noch {{(wallet.unconfirmed-wallet.confirmed) / unitFactor | number: '1.0-8'}}
+            <ng-container i18n>Aktuell sind davon noch {{(wallet.unconfirmed-wallet.confirmed) / unitFactor | number: '1.0-8'}}
             {{unitName}} unbestätigt.
-            Sobald diese Transaktionen in der Blockchain bestätigt sind, kann man auch dieses Guthaben auszahlen.
+            Sobald diese Transaktionen in der Blockchain bestätigt sind, kann man auch dieses Guthaben auszahlen.</ng-container>
         </div>
         <div fxFlexFill>
-
-            <mat-slide-toggle [(ngModel)]="emptyWallet" (change)="emptyChanged($event)">Wallet leeren</mat-slide-toggle>
+            <mat-slide-toggle [(ngModel)]="emptyWallet" (change)="emptyChanged($event)" i18n>Wallet leeren</mat-slide-toggle>
         </div>
         <div fxFlexFill>
             <mat-form-field class="address-input" [color]="addressCorrect?'primary':'warn'"
                             (input)="addressChanged($event)">
 
-                <input matInput placeholder="Auszahladresse" type="text" [(ngModel)]="address">
+                <input matInput placeholder="Auszahladresse" type="text" [(ngModel)]="address" i18n-placeholder>
                 <mat-hint *ngIf="isMainnetAddress">⚡️Dies ist eine Mainnet Bitcoin Adresse!</mat-hint>
             </mat-form-field>
         </div>
@@ -31,8 +30,8 @@
                            max="{{(wallet.confirmed-transactionFee)/unitFactor}}"
                            [(ngModel)]="payout"
                            (ngModelChange)="payoutChanged($event)"
-                           [disabled]="emptyWallet || ( wallet.confirmed == 0)">
-                    <mat-hint align="start">min. {{6000/unitFactor | number: '1.0-8'}}, max.
+                           [disabled]="emptyWallet || ( wallet.confirmed == 0)" i18n-placeholder>
+                    <mat-hint align="start" i18n>min. {{6000/unitFactor | number: '1.0-8'}}, max.
                         {{(wallet.confirmed-transactionFee)/unitFactor | number: '1.0-8'}}
                     </mat-hint>
                 </mat-form-field>
@@ -63,21 +62,17 @@
             </div>
         </div>
         <div fxFlexFill *ngIf="wallet.confirmed > 0">
-            Die Transaktionsgebühr beträgt {{transactionFee / unitFactor | number:'1.0-8'}}&nbsp;{{unitName}}<br>
-            und das Restguthaben im Wallet {{remaining / unitFactor | number:'1.0-8'}}&nbsp;{{unitName}}
+            <ng-container i18n>Die Transaktionsgebühr beträgt {{transactionFee / unitFactor | number:'1.0-8'}}&nbsp;{{unitName}}<br>
+            und das Restguthaben im Wallet {{remaining / unitFactor | number:'1.0-8'}}&nbsp;{{unitName}}</ng-container>
         </div>
 
-        <div class="error-text" *ngIf="errorText">
-            {{errorText}}
-        </div>
+        <div class="error-text" *ngIf="errorText">{{errorText}}</div>
 
     </div>
 
 </mat-dialog-content>
 
 <mat-dialog-actions>
-    <button mat-raised-button color="basic" mat-dialog-close>abbrechen</button>
-    <button mat-raised-button color="primary" (click)="accept()" [disabled]="!payoutCorrect || !addressCorrect">
-        Auszahlen!
-    </button>
+    <button mat-raised-button color="basic" mat-dialog-close i18n>Abbrechen</button>
+    <button mat-raised-button color="primary" (click)="accept()" [disabled]="!payoutCorrect || !addressCorrect" i18n>Auszahlen!</button>
 </mat-dialog-actions>

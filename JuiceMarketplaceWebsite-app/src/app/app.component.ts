@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, Inject, OnDestroy } from '@angular/core';
+import { Component, OnInit, ViewChild, Inject, OnDestroy, LOCALE_ID } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 import { MatSidenav } from '@angular/material';
@@ -33,7 +33,7 @@ export class AppComponent implements OnInit, OnDestroy {
         private layoutService: LayoutService,
         private userService: UserService,
         private ccService: NgcCookieConsentService,
-        ) {        
+        ) {
             layoutService.layoutProperties.subscribe(layoutProperties => {
             this.toolbarMenuVisible = !layoutProperties.isSmallLayout
             setTimeout(() => {

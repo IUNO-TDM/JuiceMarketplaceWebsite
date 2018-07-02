@@ -2,10 +2,10 @@
     <div class="header-background"></div>
     <section class="intro" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center stretch" fxLayoutAlign="center center">
         <div class="intro-logo" fxFlex="40">
-            <img src="./assets/images/tdm_text.svg">
+            <img src="./assets/images/tdm_text_de.svg" i18n-src>
         </div>
         <div class="intro-text" fxFlex="40">
-            <h1>
+            <h1 i18n="intro text">
                 Der Technologiedatenmarktplatz<br>
                 für die<br>
                 Lizenz zum Mixen
@@ -41,8 +41,8 @@
             <img src="./assets/images/iuno.svg">
         </div>
         <div class="start-section-text" fxFlex="50">
-            <div class="text-headline">Was macht IUNO?</div>
-            <p>
+            <div class="text-headline" i18n="section header|IUNO">Was macht IUNO?</div>
+            <p i18n="section|IUNO">
                 Im Forschungsvorhaben IUNO, dem Nationalen Referenzprojekt zur IT-Sicherheit in Industrie 4.0, werden
                 Bedrohungen und Risiken für die intelligente Fabrik identifiziert, Schutzmaßnahmen entwickelt und
                 exemplarisch in vier Anwendungsfällen umgesetzt.
@@ -53,8 +53,8 @@
     <section class="start-section marketplace" fxLayout="row" fxLayout.lt-sm="column"
              fxLayoutAlign.lt-sm="center stretch" fxLayoutAlign="space-evenly center">
         <div class="start-section-text" fxFlex="50">
-            <div class="text-headline">Technologiedatenmarktplatz</div>
-            <p>
+            <div class="text-headline" i18n="section header|Technologiedatenmarktplatz">Technologiedatenmarktplatz</div>
+            <p i18n="section|Technologiedatenmarktplatz">
                 Der Technologiedatenmarktplatz ermöglicht Daten bedarfsgerecht zu handeln, die für einen
                 Herstellungsprozeß benötigt werden. Für den bedarfsgerechten Handel ist es notwendig, daß die
                 gehandelten Daten auch nur wie gekauft verwendet werden, sprich pro Stück oder pro Zeiteinheit. Der
@@ -74,8 +74,8 @@
             <img src="./assets/images/cocktail.svg">
         </div>
         <div class="start-section-text" fxFlex="50">
-            <div class="text-headline">Warum Cocktailrezepte?</div>
-            <p>
+            <div class="text-headline" i18n="section header|Warum Cocktailrezepte">Warum Cocktailrezepte?</div>
+            <p i18n="section|Warum Cocktailrezepte">
                 IUNO hat als nationales Referenzprojekt zur IT-Sicherheit in der Industrie 4.0 Leuchtturmcharakter. Es
                 muß in der Öffentlichkeit weithin sichtbar sein, um mit den Inhalten und Ergebnissen eine möglichst
                 großes Publikum zu erreichen. Dazu benötigt es eine Demonstratormaschine, die auf Messen und Vorträgen
@@ -92,8 +92,8 @@
              fxLayoutAlign.lt-sm="center stretch" fxLayoutAlign="space-evenly center">
 
         <div class="start-section-text" fxFlex="50">
-            <div class="text-headline">Der Marktplatz ist live!</div>
-            <p>
+            <div class="text-headline" i18n="section header|Marktplatz ist live">Der Marktplatz ist live!</div>
+            <p i18n="section|Marktplatz ist live">
                 Der Marktplatz wird mittlerweile von mehreren Maschinen bei den verschiedenen Projektpartnern genutzt.
                 Dies zeigen unsere live <a routerLink="/statistics">Dashboards</a>.
             </p>
@@ -111,14 +111,14 @@
             <img src="./assets/images/Saftmischer.svg">
         </div>
         <div class="start-section-text" fxFlex="50">
-            <div class="text-headline">Lust am Ausprobieren?</div>
-            <p>
+            <div class="text-headline" i18n="section header|Lust am Ausprobieren">Lust am Ausprobieren?</div>
+            <p i18n="section|Lust am Ausprobieren">
                 Das ganze Projekt ist OpenSource und steht auf Github zur Verfügung.
             </p>
             <p class="logo-env">
                 <a href="https://github.com/IUNO-TDM"><img class="github-logo" src="assets/images/Octocat.png"></a>
             </p>
-            <p>
+            <p i18n="section add|Lust am Ausprobieren">
                 Und wenn Sie selbst eine Maschine bauen möchten, dann wenden Sie sich gerne an uns.
             </p>
         </div>
@@ -128,9 +128,9 @@
              fxLayoutAlign.lt-sm="center stretch" fxLayoutAlign="space-evenly center">
 
         <div class="start-section-text" fxFlex="50">
-            <div class="text-headline">Über uns</div>
+            <div class="text-headline" i18n="section header|Team">Über uns</div>
             <p>
-                Das Team hinter dem Projekt:
+                <ng-container  i18n="section|Team">Das Team hinter dem Projekt:</ng-container>
                 <br>
                 <span class="developer-link" (click)="showQuote('hans-peter', devs)">Dr.-Ing. Hans-Peter Bock</span>,
                 <span class="developer-link" (click)="showQuote('manuel', devs)">Manuel Beuttler</span>,
@@ -156,11 +156,13 @@
         <section *ngIf="quote == 'hans-peter'" class="start-section quotes" fxLayoutAlign="center">
             <p class="quote" fxFlex="80">
                 <span style="white-space: nowrap;"><b>Dr.-Ing. Hans-Peter Bock</b></span>
+                <ng-container i18n="section|Team - hpbock">
                 <br>
                 Experte für Industrie 4.0 Kommunikation und Security
                 <br>
                 <br>
                 Hans-Peter Bock ist Architekt, Ideengeber und Leiter der Entwicklung des Technologiedatenmarktplatz-Ökosystems.
+                </ng-container>
             </p>
 
         </section>
@@ -171,12 +173,14 @@
         <section *ngIf="quote == 'manuel'" class="start-section quotes"fxLayoutAlign="center">
             <p class="quote" fxFlex="80">
                 <span style="white-space: nowrap;"><b>Manuel Beuttler</b></span>
+                <ng-container  i18n="section|Team - mbeuttler">
                 <br>
                 System Developer for New Technologies
                 <br>
                 <br>
                 Manuel Beuttler hat im Projekt den Überblick über das Zusammenspiel der verschiedenen Komponenten.
                 Er verantwortet die Web-Services, sowie Spezifikation und Absicherung der Schnittstellen.
+                </ng-container>
             </p>
         </section>
         <div [ngClass]="{onTop: quote == 'christian', inactive: quote && quote !='christian'}" class="start-section developer" (click)="showQuote('christian', devs)">
@@ -186,12 +190,14 @@
         <section *ngIf="quote == 'christian'" class="start-section quotes"fxLayoutAlign="center">
             <p class="quote" fxFlex="80">
                 <span style="white-space: nowrap;"><b>Christian Görg</b></span>
+                <ng-container  i18n="section|Team - cgoerg">
                 <br>
                 System Architect for Enabling Technologies
                 <br>
                 <br>
                 Christan Görg entwickelt das Bezahlsystem hinter dem Technologiedatenmarktplatz
                 und verantwortet den sicheren Umgang mit Technologiedaten auf der Maschinen-Steuerung.
+                </ng-container>
             </p>
         </section>
         <div [ngClass]="{onTop: quote == 'marcel', inactive: quote && quote !='marcel'}" class="start-section developer" (click)="showQuote('marcel', devs)">
@@ -201,12 +207,14 @@
         <section *ngIf="quote == 'marcel'" class="start-section quotes"fxLayoutAlign="center">
             <p class="quote" fxFlex="80">
                 <span style="white-space: nowrap;"><b>Marcel Ely Gomes</b></span>
+                <ng-container i18n="section|Team - mgomes">
                 <br>
                 System Architect for Big Data and Analytics
                 <br>
                 <br>
                 Marcel Ely Gomes arbeitet am Herzen des Technologiedaten Marktplatz.
                 Er verantwortet das Datenbankdesign und entwickelt die Datenbank spezifischen Sicherheitskonzepte.
+                </ng-container>
             </p>
         </section>
         <div [ngClass]="{onTop: quote == 'klaus', inactive: quote && quote !='klaus'}" class="start-section developer" (click)="showQuote('klaus', devs)">
@@ -216,6 +224,7 @@
         <section *ngIf="quote == 'klaus'" class="start-section quotes"fxLayoutAlign="center">
             <p class="quote" fxFlex="80">
                 <span style="white-space: nowrap;"><b>Klaus Bauer</b></span>
+                <ng-container i18n="section|Team - kbauer">
                 <br>
                 Experte für Informations- und Kommunikationstechnologien in Produktionsnetzwerken
                 <br>
@@ -223,6 +232,7 @@
                 Klaus Bauer leitet den Bereich Basistechnologien bei TRUMPF und ist Visionsgeber des Technologiedatenmarktplatz.
                 <br>
                 Er beschrieb die Ideen dieses Marktplatzes bereits in den Umsetzungsempfehlungen von Industrie 4.0 und der Smart Service Welt.
+                </ng-container>
             </p>
         </section>
     </section>

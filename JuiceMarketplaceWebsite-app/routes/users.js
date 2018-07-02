@@ -91,7 +91,8 @@ router.get('/:id/recipes/count', authenticationService.paramIsEqualToSessionUser
     query: validation_schema.Empty,
     body: validation_schema.Empty
 }), function (req, res, next) {
-    marketplaceCore.getRecipesForUser(req.params['id'], req.user.token.accessToken, function (err, recipes) {
+    const language = req.cookies.language;
+    marketplaceCore.getRecipesForUser(language, req.params['id'], req.user.token.accessToken, function (err, recipes) {
         if (err) {
             return next(err);
         }
@@ -106,7 +107,8 @@ router.post('/:id/recipes', authenticationService.paramIsEqualToSessionUser('id'
     body: validation_schema_recipe.Recipe_Body
 }), function (req, res, next) {
     // Check if user can still publish recipes or if his limit is reached.
-    marketplaceCore.getRecipesForUser(req.params['id'], req.user.token.accessToken, function (err, recipes) {
+    const language = req.cookies.language;
+    marketplaceCore.getRecipesForUser(language, req.params['id'], req.user.token.accessToken, function (err, recipes) {
         if (err) {
             return next(err);
         }
