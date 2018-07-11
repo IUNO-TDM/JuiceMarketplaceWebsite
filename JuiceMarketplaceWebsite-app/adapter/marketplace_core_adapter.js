@@ -41,7 +41,10 @@ self.getAllComponents = function (language, accessToken, callback) {
         CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.HOST,
         CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PORT,
         '/components',
-        {lang: language}
+        {
+            lang: language,
+            technologies: [CONFIG.TECHNOLOGY_UUID]
+        }
     );
     options.headers.authorization = 'Bearer ' + accessToken;
 
