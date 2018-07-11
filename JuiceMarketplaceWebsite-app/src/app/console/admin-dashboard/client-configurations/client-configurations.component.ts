@@ -1,17 +1,17 @@
 import {Component, OnInit} from '@angular/core';
 import {AdminService} from "../../services/admin.service";
 import * as moment from "moment";
-import {ComponentService} from "tdm-common";
+import {TdmCocktailComponentService} from "tdm-common";
 
 @Component({
     selector: 'app-client-configurations',
     templateUrl: './client-configurations.component.html',
     styleUrls: ['./client-configurations.component.css'],
-    providers: [AdminService, ComponentService]
+    providers: [AdminService, TdmCocktailComponentService]
 })
 export class ClientConfigurationsComponent implements OnInit {
 
-    constructor(private adminService: AdminService, private componentService: ComponentService) {
+    constructor(private adminService: AdminService, private componentService: TdmCocktailComponentService) {
     }
 
     public componentDataReady: boolean = false;

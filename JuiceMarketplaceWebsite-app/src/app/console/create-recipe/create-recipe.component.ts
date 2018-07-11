@@ -10,10 +10,10 @@ import { AccessGuard } from '../services/user.service';
 import "rxjs/add/operator/combineLatest"
 import { RecipeImagePickerComponent } from "../recipe-image-picker/recipe-image-picker/recipe-image-picker.component";
 
-import { Recipe } from 'tdm-common'
-import { Cocktail } from 'tdm-common'
-import { CocktailComponent } from 'tdm-common'
-import { ComponentService } from 'tdm-common'
+import { TdmCocktailRecipe } from 'tdm-common'
+import { TdmCocktailProgram } from 'tdm-common'
+import { TdmCocktailComponent } from 'tdm-common'
+import { TdmCocktailComponentService } from 'tdm-common'
 import { ComponentListComponent, DragAndDropService, BeakerComponent } from 'cocktail-configurator'
 import { Subscription } from 'rxjs';
 import { LayoutService } from '../../services/layout.service';
@@ -51,8 +51,8 @@ export class CreateRecipeComponent implements OnInit {
     // errorStateMatcher = new RecipeErrorStateMatcher();
     errorFields: any;
 
-    cocktail: Cocktail;
-    components: CocktailComponent[] = [];
+    cocktail: TdmCocktailProgram;
+    components: TdmCocktailComponent[] = [];
     isBeakerEditModeEnabled = false
 
     showRecommendedComponents = true;
@@ -76,7 +76,7 @@ export class CreateRecipeComponent implements OnInit {
         private activatedRoute: ActivatedRoute,
         private accessGuard: AccessGuard,
         private layoutService: LayoutService,
-        private componentService: ComponentService,
+        private componentService: TdmCocktailComponentService,
         // private builder: FormBuilder
     ) {
         // this.recipeForm = this.builder.group({
@@ -91,7 +91,7 @@ export class CreateRecipeComponent implements OnInit {
             licenseFee: false
         }
 
-        this.cocktail = new Cocktail();
+        this.cocktail = new TdmCocktailProgram();
         this.cocktail.amount = 100;
         componentService.availableComponents.subscribe(components => {
             this.components = components;
@@ -128,9 +128,9 @@ export class CreateRecipeComponent implements OnInit {
         this.accessGuard.guardLoggedIn().subscribe(loggedIn => {
             if (loggedIn) {
                 let valid = true;
-                const recipe = new Recipe();
+                const recipe = new TdmCocktailRecipe();
 
-                recipe.title = this.recipeName;
+                recipe.name = this.recipeName;
                 recipe.description = this.recipeDescription.trim();
                 recipe.licenseFee = this.recipeLicenseFee * 100000;
                 recipe.imageRef = this.recipeImagePicker.getSelectedImage();
@@ -138,7 +138,7 @@ export class CreateRecipeComponent implements OnInit {
 
                 var anchorName = null
 
-                if (recipe.title.trim().length < 1) {
+                if (recipe.name.trim().length < 1) {
                     anchorName = "#detailsCard"
                     // this.recipeForm.controls['title'].setErrors({error: true})
                     this.errorFields.title = true
@@ -212,7 +212,7 @@ export class CreateRecipeComponent implements OnInit {
         });
     }
 
-    selectComponent(callback: (component: CocktailComponent) => any) {
+    selectComponent(callback: (component: TdmCocktailComponent) => any) {
         let dialogRef = this.dialog.open(ComponentListDialogComponent, {
             width: '300px',
             data: {

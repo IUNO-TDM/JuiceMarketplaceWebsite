@@ -450,7 +450,7 @@ function mapToTdmRecipes(recipes) {
     var tdmRecipes = recipes.map(r => {
         var recipe = {}
         recipe.id = r.technologydatauuid
-        recipe.title = r.technologydataname
+        recipe.name = r.technologydataname
         recipe.description = r.technologydatadescription
         recipe.licenseFee = r.licensefee
         recipe.program = r.technologydata

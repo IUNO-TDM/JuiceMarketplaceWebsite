@@ -21,6 +21,8 @@ const validate = validator.validate;
 const validation_schema = require('../schema/users_schema');
 const validation_schema_recipe = require('../schema/recipe_schema');
 
+// router.use('/:id', authenticationService.paramIsEqualToSessionUser('id'));
+
 /**
  * Retrieves the user information for the logged in user
  */
@@ -58,7 +60,7 @@ router.get('/', validate({
 /**
  * Retrieves the user information for a specific user
  */
-router.get('/:id', validate({
+router.get('/:id', authenticationService.paramIsEqualToSessionUser('id'), validate({
     query: validation_schema.Empty,
     body: validation_schema.Empty
 }), function (req, res, next) {
@@ -129,16 +131,16 @@ router.post('/:id/recipes', authenticationService.paramIsEqualToSessionUser('id'
             const recipe = req.body;
 
             // recipe information for further processing
-            const title = recipe['title'].trim();
+            const name = recipe['name'].trim();
             const description = recipe['description'].trim();
             const licenseFee = recipe['licenseFee'];
 
             // check metadata
             let valid = true;
             let validText;
-            if (!title || title.length < 1) {
-                logger.warn('Submitted recipe: Title is missing');
-                validText = 'Titel fehlt.';
+            if (!name || name.length < 1) {
+                logger.warn('Submitted recipe: Name is missing');
+                validText = 'Name fehlt.';
                 valid = false;
             }
             if (!description || description.length < 1) {
@@ -219,7 +221,7 @@ router.post('/:id/recipes', authenticationService.paramIsEqualToSessionUser('id'
 
             const coreData = {};
 
-            coreData.technologyDataName = title;
+            coreData.technologyDataName = name;
             coreData.technologyData = encryptedProgram;
             coreData.technologyDataDescription = description;
             coreData.technologyUUID = CONFIG.TECHNOLOGY_UUID;
