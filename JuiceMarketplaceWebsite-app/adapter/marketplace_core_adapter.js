@@ -187,7 +187,8 @@ self.getTechnologyDataHistory = function (from, to, token, callback) {
         '/reports/technologydata/history',
         {
             from: from,
-            to: to
+            to: to,
+            technologyuuid: CONFIG.TECHNOLOGY_UUID
         }
     );
     options.headers.authorization = 'Bearer ' + token.accessToken;
@@ -208,7 +209,8 @@ self.getTopComponents = function (language, from, to, limit, token, callback) {
             from: from,
             to: to,
             limit: limit,
-            lang: language
+            lang: language,
+            technologyuuid: CONFIG.TECHNOLOGY_UUID
         }
     );
     options.headers.authorization = 'Bearer ' + token.accessToken;
@@ -229,7 +231,8 @@ self.getTopTechnologyData = function (from, to, limit, token, callback) {
         {
             from: from,
             to: to,
-            limit: limit
+            limit: limit,
+            technologyuuid: CONFIG.TECHNOLOGY_UUID
         }
     );
 
@@ -250,7 +253,8 @@ self.getTotalRevenue = function (from, to, detail, token, callback) {
         {
             from: from,
             to: to,
-            detail: detail
+            detail: detail,
+            technologyuuid: CONFIG.TECHNOLOGY_UUID
         }
     );
     options.headers.authorization = 'Bearer ' + token.accessToken;
@@ -272,7 +276,8 @@ self.getRevenueForUser = function (user, from, to, accessToken, callback) {
         {
             user: user,
             from: from,
-            to: to
+            to: to,
+            technologyuuid: CONFIG.TECHNOLOGY_UUID
         }
     );
     options.headers.authorization = 'Bearer ' + accessToken;
@@ -290,7 +295,8 @@ self.getRevenueHistory = function (accessToken, from, to, callback) {
         '/reports/revenue/technologydata/history',
         {
             from: from,
-            to: to
+            to: to,
+            technologyuuid: CONFIG.TECHNOLOGY_UUID
         }
     );
     options.headers.authorization = 'Bearer ' + accessToken;
@@ -310,7 +316,8 @@ self.getTopTechnologyDataForUser = function (user, accessToken, from, to, limit,
             from: from,
             to: to,
             limit: limit,
-            user: user
+            user: user,
+            technologyuuid: CONFIG.TECHNOLOGY_UUID
         }
     );
     options.headers.authorization = 'Bearer ' + accessToken;

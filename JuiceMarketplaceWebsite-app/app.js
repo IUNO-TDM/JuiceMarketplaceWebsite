@@ -1,5 +1,5 @@
 const express = require('express');
-const path = require('path');
+const path = require('path').posix;
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const queryParser = require('express-query-int');
