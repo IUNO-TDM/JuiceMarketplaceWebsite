@@ -404,7 +404,8 @@ self.getActivatedLicenseCountForUser = function (user, accessToken, callback) {
         '/reports/licenses/count',
         {
             activated: true,
-            user: user
+            user: user,
+            technologyuuid: CONFIG.TECHNOLOGY_UUID
         }
     );
     options.headers.authorization = 'Bearer ' + accessToken;
