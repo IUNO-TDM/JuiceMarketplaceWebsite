@@ -18,6 +18,7 @@ import { ComponentListComponent, DragAndDropService, BeakerComponent } from 'coc
 import { Subscription } from 'rxjs';
 import { LayoutService } from '../../services/layout.service';
 import { ComponentListDialogComponent } from '../component-list-dialog/component-list-dialog.component';
+import { FormGroup, Validators, FormControl } from '@angular/forms';
 // import { FormControl, FormGroupDirective, NgForm, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 /** Error when invalid control is dirty, touched, or submitted. */
@@ -51,6 +52,12 @@ export class CreateRecipeComponent implements OnInit {
         })
     }
 
+    recipeForm = new FormGroup({
+        name: new FormControl('', [ Validators.required, Validators.minLength(1), Validators.maxLength(250)]),
+        description: new FormControl('', [ Validators.required, Validators.minLength(1), Validators.maxLength(30000)]),
+        licenseFee: new FormControl('', [ Validators.required]),
+    })
+
     // recipeForm: FormGroup
     // errorStateMatcher = new RecipeErrorStateMatcher();
     errorFields: any;
@@ -66,9 +73,9 @@ export class CreateRecipeComponent implements OnInit {
 
     licenseFees: number[] = [0.25, 0.5, 0.75, 1.00];
     spinnerCounter = 0;
-    recipeName: string = "";
-    recipeDescription: string = "";
-    recipeLicenseFee: number = -1;
+    // recipeName: string = "";
+    // recipeDescription: string = "";
+    // recipeLicenseFee: number = -1;
     recipesLeft = 0;
     recipeLimit = 0;
     recipeCount = 0;
@@ -136,15 +143,15 @@ export class CreateRecipeComponent implements OnInit {
         });
     }
 
-    actionSaveRecipe() {
+    onSubmit() {
         this.accessGuard.guardLoggedIn().subscribe(loggedIn => {
             if (loggedIn) {
                 let valid = true;
                 const recipe = new TdmCocktailRecipe();
 
-                recipe.name = this.recipeName;
-                recipe.description = this.recipeDescription.trim();
-                recipe.licenseFee = this.recipeLicenseFee * 100000;
+                recipe.name = this.recipeForm.get('name').value;
+                recipe.description = this.recipeForm.get('description').value.trim();
+                recipe.licenseFee = this.recipeForm.get('licenseFee').value * 100000;
                 recipe.imageRef = this.recipeImagePicker.getSelectedImage();
                 recipe.backgroundColor = this.recipeImagePicker.backgroundColor;
 
@@ -167,7 +174,7 @@ export class CreateRecipeComponent implements OnInit {
                 } else {
                     this.errorFields.description = false
                 }
-                if (this.licenseFees.indexOf(this.recipeLicenseFee) < 0) {
+                if (this.licenseFees.indexOf(this.recipeForm.get('licenseFee').value) < 0) {
                     anchorName = "#detailsCard"
                     this.errorFields.licenseFee = true
                     // alert("Bitte wählen Sie eine Lizenzgebühr aus.");
