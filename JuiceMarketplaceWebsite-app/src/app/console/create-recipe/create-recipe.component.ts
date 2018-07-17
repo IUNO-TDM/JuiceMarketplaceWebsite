@@ -40,17 +40,22 @@ import { ComponentListDialogComponent } from '../component-list-dialog/component
 @Injectable()
 export class CreateRecipeComponent implements OnInit {
     @ViewChild(RecipeImagePickerComponent) recipeImagePicker: RecipeImagePickerComponent;
-    @ViewChild(BeakerComponent) set beaker(beaker: BeakerComponent) {
-        if (beaker) {
-            setTimeout(() => {
-                beaker.setEditMode(this.isBeakerEditModeEnabled)
-            })
-        }
+
+    @ViewChild(BeakerComponent)
+    set beakerComponent(component: BeakerComponent) {
+        this.beaker = component
+        setTimeout(() => {
+            if (this.beaker) {
+                this.beaker.setEditMode(this.isBeakerEditModeEnabled)
+            }
+        })
     }
+
     // recipeForm: FormGroup
     // errorStateMatcher = new RecipeErrorStateMatcher();
     errorFields: any;
 
+    beaker: BeakerComponent = null;
     cocktail: TdmCocktailProgram;
     components: TdmCocktailComponent[] = [];
     isBeakerEditModeEnabled = false
@@ -97,13 +102,20 @@ export class CreateRecipeComponent implements OnInit {
             this.components = components;
         })
         layoutService.layoutProperties.subscribe(layoutProperties => {
+            // console.log("layoutProperties.mqAlias = " + layoutProperties.mqAlias + ", touchDevice = " + layoutProperties.isTouchDevice)
             var editMode = false
-            if (layoutProperties.isSmallLayout || layoutProperties.isTouchDevice) {
+            if (layoutProperties.isTouchDevice ||
+                layoutProperties.mqAlias == 'xs' ||
+                layoutProperties.mqAlias == 'sm' ||
+                layoutProperties.mqAlias == 'md') {
                 editMode = true
             }
+            // console.log("editMode = " + editMode + ", beaker = " + this.beaker)
             this.isBeakerEditModeEnabled = editMode
             if (this.beaker) {
-                this.beaker.setEditMode(editMode)
+                setTimeout(() => {
+                    this.beaker.setEditMode(this.isBeakerEditModeEnabled)
+                })
             }
 
         })
@@ -206,7 +218,7 @@ export class CreateRecipeComponent implements OnInit {
                         })
                         // remove anchor jump from backstack
                         // history.pushState(null, null, anchorName)
-                }
+                    }
                 }
             }
         });

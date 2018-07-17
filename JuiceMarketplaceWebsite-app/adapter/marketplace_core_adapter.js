@@ -478,7 +478,7 @@ function mapToTdmComponents(components) {
         var component = {}
         component.id = c.componentuuid
         component.name = c.componentname
-        component.color = c.displaycolor
+        component.displayColor = c.displaycolor
         return component
     })
     return tdmComponents

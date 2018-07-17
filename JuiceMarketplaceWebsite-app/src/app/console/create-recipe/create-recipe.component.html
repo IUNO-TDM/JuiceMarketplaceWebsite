@@ -21,19 +21,19 @@
             <app-message-box *ngIf="errorFields.program" type="error" i18n="error|create recipe - recipe missing">Bitte fügen Sie mindestens eine Zutat hinzu!</app-message-box>
             <!-- <span class="error" *ngIf="errorFields.program">Bitte fügen Sie mindestens eine Zutat hinzu!</span> -->
             <!-- <app-message-box type="error" *ngIf="errorMessages.indexOf('component') >= 0" i18n>Bitte fügen Sie mindestens eine Zutat hinzu!</app-message-box> -->
-            <div fxLayout.gt-md="row" fxLayout.lt-lg="column" fxFlex="100" fxLayoutAlign.gt-md="center start" fxLayoutAlign.lt-lg="center"
+            <div fxLayout.gt-xs="row" fxLayout.lt-sm="column" fxFlex="100" fxLayoutAlign.gt-xs="center start" fxLayoutAlign.lt-sm="center"
                 fxLayoutGap="30px" style="background-color: #0f00;">
-                <ng-container *ngIf="!isBeakerEditModeEnabled">
-                    <div fxLayoutAlign="center center" fxFlex="30" fxShow.lt-lg="false" style="background-color: #ff00;">
-                        <cocktail-component-list [showRecommended]="showRecommendedComponents" [showAvailable]="showAvailableComponents" [showInstalled]="showInstalledComponents"
+                <!-- <ng-container *ngIf="!isBeakerEditModeEnabled"> -->
+                        <div fxShow fxHide.lt-lg="true" fxLayoutAlign="center center" fxFlex="30" style="background-color: #ff00;">
+                        <cocktail-component-list (fxShow)="!isBeakerEditModeEnabled" (fxHide)="!isBeakerEditModeEnabled" [showRecommended]="showRecommendedComponents" [showAvailable]="showAvailableComponents" [showInstalled]="showInstalledComponents"
                             style="width: 300px; height: 450px;" i18n-removeComponentText i18n-searchComponentTitle i18n-recommendedComponentsTitle
                             i18n-installedComponentsTitle i18n-availableComponentsTitle i18n-emptySearchResultText removeComponentText="Zutat hier ablegen<br>um diese zu entfernen."
                             searchComponentTitle="Suchen" recommendedComponentsTitle="Vorgeschlagene Komponenten" installedComponentsTitle="Installierte Komponenten"
                             availableComponentsTitle="Alle Komponenten" emptySearchResultText="Keine Komponenten gefunden."></cocktail-component-list>
                     </div>
-                </ng-container>
+                <!-- </ng-container> -->
                 <div style="background-color: #0ff0;" fxFlex.gt-md="300px" fxFlex.lt-lg="auto" fxLayoutAlign="center center">
-                    <cocktail-beaker #beaker [cocktail]="cocktail" (onSelectComponent)="selectComponent($event)" style="width: 300px; height: 450px;"
+                    <cocktail-beaker #beakerComponent [cocktail]="cocktail" (onSelectComponent)="selectComponent($event)" style="width: 300px; height: 450px;"
                         i18n-dragComponentText i18n-touchComponentText dragComponentText="Zutat per<br>Drag & Drop<br>hinzufügen."
                         touchComponentText="Hier tippen um Zutat<br>hinzuzufügen."></cocktail-beaker>
                 </div>
