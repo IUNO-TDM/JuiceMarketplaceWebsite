@@ -1,6 +1,6 @@
-<h1>Informationen zur Währung IUNO</h1>
+<h1 i18n="title">Informationen zur Währung IUNO</h1>
 <mat-dialog-content>
-    <p>Die Währung in unserem Demonstrator nennt sich IUNO. Hinter den IUNOs steckt technisch das Bitcoin Testnet
+    <ng-container i18n><p>Die Währung in unserem Demonstrator nennt sich IUNO. Hinter den IUNOs steckt technisch das Bitcoin Testnet.
         Diese Variante von Bitcoin ist zum Testen und zum Entwickeln mit der Bitcoin-Technik gedacht. Einen realen Wert,
         den man beispielsweise in Euros ausdrücken könnte, gibt es nicht. Jedoch kann man damit Cocktails an unseren
         Saftmischmaschinen bezahlen.</p>
@@ -11,6 +11,7 @@
     <p>
         Folgende Apps können wir dazu empfehlen:
     </p>
+</ng-container>
     <table>
         <tr>
             <td>Windows, Linux, Mac:</td>
@@ -18,19 +19,17 @@
         </tr>
         <tr>
             <td>iOS:</td>
-            <td><a target="_blank" href="https://itunes.apple.com/de/app/copay-bitcoin-wallet/id951330296?mt=8">Copay</a> (Nur im Testnet
-                empfehlenswert)
+            <td><a target="_blank" href="https://itunes.apple.com/de/app/copay-bitcoin-wallet/id951330296?mt=8">Copay</a><ng-container i18n>(Nur im Testnet empfehlenswert)</ng-container>
             </td>
         </tr>
         <tr>
             <td>Android:</td>
-            <td><a target="_blank" href="https://play.google.com/store/apps/details?id=de.schildbach.wallet_test&hl=de">Bitcoin Wallet
-                for Testnet</a></td>
+            <td><a target="_blank" href="https://play.google.com/store/apps/details?id=de.schildbach.wallet_test&hl=de"><ng-container i18n>Bitcoin Wallet für Testnet</ng-container></a></td>
         </tr>
     </table>
 
 </mat-dialog-content>
 
 <mat-dialog-actions>
-    <button mat-raised-button mat-dialog-close>OK danke!</button>
+    <button mat-raised-button mat-dialog-close i18n>OK danke!</button>
 </mat-dialog-actions>

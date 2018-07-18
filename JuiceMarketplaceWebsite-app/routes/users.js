@@ -6,12 +6,12 @@ const express = require('express');
 const router = express.Router();
 const marketplaceCore = require('../adapter/marketplace_core_adapter');
 const authService = require('../adapter/auth_service_adapter');
-const programConverter = require('../services/program_converter');
 const logger = require('../global/logger');
 const helper = require('../services/helper_service');
 const encryption = require('../services/encryption_service');
 const recipeLimitService = require('../services/recipe_limit_service');
 const imageService = require('../services/image_service');
+const authenticationService = require('../services/authentication_service');
 
 const CONFIG = require('../config/config_loader');
 
@@ -71,7 +71,7 @@ router.get('/:id', validate({
 /**
  * Returns the limit of recipes the user can publish on the marketplace
  */
-router.get('/:id/recipes/limit', validate({
+router.get('/:id/recipes/limit', authenticationService.paramIsEqualToSessionUser('id'), validate({
     query: validation_schema.Empty,
     body: validation_schema.Empty
 }), function (req, res, next) {
@@ -87,11 +87,12 @@ router.get('/:id/recipes/limit', validate({
 /**
  * Returns the amount of recipes the user already published on the marketplace
  */
-router.get('/:id/recipes/count', validate({
+router.get('/:id/recipes/count', authenticationService.paramIsEqualToSessionUser('id'), validate({
     query: validation_schema.Empty,
     body: validation_schema.Empty
 }), function (req, res, next) {
-    marketplaceCore.getRecipesForUser(req.params['id'], req.user.token.accessToken, function (err, recipes) {
+    const language = req.cookies.language;
+    marketplaceCore.getRecipesForUser(language, req.params['id'], req.user.token.accessToken, function (err, recipes) {
         if (err) {
             return next(err);
         }
@@ -101,12 +102,13 @@ router.get('/:id/recipes/count', validate({
 /**
  * Saves a recipe for a specific user
  */
-router.post('/:id/recipes', validate({
+router.post('/:id/recipes', authenticationService.paramIsEqualToSessionUser('id'), validate({
     query: validation_schema.Empty,
     body: validation_schema_recipe.Recipe_Body
 }), function (req, res, next) {
     // Check if user can still publish recipes or if his limit is reached.
-    marketplaceCore.getRecipesForUser(req.params['id'], req.user.token.accessToken, function (err, recipes) {
+    const language = req.cookies.language;
+    marketplaceCore.getRecipesForUser(language, req.params['id'], req.user.token.accessToken, function (err, recipes) {
         if (err) {
             return next(err);
         }
@@ -248,7 +250,7 @@ router.post('/:id/recipes', validate({
 /**
  * Retrieves the user image
  */
-router.get('/:user_id/image', validate({
+router.get('/:user_id/image', authenticationService.paramIsEqualToSessionUser('user_id'), validate({
     query: validation_schema.Empty,
     body: validation_schema.Empty
 }), function (req, res, next) {
@@ -267,7 +269,7 @@ router.get('/:user_id/image', validate({
         res.send(data.imageBuffer);
     });
 });
-router.put('/:user_id/image', validate({
+router.put('/:user_id/image', authenticationService.paramIsEqualToSessionUser('user_id'), validate({
     query: validation_schema.Empty
 }), function (req, res, next) {
     logger.warn('[routes/recipes] NOT IMPLEMENTED YET');
@@ -275,8 +277,8 @@ router.put('/:user_id/image', validate({
 });
 
 
-router.use('/:user_id/recipes', require('./recipes'));
-router.use('/:id/reports', require('./user_reports'));
-router.use('/:id/vault', require('./vault'));
+router.use('/:user_id/recipes', authenticationService.paramIsEqualToSessionUser('user_id'), require('./recipes'));
+router.use('/:id/reports', authenticationService.paramIsEqualToSessionUser('id'), require('./user_reports'));
+router.use('/:id/vault', authenticationService.paramIsEqualToSessionUser('id'), require('./vault'));
 
 module.exports = router;

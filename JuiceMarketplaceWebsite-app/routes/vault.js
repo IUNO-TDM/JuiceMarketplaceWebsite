@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router({mergeParams: true});
 const marketplaceCore = require('../adapter/marketplace_core_adapter');
+const authenticationService = require('../services/authentication_service');
 
 const {Validator, ValidationError} = require('express-json-validator-middleware');
 const validator = new Validator({allErrors: true});

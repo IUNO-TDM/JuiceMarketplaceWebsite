@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatSidenav } from '@angular/material';
-import { ViewEncapsulation } from '@angular/core/src/metadata/view';
 import { UserService, User } from './services/user.service';
 
 @Component({
