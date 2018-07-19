@@ -161,8 +161,8 @@ router.post('/:id/recipes', authenticationService.paramIsEqualToSessionUser('id'
             // check total amount
             let totalAmount = 0;
             let totalPause = 0;
-            const minTotalAmount = 99;
-            const maxTotalAmount = 121;
+            const minTotalAmount = 90;
+            const maxTotalAmount = 130;
             const maxTotalPause = 5001;
             
             const machineProgram = recipe['program'];
