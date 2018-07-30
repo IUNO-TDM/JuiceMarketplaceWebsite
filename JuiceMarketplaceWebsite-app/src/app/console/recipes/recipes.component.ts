@@ -7,7 +7,7 @@ import {Observable} from 'rxjs/Rx';
 import 'rxjs/add/observable/of';
 
 import {RecipeService} from '../services/recipe.service';
-import {Recipe} from 'tdm-common';
+import {TdmCocktailRecipe} from 'tdm-common';
 import {ActivatedRoute} from '@angular/router';
 import {AccessGuard} from '../services/user.service';
 
@@ -20,7 +20,7 @@ import {AccessGuard} from '../services/user.service';
 
 export class RecipesComponent implements OnInit {
     displayedColumns = ["position", "name", "description", "licensefee", "action"];
-    dataSource = new MatTableDataSource<Recipe>();
+    dataSource = new MatTableDataSource<TdmCocktailRecipe>();
     errorMaxRecipes = false;
 
     constructor(private recipeService: RecipeService,
@@ -37,7 +37,7 @@ export class RecipesComponent implements OnInit {
     ngOnInit() {
     }
 
-    deleteRecipe(recipe: Recipe) {
+    deleteRecipe(recipe: TdmCocktailRecipe) {
         this.accessGuard.guardLoggedIn().subscribe(loggedIn => {
             if (loggedIn) {
                 this.errorMaxRecipes = false;

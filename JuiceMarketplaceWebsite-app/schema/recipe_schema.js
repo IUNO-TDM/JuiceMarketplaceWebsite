@@ -181,7 +181,7 @@ self.Recipe_Image_Body = {
 self.Recipe_Body = {
     type: "object",
     properties: {
-        title: {
+        name: {
             type: "string",
             minLength: 1,
             maxLength: 250
@@ -263,7 +263,7 @@ self.Recipe_Body = {
             pattern: '^#([A-Fa-f0-9]{3}|[A-Fa-f0-9]{4}|[A-Fa-f0-9]{6}|[A-Fa-f0-9]{8})$'
         }
     },
-    required: ['title', 'description', 'licenseFee', 'program'],
+    required: ['name', 'description', 'licenseFee', 'program'],
     additionalProperties: false
 };
 

@@ -5,14 +5,14 @@ import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
-import { Recipe } from 'tdm-common';
+import { TdmCocktailRecipe } from 'tdm-common';
 
 @Injectable()
 export class RecipeService {
     // @see https://blog.angular-university.io/how-to-build-angular2-apps-using-rxjs-observable-data-services-pitfalls-to-avoid/
     // This is to prevent the service clients from themselves emitting store values directly instead of calling action methods and therefore bypassing the store.
-    private _recipes: BehaviorSubject<Recipe[]> = new BehaviorSubject([]);
-    public readonly recipes: Observable<Recipe[]> = this._recipes.asObservable();
+    private _recipes: BehaviorSubject<TdmCocktailRecipe[]> = new BehaviorSubject([]);
+    public readonly recipes: Observable<TdmCocktailRecipe[]> = this._recipes.asObservable();
 
     private recipesUrl = '/api/users/me/recipes';
 
@@ -21,14 +21,14 @@ export class RecipeService {
     }
 
     updateRecipes() {
-        this.http.get<Recipe[]>(this.recipesUrl).subscribe(recipes => {
+        this.http.get<TdmCocktailRecipe[]>(this.recipesUrl).subscribe(recipes => {
             this._recipes.next(recipes);
         }, error => {
             this.handleError(error);
         });
     }
 
-    deleteRecipe(recipe: Recipe) {
+    deleteRecipe(recipe: TdmCocktailRecipe) {
         this.http.delete(this.recipesUrl + "/" + recipe.id, {
             responseType: 'text',
         }).subscribe(response => {
