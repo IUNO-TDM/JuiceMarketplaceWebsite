@@ -10,14 +10,15 @@ import { AccessGuard } from '../services/user.service';
 import "rxjs/add/operator/combineLatest"
 import { RecipeImagePickerComponent } from "../recipe-image-picker/recipe-image-picker/recipe-image-picker.component";
 
-import { Recipe } from 'tdm-common'
-import { Cocktail } from 'tdm-common'
-import { CocktailComponent } from 'tdm-common'
-import { ComponentService } from 'tdm-common'
+import { TdmCocktailRecipe } from 'tdm-common'
+import { TdmCocktailProgram } from 'tdm-common'
+import { TdmCocktailComponent } from 'tdm-common'
+import { TdmCocktailComponentService } from 'tdm-common'
 import { ComponentListComponent, DragAndDropService, BeakerComponent } from 'cocktail-configurator'
 import { Subscription } from 'rxjs';
 import { LayoutService } from '../../services/layout.service';
 import { ComponentListDialogComponent } from '../component-list-dialog/component-list-dialog.component';
+import { FormGroup, Validators, FormControl } from '@angular/forms';
 // import { FormControl, FormGroupDirective, NgForm, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 /** Error when invalid control is dirty, touched, or submitted. */
@@ -40,19 +41,30 @@ import { ComponentListDialogComponent } from '../component-list-dialog/component
 @Injectable()
 export class CreateRecipeComponent implements OnInit {
     @ViewChild(RecipeImagePickerComponent) recipeImagePicker: RecipeImagePickerComponent;
-    @ViewChild(BeakerComponent) set beaker(beaker: BeakerComponent) {
-        if (beaker) {
-            setTimeout(() => {
-                beaker.setEditMode(this.isBeakerEditModeEnabled)
-            })
-        }
+
+    @ViewChild(BeakerComponent)
+    set beakerComponent(component: BeakerComponent) {
+        this.beaker = component
+        setTimeout(() => {
+            if (this.beaker) {
+                this.beaker.setEditMode(this.isBeakerEditModeEnabled)
+            }
+        })
     }
+
+    recipeForm = new FormGroup({
+        name: new FormControl('', [ Validators.required, Validators.minLength(1), Validators.maxLength(250)]),
+        description: new FormControl('', [ Validators.required, Validators.minLength(1), Validators.maxLength(30000)]),
+        licenseFee: new FormControl('', [ Validators.required]),
+    })
+
     // recipeForm: FormGroup
     // errorStateMatcher = new RecipeErrorStateMatcher();
     errorFields: any;
 
-    cocktail: Cocktail;
-    components: CocktailComponent[] = [];
+    beaker: BeakerComponent = null;
+    cocktail: TdmCocktailProgram;
+    components: TdmCocktailComponent[] = [];
     isBeakerEditModeEnabled = false
 
     showRecommendedComponents = true;
@@ -61,9 +73,9 @@ export class CreateRecipeComponent implements OnInit {
 
     licenseFees: number[] = [0.25, 0.5, 0.75, 1.00];
     spinnerCounter = 0;
-    recipeName: string = "";
-    recipeDescription: string = "";
-    recipeLicenseFee: number = -1;
+    // recipeName: string = "";
+    // recipeDescription: string = "";
+    // recipeLicenseFee: number = -1;
     recipesLeft = 0;
     recipeLimit = 0;
     recipeCount = 0;
@@ -76,7 +88,7 @@ export class CreateRecipeComponent implements OnInit {
         private activatedRoute: ActivatedRoute,
         private accessGuard: AccessGuard,
         private layoutService: LayoutService,
-        private componentService: ComponentService,
+        private componentService: TdmCocktailComponentService,
         // private builder: FormBuilder
     ) {
         // this.recipeForm = this.builder.group({
@@ -91,19 +103,26 @@ export class CreateRecipeComponent implements OnInit {
             licenseFee: false
         }
 
-        this.cocktail = new Cocktail();
+        this.cocktail = new TdmCocktailProgram();
         this.cocktail.amount = 100;
         componentService.availableComponents.subscribe(components => {
             this.components = components;
         })
         layoutService.layoutProperties.subscribe(layoutProperties => {
+            // console.log("layoutProperties.mqAlias = " + layoutProperties.mqAlias + ", touchDevice = " + layoutProperties.isTouchDevice)
             var editMode = false
-            if (layoutProperties.isSmallLayout || layoutProperties.isTouchDevice) {
+            if (layoutProperties.isTouchDevice ||
+                layoutProperties.mqAlias == 'xs' ||
+                layoutProperties.mqAlias == 'sm' ||
+                layoutProperties.mqAlias == 'md') {
                 editMode = true
             }
+            // console.log("editMode = " + editMode + ", beaker = " + this.beaker)
             this.isBeakerEditModeEnabled = editMode
             if (this.beaker) {
-                this.beaker.setEditMode(editMode)
+                setTimeout(() => {
+                    this.beaker.setEditMode(this.isBeakerEditModeEnabled)
+                })
             }
 
         })
@@ -124,21 +143,21 @@ export class CreateRecipeComponent implements OnInit {
         });
     }
 
-    actionSaveRecipe() {
+    onSubmit() {
         this.accessGuard.guardLoggedIn().subscribe(loggedIn => {
             if (loggedIn) {
                 let valid = true;
-                const recipe = new Recipe();
+                const recipe = new TdmCocktailRecipe();
 
-                recipe.title = this.recipeName;
-                recipe.description = this.recipeDescription.trim();
-                recipe.licenseFee = this.recipeLicenseFee * 100000;
+                recipe.name = this.recipeForm.get('name').value;
+                recipe.description = this.recipeForm.get('description').value.trim();
+                recipe.licenseFee = this.recipeForm.get('licenseFee').value * 100000;
                 recipe.imageRef = this.recipeImagePicker.getSelectedImage();
                 recipe.backgroundColor = this.recipeImagePicker.backgroundColor;
 
                 var anchorName = null
 
-                if (recipe.title.trim().length < 1) {
+                if (recipe.name.trim().length < 1) {
                     anchorName = "#detailsCard"
                     // this.recipeForm.controls['title'].setErrors({error: true})
                     this.errorFields.title = true
@@ -155,7 +174,7 @@ export class CreateRecipeComponent implements OnInit {
                 } else {
                     this.errorFields.description = false
                 }
-                if (this.licenseFees.indexOf(this.recipeLicenseFee) < 0) {
+                if (this.licenseFees.indexOf(this.recipeForm.get('licenseFee').value) < 0) {
                     anchorName = "#detailsCard"
                     this.errorFields.licenseFee = true
                     // alert("Bitte wählen Sie eine Lizenzgebühr aus.");
@@ -206,13 +225,13 @@ export class CreateRecipeComponent implements OnInit {
                         })
                         // remove anchor jump from backstack
                         // history.pushState(null, null, anchorName)
-                }
+                    }
                 }
             }
         });
     }
 
-    selectComponent(callback: (component: CocktailComponent) => any) {
+    selectComponent(callback: (component: TdmCocktailComponent) => any) {
         let dialogRef = this.dialog.open(ComponentListDialogComponent, {
             width: '300px',
             data: {

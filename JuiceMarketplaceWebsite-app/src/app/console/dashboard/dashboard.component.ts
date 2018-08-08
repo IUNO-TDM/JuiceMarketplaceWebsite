@@ -4,7 +4,6 @@ import {ViewEncapsulation} from '@angular/core'
 import * as moment from 'moment';
 
 import {DashboardService} from '../services/dashboard.service';
-import {Recipe} from 'tdm-common';
 import {RevenueReport} from "../models/RevenueReport";
 import * as async from 'async';
 import {RecipeReport} from "../models/RecipeReport";

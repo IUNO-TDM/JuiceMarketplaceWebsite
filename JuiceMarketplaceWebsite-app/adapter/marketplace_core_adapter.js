@@ -187,7 +187,8 @@ self.getTechnologyDataHistory = function (from, to, token, callback) {
         '/reports/technologydata/history',
         {
             from: from,
-            to: to
+            to: to,
+            technologyuuid: CONFIG.TECHNOLOGY_UUID
         }
     );
     options.headers.authorization = 'Bearer ' + token.accessToken;
@@ -208,7 +209,8 @@ self.getTopComponents = function (language, from, to, limit, token, callback) {
             from: from,
             to: to,
             limit: limit,
-            lang: language
+            lang: language,
+            technologyuuid: CONFIG.TECHNOLOGY_UUID
         }
     );
     options.headers.authorization = 'Bearer ' + token.accessToken;
@@ -229,7 +231,8 @@ self.getTopTechnologyData = function (from, to, limit, token, callback) {
         {
             from: from,
             to: to,
-            limit: limit
+            limit: limit,
+            technologyuuid: CONFIG.TECHNOLOGY_UUID
         }
     );
 
@@ -250,7 +253,8 @@ self.getTotalRevenue = function (from, to, detail, token, callback) {
         {
             from: from,
             to: to,
-            detail: detail
+            detail: detail,
+            technologyuuid: CONFIG.TECHNOLOGY_UUID
         }
     );
     options.headers.authorization = 'Bearer ' + token.accessToken;
@@ -272,7 +276,8 @@ self.getRevenueForUser = function (user, from, to, accessToken, callback) {
         {
             user: user,
             from: from,
-            to: to
+            to: to,
+            technologyuuid: CONFIG.TECHNOLOGY_UUID
         }
     );
     options.headers.authorization = 'Bearer ' + accessToken;
@@ -290,7 +295,8 @@ self.getRevenueHistory = function (accessToken, from, to, callback) {
         '/reports/revenue/technologydata/history',
         {
             from: from,
-            to: to
+            to: to,
+            technologyuuid: CONFIG.TECHNOLOGY_UUID
         }
     );
     options.headers.authorization = 'Bearer ' + accessToken;
@@ -310,7 +316,8 @@ self.getTopTechnologyDataForUser = function (user, accessToken, from, to, limit,
             from: from,
             to: to,
             limit: limit,
-            user: user
+            user: user,
+            technologyuuid: CONFIG.TECHNOLOGY_UUID
         }
     );
     options.headers.authorization = 'Bearer ' + accessToken;
@@ -397,7 +404,8 @@ self.getActivatedLicenseCountForUser = function (user, accessToken, callback) {
         '/reports/licenses/count',
         {
             activated: true,
-            user: user
+            user: user,
+            technologyuuid: CONFIG.TECHNOLOGY_UUID
         }
     );
     options.headers.authorization = 'Bearer ' + accessToken;
@@ -453,7 +461,7 @@ function mapToTdmRecipes(recipes) {
     var tdmRecipes = recipes.map(r => {
         var recipe = {}
         recipe.id = r.technologydatauuid
-        recipe.title = r.technologydataname
+        recipe.name = r.technologydataname
         recipe.description = r.technologydatadescription
         recipe.licenseFee = r.licensefee
         recipe.program = r.technologydata
@@ -470,7 +478,7 @@ function mapToTdmComponents(components) {
         var component = {}
         component.id = c.componentuuid
         component.name = c.componentname
-        component.color = c.displaycolor
+        component.displayColor = c.displaycolor
         return component
     })
     return tdmComponents

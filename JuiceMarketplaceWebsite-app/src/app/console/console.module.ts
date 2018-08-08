@@ -44,7 +44,7 @@ import {RecipeImagePickerModule} from "./recipe-image-picker/recipe-image-picker
 import {VaultTestnetHelpDialogComponent} from "./vault-testnet-help-dialog/vault-testnet-help-dialog.component";
 
 import {CocktailConfiguratorModule, DragAndDropService} from 'cocktail-configurator'
-import {ComponentService} from 'tdm-common'
+import {TdmCocktailComponentService} from 'tdm-common'
 
 @NgModule({
     imports: [
@@ -89,7 +89,7 @@ import {ComponentService} from 'tdm-common'
     ],
     providers: [
         AccessGuard,
-        ComponentService,
+        TdmCocktailComponentService,
         DragAndDropService,
         {provide: 'componentSourceUrl', useValue: '/api/components'}
     ],

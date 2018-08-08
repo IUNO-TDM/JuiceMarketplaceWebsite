@@ -16,6 +16,7 @@ import { LayoutService } from './services/layout.service';
 })
 
 export class AppComponent implements OnInit, OnDestroy {
+    locale: string = "en"
     watcher: Subscription
     title = 'app'
     routerSubscription: Subscription
@@ -28,12 +29,15 @@ export class AppComponent implements OnInit, OnDestroy {
     @ViewChild(MatSidenav) sidenav: MatSidenav;
     @ViewChild(IndexComponent) index: IndexComponent;
 
-    constructor(private router: Router,
+    constructor(
+        @Inject(LOCALE_ID) locale: string,
+        private router: Router,
         private activatedRoute: ActivatedRoute,
         private layoutService: LayoutService,
         private userService: UserService,
         private ccService: NgcCookieConsentService,
         ) {
+            this.locale = locale
             layoutService.layoutProperties.subscribe(layoutProperties => {
             this.toolbarMenuVisible = !layoutProperties.isSmallLayout
             setTimeout(() => {
@@ -65,6 +69,28 @@ export class AppComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit() {
+        
+        // Update texts in Cookie-Consent to match language
+        switch (this.locale) {
+            case 'de':
+                this.ccService.getConfig().content.message = "Um unsere Webseite für Sie optimal gestalten zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu."
+                this.ccService.getConfig().content.dismiss = "Verstanden"
+                this.ccService.getConfig().content.deny = "Refuse cookies"
+                this.ccService.getConfig().content.link = "Mehr zum Thema Cookies"
+                this.ccService.getConfig().content.href = "https://cookiesandyou.com"
+                break;
+            default:
+                this.ccService.getConfig().content.message = "In order to be able to design our website optimally for you, we use cookies. By continuing to use the website, you agree to the use of cookies."
+                this.ccService.getConfig().content.dismiss = "Accept"
+                this.ccService.getConfig().content.deny = "Refuse cookies"
+                this.ccService.getConfig().content.link = "More about cookies"
+                this.ccService.getConfig().content.href = "https://cookiesandyou.com"
+            break;
+        }
+        this.ccService.destroy(); //remove previous cookie bar (with default messages)
+        this.ccService.init(this.ccService.getConfig()); // update config with translated messages
+
+
         this.routerSubscription = this.router.events.subscribe(s => {
             if (s instanceof NavigationEnd) {
                 this.updateMenuState()
