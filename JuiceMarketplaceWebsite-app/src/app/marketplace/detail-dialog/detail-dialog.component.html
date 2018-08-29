@@ -1,24 +1,24 @@
 <h1 mat-dialog-title>{{technologydata.name}} </h1>
 <div mat-dialog-content>
   <img src="/api/technologydata/{{technologydata.id}}/image" class="object-image">
-  <p>Beschreibung</p>
+  <p i18n="description">Beschreibung</p>
   {{technologydata.description}}
-  <p>Lizenzgebühr</p>
+  <p i18n="licensefee">Lizenzgebühr</p>
   {{technologydata.licenseFee}}
   <div *ngIf="technologydata.machines && technologydata.machines.length > 0">
-    <p>Maschinen</p>
+    <p i18n="machines">Maschinen</p>
     <mat-list>
       <mat-list-item *ngFor="let component of technologydata.machines">{{component.name}}</mat-list-item>
     </mat-list>
   </div>
   <div *ngIf="technologydata.materials && technologydata.materials.length > 0">
-    <p>Materialien</p>
+    <p i18n="materials">Materialien</p>
     <mat-list>
       <mat-list-item *ngFor="let component of technologydata.materials">{{component.name}}</mat-list-item>
     </mat-list>
   </div>
   <div *ngIf="technologydata.juices && technologydata.juices.length > 0">
-    <p>Zutaten</p>
+    <p i18n="contents">Zutaten</p>
     <mat-list>
       <mat-list-item *ngFor="let component of technologydata.juices">{{component.name}}</mat-list-item>
     </mat-list>
