@@ -6,5 +6,9 @@
     <mat-card-content fxLayoutAlign="center">
       <img src="/api/technologydata/{{object.id}}/image" class="object-image">
     </mat-card-content>
+    <mat-card-footer>
+      <img class="technology-icon" *ngIf="object.technologyId == ULTIMAKER_TECHNOLOGY_UUID" src="./assets/images/3d_obj_icon.svg">
+      <img class="technology-icon" *ngIf="object.technologyId == COCKTAIL_TECHNOLOGY_UUID"src="./assets/images/cocktail_icon.svg">
+    </mat-card-footer>
   </mat-card>
 </div>
