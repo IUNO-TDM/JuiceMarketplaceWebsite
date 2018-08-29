@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {TechnologydataService} from "../services/technologydata.service";
-import {TdmTechnologyData} from "tdm-common";
 import {MatDialog, MatDialogRef} from "@angular/material";
 import {DetailDialogComponent} from "../detail-dialog/detail-dialog.component";
+import {TechnologyData} from "../models/technologydata";
 
 
 
@@ -15,7 +15,7 @@ import {DetailDialogComponent} from "../detail-dialog/detail-dialog.component";
 })
 export class GalleryComponent implements OnInit {
 
-    technologyData: TdmTechnologyData[];
+    technologyData: TechnologyData[];
 
     TESTING_ULTIMAKER_TECHNOLOGY_UUID = "adb4c297-45bd-437e-ac90-2aed14f6b882";
     PRODUCTIVE_ULTIMAKER_TECHNOLOGY_UUID = "f6589569-c5c5-4567-ac53-97dc9afda09f";

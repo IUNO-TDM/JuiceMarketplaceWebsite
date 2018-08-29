@@ -2,13 +2,13 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {BehaviorSubject} from "rxjs/BehaviorSubject";
 import {Observable} from "rxjs/Observable";
-import {TdmTechnologyData} from "tdm-common";
+import {TechnologyData} from "../models/technologydata";
 
 @Injectable()
 export class TechnologydataService {
 
-    private _technologyData: BehaviorSubject<TdmTechnologyData[]> = new BehaviorSubject([]);
-    public readonly technologyData: Observable<TdmTechnologyData[]> = this._technologyData.asObservable();
+    private _technologyData: BehaviorSubject<TechnologyData[]> = new BehaviorSubject([]);
+    public readonly technologyData: Observable<TechnologyData[]> = this._technologyData.asObservable();
 
     private technologyDataUrl = '/api/technologydata';
   constructor(private http: HttpClient) {
@@ -16,7 +16,7 @@ export class TechnologydataService {
   }
 
     updateTechnologyData() {
-        this.http.get<TdmTechnologyData[]>(this.technologyDataUrl).subscribe(td => {
+        this.http.get<TechnologyData[]>(this.technologyDataUrl).subscribe(td => {
             this._technologyData.next(td);
         }, error => {
             this.handleError(error);
