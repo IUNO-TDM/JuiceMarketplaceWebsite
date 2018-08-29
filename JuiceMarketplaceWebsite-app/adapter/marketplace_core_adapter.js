@@ -202,8 +202,7 @@ self.getAllTechnologyData = function (language, token, params, callback) {
 };
 
 
-self.getImageForId = function (id,token, callback) {
-
+self.getImageForId = function (id, token, callback) {
 
 
     const options = buildOptionsForRequest(
@@ -533,7 +532,6 @@ self.getLastProtocolForEachClient = function (eventType, from, to, accessToken, 
 };
 
 
-
 module.exports = self;
 
 
@@ -555,7 +553,7 @@ function mapToTdmRecipes(recipes) {
 }
 
 function mapToTechnologyData(technologydata) {
-    const techData = technologydata.map(r => {
+    return technologydata.map(r => {
         var td = {};
         td.id = r.technologydatauuid;
         td.technologyId = r.technologyuuid;
@@ -568,18 +566,27 @@ function mapToTechnologyData(technologydata) {
         td.imageRef = r.technologydataimgref;
         return td
     });
-    return techData
 }
 
 function mapToTdmComponents(components) {
-    var tdmComponents = components.map(c => {
-        var component = {}
-        component.id = c.componentuuid
-        component.name = c.componentname
-        component.displayColor = c.displaycolor
+    return components.map(c => {
+        let component = {};
+        component.id = c.componentuuid;
+        component.name = c.componentname;
+        component.displayColor = c.displaycolor;
+        component.attributes = mapToTdmAttributes(c.attributes);
         return component
+    });
+
+}
+
+function mapToTdmAttributes(attributes) {
+    return attributes.map(a => {
+        let attribute = {};
+        attribute.id = a.attributeid;
+        attribute.name = a.attributename;
+        return attribute
     })
-    return tdmComponents
 }
 
 function doRequest(options, callback) {

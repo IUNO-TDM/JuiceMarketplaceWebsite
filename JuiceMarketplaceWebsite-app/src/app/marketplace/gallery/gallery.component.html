@@ -1,14 +1,20 @@
 <div fxFlex fxLayout="row wrap" fxLayoutGap="15px">
-  <mat-card *ngFor="let object of technologyData" class="object-card" >
-    <mat-card-header>
-      <mat-card-title i18n>{{object.name}}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content fxLayoutAlign="center">
-      <img src="/api/technologydata/{{object.id}}/image" class="object-image">
-    </mat-card-content>
-    <mat-card-footer>
-      <img class="technology-icon" *ngIf="object.technologyId == ULTIMAKER_TECHNOLOGY_UUID" src="./assets/images/3d_obj_icon.svg">
-      <img class="technology-icon" *ngIf="object.technologyId == COCKTAIL_TECHNOLOGY_UUID"src="./assets/images/cocktail_icon.svg">
-    </mat-card-footer>
-  </mat-card>
+    <mat-card *ngFor="let object of technologyData" class="object-card" (click)="onCardSelect(object)">
+        <mat-card-header>
+            <mat-card-title i18n>{{object.name}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content fxLayoutAlign="center">
+            <img src="/api/technologydata/{{object.id}}/image" class="object-image">
+        </mat-card-content>
+        <mat-card-footer>
+            <img class="technology-icon"
+                 *ngIf="object.technologyId == TESTING_ULTIMAKER_TECHNOLOGY_UUID ||
+                  object.technologyId == PRODUCTIVE_ULTIMAKER_TECHNOLOGY_UUID"
+                 src="./assets/images/3d_obj_icon.svg">
+            <img class="technology-icon"
+                 *ngIf="object.technologyId == TESTING_COCKTAIL_TECHNOLOGY_UUID ||
+                 object.technologyId == PRODUCTIVE_COCKTAIL_TECHNOLOGY_UUID"
+                 src="./assets/images/cocktail_icon.svg">
+        </mat-card-footer>
+    </mat-card>
 </div>
