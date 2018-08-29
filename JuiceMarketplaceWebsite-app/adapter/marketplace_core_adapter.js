@@ -174,6 +174,85 @@ self.getAllRecipes = function (language, token, params, callback) {
         callback(err, tdmRecipes);
     });
 };
+
+
+self.getAllTechnologyData = function (language, token, params, callback) {
+    if (!params) {
+        params = {};
+    }
+    params['lang'] = language;
+
+    const options = buildOptionsForRequest(
+        'GET',
+        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PROTOCOL,
+        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.HOST,
+        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PORT,
+        '/technologydata',
+        params
+    );
+    options.headers.authorization = 'Bearer ' + token.accessToken;
+    // params['technology'] = "ce7da33b-0885-46b5-8ffe-37a211e3bc9c";
+    doRequest(options, function (err, techData) {
+        var technologyData = null
+        if (techData && !err) {
+            technologyData = mapToTechnologyData(techData)
+        }
+        callback(err, technologyData);
+    });
+};
+
+
+self.getImageForId = function (id,token, callback) {
+
+
+
+    const options = buildOptionsForRequest(
+        'GET',
+        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PROTOCOL,
+        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.HOST,
+        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PORT,
+        '/technologydata/' + id + '/image',
+        {}
+    );
+    options.json = false;
+    options.encoding = null;
+    options.headers.authorization = 'Bearer ' + token.accessToken;
+    request(options, function (e, r, data) {
+        // logger.debug('Response from MarketplaceCore: ' + JSON.stringify(jsonData));
+        if (typeof(callback) !== 'function') {
+
+            callback = function (err, data) {
+                logger.warn('Callback not handled by caller');
+            };
+        }
+
+        if (e) {
+            logger.crit(e);
+
+            callback(e);
+        }
+
+        if (r && r.statusCode !== 200) {
+            const err = {
+                status: r.statusCode,
+                message: data
+            };
+            logger.warn('Call not successful: Options: ' + JSON.stringify(options) + ' Error: ' + JSON.stringify(err));
+            callback(err);
+
+            return;
+        }
+
+        callback(null, {
+            imageBuffer: data,
+            contentType: r ? r.headers['content-type'] : null
+        });
+    });
+    doRequest(options, function (err, data) {
+
+    });
+
+};
 //</editor-fold>
 
 //<editor-fold desc="Dashboard (Public) Reports">
@@ -453,6 +532,8 @@ self.getLastProtocolForEachClient = function (eventType, from, to, accessToken, 
     doRequest(options, callback);
 };
 
+
+
 module.exports = self;
 
 
@@ -471,6 +552,23 @@ function mapToTdmRecipes(recipes) {
         return recipe
     })
     return tdmRecipes
+}
+
+function mapToTechnologyData(technologydata) {
+    const techData = technologydata.map(r => {
+        var td = {};
+        td.id = r.technologydatauuid;
+        td.technologyId = r.technologyuuid;
+        td.name = r.technologydataname;
+        td.description = r.technologydatadescription;
+        td.licenseFee = r.licensefee;
+        td.program = r.technologydata;
+        td.backgroundColor = r.backgroundcolor;
+        td.components = mapToTdmComponents(r.componentlist);
+        td.imageRef = r.technologydataimgref;
+        return td
+    });
+    return techData
 }
 
 function mapToTdmComponents(components) {

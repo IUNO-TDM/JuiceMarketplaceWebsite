@@ -65,6 +65,9 @@ export class IndexComponent implements OnInit {
     openStatistics() {
         this.router.navigateByUrl('/statistics')
     }
+    openMarketplace() {
+        this.router.navigateByUrl('/marketplace')
+    }
 
     openNews() {
         this.router.navigateByUrl('/news')
