@@ -574,13 +574,18 @@ function mapToTdmComponents(components) {
         component.id = c.componentuuid;
         component.name = c.componentname;
         component.displayColor = c.displaycolor;
-        component.attributes = mapToTdmAttributes(c.attributes);
+        if(c.attributes){
+            component.attributes = mapToTdmAttributes(c.attributes);
+        }
         return component
     });
 
 }
 
 function mapToTdmAttributes(attributes) {
+    if(!attributes){
+        return null;
+    }
     return attributes.map(a => {
         let attribute = {};
         attribute.id = a.attributeid;
