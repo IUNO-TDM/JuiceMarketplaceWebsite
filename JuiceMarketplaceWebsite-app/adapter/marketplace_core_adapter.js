@@ -588,7 +588,7 @@ function mapToTechnologyData(technologydata) {
         td.licenseFee = r.licensefee;
         td.program = r.technologydata;
         td.backgroundColor = r.backgroundcolor;
-        if(td.components){
+        if(r.componentlist){
             td.components = mapToTdmComponents(r.componentlist);
         }
         td.imageRef = r.technologydataimgref;
