@@ -202,6 +202,32 @@ self.getAllTechnologyData = function (language, token, params, callback) {
 };
 
 
+self.getTechnologyDataById = function (id,language, token, params, callback) {
+    if (!params) {
+        params = {};
+    }
+    params['lang'] = language;
+
+    const options = buildOptionsForRequest(
+        'GET',
+        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PROTOCOL,
+        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.HOST,
+        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PORT,
+        '/technologydata/' + id,
+        params
+    );
+    options.headers.authorization = 'Bearer ' + token.accessToken;
+    // params['technology'] = "ce7da33b-0885-46b5-8ffe-37a211e3bc9c";
+    doRequest(options, function (err, techData) {
+        var technologyData = null
+        if (techData && !err) {
+            technologyData = mapToTechnologyData([techData])[0];
+        }
+        callback(err, technologyData);
+    });
+};
+
+
 self.getImageForId = function (id, token, callback) {
 
 
@@ -562,7 +588,9 @@ function mapToTechnologyData(technologydata) {
         td.licenseFee = r.licensefee;
         td.program = r.technologydata;
         td.backgroundColor = r.backgroundcolor;
-        td.components = mapToTdmComponents(r.componentlist);
+        if(td.components){
+            td.components = mapToTdmComponents(r.componentlist);
+        }
         td.imageRef = r.technologydataimgref;
         return td
     });

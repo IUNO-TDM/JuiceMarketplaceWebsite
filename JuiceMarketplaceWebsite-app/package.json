@@ -5,12 +5,16 @@
   "scripts": {
     "develop": "nodemon ./app.js",
     "build": "npm run build-i18n",
+    "build-debug": "npm run build-i18n-debug",
+    "build-debug-watch": "nodemon --config nodemon-build.json",
+    "debug-docker": "export TDM_JMW_CONFIG=config_docker && export NODE_ENV=docker && node --inspect-brk ./bin/www",
     "start": "node ./bin/www",
     "snyk-protect": "snyk protect",
     "prepublish": "npm run snyk-protect",
     "lint": "tslint ./src/**/*.ts -t verbose",
-    "extract-i18n": "ng xi18n --output-path src/i18n && for i in de en; do xliffmerge --profile xliffmerge.json de $i; done",
+    "extract-i18n ": "ng xi18n --output-path src/i18n && for i in de en; do xliffmerge --profile xliffmerge.json de $i; done",
     "build-i18n": "for i in de en; do ng build --prod --build-optimizer --aot --base-href=/$i/ --outputPath=dist/$i --i18nFile=src/i18n/messages.$i.xlf --i18nFormat=xlf --locale=$i; done",
+    "build-i18n-debug": "for i in de en; do ng build --sourcemaps --build-optimizer --aot --base-href=/$i/ --outputPath=dist/$i --i18nFile=src/i18n/messages.$i.xlf --i18nFormat=xlf --locale=$i; done",
     "build-i18n-single": "run() { ng build --prod --build-optimizer --aot --base-href=/$1/ --outputPath=dist/$1 --i18nFile=src/i18n/messages.$1.xlf --i18nFormat=xlf --locale=$1 $2 $3; }; run",
     "continuous-build-i18n-single": "run() { ng build -w --aot --base-href=/$1/ --outputPath=dist/$1 --i18nFile=src/i18n/messages.$1.xlf --i18nFormat=xlf --locale=$1; }; run"
   },
