@@ -58,6 +58,7 @@ router.get('/:tech_id/image', validate({
     query: validation_schema.Empty,
     body: validation_schema.Empty
 }), function (req, res, next) {
+    const language = req.cookies.language;
     authService.getPublicToken((err, token) => {
         marketplaceCore.getImageForId(req.params['tech_id'], token, (err, data) => {
             if (err) {
