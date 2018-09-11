@@ -332,20 +332,12 @@
           <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
           <context context-type="linenumber">27</context>
         </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/marketplace/detail-dialog/detail-dialog.component.ts</context>
-          <context context-type="linenumber">4</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="c51da9899fe9350fcc3f226a107341458a8a7640" datatype="html">
         <source>Lizenzgebühr</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
           <context context-type="linenumber">83</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/marketplace/detail-dialog/detail-dialog.component.ts</context>
-          <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5ccc633c2e84a1ddb8f59dec8affa3af4aed7988" datatype="html">
@@ -927,36 +919,52 @@
         <note priority="1" from="description">Team - kbauer</note>
         <note priority="1" from="meaning">section</note>
       </trans-unit>
-      <trans-unit id="385a5c8956aa1806e90293734a8655013dbb2645" datatype="html">
-        <source>Maschinen</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/marketplace/detail-dialog/detail-dialog.component.ts</context>
-          <context context-type="linenumber">9</context>
-        </context-group>
-        <note priority="1" from="description">machines</note>
-      </trans-unit>
-      <trans-unit id="0026c405926f12a87cca7cf73665ae80496e72f9" datatype="html">
-        <source>Materialien</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/marketplace/detail-dialog/detail-dialog.component.ts</context>
-          <context context-type="linenumber">15</context>
-        </context-group>
-        <note priority="1" from="description">materials</note>
-      </trans-unit>
-      <trans-unit id="f26eb46945cbe6a65dd22c19a8ee9c43d3b7f435" datatype="html">
-        <source>Zutaten</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/marketplace/detail-dialog/detail-dialog.component.ts</context>
-          <context context-type="linenumber">21</context>
-        </context-group>
-        <note priority="1" from="description">contents</note>
-      </trans-unit>
       <trans-unit id="2c6838c274478601bf4ab83914dd16e710e4cb02" datatype="html">
         <source><x id="INTERPOLATION" equiv-text="{{object.name}}"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/marketplace/gallery/gallery.component.ts</context>
-          <context context-type="linenumber">4</context>
+          <context context-type="linenumber">14</context>
         </context-group>
+      </trans-unit>
+      <trans-unit id="985aa4045bdf3ce28034eff1f3c404740354afff" datatype="html">
+        <source>Beschreibung:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/marketplace/gallery-detail/gallery-detail.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">description</note>
+      </trans-unit>
+      <trans-unit id="5e3750473444ed0d4ff0bf794ebaf415db164c8e" datatype="html">
+        <source>Lizenzgebühr:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/marketplace/gallery-detail/gallery-detail.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">licensefee</note>
+      </trans-unit>
+      <trans-unit id="672d44e7ea254e4c61b40eeef699e60bd18f723e" datatype="html">
+        <source>Maschinen:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/marketplace/gallery-detail/gallery-detail.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">machines</note>
+      </trans-unit>
+      <trans-unit id="c7cac8d33f07b9acce836beba9b8b478f1ae48ec" datatype="html">
+        <source>Materialien:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/marketplace/gallery-detail/gallery-detail.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <note priority="1" from="description">materials</note>
+      </trans-unit>
+      <trans-unit id="99ef08091fb4d2267254423538b4c516c5bee2a4" datatype="html">
+        <source>Zutaten:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/marketplace/gallery-detail/gallery-detail.component.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <note priority="1" from="description">contents</note>
       </trans-unit>
       <trans-unit id="7fe5242d9b419adf0370f14adcdd41fe132b710c" datatype="html">
         <source>Lizenzverkäufe im Tagesverlauf</source>
