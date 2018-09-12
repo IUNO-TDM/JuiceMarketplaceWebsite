@@ -18,7 +18,7 @@ router.get('/:id', validate({
     body: validation_schema.Empty
 }), function (req, res, next) {
 
-    authService.getClient(req.params['id'], (err, client) => {
+    authService.getClient(req.params['id'], req.user.token, (err, client) => {
         if (err) {
             return next(err);
         }
