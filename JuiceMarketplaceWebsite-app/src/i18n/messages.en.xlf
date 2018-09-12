@@ -888,7 +888,7 @@
         <note from="description" priority="1">Sidebar</note>
         <note from="meaning" priority="1">link to marketplace</note>
       </trans-unit><trans-unit id="5b1d0506c7030748c577e593e50b381ee16d9686" datatype="html">
-        <source>Verkäufer</source><target state="translated">Creator</target>
+        <source>Verkäufer</source><target state="translated">Vendors</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
           <context context-type="linenumber">5</context>
