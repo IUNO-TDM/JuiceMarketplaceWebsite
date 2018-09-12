@@ -4,7 +4,7 @@ const marketplaceCore = require('../adapter/marketplace_core_adapter');
 const logger = require('../global/logger');
 const helper = require('../services/helper_service');
 
-const {Validator, ValidationError} = require('express-json-validator-middleware');
+const Validator = require('express-json-validator-middleware').Validator;
 const validator = new Validator({allErrors: true});
 const validate = validator.validate;
 const validation_schema = require('../schema/recipe_schema');
@@ -18,7 +18,7 @@ router.get('/', validate({
 }), function (req, res, next) {
     const components = req.query['components'];
     let createdBy = req.query['createdBy'];
-    if(req.params['user_id']){
+    if (req.params['user_id']) {
         createdBy = req.params['user_id'];
     }
     const limit = req.query['limit'];
@@ -34,15 +34,16 @@ router.get('/', validate({
         params['ownerUUID'] = createdBy;
     }
 
-    var language = req.cookies.language;
-    marketplaceCore.getAllRecipes(language, req.user.token, params, function (err, recipes) {
+    params['lang'] = req.cookies.language;
+
+    marketplaceCore.getAllRecipes(req.user.token, params, function (err, recipes) {
         if (err) {
             return next(err);
         }
 
         switch (orderedBy) {
             case 'alphASC':
-                recipes.sort(function(a,b) {
+                recipes.sort(function (a, b) {
                     const nameA = a.title.toUpperCase(); // ignore upper and lowercase
                     const nameB = b.title.toUpperCase(); // ignore upper and lowercase
                     if (nameA < nameB) {
@@ -57,7 +58,7 @@ router.get('/', validate({
                 });
                 break;
             case 'alphDESC':
-                recipes.sort(function(a,b) {
+                recipes.sort(function (a, b) {
                     const nameA = a.title.toUpperCase(); // ignore upper and lowercase
                     const nameB = b.title.toUpperCase(); // ignore upper and lowercase
                     if (nameA > nameB) {
@@ -85,7 +86,7 @@ router.get('/', validate({
         }
 
         if (limit && recipes.length > limit) {
-            recipes = recipes.slice(0, limit-1)
+            recipes = recipes.slice(0, limit - 1)
         }
 
         res.send(recipes);

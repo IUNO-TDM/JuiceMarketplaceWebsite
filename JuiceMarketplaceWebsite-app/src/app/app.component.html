@@ -14,7 +14,8 @@
 
         <!-- Direct Links -->
         <div *ngIf="toolbarMenuVisible" class="nav-buttons" #navbuttons>
-            <a #tdm mat-button class="lightupper" (click)="tdmClicked()" i18n>Marktplatz</a>
+            <a #mp mat-button class="lightupper" (click)="tdmClicked()" i18n>Marktplatz</a>
+            <a #tdm mat-button class="lightupper" (click)="consoleClicked()" i18n>Verkäufer</a>
             <a #stats mat-button class="lightupper" (click)="statisticsClicked()" i18n>Statistiken</a>
         </div>
         <div fxFlex></div>

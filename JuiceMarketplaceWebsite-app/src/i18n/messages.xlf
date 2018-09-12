@@ -20,11 +20,20 @@
         <note priority="1" from="description">Sidebar</note>
         <note priority="1" from="meaning">link to marketplace</note>
       </trans-unit>
+      <trans-unit id="5b1d0506c7030748c577e593e50b381ee16d9686" datatype="html">
+        <source>Verkäufer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Sidebar</note>
+        <note priority="1" from="meaning">link to console</note>
+      </trans-unit>
       <trans-unit id="35cbc965e5fb57c3a1a4a2df93d4ce003e8864c2" datatype="html">
         <source>Statistiken</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
-          <context context-type="linenumber">6</context>
+          <context context-type="linenumber">7</context>
         </context-group>
         <note priority="1" from="description">Sidebar</note>
         <note priority="1" from="meaning">link to statistics</note>
@@ -33,7 +42,7 @@
         <source>Dashboard</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">21</context>
         </context-group>
         <note priority="1" from="description">Sidebar</note>
         <note priority="1" from="meaning">link to console/dashboard</note>
@@ -42,7 +51,7 @@
         <source>Neues Getränk anlegen</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
-          <context context-type="linenumber">21</context>
+          <context context-type="linenumber">22</context>
         </context-group>
         <note priority="1" from="description">Sidebar</note>
         <note priority="1" from="meaning">link to console/new drink</note>
@@ -51,7 +60,7 @@
         <source>Getränke verwalten</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
-          <context context-type="linenumber">22</context>
+          <context context-type="linenumber">23</context>
         </context-group>
         <note priority="1" from="description">Sidebar</note>
         <note priority="1" from="meaning">link to console/manage drinks</note>
@@ -60,7 +69,7 @@
         <source>Guthaben verwalten</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
-          <context context-type="linenumber">23</context>
+          <context context-type="linenumber">24</context>
         </context-group>
         <note priority="1" from="description">Sidebar</note>
         <note priority="1" from="meaning">link to console/manage credit</note>
@@ -69,7 +78,7 @@
         <source>Admin Dashboard</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
-          <context context-type="linenumber">24</context>
+          <context context-type="linenumber">25</context>
         </context-group>
         <note priority="1" from="description">Sidebar</note>
         <note priority="1" from="meaning">link to admin dashboard/admin dashboard</note>
@@ -81,11 +90,18 @@
           <context context-type="linenumber">17</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="6c76de4b39fc8e7ff3ef6d6759ad17efe67cb3dc" datatype="html">
+        <source>Verkäufer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="b1875fdd47821b247985a5c0e4110b3c6d4af7f7" datatype="html">
         <source>Statistiken</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="c47b6066a02b6434f0cd861e792d9ceebbe59235" datatype="html">
@@ -902,6 +918,53 @@
         </context-group>
         <note priority="1" from="description">Team - kbauer</note>
         <note priority="1" from="meaning">section</note>
+      </trans-unit>
+      <trans-unit id="2c6838c274478601bf4ab83914dd16e710e4cb02" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{object.name}}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/marketplace/gallery/gallery.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="985aa4045bdf3ce28034eff1f3c404740354afff" datatype="html">
+        <source>Beschreibung:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/marketplace/gallery-detail/gallery-detail.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">description</note>
+      </trans-unit>
+      <trans-unit id="5e3750473444ed0d4ff0bf794ebaf415db164c8e" datatype="html">
+        <source>Lizenzgebühr:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/marketplace/gallery-detail/gallery-detail.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">licensefee</note>
+      </trans-unit>
+      <trans-unit id="672d44e7ea254e4c61b40eeef699e60bd18f723e" datatype="html">
+        <source>Maschinen:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/marketplace/gallery-detail/gallery-detail.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">machines</note>
+      </trans-unit>
+      <trans-unit id="c7cac8d33f07b9acce836beba9b8b478f1ae48ec" datatype="html">
+        <source>Materialien:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/marketplace/gallery-detail/gallery-detail.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <note priority="1" from="description">materials</note>
+      </trans-unit>
+      <trans-unit id="99ef08091fb4d2267254423538b4c516c5bee2a4" datatype="html">
+        <source>Zutaten:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/marketplace/gallery-detail/gallery-detail.component.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <note priority="1" from="description">contents</note>
       </trans-unit>
       <trans-unit id="7fe5242d9b419adf0370f14adcdd41fe132b710c" datatype="html">
         <source>Lizenzverkäufe im Tagesverlauf</source>

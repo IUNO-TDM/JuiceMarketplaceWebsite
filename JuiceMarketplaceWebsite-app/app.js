@@ -66,6 +66,7 @@ app.use('/coupon', require('./routes/coupon'));
 app.use('/api/users', isLoggedIn, require('./routes/users'));
 app.use('/api/clients', isLoggedIn, require('./routes/clients'));
 app.use('/api/recipes', isLoggedIn, require('./routes/recipes'));
+app.use('/api/technologydata', require('./routes/technologydata'));
 app.use('/api/components', isLoggedIn, require('./routes/components'));
 
 // -- RESTRICTED TO ROLES
@@ -97,6 +98,7 @@ app.use('/en', function(req, res) {
 // This route selects the preferred language of the browser
 // and redirects the client. If the preferred language is not
 // supported, the browser is redirected to 'en'.
+
 app.use('/', function(req, res, next) {
     var preferredLanguage = req.acceptsLanguages('de', 'en')
     if (!preferredLanguage) {

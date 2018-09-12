@@ -108,6 +108,10 @@ export class AppComponent implements OnInit, OnDestroy {
     }
 
     tdmClicked() {
+        this.router.navigateByUrl('/marketplace');
+    }
+
+    consoleClicked() {
         this.userService.isLoggedIn().subscribe(loggedin => {
             if (loggedin) {
                 this.router.navigateByUrl('/console');
