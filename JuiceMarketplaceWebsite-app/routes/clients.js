@@ -13,9 +13,6 @@ const validator = new Validator({allErrors: true});
 const validate = validator.validate;
 const validation_schema = require('../schema/clients_schema');
 
-/**
- * Retrieves the user information for a specific user
- */
 router.get('/:id', validate({
     query: validation_schema.Empty,
     body: validation_schema.Empty
