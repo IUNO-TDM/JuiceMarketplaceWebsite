@@ -4,11 +4,9 @@
 
 const self = {};
 
-const https = require('https');
 const logger = require('../global/logger');
 const CONFIG = require('../config/config_loader');
 const request = require('request');
-const helper = require('../services/helper_service');
 
 //<editor-fold desc="Build Options">
 function buildOptionsForRequest(method, protocol, host, port, path, qs) {
@@ -50,7 +48,7 @@ self.getAllComponents = function (language, accessToken, callback) {
 
     request(options, function (e, r, components) {
         const err = logger.logRequestAndResponse(e, options, r, components);
-        var tdmComponents = null
+        let tdmComponents;
         if (components && !err) {
             tdmComponents = mapToTdmComponents(components)
         }
@@ -87,7 +85,7 @@ self.getRecipesForUser = function (language, userId, accessToken, callback) {
     request(options, function (e, r, recipes) {
         const err = logger.logRequestAndResponse(e, options, r, recipes);
 
-        var tdmRecipes = null
+        let tdmRecipes;
         if (recipes && !err) {
             tdmRecipes = mapToTdmRecipes(recipes)
         }
@@ -148,13 +146,12 @@ self.deleteRecipe = function (token, recipeID, callback) {
     doRequest(options, callback);
 };
 
-self.getAllRecipes = function (language, token, params, callback) {
+self.getAllRecipes = function (token, params, callback) {
     if (!params) {
         params = {};
     }
 
     params['technology'] = CONFIG.TECHNOLOGY_UUID;
-    params['lang'] = language;
 
     const options = buildOptionsForRequest(
         'GET',
@@ -167,7 +164,7 @@ self.getAllRecipes = function (language, token, params, callback) {
     options.headers.authorization = 'Bearer ' + token.accessToken;
 
     doRequest(options, function (err, recipes) {
-        var tdmRecipes = null
+        let tdmRecipes;
         if (recipes && !err) {
             tdmRecipes = mapToTdmRecipes(recipes)
         }
@@ -176,11 +173,7 @@ self.getAllRecipes = function (language, token, params, callback) {
 };
 
 
-self.getAllTechnologyData = function (language, token, params, callback) {
-    if (!params) {
-        params = {};
-    }
-    params['lang'] = language;
+self.getAllTechnologyData = function (token, params, callback) {
 
     const options = buildOptionsForRequest(
         'GET',
@@ -191,9 +184,9 @@ self.getAllTechnologyData = function (language, token, params, callback) {
         params
     );
     options.headers.authorization = 'Bearer ' + token.accessToken;
-    // params['technology'] = "ce7da33b-0885-46b5-8ffe-37a211e3bc9c";
+
     doRequest(options, function (err, techData) {
-        var technologyData = null
+        let technologyData;
         if (techData && !err) {
             technologyData = mapToTechnologyData(techData)
         }
@@ -202,11 +195,7 @@ self.getAllTechnologyData = function (language, token, params, callback) {
 };
 
 
-self.getTechnologyDataById = function (id,language, token, params, callback) {
-    if (!params) {
-        params = {};
-    }
-    params['lang'] = language;
+self.getTechnologyDataById = function (id,token, params, callback) {
 
     const options = buildOptionsForRequest(
         'GET',
@@ -219,7 +208,7 @@ self.getTechnologyDataById = function (id,language, token, params, callback) {
     options.headers.authorization = 'Bearer ' + token.accessToken;
     // params['technology'] = "ce7da33b-0885-46b5-8ffe-37a211e3bc9c";
     doRequest(options, function (err, techData) {
-        var technologyData = null
+        let technologyData;
         if (techData && !err) {
             technologyData = mapToTechnologyData([techData])[0];
         }
