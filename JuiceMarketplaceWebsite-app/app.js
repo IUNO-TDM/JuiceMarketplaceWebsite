@@ -64,12 +64,12 @@ app.use('/coupon', require('./routes/coupon'));
 
 // -- RESTRICTED CONTENT --
 app.use('/api/users', isLoggedIn, require('./routes/users'));
-app.use('/api/clients', isLoggedIn, require('./routes/clients'));
 app.use('/api/recipes', isLoggedIn, require('./routes/recipes'));
 app.use('/api/technologydata', require('./routes/technologydata'));
 app.use('/api/components', isLoggedIn, require('./routes/components'));
 
 // -- RESTRICTED TO ROLES
+app.use('/api/clients', isAdmin, require('./routes/clients'));
 app.use('/api/admin/', isAdmin, require('./routes/admin'));
 
 

@@ -9,12 +9,13 @@
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">17</context>
         </context-group>
-      </trans-unit><trans-unit id="6c76de4b39fc8e7ff3ef6d6759ad17efe67cb3dc" datatype="html">
-        <source>Verkäufer</source><target state="translated">Creators</target>
+      </trans-unit><trans-unit id="cd24bb9c8572cb3dee542d78cae01dc25468b5b2" datatype="html">
+        <source>Mein Saftladen</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">18</context>
         </context-group>
+        <target state="translated">My Juice Shop</target>
       </trans-unit>
       <trans-unit id="b1875fdd47821b247985a5c0e4110b3c6d4af7f7" approved="yes">
         <source xml:space="preserve">Statistiken</source>
@@ -437,46 +438,32 @@
         </context-group>
         <target state="translated">OK thanks!</target>
       </trans-unit>
-      <trans-unit id="7fe5242d9b419adf0370f14adcdd41fe132b710c" datatype="html">
-        <source>Lizenzverkäufe im Tagesverlauf</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
-          <context context-type="linenumber">6</context>
-        </context-group>
-        <target state="translated">License sales during the day</target>
-      </trans-unit>
-      <trans-unit id="c6fb8b06d07e90841651b619e83e17396c7d8715" datatype="html">
-        <source>Lizenzverkäufe im letzten Monat</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
-          <context context-type="linenumber">18</context>
-        </context-group>
-        <target state="translated">License sales last month</target>
-      </trans-unit>
-      <trans-unit id="961d9af389fd94425aecfa16ea9df6b3a4cc276c" datatype="html">
-        <source>Die beliebtesten Zutaten</source>
+      
+      <trans-unit id="fe46a5104ffbded5e8b63f66ea3fe73a4c75e590" datatype="html">
+        <source>Beliebte Getränkezutaten</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
           <context context-type="linenumber">33</context>
         </context-group>
-        <target state="translated">Most popular ingredients</target>
-      </trans-unit>
-      <trans-unit id="017df1a1f452b8592e6babc821507b400873aa9d" datatype="html">
-        <source>Die beliebtesten Rezepte aller Zeiten</source>
+        <target state="translated">Popular recipe ingredients</target>
+      </trans-unit><trans-unit id="e73bf2fd958d4118f533d054316c785be8219118" datatype="html">
+        <source>Dauerrenner unter den Getränken</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
           <context context-type="linenumber">45</context>
         </context-group>
-        <target state="translated">Most popular recipes of all time</target>
-      </trans-unit>
-      <trans-unit id="89ea7601029a7cc9366d93185997891359fae352" datatype="html">
-        <source>Die beliebtesten Rezepte heute</source>
+        <target state="translated">Recipes Hall of Fame</target>
+      </trans-unit><trans-unit id="8027ed8d0a2b64708be3988a33e80f39ee2e9652" datatype="html">
+        <source>Aktuell beliebte Rezepte</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
           <context context-type="linenumber">56</context>
         </context-group>
-        <target state="translated">Most popular recipes today</target>
+        <target state="translated">Today's most popular recipes</target>
       </trans-unit>
+      
+      
+      
     <trans-unit id="a3e515a387b2443634e5de844006c95abce05794" datatype="html">
         <source>Anmelden / Registrieren</source>
         <context-group purpose="location">
@@ -788,6 +775,20 @@
           <context context-type="linenumber">39</context>
         </context-group>
         <note priority="1" from="description">contents</note>
+      </trans-unit><trans-unit id="d5a5a26dd5ba4cc3dbbd43364dd5bdf6caaefb7f" datatype="html">
+        <source>Lizenzverkäufe (Heute)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <target state="translated">License sales (today)</target>
+      </trans-unit><trans-unit id="112748d842a1fa941cf99db6b8528dad5c5f8839" datatype="html">
+        <source>Lizenzverkäufe (Monat)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <target state="translated">License sales last month</target>
       </trans-unit><trans-unit id="e7bb3084327f26b44499f31f24f9520ac8040242" datatype="html">
         <source>./assets/images/tdm_text_de.svg</source>
         <context-group purpose="location">
