@@ -99,7 +99,8 @@ hr {
 
 .news-card img {
     padding: 10px;
-    max-height: 200px;
+    max-height: 150px;
+    object-fit: contain;
 }
 .news-text a {
     color: black;
