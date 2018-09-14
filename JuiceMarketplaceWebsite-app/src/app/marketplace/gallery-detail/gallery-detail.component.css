@@ -28,3 +28,7 @@ h1 {
 mat-list {
     padding: 0px;
 }
+
+.detail-container {
+    margin: 5px;
+}

@@ -1,48 +1,49 @@
-<div class="detail-container" fxLayout="column">
-    <button mat-button color="primary" (click)="backClicked()" fxFlexAlign="start">zurück</button>
+<mat-card class="detail-container" fxLayout="column">
 
-    <h1>{{_techData.name}} </h1>
-    <div class="contents" fxLayout.lt-sm="column" fxLayout.gt-xs="row" fxLayoutAlign="space-evenly stretch"
-        fxFlex.gt-xs>
-        <div fxFlex.lt-sm="50">
-            <img *ngIf="_techData && _techData.id" src="/api/technologydata/{{_techData.id}}/image" class="object-image">
-        </div>
-        <div fxFlex.lt-sm="50" class="metadata-container" fxLayoutAlign="start center">
-            <div class="metadata">
-                <div class="section">
-                    <div class="section-title" i18n="description">Beschreibung:</div>
-                    <div class="section-text">
-                        {{_techData.description}}
+        <button mat-button color="primary" (click)="backClicked()" fxFlexAlign="start">zurück</button>
+        <h1>{{_techData.name}} </h1>
+        <div class="contents" fxLayout.lt-sm="column" fxLayout.gt-xs="row" fxLayoutAlign="space-evenly stretch"
+            fxFlex.gt-xs>
+            <div fxFlex.lt-sm="50">
+                <img *ngIf="_techData && _techData.id" src="/api/technologydata/{{_techData.id}}/image" class="object-image">
+            </div>
+            <div fxFlex.lt-sm="50" class="metadata-container" fxLayoutAlign="start center">
+                <div class="metadata">
+                    <div class="section">
+                        <div class="section-title" i18n="description">Beschreibung:</div>
+                        <div class="section-text">
+                            {{_techData.description}}
+                        </div>
                     </div>
-                </div>
-                <div class="section">
-                    <div class="section-title" i18n="licensefee">Lizenzgebühr:</div>
-                    <div class="section-text">
-                        {{(_techData.licenseFee/100000) | number:'1.0-2'}} IUNO
+                    <div class="section">
+                        <div class="section-title" i18n="licensefee">Lizenzgebühr:</div>
+                        <div class="section-text">
+                            {{(_techData.licenseFee/100000) | number:'1.0-2'}} IUNO
+                        </div>
                     </div>
+                    <div *ngIf="_techData.machines && _techData.machines.length > 0" class="section">
+                        <div class="section-title" i18n="machines">Maschinen:</div>
+                        <mat-list>
+                            <mat-list-item *ngFor="let component of _techData.machines">• {{component.name}}</mat-list-item>
+                        </mat-list>
+                    </div>
+    
+                    <div *ngIf="_techData.materials && _techData.materials.length > 0" class="section">
+                        <div class="section-title" i18n="materials">Materialien:</div>
+                        <mat-list>
+                            <mat-list-item *ngFor="let component of _techData.materials">• {{component.name}}</mat-list-item>
+                        </mat-list>
+                    </div>
+    
+                    <div *ngIf="_techData.juices && _techData.juices.length > 0" class="section">
+                        <div class="section-title" i18n="contents">Zutaten:</div>
+                        <mat-list>
+                            <mat-list-item *ngFor="let component of _techData.juices">• {{component.name}}</mat-list-item>
+                        </mat-list>
+                    </div>
+    
                 </div>
-                <div *ngIf="_techData.machines && _techData.machines.length > 0" class="section">
-                    <div class="section-title" i18n="machines">Maschinen:</div>
-                    <mat-list>
-                        <mat-list-item *ngFor="let component of _techData.machines">• {{component.name}}</mat-list-item>
-                    </mat-list>
-                </div>
-
-                <div *ngIf="_techData.materials && _techData.materials.length > 0" class="section">
-                    <div class="section-title" i18n="materials">Materialien:</div>
-                    <mat-list>
-                        <mat-list-item *ngFor="let component of _techData.materials">• {{component.name}}</mat-list-item>
-                    </mat-list>
-                </div>
-
-                <div *ngIf="_techData.juices && _techData.juices.length > 0" class="section">
-                    <div class="section-title" i18n="contents">Zutaten:</div>
-                    <mat-list>
-                        <mat-list-item *ngFor="let component of _techData.juices">• {{component.name}}</mat-list-item>
-                    </mat-list>
-                </div>
-
             </div>
         </div>
-    </div>
-</div>
+
+</mat-card>
