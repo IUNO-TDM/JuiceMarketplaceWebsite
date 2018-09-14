@@ -737,8 +737,8 @@
         <note priority="1" from="description">Technologiedatenmarktplatz</note>
         <note priority="1" from="meaning">section</note>
       </trans-unit>
-      <trans-unit id="22cb48d4ebba8a1ce65b66ce2bc71a3d1f8b3fd6" datatype="html">
-        <source>https://www.youtube-nocookie.com/embed/1CTcGxSz2yc?rel=0&amp;showinfo=0&amp;autoplay=1</source>
+      <trans-unit id="3ed9d9721f2b215bcfb3719592969cdba54d8fba" datatype="html">
+        <source>https://www.youtube-nocookie.com/embed/1CTcGxSz2yc?rel=0&amp;showinfo=0</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
           <context context-type="linenumber">66</context>

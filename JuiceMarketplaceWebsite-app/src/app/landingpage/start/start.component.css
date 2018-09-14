@@ -80,6 +80,7 @@ hr {
 
     max-height: 250px;
     min-height: 200px;
+    max-width: 100%;
 }
 
 .start-section-text {
@@ -191,4 +192,9 @@ hr {
 
 .inactive {
     /*opacity: 0.3;*/
+}
+
+.youtube-video {
+    max-width: 100%;
+    height:100%;
 }

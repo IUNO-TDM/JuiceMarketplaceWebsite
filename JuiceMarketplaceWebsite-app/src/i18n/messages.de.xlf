@@ -223,7 +223,7 @@
           <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
           <context context-type="linenumber">65</context>
         </context-group>
-      <target state="final">Die Transaktionsgebühr beträgt <x id="INTERPOLATION" equiv-text="{{transactionFee / unitFactor | number:'1.0-8'}}"/> <x id="INTERPOLATION_1" equiv-text="{{unitName}}"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+      <target state="final">Die Transaktions&shy;gebühr beträgt <x id="INTERPOLATION" equiv-text="{{transactionFee / unitFactor | number:'1.0-8'}}"/> <x id="INTERPOLATION_1" equiv-text="{{unitName}}"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
             und das Restguthaben im Wallet <x id="INTERPOLATION_2" equiv-text="{{remaining / unitFactor | number:'1.0-8'}}"/> <x id="INTERPOLATION_1" equiv-text="{{unitName}}"/></target></trans-unit><trans-unit id="7902b69333172d210bf736b62e3408550de0d56a" datatype="html">
         <source>Auszahlen!</source>
         <context-group purpose="location">
@@ -271,7 +271,7 @@
         den man beispielsweise in Euros ausdrücken könnte, gibt es nicht. Jedoch kann man damit Cocktails an unseren
         Saftmischmaschinen bezahlen.<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
     <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
-        Für dich als Technologiedatenhersteller speichern wir deine IUNOs, die du mit Lizenzverkäufen erhalten hast.
+        Für dich als Technologie&shy;daten&shy;hersteller speichern wir deine IUNOs, die du mit Lizenzverkäufen erhalten hast.
         Wenn du willst, kannst du dir dein Guthaben gerne an deine Bitcoin-Wallet schicken. Dazu benötigst du eine
         Bitcoin-Wallet, die mit dem Bitcoin-Testnet zusammenarbeitet.<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
     <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
@@ -337,7 +337,7 @@
         </context-group>
         <note priority="1" from="description">intro text</note>
       <target state="final">
-                Der Technologiedatenmarktplatz<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Der Technologie&shy;daten&shy;marktplatz<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
                 für die<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
                 Lizenz zum Mixen
             </target></trans-unit><trans-unit id="3f12ced55bd8d55d5cadadb4850d06e292f67c20" datatype="html">
@@ -386,11 +386,17 @@
         <note priority="1" from="description">Technologiedatenmarktplatz</note>
         <note priority="1" from="meaning">section</note>
       <target state="final">
-                Der Technologiedatenmarktplatz ermöglicht Daten bedarfsgerecht zu handeln, die für einen
+                Der Technologie&shy;daten&shy;marktplatz ermöglicht Daten bedarfsgerecht zu handeln, die für einen
                 Herstellungsprozeß benötigt werden. Für den bedarfsgerechten Handel ist es notwendig, daß die
                 gehandelten Daten auch nur wie gekauft verwendet werden, sprich pro Stück oder pro Zeiteinheit. Der
                 erarbeitete Demonstrator gewährt diese Sicherheit über die lizenzgerechte Nutzung der gehandelten Daten.
-            </target></trans-unit><trans-unit id="e9e61cddcc667445059d1706cff6f2720beb4048" datatype="html">
+            </target></trans-unit><trans-unit id="3ed9d9721f2b215bcfb3719592969cdba54d8fba" datatype="html">
+        <source>https://www.youtube-nocookie.com/embed/1CTcGxSz2yc?rel=0&amp;showinfo=0</source><target state="final">https://www.youtube-nocookie.com/embed/1CTcGxSz2yc?rel=0&amp;showinfo=0</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit><trans-unit id="e9e61cddcc667445059d1706cff6f2720beb4048" datatype="html">
         <source>Warum Cocktailrezepte?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
@@ -414,11 +420,11 @@
         <note priority="1" from="description">Warum Cocktailrezepte</note>
         <note priority="1" from="meaning">section</note>
       <target state="final">
-                IUNO hat als nationales Referenzprojekt zur IT-Sicherheit in der Industrie 4.0 Leuchtturmcharakter. Es
+                IUNO hat als nationales Referenzprojekt zur IT-Sicherheit in der Industrie 4.0 Leucht&shy;turm&shy;charakter. Es
                 muß in der Öffentlichkeit weithin sichtbar sein, um mit den Inhalten und Ergebnissen eine möglichst
                 großes Publikum zu erreichen. Dazu benötigt es eine Demonstratormaschine, die auf Messen und Vorträgen
                 leicht gezeigt werden kann und das Thema anschaulich transportiert. Aus diesem Grund der
-                Technologiedatenmarktplatz an einer Cocktailmischmaschine veranschaulicht. Diese Maschine erweckt
+                Technologie&shy;daten&shy;marktplatz an einer Cocktail&shy;misch&shy;maschine veranschaulicht. Diese Maschine erweckt
                 genügend Aufmerksamkeit und ermöglicht damit den Transfer des sehr trockenen Themas IT-Sicherheit.
             </target></trans-unit><trans-unit id="c82b8429a1804cf10fca528683230dbf431e92b7" datatype="html">
         <source>Der Marktplatz ist live!</source>
@@ -509,7 +515,7 @@
                 Experte für Industrie 4.0 Kommunikation und Security
                 <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
                 <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Hans-Peter Bock ist Architekt, Ideengeber und Leiter der Entwicklung des Technologiedatenmarktplatz-Ökosystems.
+                Hans-Peter Bock ist Architekt, Ideengeber und Leiter der Entwicklung des Technologie&shy;daten&shy;marktplatz-Ökosystems.
                 </target></trans-unit><trans-unit id="138c447f93455e68a7816388293a3ec078e36c80" datatype="html">
         <source>
                 <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
@@ -552,7 +558,7 @@
                 System Architect for Enabling Technologies
                 <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
                 <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Christan Görg entwickelt das Bezahlsystem hinter dem Technologiedatenmarktplatz
+                Christan Görg entwickelt das Bezahlsystem hinter dem Technologie&shy;daten&shy;marktplatz
                 und verantwortet den sicheren Umgang mit Technologiedaten auf der Maschinen-Steuerung.
                 </target></trans-unit><trans-unit id="703e286e320549b880e78248df81aeec4b25680e" datatype="html">
         <source>
@@ -574,7 +580,7 @@
                 System Architect for Big Data and Analytics
                 <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
                 <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Marcel Ely Gomes arbeitet am Herzen des Technologiedaten Marktplatz.
+                Marcel Ely Gomes arbeitet am Herzen des Technologie&shy;daten&shy;marktplatz.
                 Er verantwortet das Datenbankdesign und entwickelt die Datenbank spezifischen Sicherheitskonzepte.
                 </target></trans-unit><trans-unit id="d2542323b64d2177b921df4afe86691d271e9bac" datatype="html">
         <source>
@@ -594,12 +600,12 @@
         <note priority="1" from="meaning">section</note>
       <target state="final">
                 <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Experte für Informations- und Kommunikationstechnologien in Produktionsnetzwerken
+                Experte für Informations- und Kommunikations&shy;technologien in Produktionsnetzwerken
                 <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
                 <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Klaus Bauer leitet den Bereich Basistechnologien bei TRUMPF und ist Visionsgeber des Technologiedatenmarktplatz.
+                Klaus Bauer leitet den Bereich Basistechnologien bei TRUMPF und ist Visionsgeber des Technologie&shy;daten&shy;marktplatz.
                 <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Er beschrieb die Ideen dieses Marktplatzes bereits in den Umsetzungsempfehlungen von Industrie 4.0 und der Smart Service Welt.
+                Er beschrieb die Ideen dieses Marktplatzes bereits in den Umsetzungs&shy;mpfehlungen von Industrie 4.0 und der Smart Service Welt.
                 </target></trans-unit><trans-unit id="2c6838c274478601bf4ab83914dd16e710e4cb02" datatype="html">
         <source><x id="INTERPOLATION" equiv-text="{{object.name}}"/></source><target state="final"><x id="INTERPOLATION" equiv-text="{{object.name}}"/></target>
         
@@ -710,13 +716,7 @@
         </context-group>
       <target state="final">Sie haben bereits ihr Limit von <x id="INTERPOLATION" equiv-text="{{recipeLimit}}"/> Rezepten am Marktplatz erreicht.
                 <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-            </target></trans-unit><trans-unit id="22cb48d4ebba8a1ce65b66ce2bc71a3d1f8b3fd6" datatype="html">
-        <source>https://www.youtube-nocookie.com/embed/1CTcGxSz2yc?rel=0&amp;showinfo=0&amp;autoplay=1</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">66</context>
-        </context-group>
-      <target state="final">https://www.youtube-nocookie.com/embed/1CTcGxSz2yc?rel=0&amp;showinfo=0&amp;autoplay=1</target></trans-unit></body>
+            </target></trans-unit></body>
   </file>
   <file original="app/console/create-recipe/create-recipe.component.ts" datatype="plaintext" source-language="de" target-language="de">
     <body>

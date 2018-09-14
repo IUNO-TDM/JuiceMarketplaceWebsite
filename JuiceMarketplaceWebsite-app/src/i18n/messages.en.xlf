@@ -536,7 +536,13 @@
         <note priority="1" from="meaning">section</note>
       <target state="translated">
                 The Technology Data Marketplace makes it possible to trade data required for a production process. For trading according to demand, it is necessary that the traded data is only used as purchased, i.e. per piece or per unit of time. The developed demonstrator guarantees this security about the license-fair use of the traded data.
-            </target></trans-unit><trans-unit id="e9e61cddcc667445059d1706cff6f2720beb4048" datatype="html">
+            </target></trans-unit><trans-unit id="3ed9d9721f2b215bcfb3719592969cdba54d8fba" datatype="html">
+        <source>https://www.youtube-nocookie.com/embed/1CTcGxSz2yc?rel=0&amp;showinfo=0</source><target state="translated">https://www.youtube-nocookie.com/embed/LwuCGvIIVZM?rel=0&amp;showinfo=0</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit><trans-unit id="e9e61cddcc667445059d1706cff6f2720beb4048" datatype="html">
         <source>Warum Cocktailrezepte?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
@@ -849,13 +855,7 @@
         </context-group>
       <target state="translated">You have already reached your limit of <x id="INTERPOLATION" equiv-text="{{recipeLimit}}"/> recipes on the marketplace.
                 <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-            </target></trans-unit><trans-unit id="22cb48d4ebba8a1ce65b66ce2bc71a3d1f8b3fd6" datatype="html">
-        <source>https://www.youtube-nocookie.com/embed/1CTcGxSz2yc?rel=0&amp;showinfo=0&amp;autoplay=1</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">66</context>
-        </context-group>
-      <target state="translated">https://www.youtube-nocookie.com/embed/LwuCGvIIVZM?rel=0&amp;showinfo=0&amp;autoplay=1</target></trans-unit></body>
+            </target></trans-unit></body>
   </file>
   <file original="app/sidebar/index/index.component.ts" datatype="plaintext" source-language="de" target-language="en">
     <body>
