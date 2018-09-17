@@ -1,0 +1,45 @@
+.object-card {
+    min-width: 310px;
+    max-width: 310px;
+    height: 250px;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.object-card:hover {
+    background-color: #efefef;
+}
+
+.object-card:active {
+    background-color: #eaeaea;
+}
+
+.object-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.technology-icon {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+
+.gallery {
+    height: 100%;
+    margin: 15px;
+}
+
+.object-title {
+    font-size: 21px;
+    font-weight: 300;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+.card-content {
+    height: 197px;
+    width: 100%;
+}

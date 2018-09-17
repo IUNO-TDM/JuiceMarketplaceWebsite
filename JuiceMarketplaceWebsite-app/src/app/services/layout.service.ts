@@ -21,7 +21,6 @@ export class LayoutService {
     private media: ObservableMedia
   ) {
     this.watcher = media.subscribe((change: MediaChange) => {
-      // console.log("Watcher: " + change.mqAlias)
 
       var layoutProperties = new LayoutProperties()
       layoutProperties.mqAlias = change.mqAlias
@@ -30,6 +29,8 @@ export class LayoutService {
       if (change.mqAlias == 'xs' || change.mqAlias == 'sm') {
         layoutProperties.isSmallLayout = true
       }
+
+      // console.log("mqAlias = " + change.mqAlias + " - isSmallLayout = " + layoutProperties.isSmallLayout);
 
       var ua = window.navigator.userAgent
       var touchDevice = false

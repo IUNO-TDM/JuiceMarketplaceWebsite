@@ -1,0 +1,21 @@
+<div class="container" fxFlex>
+    <div class="gallery" *ngIf="!selectedTechDataId" fxFlex fxLayout="row wrap" fxLayoutGap="15px">
+        <mat-card *ngFor="let object of technologyData" class="object-card" (click)="onCardSelect(object)">
+            <div class="card-content">
+                <img src="/api/technologydata/{{object.id}}/image" class="object-image">
+            </div>
+            <mat-card-footer fxLayout="row" fxLayoutAlign="start center">
+                <img class="technology-icon" *ngIf="object.technologyId == TESTING_ULTIMAKER_TECHNOLOGY_UUID ||
+                              object.technologyId == PRODUCTIVE_ULTIMAKER_TECHNOLOGY_UUID"
+                    src="./assets/images/3d_obj_icon.svg">
+                <img class="technology-icon" *ngIf="object.technologyId == TESTING_COCKTAIL_TECHNOLOGY_UUID ||
+                             object.technologyId == PRODUCTIVE_COCKTAIL_TECHNOLOGY_UUID"
+                    src="./assets/images/cocktail_icon.svg">
+                <div class="object-title" i18n>{{object.name}}</div>
+            </mat-card-footer>
+        </mat-card>
+    </div>
+    <div class="gallery-detail" *ngIf="selectedTechDataId" fxFlex>
+        <gallery-detail [technologyDataId]="selectedTechDataId" (onBack)="detailBack()" fxFlex></gallery-detail>
+    </div>
+</div>

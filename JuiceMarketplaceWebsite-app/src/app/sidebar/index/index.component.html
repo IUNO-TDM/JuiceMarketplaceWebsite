@@ -1,7 +1,8 @@
 <ng-container *ngIf="showTopItems">
     <div fxLayout="column" fxLayoutAlign="">
         <button (click)="openLandingPage()" mat-button class="nav-button index" i18n="link to start|Sidebar">Start</button>
-        <button (click)="openConsole()" mat-button class="nav-button index" i18n="link to marketplace|Sidebar">Marktplatz</button>
+        <button (click)="openMarketplace()" mat-button class="nav-button index" i18n="link to marketplace|Sidebar">Marktplatz</button>
+        <button (click)="openConsole()" mat-button class="nav-button index" i18n="link to console|Sidebar">Verkäufer</button>
         <ng-container *ngTemplateOutlet="console"></ng-container>
         <button (click)="openStatistics()" mat-button class="nav-button index" i18n="link to statistics|Sidebar">Statistiken</button>
         <!--<app-statistics></app-statistics>-->

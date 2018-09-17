@@ -20,11 +20,20 @@
         <note priority="1" from="description">Sidebar</note>
         <note priority="1" from="meaning">link to marketplace</note>
       </trans-unit>
+      <trans-unit id="5b1d0506c7030748c577e593e50b381ee16d9686" datatype="html">
+        <source>Verkäufer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Sidebar</note>
+        <note priority="1" from="meaning">link to console</note>
+      </trans-unit>
       <trans-unit id="35cbc965e5fb57c3a1a4a2df93d4ce003e8864c2" datatype="html">
         <source>Statistiken</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
-          <context context-type="linenumber">6</context>
+          <context context-type="linenumber">7</context>
         </context-group>
         <note priority="1" from="description">Sidebar</note>
         <note priority="1" from="meaning">link to statistics</note>
@@ -33,7 +42,7 @@
         <source>Dashboard</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">21</context>
         </context-group>
         <note priority="1" from="description">Sidebar</note>
         <note priority="1" from="meaning">link to console/dashboard</note>
@@ -42,7 +51,7 @@
         <source>Neues Getränk anlegen</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
-          <context context-type="linenumber">21</context>
+          <context context-type="linenumber">22</context>
         </context-group>
         <note priority="1" from="description">Sidebar</note>
         <note priority="1" from="meaning">link to console/new drink</note>
@@ -51,7 +60,7 @@
         <source>Getränke verwalten</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
-          <context context-type="linenumber">22</context>
+          <context context-type="linenumber">23</context>
         </context-group>
         <note priority="1" from="description">Sidebar</note>
         <note priority="1" from="meaning">link to console/manage drinks</note>
@@ -60,7 +69,7 @@
         <source>Guthaben verwalten</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
-          <context context-type="linenumber">23</context>
+          <context context-type="linenumber">24</context>
         </context-group>
         <note priority="1" from="description">Sidebar</note>
         <note priority="1" from="meaning">link to console/manage credit</note>
@@ -69,7 +78,7 @@
         <source>Admin Dashboard</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
-          <context context-type="linenumber">24</context>
+          <context context-type="linenumber">25</context>
         </context-group>
         <note priority="1" from="description">Sidebar</note>
         <note priority="1" from="meaning">link to admin dashboard/admin dashboard</note>
@@ -81,11 +90,18 @@
           <context context-type="linenumber">17</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="cd24bb9c8572cb3dee542d78cae01dc25468b5b2" datatype="html">
+        <source>Mein Saftladen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="b1875fdd47821b247985a5c0e4110b3c6d4af7f7" datatype="html">
         <source>Statistiken</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="c47b6066a02b6434f0cd861e792d9ceebbe59235" datatype="html">
@@ -266,8 +282,10 @@
           <context context-type="linenumber">51</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="44b31522e166a2d7810a8bfa423d96821d6ea075" datatype="html">
-        <source>Bitte geben Sie einen Titel ein!<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/></source>
+      <trans-unit id="ba92ca85c849ee3cd1bf47bf3e60f062d108042f" datatype="html">
+        <source>Bitte geben Sie einen Titel ein!
+                            <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                        </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
           <context context-type="linenumber">57</context>
@@ -275,20 +293,24 @@
         <note priority="1" from="description">create recipe - title missing</note>
         <note priority="1" from="meaning">error</note>
       </trans-unit>
-      <trans-unit id="bb7f2c6d36d56722bd195c6846ba9b835a3131dd" datatype="html">
-        <source>Bitte geben Sie einen Beschreibungstext ein!<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/></source>
+      <trans-unit id="e62e9f4562c43c343da730d282254e6797e55788" datatype="html">
+        <source>Bitte geben Sie einen Beschreibungstext ein!
+                            <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                        </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">58</context>
+          <context context-type="linenumber">60</context>
         </context-group>
         <note priority="1" from="description">create recipe - description missing</note>
         <note priority="1" from="meaning">error</note>
       </trans-unit>
-      <trans-unit id="4c2d2c433d34adbe8148d961e3f8e014ef7f29de" datatype="html">
-        <source>Bitte wählen Sie eine Lizenzgebühr aus!<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/></source>
+      <trans-unit id="f6cddcac4e1543114fdc7387973a3ffb298617dd" datatype="html">
+        <source>Bitte wählen Sie eine Lizenzgebühr aus!
+                            <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                        </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">59</context>
+          <context context-type="linenumber">63</context>
         </context-group>
         <note priority="1" from="description">create recipe - license fee missing</note>
         <note priority="1" from="meaning">error</note>
@@ -297,14 +319,14 @@
         <source>Titel</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">65</context>
+          <context context-type="linenumber">71</context>
         </context-group>
       </trans-unit>
       <trans-unit id="f09ad66c1ebf16217ba1a1072be7a98de2d95eac" datatype="html">
         <source>Beschreibung</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">71</context>
+          <context context-type="linenumber">77</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
@@ -315,37 +337,37 @@
         <source>Lizenzgebühr</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">77</context>
+          <context context-type="linenumber">83</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5ccc633c2e84a1ddb8f59dec8affa3af4aed7988" datatype="html">
         <source>Bild</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">94</context>
+          <context context-type="linenumber">100</context>
         </context-group>
       </trans-unit>
       <trans-unit id="05d6def11b80c405276ad18c4fc5183e8cea4f75" datatype="html">
         <source>Speichern</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">105</context>
+          <context context-type="linenumber">111</context>
         </context-group>
       </trans-unit>
       <trans-unit id="367e537f73ef5d6874808117f0d8376a5aab6811" datatype="html">
         <source>Rezeptlimit erreicht!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">112</context>
+          <context context-type="linenumber">118</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="7484f7eceaccef965e94c427c0ec0dc181735c4c" datatype="html">
+      <trans-unit id="2b2aaee8f59e5cc9fc32d45ca562a645573c8235" datatype="html">
         <source>Sie haben bereits ihr Limit von <x id="INTERPOLATION" equiv-text="{{recipeLimit}}"/> Rezepten am Marktplatz erreicht.
-            <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-        </source>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+            </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">113</context>
+          <context context-type="linenumber">119</context>
         </context-group>
       </trans-unit>
       <trans-unit id="adf103f42182c40380a2cca83020ede8447094b4" datatype="html">
@@ -670,11 +692,22 @@
         </context-group>
         <note priority="1" from="description">intro text</note>
       </trans-unit>
+      <trans-unit id="a33138be8c9fce88eba04363d4518be574f66a4e" datatype="html">
+        <source>
+                        Wir sind vom 16.10. bis 18.10. mit unserer Mischmaschine zusammen mit WIBU auf dem <x id="START_LINK" ctype="x-a" equiv-text="&lt;a>"/>IOTSWC 2018<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/> in Barcelona. Besuchen Sie uns gerne auf einen leckeren Cocktail! 
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <note priority="1" from="description">news</note>
+        <note priority="1" from="meaning">section</note>
+      </trans-unit>
       <trans-unit id="3f12ced55bd8d55d5cadadb4850d06e292f67c20" datatype="html">
         <source>Was macht IUNO?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">44</context>
+          <context context-type="linenumber">37</context>
         </context-group>
         <note priority="1" from="description">IUNO</note>
         <note priority="1" from="meaning">section header</note>
@@ -687,7 +720,7 @@
             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">45</context>
+          <context context-type="linenumber">38</context>
         </context-group>
         <note priority="1" from="description">IUNO</note>
         <note priority="1" from="meaning">section</note>
@@ -696,30 +729,38 @@
         <source>Technologiedatenmarktplatz</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">56</context>
+          <context context-type="linenumber">49</context>
         </context-group>
         <note priority="1" from="description">Technologiedatenmarktplatz</note>
         <note priority="1" from="meaning">section header</note>
       </trans-unit>
-      <trans-unit id="859febd8a92c46a05920275d04b7f0a7a86c8fbf" datatype="html">
+      <trans-unit id="72128c952923920209dfb9076ab9202a7741484a" datatype="html">
         <source>
                 Der Technologiedatenmarktplatz ermöglicht Daten bedarfsgerecht zu handeln, die für einen
                 Herstellungsprozeß benötigt werden. Für den bedarfsgerechten Handel ist es notwendig, daß die
                 gehandelten Daten auch nur wie gekauft verwendet werden, sprich pro Stück oder pro Zeiteinheit. Der
-                erarbeitete Demonstrator gewährt diese Sicherheit über die lizenzgerechte Nutzung der gehandelten Daten.
+                erarbeitete Demonstrator gewährt diese Sicherheit über die lizenzgerechte Nutzung der gehandelten
+                Daten.
             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">57</context>
+          <context context-type="linenumber">50</context>
         </context-group>
         <note priority="1" from="description">Technologiedatenmarktplatz</note>
         <note priority="1" from="meaning">section</note>
+      </trans-unit>
+      <trans-unit id="3ed9d9721f2b215bcfb3719592969cdba54d8fba" datatype="html">
+        <source>https://www.youtube-nocookie.com/embed/1CTcGxSz2yc?rel=0&amp;showinfo=0</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="e9e61cddcc667445059d1706cff6f2720beb4048" datatype="html">
         <source>Warum Cocktailrezepte?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">77</context>
+          <context context-type="linenumber">72</context>
         </context-group>
         <note priority="1" from="description">Warum Cocktailrezepte</note>
         <note priority="1" from="meaning">section header</note>
@@ -735,7 +776,7 @@
             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">78</context>
+          <context context-type="linenumber">73</context>
         </context-group>
         <note priority="1" from="description">Warum Cocktailrezepte</note>
         <note priority="1" from="meaning">section</note>
@@ -744,7 +785,7 @@
         <source>Der Marktplatz ist live!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">95</context>
+          <context context-type="linenumber">90</context>
         </context-group>
         <note priority="1" from="description">Marktplatz ist live</note>
         <note priority="1" from="meaning">section header</note>
@@ -756,7 +797,7 @@
             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">96</context>
+          <context context-type="linenumber">91</context>
         </context-group>
         <note priority="1" from="description">Marktplatz ist live</note>
         <note priority="1" from="meaning">section</note>
@@ -765,7 +806,7 @@
         <source>Lust am Ausprobieren?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">114</context>
+          <context context-type="linenumber">109</context>
         </context-group>
         <note priority="1" from="description">Lust am Ausprobieren</note>
         <note priority="1" from="meaning">section header</note>
@@ -776,7 +817,7 @@
             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">115</context>
+          <context context-type="linenumber">110</context>
         </context-group>
         <note priority="1" from="description">Lust am Ausprobieren</note>
         <note priority="1" from="meaning">section</note>
@@ -787,7 +828,7 @@
             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">121</context>
+          <context context-type="linenumber">116</context>
         </context-group>
         <note priority="1" from="description">Lust am Ausprobieren</note>
         <note priority="1" from="meaning">section add</note>
@@ -796,7 +837,7 @@
         <source>Über uns</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">131</context>
+          <context context-type="linenumber">126</context>
         </context-group>
         <note priority="1" from="description">Team</note>
         <note priority="1" from="meaning">section header</note>
@@ -805,83 +846,86 @@
         <source>Das Team hinter dem Projekt:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">133</context>
+          <context context-type="linenumber">128</context>
         </context-group>
         <note priority="1" from="description">Team</note>
         <note priority="1" from="meaning">section</note>
       </trans-unit>
-      <trans-unit id="3644dfd10f2f105f1e2d1a39860a97396cf2f52a" datatype="html">
+      <trans-unit id="600225ba0450d546aee95582b888c89f97b035fe" datatype="html">
         <source>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Experte für Industrie 4.0 Kommunikation und Security
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Hans-Peter Bock ist Architekt, Ideengeber und Leiter der Entwicklung des Technologiedatenmarktplatz-Ökosystems.
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    Experte für Industrie 4.0 Kommunikation und Security
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    Hans-Peter Bock ist Architekt, Ideengeber und Leiter der Entwicklung des
+                    Technologiedatenmarktplatz-Ökosystems.
                 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">159</context>
+          <context context-type="linenumber">154</context>
         </context-group>
         <note priority="1" from="description">Team - hpbock</note>
         <note priority="1" from="meaning">section</note>
       </trans-unit>
-      <trans-unit id="138c447f93455e68a7816388293a3ec078e36c80" datatype="html">
+      <trans-unit id="4b42601c7e799a26454b3444080f3047faa289fe" datatype="html">
         <source>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                System Developer for New Technologies
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Manuel Beuttler hat im Projekt den Überblick über das Zusammenspiel der verschiedenen Komponenten.
-                Er verantwortet die Web-Services, sowie Spezifikation und Absicherung der Schnittstellen.
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    System Developer for New Technologies
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    Manuel Beuttler hat im Projekt den Überblick über das Zusammenspiel der verschiedenen Komponenten.
+                    Er verantwortet die Web-Services, sowie Spezifikation und Absicherung der Schnittstellen.
                 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">176</context>
+          <context context-type="linenumber">173</context>
         </context-group>
         <note priority="1" from="description">Team - mbeuttler</note>
         <note priority="1" from="meaning">section</note>
       </trans-unit>
-      <trans-unit id="72aeb28d126937e4b27abaebd901e0e1be7ad9ac" datatype="html">
+      <trans-unit id="61bd11cb1a18331309446ac6990415cba0f986a5" datatype="html">
         <source>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                System Architect for Enabling Technologies
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Christan Görg entwickelt das Bezahlsystem hinter dem Technologiedatenmarktplatz
-                und verantwortet den sicheren Umgang mit Technologiedaten auf der Maschinen-Steuerung.
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    System Architect for Enabling Technologies
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    Christan Görg entwickelt das Bezahlsystem hinter dem Technologiedatenmarktplatz
+                    und verantwortet den sicheren Umgang mit Technologiedaten auf der Maschinen-Steuerung.
                 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">193</context>
+          <context context-type="linenumber">191</context>
         </context-group>
         <note priority="1" from="description">Team - cgoerg</note>
         <note priority="1" from="meaning">section</note>
       </trans-unit>
-      <trans-unit id="703e286e320549b880e78248df81aeec4b25680e" datatype="html">
+      <trans-unit id="11e8f0115be88e421b74a5eae7d7a7bcff90632a" datatype="html">
         <source>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                System Architect for Big Data and Analytics
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Marcel Ely Gomes arbeitet am Herzen des Technologiedaten Marktplatz.
-                Er verantwortet das Datenbankdesign und entwickelt die Datenbank spezifischen Sicherheitskonzepte.
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    System Architect for Big Data and Analytics
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    Marcel Ely Gomes arbeitet am Herzen des Technologiedaten Marktplatz.
+                    Er verantwortet das Datenbankdesign und entwickelt die Datenbank spezifischen Sicherheitskonzepte.
                 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">210</context>
+          <context context-type="linenumber">209</context>
         </context-group>
         <note priority="1" from="description">Team - mgomes</note>
         <note priority="1" from="meaning">section</note>
       </trans-unit>
-      <trans-unit id="d2542323b64d2177b921df4afe86691d271e9bac" datatype="html">
+      <trans-unit id="ff9f15d04888369a4de1aa674d77f4700f5e30de" datatype="html">
         <source>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Experte für Informations- und Kommunikationstechnologien in Produktionsnetzwerken
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Klaus Bauer leitet den Bereich Basistechnologien bei TRUMPF und ist Visionsgeber des Technologiedatenmarktplatz.
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Er beschrieb die Ideen dieses Marktplatzes bereits in den Umsetzungsempfehlungen von Industrie 4.0 und der Smart Service Welt.
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    Experte für Informations- und Kommunikationstechnologien in Produktionsnetzwerken
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    Klaus Bauer leitet den Bereich Basistechnologien bei TRUMPF und ist Visionsgeber des
+                    Technologiedatenmarktplatz.
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    Er beschrieb die Ideen dieses Marktplatzes bereits in den Umsetzungsempfehlungen von Industrie 4.0
+                    und der Smart Service Welt.
                 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
@@ -890,36 +934,83 @@
         <note priority="1" from="description">Team - kbauer</note>
         <note priority="1" from="meaning">section</note>
       </trans-unit>
-      <trans-unit id="7fe5242d9b419adf0370f14adcdd41fe132b710c" datatype="html">
-        <source>Lizenzverkäufe im Tagesverlauf</source>
+      <trans-unit id="2c6838c274478601bf4ab83914dd16e710e4cb02" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{object.name}}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/marketplace/gallery/gallery.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="985aa4045bdf3ce28034eff1f3c404740354afff" datatype="html">
+        <source>Beschreibung:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/marketplace/gallery-detail/gallery-detail.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">description</note>
+      </trans-unit>
+      <trans-unit id="5e3750473444ed0d4ff0bf794ebaf415db164c8e" datatype="html">
+        <source>Lizenzgebühr:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/marketplace/gallery-detail/gallery-detail.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">licensefee</note>
+      </trans-unit>
+      <trans-unit id="672d44e7ea254e4c61b40eeef699e60bd18f723e" datatype="html">
+        <source>Maschinen:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/marketplace/gallery-detail/gallery-detail.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">machines</note>
+      </trans-unit>
+      <trans-unit id="c7cac8d33f07b9acce836beba9b8b478f1ae48ec" datatype="html">
+        <source>Materialien:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/marketplace/gallery-detail/gallery-detail.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <note priority="1" from="description">materials</note>
+      </trans-unit>
+      <trans-unit id="99ef08091fb4d2267254423538b4c516c5bee2a4" datatype="html">
+        <source>Zutaten:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/marketplace/gallery-detail/gallery-detail.component.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <note priority="1" from="description">contents</note>
+      </trans-unit>
+      <trans-unit id="d5a5a26dd5ba4cc3dbbd43364dd5bdf6caaefb7f" datatype="html">
+        <source>Lizenzverkäufe (Heute)</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
           <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="c6fb8b06d07e90841651b619e83e17396c7d8715" datatype="html">
-        <source>Lizenzverkäufe im letzten Monat</source>
+      <trans-unit id="112748d842a1fa941cf99db6b8528dad5c5f8839" datatype="html">
+        <source>Lizenzverkäufe (Monat)</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
           <context context-type="linenumber">18</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="961d9af389fd94425aecfa16ea9df6b3a4cc276c" datatype="html">
-        <source>Die beliebtesten Zutaten</source>
+      <trans-unit id="fe46a5104ffbded5e8b63f66ea3fe73a4c75e590" datatype="html">
+        <source>Beliebte Getränkezutaten</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
           <context context-type="linenumber">33</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="017df1a1f452b8592e6babc821507b400873aa9d" datatype="html">
-        <source>Die beliebtesten Rezepte aller Zeiten</source>
+      <trans-unit id="e73bf2fd958d4118f533d054316c785be8219118" datatype="html">
+        <source>Dauerrenner unter den Getränken</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
           <context context-type="linenumber">45</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="89ea7601029a7cc9366d93185997891359fae352" datatype="html">
-        <source>Die beliebtesten Rezepte heute</source>
+      <trans-unit id="8027ed8d0a2b64708be3988a33e80f39ee2e9652" datatype="html">
+        <source>Aktuell beliebte Rezepte</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
           <context context-type="linenumber">56</context>

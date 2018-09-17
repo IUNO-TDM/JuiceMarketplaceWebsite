@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { CocktailComponent, ComponentService } from 'tdm-common';
+import { TdmCocktailComponent, TdmCocktailComponentService } from 'tdm-common';
 
 @Component({
   selector: 'cocktail-component-list-dialog',
@@ -30,7 +30,7 @@ export class ComponentListDialogComponent implements OnInit {
   ngOnInit() {
   }
 
-  onComponentSelected(component: CocktailComponent) {
+  onComponentSelected(component: TdmCocktailComponent) {
     this.dialogRef.close(component);
   }
 

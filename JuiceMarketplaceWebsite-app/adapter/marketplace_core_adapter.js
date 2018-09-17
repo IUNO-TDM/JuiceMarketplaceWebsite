@@ -4,11 +4,9 @@
 
 const self = {};
 
-const https = require('https');
 const logger = require('../global/logger');
 const CONFIG = require('../config/config_loader');
 const request = require('request');
-const helper = require('../services/helper_service');
 
 //<editor-fold desc="Build Options">
 function buildOptionsForRequest(method, protocol, host, port, path, qs) {
@@ -50,7 +48,7 @@ self.getAllComponents = function (language, accessToken, callback) {
 
     request(options, function (e, r, components) {
         const err = logger.logRequestAndResponse(e, options, r, components);
-        var tdmComponents = null
+        let tdmComponents;
         if (components && !err) {
             tdmComponents = mapToTdmComponents(components)
         }
@@ -87,7 +85,7 @@ self.getRecipesForUser = function (language, userId, accessToken, callback) {
     request(options, function (e, r, recipes) {
         const err = logger.logRequestAndResponse(e, options, r, recipes);
 
-        var tdmRecipes = null
+        let tdmRecipes;
         if (recipes && !err) {
             tdmRecipes = mapToTdmRecipes(recipes)
         }
@@ -148,13 +146,12 @@ self.deleteRecipe = function (token, recipeID, callback) {
     doRequest(options, callback);
 };
 
-self.getAllRecipes = function (language, token, params, callback) {
+self.getAllRecipes = function (token, params, callback) {
     if (!params) {
         params = {};
     }
 
     params['technology'] = CONFIG.TECHNOLOGY_UUID;
-    params['lang'] = language;
 
     const options = buildOptionsForRequest(
         'GET',
@@ -167,12 +164,108 @@ self.getAllRecipes = function (language, token, params, callback) {
     options.headers.authorization = 'Bearer ' + token.accessToken;
 
     doRequest(options, function (err, recipes) {
-        var tdmRecipes = null
+        let tdmRecipes;
         if (recipes && !err) {
             tdmRecipes = mapToTdmRecipes(recipes)
         }
         callback(err, tdmRecipes);
     });
+};
+
+
+self.getAllTechnologyData = function (token, params, callback) {
+
+    const options = buildOptionsForRequest(
+        'GET',
+        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PROTOCOL,
+        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.HOST,
+        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PORT,
+        '/technologydata',
+        params
+    );
+    options.headers.authorization = 'Bearer ' + token.accessToken;
+
+    doRequest(options, function (err, techData) {
+        let technologyData;
+        if (techData && !err) {
+            technologyData = mapToTechnologyData(techData)
+        }
+        callback(err, technologyData);
+    });
+};
+
+
+self.getTechnologyDataById = function (id,token, params, callback) {
+
+    const options = buildOptionsForRequest(
+        'GET',
+        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PROTOCOL,
+        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.HOST,
+        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PORT,
+        '/technologydata/' + id,
+        params
+    );
+    options.headers.authorization = 'Bearer ' + token.accessToken;
+    // params['technology'] = "ce7da33b-0885-46b5-8ffe-37a211e3bc9c";
+    doRequest(options, function (err, techData) {
+        let technologyData;
+        if (techData && !err) {
+            technologyData = mapToTechnologyData([techData])[0];
+        }
+        callback(err, technologyData);
+    });
+};
+
+
+self.getImageForId = function (id, token, callback) {
+
+
+    const options = buildOptionsForRequest(
+        'GET',
+        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PROTOCOL,
+        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.HOST,
+        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PORT,
+        '/technologydata/' + id + '/image',
+        {}
+    );
+    options.json = false;
+    options.encoding = null;
+    options.headers.authorization = 'Bearer ' + token.accessToken;
+    request(options, function (e, r, data) {
+        // logger.debug('Response from MarketplaceCore: ' + JSON.stringify(jsonData));
+        if (typeof(callback) !== 'function') {
+
+            callback = function (err, data) {
+                logger.warn('Callback not handled by caller');
+            };
+        }
+
+        if (e) {
+            logger.crit(e);
+
+            callback(e);
+        }
+
+        if (r && r.statusCode !== 200) {
+            const err = {
+                status: r.statusCode,
+                message: data
+            };
+            logger.warn('Call not successful: Options: ' + JSON.stringify(options) + ' Error: ' + JSON.stringify(err));
+            callback(err);
+
+            return;
+        }
+
+        callback(null, {
+            imageBuffer: data,
+            contentType: r ? r.headers['content-type'] : null
+        });
+    });
+    doRequest(options, function (err, data) {
+
+    });
+
 };
 //</editor-fold>
 
@@ -187,7 +280,8 @@ self.getTechnologyDataHistory = function (from, to, token, callback) {
         '/reports/technologydata/history',
         {
             from: from,
-            to: to
+            to: to,
+            technologyuuid: CONFIG.TECHNOLOGY_UUID
         }
     );
     options.headers.authorization = 'Bearer ' + token.accessToken;
@@ -208,7 +302,8 @@ self.getTopComponents = function (language, from, to, limit, token, callback) {
             from: from,
             to: to,
             limit: limit,
-            lang: language
+            lang: language,
+            technologyuuid: CONFIG.TECHNOLOGY_UUID
         }
     );
     options.headers.authorization = 'Bearer ' + token.accessToken;
@@ -229,7 +324,8 @@ self.getTopTechnologyData = function (from, to, limit, token, callback) {
         {
             from: from,
             to: to,
-            limit: limit
+            limit: limit,
+            technologyuuid: CONFIG.TECHNOLOGY_UUID
         }
     );
 
@@ -250,7 +346,8 @@ self.getTotalRevenue = function (from, to, detail, token, callback) {
         {
             from: from,
             to: to,
-            detail: detail
+            detail: detail,
+            technologyuuid: CONFIG.TECHNOLOGY_UUID
         }
     );
     options.headers.authorization = 'Bearer ' + token.accessToken;
@@ -272,7 +369,8 @@ self.getRevenueForUser = function (user, from, to, accessToken, callback) {
         {
             user: user,
             from: from,
-            to: to
+            to: to,
+            technologyuuid: CONFIG.TECHNOLOGY_UUID
         }
     );
     options.headers.authorization = 'Bearer ' + accessToken;
@@ -290,7 +388,8 @@ self.getRevenueHistory = function (accessToken, from, to, callback) {
         '/reports/revenue/technologydata/history',
         {
             from: from,
-            to: to
+            to: to,
+            technologyuuid: CONFIG.TECHNOLOGY_UUID
         }
     );
     options.headers.authorization = 'Bearer ' + accessToken;
@@ -310,7 +409,8 @@ self.getTopTechnologyDataForUser = function (user, accessToken, from, to, limit,
             from: from,
             to: to,
             limit: limit,
-            user: user
+            user: user,
+            technologyuuid: CONFIG.TECHNOLOGY_UUID
         }
     );
     options.headers.authorization = 'Bearer ' + accessToken;
@@ -397,7 +497,8 @@ self.getActivatedLicenseCountForUser = function (user, accessToken, callback) {
         '/reports/licenses/count',
         {
             activated: true,
-            user: user
+            user: user,
+            technologyuuid: CONFIG.TECHNOLOGY_UUID
         }
     );
     options.headers.authorization = 'Bearer ' + accessToken;
@@ -445,6 +546,7 @@ self.getLastProtocolForEachClient = function (eventType, from, to, accessToken, 
     doRequest(options, callback);
 };
 
+
 module.exports = self;
 
 
@@ -453,7 +555,7 @@ function mapToTdmRecipes(recipes) {
     var tdmRecipes = recipes.map(r => {
         var recipe = {}
         recipe.id = r.technologydatauuid
-        recipe.title = r.technologydataname
+        recipe.name = r.technologydataname
         recipe.description = r.technologydatadescription
         recipe.licenseFee = r.licensefee
         recipe.program = r.technologydata
@@ -465,15 +567,48 @@ function mapToTdmRecipes(recipes) {
     return tdmRecipes
 }
 
+function mapToTechnologyData(technologydata) {
+    return technologydata.map(r => {
+        var td = {};
+        td.id = r.technologydatauuid;
+        td.technologyId = r.technologyuuid;
+        td.name = r.technologydataname;
+        td.description = r.technologydatadescription;
+        td.licenseFee = r.licensefee;
+        td.program = r.technologydata;
+        td.backgroundColor = r.backgroundcolor;
+        if(r.componentlist){
+            td.components = mapToTdmComponents(r.componentlist);
+        }
+        td.imageRef = r.technologydataimgref;
+        return td
+    });
+}
+
 function mapToTdmComponents(components) {
-    var tdmComponents = components.map(c => {
-        var component = {}
-        component.id = c.componentuuid
-        component.name = c.componentname
-        component.color = c.displaycolor
+    return components.map(c => {
+        let component = {};
+        component.id = c.componentuuid;
+        component.name = c.componentname;
+        component.displayColor = c.displaycolor;
+        if(c.attributes){
+            component.attributes = mapToTdmAttributes(c.attributes);
+        }
         return component
+    });
+
+}
+
+function mapToTdmAttributes(attributes) {
+    if(!attributes){
+        return null;
+    }
+    return attributes.map(a => {
+        let attribute = {};
+        attribute.id = a.attributeid;
+        attribute.name = a.attributename;
+        return attribute
     })
-    return tdmComponents
 }
 
 function doRequest(options, callback) {

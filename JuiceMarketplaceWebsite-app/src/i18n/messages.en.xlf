@@ -9,15 +9,19 @@
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">17</context>
         </context-group>
-      </trans-unit>
-      <trans-unit id="b1875fdd47821b247985a5c0e4110b3c6d4af7f7" approved="yes">
-        <source xml:space="preserve">Statistiken</source>
-        <target xml:space="preserve">Statistics</target>
+      </trans-unit><trans-unit id="cd24bb9c8572cb3dee542d78cae01dc25468b5b2" datatype="html">
+        <source>Mein Saftladen</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">18</context>
         </context-group>
+        <target state="translated">My Juice Shop</target>
       </trans-unit>
+      <trans-unit id="b1875fdd47821b247985a5c0e4110b3c6d4af7f7" approved="yes">
+        <source xml:space="preserve">Statistiken</source>
+        <target xml:space="preserve">Statistics</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">app/app.component.ts</context><context context-type="linenumber">19</context></context-group></trans-unit>
       <trans-unit id="da27c106262f920eec6fb5ce72255a68ada2210c" datatype="html">
         <source>Produktdetails</source>
         
@@ -27,33 +31,33 @@
         <source>Titel</source>
         
         <target state="translated">Title</target>
-      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">65</context></context-group></trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">71</context></context-group></trans-unit>
       <trans-unit id="f09ad66c1ebf16217ba1a1072be7a98de2d95eac" datatype="html">
         <source>Beschreibung</source>
         <target state="translated">Description</target>
         
         
-      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">71</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/console/recipes/recipes.component.ts</context><context context-type="linenumber">27</context></context-group></trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">77</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/console/recipes/recipes.component.ts</context><context context-type="linenumber">27</context></context-group></trans-unit>
       <trans-unit id="c51da9899fe9350fcc3f226a107341458a8a7640" datatype="html">
         <source>Lizenzgebühr</source>
         
         <target state="translated">Licence fee</target>
-      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">77</context></context-group></trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">83</context></context-group></trans-unit>
       <trans-unit id="5ccc633c2e84a1ddb8f59dec8affa3af4aed7988" datatype="html">
         <source>Bild</source>
         
         <target state="translated">Image</target>
-      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">94</context></context-group></trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">100</context></context-group></trans-unit>
       <trans-unit id="05d6def11b80c405276ad18c4fc5183e8cea4f75" datatype="html">
         <source>Speichern</source>
         
         <target state="translated">Save</target>
-      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">105</context></context-group></trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">111</context></context-group></trans-unit>
       <trans-unit id="367e537f73ef5d6874808117f0d8376a5aab6811" datatype="html">
         <source>Rezeptlimit erreicht!</source>
         
         <target state="translated">Recipe limit reached!</target>
-      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">112</context></context-group></trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">118</context></context-group></trans-unit>
       
       <trans-unit id="adf103f42182c40380a2cca83020ede8447094b4" datatype="html">
         <source>Getränke verwalten</source>
@@ -434,46 +438,32 @@
         </context-group>
         <target state="translated">OK thanks!</target>
       </trans-unit>
-      <trans-unit id="7fe5242d9b419adf0370f14adcdd41fe132b710c" datatype="html">
-        <source>Lizenzverkäufe im Tagesverlauf</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
-          <context context-type="linenumber">6</context>
-        </context-group>
-        <target state="translated">License sales during the day</target>
-      </trans-unit>
-      <trans-unit id="c6fb8b06d07e90841651b619e83e17396c7d8715" datatype="html">
-        <source>Lizenzverkäufe im letzten Monat</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
-          <context context-type="linenumber">18</context>
-        </context-group>
-        <target state="translated">License sales last month</target>
-      </trans-unit>
-      <trans-unit id="961d9af389fd94425aecfa16ea9df6b3a4cc276c" datatype="html">
-        <source>Die beliebtesten Zutaten</source>
+      
+      <trans-unit id="fe46a5104ffbded5e8b63f66ea3fe73a4c75e590" datatype="html">
+        <source>Beliebte Getränkezutaten</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
           <context context-type="linenumber">33</context>
         </context-group>
-        <target state="translated">Most popular ingredients</target>
-      </trans-unit>
-      <trans-unit id="017df1a1f452b8592e6babc821507b400873aa9d" datatype="html">
-        <source>Die beliebtesten Rezepte aller Zeiten</source>
+        <target state="translated">Popular recipe ingredients</target>
+      </trans-unit><trans-unit id="e73bf2fd958d4118f533d054316c785be8219118" datatype="html">
+        <source>Dauerrenner unter den Getränken</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
           <context context-type="linenumber">45</context>
         </context-group>
-        <target state="translated">Most popular recipes of all time</target>
-      </trans-unit>
-      <trans-unit id="89ea7601029a7cc9366d93185997891359fae352" datatype="html">
-        <source>Die beliebtesten Rezepte heute</source>
+        <target state="translated">Recipes Hall of Fame</target>
+      </trans-unit><trans-unit id="8027ed8d0a2b64708be3988a33e80f39ee2e9652" datatype="html">
+        <source>Aktuell beliebte Rezepte</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
           <context context-type="linenumber">56</context>
         </context-group>
-        <target state="translated">Most popular recipes today</target>
+        <target state="translated">Today's most popular recipes</target>
       </trans-unit>
+      
+      
+      
     <trans-unit id="a3e515a387b2443634e5de844006c95abce05794" datatype="html">
         <source>Anmelden / Registrieren</source>
         <context-group purpose="location">
@@ -501,60 +491,68 @@
                 The Technology Data Marketplace<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
                 for the<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
                 license to mix
-            </target></trans-unit><trans-unit id="3f12ced55bd8d55d5cadadb4850d06e292f67c20" datatype="html">
-        <source>Was macht IUNO?</source>
+            </target></trans-unit><trans-unit id="a33138be8c9fce88eba04363d4518be574f66a4e" datatype="html">
+        <source>
+                        Wir sind vom 16.10. bis 18.10. mit unserer Mischmaschine zusammen mit WIBU auf dem <x id="START_LINK" ctype="x-a" equiv-text="&lt;a>"/>IOTSWC 2018<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/> in Barcelona. Besuchen Sie uns gerne auf einen leckeren Cocktail! 
+                </source><target state="new">
+                        Find us in Barcelona at <x id="START_LINK" ctype="x-a" equiv-text="&lt;a>"/>IOTSWC 2018<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/> from 16th to 18th of october.
+                        Together with WIBU we are presenting our cocktail mixing machine. Come and visit us for a refreshing cocktail! 
+                </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">44</context>
+          <context context-type="linenumber">23</context>
         </context-group>
+        <note priority="1" from="description">news</note>
+        <note priority="1" from="meaning">section</note>
+      </trans-unit><trans-unit id="3f12ced55bd8d55d5cadadb4850d06e292f67c20" datatype="html">
+        <source>Was macht IUNO?</source>
+        
         <note priority="1" from="description">IUNO</note>
         <note priority="1" from="meaning">section header</note>
-      <target state="translated">What does IUNO?</target></trans-unit><trans-unit id="9c60b5fd625b6b10cb591b42ed7a07e0fdbc21f5" datatype="html">
+      <target state="translated">What does IUNO?</target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">37</context></context-group></trans-unit><trans-unit id="9c60b5fd625b6b10cb591b42ed7a07e0fdbc21f5" datatype="html">
         <source>
                 Im Forschungsvorhaben IUNO, dem Nationalen Referenzprojekt zur IT-Sicherheit in Industrie 4.0, werden
                 Bedrohungen und Risiken für die intelligente Fabrik identifiziert, Schutzmaßnahmen entwickelt und
                 exemplarisch in vier Anwendungsfällen umgesetzt.
             </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">45</context>
-        </context-group>
+        
         <note priority="1" from="description">IUNO</note>
         <note priority="1" from="meaning">section</note>
       <target state="translated">
                 The IUNO research project, the national reference project on IT security in industry 4.0, identifies threats and risks for the intelligent factory, develops protective measures and implements them in four application cases.
-            </target></trans-unit><trans-unit id="cbb6079284144cac1ac7cd4c44f242f0f37cbe97" datatype="html">
+            </target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">38</context></context-group></trans-unit><trans-unit id="cbb6079284144cac1ac7cd4c44f242f0f37cbe97" datatype="html">
         <source>Technologiedatenmarktplatz</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">56</context>
-        </context-group>
+        
         <note priority="1" from="description">Technologiedatenmarktplatz</note>
         <note priority="1" from="meaning">section header</note>
-      <target state="translated">Technology Data Marketplace</target></trans-unit><trans-unit id="859febd8a92c46a05920275d04b7f0a7a86c8fbf" datatype="html">
+      <target state="translated">Technology Data Marketplace</target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">49</context></context-group></trans-unit><trans-unit id="72128c952923920209dfb9076ab9202a7741484a" datatype="html">
         <source>
                 Der Technologiedatenmarktplatz ermöglicht Daten bedarfsgerecht zu handeln, die für einen
                 Herstellungsprozeß benötigt werden. Für den bedarfsgerechten Handel ist es notwendig, daß die
                 gehandelten Daten auch nur wie gekauft verwendet werden, sprich pro Stück oder pro Zeiteinheit. Der
-                erarbeitete Demonstrator gewährt diese Sicherheit über die lizenzgerechte Nutzung der gehandelten Daten.
-            </source>
+                erarbeitete Demonstrator gewährt diese Sicherheit über die lizenzgerechte Nutzung der gehandelten
+                Daten.
+            </source><target state="translated">
+                The Technology Data Marketplace makes it possible to trade data required for a production process.
+                For trading according to demand, it is necessary that the traded data is only used as purchased,
+                i.e. per piece or per unit of time. The developed demonstrator guarantees this security about the 
+                license-fair use of the traded data.
+            </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">57</context>
+          <context context-type="linenumber">50</context>
         </context-group>
         <note priority="1" from="description">Technologiedatenmarktplatz</note>
         <note priority="1" from="meaning">section</note>
-      <target state="translated">
-                The Technology Data Marketplace makes it possible to trade data required for a production process. For trading according to demand, it is necessary that the traded data is only used as purchased, i.e. per piece or per unit of time. The developed demonstrator guarantees this security about the license-fair use of the traded data.
-            </target></trans-unit><trans-unit id="e9e61cddcc667445059d1706cff6f2720beb4048" datatype="html">
+      </trans-unit><trans-unit id="3ed9d9721f2b215bcfb3719592969cdba54d8fba" datatype="html">
+        <source>https://www.youtube-nocookie.com/embed/1CTcGxSz2yc?rel=0&amp;showinfo=0</source><target state="translated">https://www.youtube-nocookie.com/embed/LwuCGvIIVZM?rel=0&amp;showinfo=0</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">60</context></context-group></trans-unit><trans-unit id="e9e61cddcc667445059d1706cff6f2720beb4048" datatype="html">
         <source>Warum Cocktailrezepte?</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">77</context>
-        </context-group>
+        
         <note priority="1" from="description">Warum Cocktailrezepte</note>
         <note priority="1" from="meaning">section header</note>
-      <target state="translated">Why cocktail recipes?</target></trans-unit><trans-unit id="8e08d99b6f96f481d4ba8e1f41cc4bd20aaeb1b8" datatype="html">
+      <target state="translated">Why cocktail recipes?</target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">72</context></context-group></trans-unit><trans-unit id="8e08d99b6f96f481d4ba8e1f41cc4bd20aaeb1b8" datatype="html">
         <source>
                 IUNO hat als nationales Referenzprojekt zur IT-Sicherheit in der Industrie 4.0 Leuchtturmcharakter. Es
                 muß in der Öffentlichkeit weithin sichtbar sein, um mit den Inhalten und Ergebnissen eine möglichst
@@ -563,191 +561,231 @@
                 Technologiedatenmarktplatz an einer Cocktailmischmaschine veranschaulicht. Diese Maschine erweckt
                 genügend Aufmerksamkeit und ermöglicht damit den Transfer des sehr trockenen Themas IT-Sicherheit.
             </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">78</context>
-        </context-group>
+        
         <note priority="1" from="description">Warum Cocktailrezepte</note>
         <note priority="1" from="meaning">section</note>
       <target state="translated">
                 IUNO is a flagship project as a national reference project for IT security in Industry 4.0. It must be widely visible in the public in order to reach the widest possible audience with the contents and results. For this it needs a demonstrator machine, which can be easily shown at fairs and lectures and clearly conveys the subject. For this reason, the technology data marketplace is illustrated on a cocktail blender. This machine attracts enough attention, allowing the transfer of the very dry IT security issue.
-            </target></trans-unit><trans-unit id="c82b8429a1804cf10fca528683230dbf431e92b7" datatype="html">
+            </target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">73</context></context-group></trans-unit><trans-unit id="c82b8429a1804cf10fca528683230dbf431e92b7" datatype="html">
         <source>Der Marktplatz ist live!</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">95</context>
-        </context-group>
+        
         <note priority="1" from="description">Marktplatz ist live</note>
         <note priority="1" from="meaning">section header</note>
-      <target state="translated">The marketplace is live!</target></trans-unit><trans-unit id="ba3224d55e372ae154febe89dcddf330a389eca8" datatype="html">
+      <target state="translated">The marketplace is live!</target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">90</context></context-group></trans-unit><trans-unit id="ba3224d55e372ae154febe89dcddf330a389eca8" datatype="html">
         <source>
                 Der Marktplatz wird mittlerweile von mehreren Maschinen bei den verschiedenen Projektpartnern genutzt.
                 Dies zeigen unsere live <x id="START_LINK" ctype="x-a" equiv-text="&lt;a>"/>Dashboards<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/>.
             </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">96</context>
-        </context-group>
+        
         <note priority="1" from="description">Marktplatz ist live</note>
         <note priority="1" from="meaning">section</note>
       <target state="translated">
                 The marketplace is now used by several machines in the various project partners. This is shown by our live <x id="START_LINK" ctype="x-a" equiv-text="&lt;a>"/>Dashboards<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/>.
-            </target></trans-unit><trans-unit id="6591f10ed53e8f03c25bdc47ced8ae5a1e024dbf" datatype="html">
+            </target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">91</context></context-group></trans-unit><trans-unit id="6591f10ed53e8f03c25bdc47ced8ae5a1e024dbf" datatype="html">
         <source>Lust am Ausprobieren?</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">114</context>
-        </context-group>
+        
         <note priority="1" from="description">Lust am Ausprobieren</note>
         <note priority="1" from="meaning">section header</note>
-      <target state="translated">Feel like trying?</target></trans-unit><trans-unit id="410c4f0bda410720af03e09bb2b4f955ef97c252" datatype="html">
+      <target state="translated">Feel like trying?</target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">109</context></context-group></trans-unit><trans-unit id="410c4f0bda410720af03e09bb2b4f955ef97c252" datatype="html">
         <source>
                 Das ganze Projekt ist OpenSource und steht auf Github zur Verfügung.
             </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">115</context>
-        </context-group>
+        
         <note priority="1" from="description">Lust am Ausprobieren</note>
         <note priority="1" from="meaning">section</note>
       <target state="translated">
                 The whole project is open source and is available on Github.
-            </target></trans-unit><trans-unit id="9a91ff40b4d1054dc6b80476687e52ab3c5975f3" datatype="html">
+            </target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">110</context></context-group></trans-unit><trans-unit id="9a91ff40b4d1054dc6b80476687e52ab3c5975f3" datatype="html">
         <source>
                 Und wenn Sie selbst eine Maschine bauen möchten, dann wenden Sie sich gerne an uns.
             </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">121</context>
-        </context-group>
+        
         <note priority="1" from="description">Lust am Ausprobieren</note>
         <note priority="1" from="meaning">section add</note>
       <target state="translated">
                 And if you want to build a machine yourself, feel free to contact us.
-            </target></trans-unit><trans-unit id="f1251e2b4609fb43cbab117132519bfc05602aa7" datatype="html">
+            </target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">116</context></context-group></trans-unit><trans-unit id="f1251e2b4609fb43cbab117132519bfc05602aa7" datatype="html">
         <source>Über uns</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">131</context>
-        </context-group>
+        
         <note priority="1" from="description">Team</note>
         <note priority="1" from="meaning">section header</note>
-      <target state="translated">About us</target></trans-unit><trans-unit id="193efcf00bd5896bdb0b3d811ae113c1523f4a6b" datatype="html">
+      <target state="translated">About us</target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">126</context></context-group></trans-unit><trans-unit id="193efcf00bd5896bdb0b3d811ae113c1523f4a6b" datatype="html">
         <source>Das Team hinter dem Projekt:</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">133</context>
-        </context-group>
+        
         <note priority="1" from="description">Team</note>
         <note priority="1" from="meaning">section</note>
-      <target state="translated">The team behind the project:</target></trans-unit><trans-unit id="3644dfd10f2f105f1e2d1a39860a97396cf2f52a" datatype="html">
+      <target state="translated">The team behind the project:</target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">128</context></context-group></trans-unit><trans-unit id="600225ba0450d546aee95582b888c89f97b035fe" datatype="html">
         <source>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Experte für Industrie 4.0 Kommunikation und Security
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Hans-Peter Bock ist Architekt, Ideengeber und Leiter der Entwicklung des Technologiedatenmarktplatz-Ökosystems.
-                </source>
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    Experte für Industrie 4.0 Kommunikation und Security
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    Hans-Peter Bock ist Architekt, Ideengeber und Leiter der Entwicklung des
+                    Technologiedatenmarktplatz-Ökosystems.
+                </source><target state="translated">
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    Expert for Industry 4.0 Communication and Security
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    Hans-Peter Bock is architect, creator of ideas and head 
+                    of the development of the Technology Data Marketplace ecosystem.
+                </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">159</context>
+          <context context-type="linenumber">154</context>
         </context-group>
         <note priority="1" from="description">Team - hpbock</note>
         <note priority="1" from="meaning">section</note>
-      <target state="translated">
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Expert for Industry 4.0 Communication and Security
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Hans-Peter Bock is architect, creator of ideas and head of the development of the Technology Data Marketplace ecosystem.
-                </target></trans-unit><trans-unit id="138c447f93455e68a7816388293a3ec078e36c80" datatype="html">
+      </trans-unit><trans-unit id="4b42601c7e799a26454b3444080f3047faa289fe" datatype="html">
         <source>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                System Developer for New Technologies
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Manuel Beuttler hat im Projekt den Überblick über das Zusammenspiel der verschiedenen Komponenten.
-                Er verantwortet die Web-Services, sowie Spezifikation und Absicherung der Schnittstellen.
-                </source>
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    System Developer for New Technologies
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    Manuel Beuttler hat im Projekt den Überblick über das Zusammenspiel der verschiedenen Komponenten.
+                    Er verantwortet die Web-Services, sowie Spezifikation und Absicherung der Schnittstellen.
+                </source><target state="translated">
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    System Developer for New Technologies
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    Manuel Beuttler has an overview of the interaction of the various components 
+                    in the project. He is responsible for the web services, as well as specification 
+                    and protection of the interfaces.
+                </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">176</context>
+          <context context-type="linenumber">173</context>
         </context-group>
         <note priority="1" from="description">Team - mbeuttler</note>
         <note priority="1" from="meaning">section</note>
-      <target state="translated">
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                System Developer for New Technologies
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Manuel Beuttler has an overview of the interaction of the various components in the project. He is responsible for the web services, as well as specification and protection of the interfaces.
-                </target></trans-unit><trans-unit id="72aeb28d126937e4b27abaebd901e0e1be7ad9ac" datatype="html">
+      </trans-unit><trans-unit id="61bd11cb1a18331309446ac6990415cba0f986a5" datatype="html">
         <source>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                System Architect for Enabling Technologies
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Christan Görg entwickelt das Bezahlsystem hinter dem Technologiedatenmarktplatz
-                und verantwortet den sicheren Umgang mit Technologiedaten auf der Maschinen-Steuerung.
-                </source>
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    System Architect for Enabling Technologies
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    Christan Görg entwickelt das Bezahlsystem hinter dem Technologiedatenmarktplatz
+                    und verantwortet den sicheren Umgang mit Technologiedaten auf der Maschinen-Steuerung.
+                </source><target state="translated">
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    System Architect for Enabling Technologies
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    Christan Görg develops the payment system behind 
+                    the technology data marketplace and is responsible
+                    for the secure handling of technology data on the
+                    machine control system.
+                </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">193</context>
+          <context context-type="linenumber">191</context>
         </context-group>
         <note priority="1" from="description">Team - cgoerg</note>
         <note priority="1" from="meaning">section</note>
-      <target state="translated">
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                System Architect for Enabling Technologies
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Christan Görg develops the payment system behind the technology data marketplace and is responsible for the secure handling of technology data on the machine control system.
-                </target></trans-unit><trans-unit id="703e286e320549b880e78248df81aeec4b25680e" datatype="html">
+      </trans-unit><trans-unit id="11e8f0115be88e421b74a5eae7d7a7bcff90632a" datatype="html">
         <source>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                System Architect for Big Data and Analytics
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Marcel Ely Gomes arbeitet am Herzen des Technologiedaten Marktplatz.
-                Er verantwortet das Datenbankdesign und entwickelt die Datenbank spezifischen Sicherheitskonzepte.
-                </source>
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    System Architect for Big Data and Analytics
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    Marcel Ely Gomes arbeitet am Herzen des Technologiedaten Marktplatz.
+                    Er verantwortet das Datenbankdesign und entwickelt die Datenbank spezifischen Sicherheitskonzepte.
+                </source><target state="translated">
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    System Architect for Big Data and Analytics
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    Marcel Ely Gomes works at the heart of the Technology
+                    Data Marketplace. He is responsible for the database
+                    design and develops the database specific security concepts.
+                </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">210</context>
+          <context context-type="linenumber">209</context>
         </context-group>
         <note priority="1" from="description">Team - mgomes</note>
         <note priority="1" from="meaning">section</note>
-      <target state="translated">
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                System Architect for Big Data and Analytics
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Marcel Ely Gomes works at the heart of the Technology Data Marketplace. He is responsible for the database design and develops the database specific security concepts.
-                </target></trans-unit><trans-unit id="d2542323b64d2177b921df4afe86691d271e9bac" datatype="html">
+      </trans-unit><trans-unit id="ff9f15d04888369a4de1aa674d77f4700f5e30de" datatype="html">
         <source>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Experte für Informations- und Kommunikationstechnologien in Produktionsnetzwerken
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Klaus Bauer leitet den Bereich Basistechnologien bei TRUMPF und ist Visionsgeber des Technologiedatenmarktplatz.
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Er beschrieb die Ideen dieses Marktplatzes bereits in den Umsetzungsempfehlungen von Industrie 4.0 und der Smart Service Welt.
-                </source>
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    Experte für Informations- und Kommunikationstechnologien in Produktionsnetzwerken
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    Klaus Bauer leitet den Bereich Basistechnologien bei TRUMPF und ist Visionsgeber des
+                    Technologiedatenmarktplatz.
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    Er beschrieb die Ideen dieses Marktplatzes bereits in den Umsetzungsempfehlungen von Industrie 4.0
+                    und der Smart Service Welt.
+                </source><target state="translated">
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    Experte für Informations- und Kommunikationstechnologien in Produktionsnetzwerken
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    Klaus Bauer is the head of basic technologies at TRUMPF and is the visionary of the Technology Data Marketplace.
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    He described the ideas of this marketplace in the
+                     implementation recommendations of Industrie 4.0 and the Smart Service world.
+                </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
           <context context-type="linenumber">227</context>
         </context-group>
         <note priority="1" from="description">Team - kbauer</note>
         <note priority="1" from="meaning">section</note>
-      <target state="translated">
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Experte für Informations- und Kommunikationstechnologien in Produktionsnetzwerken
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Klaus Bauer is the head of basic technologies at TRUMPF and is the visionary of the Technology Data Marketplace.
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                He described the ideas of this marketplace in the implementation recommendations of Industrie 4.0 and the Smart Service world.
-                </target></trans-unit><trans-unit id="e7bb3084327f26b44499f31f24f9520ac8040242" datatype="html">
+      </trans-unit><trans-unit id="2c6838c274478601bf4ab83914dd16e710e4cb02" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{object.name}}"/></source><target state="translated"><x id="INTERPOLATION" equiv-text="{{object.name}}"/></target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">app/marketplace/gallery/gallery.component.ts</context><context context-type="linenumber">14</context></context-group></trans-unit><trans-unit id="985aa4045bdf3ce28034eff1f3c404740354afff" datatype="html">
+        <source>Beschreibung:</source><target state="translated">Description:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/marketplace/gallery-detail/gallery-detail.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">description</note>
+      </trans-unit><trans-unit id="5e3750473444ed0d4ff0bf794ebaf415db164c8e" datatype="html">
+        <source>Lizenzgebühr:</source><target state="translated">Licensefee:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/marketplace/gallery-detail/gallery-detail.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">licensefee</note>
+      </trans-unit><trans-unit id="672d44e7ea254e4c61b40eeef699e60bd18f723e" datatype="html">
+        <source>Maschinen:</source><target state="translated">Machines:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/marketplace/gallery-detail/gallery-detail.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">machines</note>
+      </trans-unit><trans-unit id="c7cac8d33f07b9acce836beba9b8b478f1ae48ec" datatype="html">
+        <source>Materialien:</source><target state="translated">Materials:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/marketplace/gallery-detail/gallery-detail.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <note priority="1" from="description">materials</note>
+      </trans-unit><trans-unit id="99ef08091fb4d2267254423538b4c516c5bee2a4" datatype="html">
+        <source>Zutaten:</source><target state="translated">Ingredients:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/marketplace/gallery-detail/gallery-detail.component.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <note priority="1" from="description">contents</note>
+      </trans-unit><trans-unit id="d5a5a26dd5ba4cc3dbbd43364dd5bdf6caaefb7f" datatype="html">
+        <source>Lizenzverkäufe (Heute)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <target state="translated">License sales (today)</target>
+      </trans-unit><trans-unit id="112748d842a1fa941cf99db6b8528dad5c5f8839" datatype="html">
+        <source>Lizenzverkäufe (Monat)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <target state="translated">License sales last month</target>
+      </trans-unit><trans-unit id="e7bb3084327f26b44499f31f24f9520ac8040242" datatype="html">
         <source>./assets/images/tdm_text_de.svg</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
@@ -761,41 +799,53 @@
         </context-group>
         <note priority="1" from="description">create recipe - recipe missing</note>
         <note priority="1" from="meaning">error</note>
-      <target state="translated">Please add at least one ingredient!</target></trans-unit><trans-unit id="44b31522e166a2d7810a8bfa423d96821d6ea075" datatype="html">
-        <source>Bitte geben Sie einen Titel ein!<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/></source>
+      <target state="translated">Please add at least one ingredient!</target></trans-unit><trans-unit id="ba92ca85c849ee3cd1bf47bf3e60f062d108042f" datatype="html">
+        <source>Bitte geben Sie einen Titel ein!
+                            <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                        </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
           <context context-type="linenumber">57</context>
         </context-group>
         <note priority="1" from="description">create recipe - title missing</note>
         <note priority="1" from="meaning">error</note>
-      <target state="translated">Please enter a title!<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/></target></trans-unit><trans-unit id="bb7f2c6d36d56722bd195c6846ba9b835a3131dd" datatype="html">
-        <source>Bitte geben Sie einen Beschreibungstext ein!<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/></source>
+      <target state="translated">Please enter a title!
+                            <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                        </target></trans-unit><trans-unit id="e62e9f4562c43c343da730d282254e6797e55788" datatype="html">
+        <source>Bitte geben Sie einen Beschreibungstext ein!
+                            <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                        </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">58</context>
+          <context context-type="linenumber">60</context>
         </context-group>
         <note priority="1" from="description">create recipe - description missing</note>
         <note priority="1" from="meaning">error</note>
-      <target state="translated">Please enter a description text!<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/></target></trans-unit><trans-unit id="4c2d2c433d34adbe8148d961e3f8e014ef7f29de" datatype="html">
-        <source>Bitte wählen Sie eine Lizenzgebühr aus!<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/></source>
+      <target state="translated">Please enter a description!
+                            <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                        </target></trans-unit><trans-unit id="f6cddcac4e1543114fdc7387973a3ffb298617dd" datatype="html">
+        <source>Bitte wählen Sie eine Lizenzgebühr aus!
+                            <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                        </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">59</context>
+          <context context-type="linenumber">63</context>
         </context-group>
         <note priority="1" from="description">create recipe - license fee missing</note>
         <note priority="1" from="meaning">error</note>
-      <target state="translated">Please select a license fee!<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/></target></trans-unit><trans-unit id="7484f7eceaccef965e94c427c0ec0dc181735c4c" datatype="html">
+      <target state="translated">Please select a license fee!
+                            <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                        </target></trans-unit><trans-unit id="2b2aaee8f59e5cc9fc32d45ca562a645573c8235" datatype="html">
         <source>Sie haben bereits ihr Limit von <x id="INTERPOLATION" equiv-text="{{recipeLimit}}"/> Rezepten am Marktplatz erreicht.
-            <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-        </source>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+            </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">113</context>
+          <context context-type="linenumber">119</context>
         </context-group>
       <target state="translated">You have already reached your limit of <x id="INTERPOLATION" equiv-text="{{recipeLimit}}"/> recipes on the marketplace.
-            <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-        </target></trans-unit></body>
+                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+            </target></trans-unit></body>
   </file>
   <file original="app/sidebar/index/index.component.ts" datatype="plaintext" source-language="de" target-language="en">
     <body>
@@ -803,13 +853,10 @@
         <source xml:space="preserve">Admin Dashboard</source>
         <target xml:space="preserve">Admin Dashboard</target>
         <note from="translator">link to admin dashboard/admin dashboard</note>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
-          <context context-type="linenumber">24</context>
-        </context-group>
+        
         <note from="description" priority="1">Sidebar</note>
         <note from="meaning" priority="1">link to admin dashboard/admin dashboard</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">app/sidebar/index/index.component.ts</context><context context-type="linenumber">25</context></context-group></trans-unit>
       <trans-unit id="57b8728de504ae17b0de35dd3731abf992e9db9d" approved="yes">
         <source xml:space="preserve">Start</source>
         <target xml:space="preserve">Start</target>
@@ -831,62 +878,55 @@
         </context-group>
         <note from="description" priority="1">Sidebar</note>
         <note from="meaning" priority="1">link to marketplace</note>
+      </trans-unit><trans-unit id="5b1d0506c7030748c577e593e50b381ee16d9686" datatype="html">
+        <source>Verkäufer</source><target state="translated">Vendors</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Sidebar</note>
+        <note priority="1" from="meaning">link to console</note>
       </trans-unit>
       <trans-unit id="35cbc965e5fb57c3a1a4a2df93d4ce003e8864c2" approved="yes">
         <source xml:space="preserve">Statistiken</source>
         <target xml:space="preserve">Statistics</target>
         <note from="translator">link to statistics</note>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
-          <context context-type="linenumber">6</context>
-        </context-group>
+        
         <note from="description" priority="1">Sidebar</note>
         <note from="meaning" priority="1">link to statistics</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">app/sidebar/index/index.component.ts</context><context context-type="linenumber">7</context></context-group></trans-unit>
       <trans-unit id="cd75d37100383c2c196f9f2b58926afb6fe6c636" approved="yes">
         <source xml:space="preserve">Dashboard</source>
         <target xml:space="preserve">Dashboard</target>
         <note from="translator">link to console/dashboard</note>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
-          <context context-type="linenumber">20</context>
-        </context-group>
+        
         <note from="description" priority="1">Sidebar</note>
         <note from="meaning" priority="1">link to console/dashboard</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">app/sidebar/index/index.component.ts</context><context context-type="linenumber">21</context></context-group></trans-unit>
       <trans-unit id="6b16f32d05491b220fd649d9e9bd84a9d10ae104" approved="yes">
         <source xml:space="preserve">Neues Getränk anlegen</source>
         <target xml:space="preserve">Create new drink</target>
         <note from="translator">link to console/new drink</note>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
-          <context context-type="linenumber">21</context>
-        </context-group>
+        
         <note from="description" priority="1">Sidebar</note>
         <note from="meaning" priority="1">link to console/new drink</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">app/sidebar/index/index.component.ts</context><context context-type="linenumber">22</context></context-group></trans-unit>
       <trans-unit id="5aa9d6c7cdd31a482402ae74f314b98ad7858ead" approved="yes">
         <source xml:space="preserve">Getränke verwalten</source>
         <target xml:space="preserve">Manage drinks</target>
         <note from="translator">link to console/manage drinks</note>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
-          <context context-type="linenumber">22</context>
-        </context-group>
+        
         <note from="description" priority="1">Sidebar</note>
         <note from="meaning" priority="1">link to console/manage drinks</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">app/sidebar/index/index.component.ts</context><context context-type="linenumber">23</context></context-group></trans-unit>
       <trans-unit id="4fc0481716e9d3e3d0dfc11fa4ab8be2b1166412" approved="yes">
         <source xml:space="preserve">Guthaben verwalten</source>
         <target xml:space="preserve">Manage credit</target>
         <note from="translator">link to console/manage credit</note>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/sidebar/index/index.component.ts</context>
-          <context context-type="linenumber">23</context>
-        </context-group>
+        
         <note from="description" priority="1">Sidebar</note>
         <note from="meaning" priority="1">link to console/manage credit</note>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">app/sidebar/index/index.component.ts</context><context context-type="linenumber">24</context></context-group></trans-unit>
     </body>
   </file>
   <file original="app/console/component-list-dialog/component-list-dialog.component.ts" datatype="plaintext" source-language="de" target-language="en">

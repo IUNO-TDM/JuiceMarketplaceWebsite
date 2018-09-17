@@ -1,0 +1,6 @@
+{
+  "watch": ["src"],
+  "ignore": ["src/**/*.spec.ts"],
+  "ext": "html,js,css",
+  "exec": "for i in de en; do ng build --prod --sourcemaps --build-optimizer --aot --base-href=/$i/ --outputPath=dist/$i --i18nFile=src/i18n/messages.$i.xlf --i18nFormat=xlf --locale=$i; done"
+}

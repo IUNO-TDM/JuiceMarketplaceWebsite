@@ -9,42 +9,42 @@
         </button>
     </div> -->
 </div>
-<form>
-<div *ngIf="recipesLeft > 0" fxLayout="column" fxLayoutGap="10px">
-    <mat-card class="iuno-card" id="programCard">
-        <mat-card-header>
-            <mat-card-title>
-                <span class="card-title" i18n>Rezeptur</span>
-            </mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-            <app-message-box *ngIf="errorFields.program" type="error" i18n="error|create recipe - recipe missing">Bitte fügen Sie mindestens eine Zutat hinzu!</app-message-box>
-            <!-- <span class="error" *ngIf="errorFields.program">Bitte fügen Sie mindestens eine Zutat hinzu!</span> -->
-            <!-- <app-message-box type="error" *ngIf="errorMessages.indexOf('component') >= 0" i18n>Bitte fügen Sie mindestens eine Zutat hinzu!</app-message-box> -->
-            <div fxLayout.gt-md="row" fxLayout.lt-lg="column" fxFlex="100" fxLayoutAlign.gt-md="center start" fxLayoutAlign.lt-lg="center"
-                fxLayoutGap="30px" style="background-color: #0f00;">
-                <ng-container *ngIf="!isBeakerEditModeEnabled">
-                    <div fxLayoutAlign="center center" fxFlex="30" fxShow.lt-lg="false" style="background-color: #ff00;">
-                        <cocktail-component-list [showRecommended]="showRecommendedComponents" [showAvailable]="showAvailableComponents" [showInstalled]="showInstalledComponents"
-                            style="width: 300px; height: 450px;" i18n-removeComponentText i18n-searchComponentTitle i18n-recommendedComponentsTitle
-                            i18n-installedComponentsTitle i18n-availableComponentsTitle i18n-emptySearchResultText removeComponentText="Zutat hier ablegen<br>um diese zu entfernen."
+<form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
+    <div *ngIf="recipesLeft > 0" fxLayout="column" fxLayoutGap="10px">
+        <mat-card class="iuno-card" id="programCard">
+            <mat-card-header>
+                <mat-card-title>
+                    <span class="card-title" i18n>Rezeptur</span>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content fxLayout="column" fxLayoutGap="15px">
+                <app-message-box *ngIf="errorFields.program" fxFlex="100" type="error" i18n="error|create recipe - recipe missing">Bitte fügen Sie mindestens eine Zutat hinzu!</app-message-box>
+                <!-- <span class="error" *ngIf="errorFields.program">Bitte fügen Sie mindestens eine Zutat hinzu!</span> -->
+                <!-- <app-message-box type="error" *ngIf="errorMessages.indexOf('component') >= 0" i18n>Bitte fügen Sie mindestens eine Zutat hinzu!</app-message-box> -->
+                <div fxLayout.gt-xs="row" fxLayout.lt-sm="column" fxLayoutAlign="center" fxLayoutGap="30px" style="background-color: #0f00;">
+                    <!-- <ng-container *ngIf="!isBeakerEditModeEnabled"> -->
+                    <div fxShow fxHide.lt-lg="true" fxLayoutAlign="center center"  fxFlex.gt-md="320px" fxFlex.lt-lg="auto" style="background-color: #ff00;">
+                        <cocktail-component-list (fxShow)="!isBeakerEditModeEnabled" (fxHide)="!isBeakerEditModeEnabled" [showRecommended]="showRecommendedComponents"
+                            [showAvailable]="showAvailableComponents" [showInstalled]="showInstalledComponents" style="width: 300px; height: 450px;"
+                            i18n-removeComponentText i18n-searchComponentTitle i18n-recommendedComponentsTitle i18n-installedComponentsTitle
+                            i18n-availableComponentsTitle i18n-emptySearchResultText removeComponentText="Zutat hier ablegen<br>um diese zu entfernen."
                             searchComponentTitle="Suchen" recommendedComponentsTitle="Vorgeschlagene Komponenten" installedComponentsTitle="Installierte Komponenten"
                             availableComponentsTitle="Alle Komponenten" emptySearchResultText="Keine Komponenten gefunden."></cocktail-component-list>
                     </div>
-                </ng-container>
-                <div style="background-color: #0ff0;" fxFlex.gt-md="300px" fxFlex.lt-lg="auto" fxLayoutAlign="center center">
-                    <cocktail-beaker #beaker [cocktail]="cocktail" (onSelectComponent)="selectComponent($event)" style="width: 300px; height: 450px;"
-                        i18n-dragComponentText i18n-touchComponentText dragComponentText="Zutat per<br>Drag & Drop<br>hinzufügen."
-                        touchComponentText="Hier tippen um Zutat<br>hinzuzufügen."></cocktail-beaker>
+                    <!-- </ng-container> -->
+                    <div style="background-color: #0ff0;" fxFlex.gt-md="300px" fxFlex.lt-lg="auto" fxLayoutAlign="center center">
+                        <cocktail-beaker #beakerComponent [cocktail]="cocktail" (onSelectComponent)="selectComponent($event)" style="width: 300px; height: 450px;"
+                            i18n-dragComponentText i18n-touchComponentText dragComponentText="Zutat per<br>Drag & Drop<br>hinzufügen."
+                            touchComponentText="Hier tippen um Zutat<br>hinzuzufügen."></cocktail-beaker>
+                    </div>
+                    <div style="background-color:  #00f0;" fxLayoutAlign.gt-md="center start" fxFlex.gt-md="320px" fxFlex.lt-lg="auto" fxLayoutAlign.lt-lg="center start">
+                        <cocktail-ingredients-listing [cocktail]="cocktail" fxFlexFill i18n-ingredientTitle i18n-amountTitle i18n-noIngredients ingredientTitle="Zutat"
+                            amountTitle="Menge" noIngredients="Es wurden noch keine Zutaten<br>hinzugefügt."></cocktail-ingredients-listing>
+                    </div>
                 </div>
-                <div style="background-color:  #00f0;" fxLayoutAlign.gt-md="center start" fxFlex.gt-md="320px" fxFlex.lt-lg="auto" fxLayoutAlign.lt-lg="center start">
-                    <cocktail-ingredients-listing [cocktail]="cocktail" fxFlexFill i18n-ingredientTitle i18n-amountTitle i18n-noIngredients ingredientTitle="Zutat"
-                        amountTitle="Menge" noIngredients="Es wurden noch keine Zutaten<br>hinzugefügt."></cocktail-ingredients-listing>
-                </div>
-            </div>
-        </mat-card-content>
-    </mat-card>
-    <mat-card class="iuno-card" id="detailsCard">
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="iuno-card" id="detailsCard">
             <!-- <mat-card fxFill class="iuno-card mat-elevation-z2"> -->
             <mat-card-header>
                 <mat-card-title>
@@ -53,28 +53,34 @@
             </mat-card-header>
             <mat-card-content fxLayout="row">
                 <div fxFlex="100">
-                        <app-message-box fxFlexFill *ngIf="errorFields.title || errorFields.description || errorFields.licenseFee" type="error" style="margin: 0px; margin-top: -1.5em;">
-                                <ng-container *ngIf="errorFields.title" i18n="error|create recipe - title missing">Bitte geben Sie einen Titel ein!<br></ng-container>
-                                <ng-container *ngIf="errorFields.description" i18n="error|create recipe - description missing">Bitte geben Sie einen Beschreibungstext ein!<br></ng-container>
-                                <ng-container *ngIf="errorFields.licenseFee" i18n="error|create recipe - license fee missing">Bitte wählen Sie eine Lizenzgebühr aus!<br></ng-container>
-                            </app-message-box>
-                <mat-card-content>
+                    <app-message-box fxFlexFill *ngIf="errorFields.title || errorFields.description || errorFields.licenseFee" type="error" style="margin: 0px; margin-top: -1.5em;">
+                        <ng-container *ngIf="errorFields.title" i18n="error|create recipe - title missing">Bitte geben Sie einen Titel ein!
+                            <br>
+                        </ng-container>
+                        <ng-container *ngIf="errorFields.description" i18n="error|create recipe - description missing">Bitte geben Sie einen Beschreibungstext ein!
+                            <br>
+                        </ng-container>
+                        <ng-container *ngIf="errorFields.licenseFee" i18n="error|create recipe - license fee missing">Bitte wählen Sie eine Lizenzgebühr aus!
+                            <br>
+                        </ng-container>
+                    </app-message-box>
+                    <mat-card-content>
                         <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center" class="productdetails">
                             <!-- recipe title -->
                             <mat-form-field fxFlexFill>
-                                <input matInput [(ngModel)]="recipeName" name="recipeName" placeholder="Titel" i18n-placeholder>
+                                <input matInput formControlName="name" placeholder="Titel" i18n-placeholder>
                             </mat-form-field>
                             <!-- <span class="error" *ngIf="errorFields.title">Bitte geben Sie einen Titel ein!</span> -->
 
                             <!-- recipe description -->
                             <mat-form-field fxFlexFill>
-                                <textarea matInput [(ngModel)]="recipeDescription" name="recipeDescription" placeholder="Beschreibung" style="width: 100%; height: 100px;" i18n-placeholder></textarea>
+                                <textarea matInput formControlName="description" placeholder="Beschreibung" style="width: 100%; height: 100px;" i18n-placeholder></textarea>
                             </mat-form-field>
                             <!-- <span class="error" *ngIf="errorFields.description">Bitte geben Sie einen Beschreibungstext ein!</span> -->
 
                             <!-- recipe license fee -->
                             <mat-form-field fxFlexFill>
-                                <mat-select placeholder="Lizenzgebühr" [(ngModel)]="recipeLicenseFee" name="licenseFee" i18n-placeholder>
+                                <mat-select placeholder="Lizenzgebühr" formControlName="licenseFee" i18n-placeholder>
                                     <mat-option *ngFor="let fee of licenseFees" [value]="fee">
                                         {{fee | number:'1.2-2'}} IUNO
                                     </mat-option>
@@ -85,41 +91,41 @@
                     </mat-card-content>
                 </div>
             </mat-card-content>
-        <!-- </mat-card>
+            <!-- </mat-card>
         <mat-card class="iuno-card"> -->
-    </mat-card>
-    <mat-card class="iuno-card">
-        <mat-card-header>
-            <mat-card-title>
-                <span class="card-title" i18n>Bild</span>
-            </mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-            <div fxFlex="100" fxLayoutAlign="center">
-                <app-recipe-image-picker #recipeImagePicker></app-recipe-image-picker>
-            </div>
+        </mat-card>
+        <mat-card class="iuno-card">
+            <mat-card-header>
+                <mat-card-title>
+                    <span class="card-title" i18n>Bild</span>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <div fxFlex="100" fxLayoutAlign="center">
+                    <app-recipe-image-picker #recipeImagePicker></app-recipe-image-picker>
+                </div>
 
-        </mat-card-content>
-    </mat-card>
-    <div fxLayoutAlign="center center">
-        <button (click)="actionSaveRecipe()" mat-raised-button color="primary" class="mat-elevation-z1" i18n>Speichern</button>
+            </mat-card-content>
+        </mat-card>
+        <div fxLayoutAlign="center center">
+            <button [disabled]="!recipeForm.valid" type="submit" mat-raised-button color="primary" class="mat-elevation-z1" i18n>Speichern</button>
+        </div>
+
     </div>
 
-</div>
-
-<div *ngIf="recipesLeft < 1">
-    <mat-card class="iuno-card">
-        <mat-card-header i18n>Rezeptlimit erreicht!</mat-card-header>
-        <mat-card-content i18n>Sie haben bereits ihr Limit von {{recipeLimit}} Rezepten am Marktplatz erreicht.
-            <br>
-        </mat-card-content>
-        <!-- <mat-card-actions>
+    <div *ngIf="recipesLeft < 1">
+        <mat-card class="iuno-card">
+            <mat-card-header i18n>Rezeptlimit erreicht!</mat-card-header>
+            <mat-card-content i18n>Sie haben bereits ihr Limit von {{recipeLimit}} Rezepten am Marktplatz erreicht.
+                <br>
+            </mat-card-content>
+            <!-- <mat-card-actions>
                 <div fxFlex="100" fxLayoutAlign="center center">
                     <button (click)="actionSaveRecipe()" mat-raised-button color="primary" class="mat-elevation-z1">
                         Speichern
                     </button>
                 </div>
             </mat-card-actions> -->
-    </mat-card>
-</div>
+        </mat-card>
+    </div>
 </form>
