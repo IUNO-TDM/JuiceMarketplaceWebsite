@@ -692,11 +692,22 @@
         </context-group>
         <note priority="1" from="description">intro text</note>
       </trans-unit>
+      <trans-unit id="a33138be8c9fce88eba04363d4518be574f66a4e" datatype="html">
+        <source>
+                        Wir sind vom 16.10. bis 18.10. mit unserer Mischmaschine zusammen mit WIBU auf dem <x id="START_LINK" ctype="x-a" equiv-text="&lt;a>"/>IOTSWC 2018<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/> in Barcelona. Besuchen Sie uns gerne auf einen leckeren Cocktail! 
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <note priority="1" from="description">news</note>
+        <note priority="1" from="meaning">section</note>
+      </trans-unit>
       <trans-unit id="3f12ced55bd8d55d5cadadb4850d06e292f67c20" datatype="html">
         <source>Was macht IUNO?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">44</context>
+          <context context-type="linenumber">37</context>
         </context-group>
         <note priority="1" from="description">IUNO</note>
         <note priority="1" from="meaning">section header</note>
@@ -709,7 +720,7 @@
             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">45</context>
+          <context context-type="linenumber">38</context>
         </context-group>
         <note priority="1" from="description">IUNO</note>
         <note priority="1" from="meaning">section</note>
@@ -718,37 +729,38 @@
         <source>Technologiedatenmarktplatz</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">56</context>
+          <context context-type="linenumber">49</context>
         </context-group>
         <note priority="1" from="description">Technologiedatenmarktplatz</note>
         <note priority="1" from="meaning">section header</note>
       </trans-unit>
-      <trans-unit id="859febd8a92c46a05920275d04b7f0a7a86c8fbf" datatype="html">
+      <trans-unit id="72128c952923920209dfb9076ab9202a7741484a" datatype="html">
         <source>
                 Der Technologiedatenmarktplatz ermöglicht Daten bedarfsgerecht zu handeln, die für einen
                 Herstellungsprozeß benötigt werden. Für den bedarfsgerechten Handel ist es notwendig, daß die
                 gehandelten Daten auch nur wie gekauft verwendet werden, sprich pro Stück oder pro Zeiteinheit. Der
-                erarbeitete Demonstrator gewährt diese Sicherheit über die lizenzgerechte Nutzung der gehandelten Daten.
+                erarbeitete Demonstrator gewährt diese Sicherheit über die lizenzgerechte Nutzung der gehandelten
+                Daten.
             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">57</context>
+          <context context-type="linenumber">50</context>
         </context-group>
         <note priority="1" from="description">Technologiedatenmarktplatz</note>
         <note priority="1" from="meaning">section</note>
       </trans-unit>
-      <trans-unit id="22cb48d4ebba8a1ce65b66ce2bc71a3d1f8b3fd6" datatype="html">
-        <source>https://www.youtube-nocookie.com/embed/1CTcGxSz2yc?rel=0&amp;showinfo=0&amp;autoplay=1</source>
+      <trans-unit id="3ed9d9721f2b215bcfb3719592969cdba54d8fba" datatype="html">
+        <source>https://www.youtube-nocookie.com/embed/1CTcGxSz2yc?rel=0&amp;showinfo=0</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">66</context>
+          <context context-type="linenumber">60</context>
         </context-group>
       </trans-unit>
       <trans-unit id="e9e61cddcc667445059d1706cff6f2720beb4048" datatype="html">
         <source>Warum Cocktailrezepte?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">77</context>
+          <context context-type="linenumber">72</context>
         </context-group>
         <note priority="1" from="description">Warum Cocktailrezepte</note>
         <note priority="1" from="meaning">section header</note>
@@ -764,7 +776,7 @@
             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">78</context>
+          <context context-type="linenumber">73</context>
         </context-group>
         <note priority="1" from="description">Warum Cocktailrezepte</note>
         <note priority="1" from="meaning">section</note>
@@ -773,7 +785,7 @@
         <source>Der Marktplatz ist live!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">95</context>
+          <context context-type="linenumber">90</context>
         </context-group>
         <note priority="1" from="description">Marktplatz ist live</note>
         <note priority="1" from="meaning">section header</note>
@@ -785,7 +797,7 @@
             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">96</context>
+          <context context-type="linenumber">91</context>
         </context-group>
         <note priority="1" from="description">Marktplatz ist live</note>
         <note priority="1" from="meaning">section</note>
@@ -794,7 +806,7 @@
         <source>Lust am Ausprobieren?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">114</context>
+          <context context-type="linenumber">109</context>
         </context-group>
         <note priority="1" from="description">Lust am Ausprobieren</note>
         <note priority="1" from="meaning">section header</note>
@@ -805,7 +817,7 @@
             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">115</context>
+          <context context-type="linenumber">110</context>
         </context-group>
         <note priority="1" from="description">Lust am Ausprobieren</note>
         <note priority="1" from="meaning">section</note>
@@ -816,7 +828,7 @@
             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">121</context>
+          <context context-type="linenumber">116</context>
         </context-group>
         <note priority="1" from="description">Lust am Ausprobieren</note>
         <note priority="1" from="meaning">section add</note>
@@ -825,7 +837,7 @@
         <source>Über uns</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">131</context>
+          <context context-type="linenumber">126</context>
         </context-group>
         <note priority="1" from="description">Team</note>
         <note priority="1" from="meaning">section header</note>
@@ -834,83 +846,86 @@
         <source>Das Team hinter dem Projekt:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">133</context>
+          <context context-type="linenumber">128</context>
         </context-group>
         <note priority="1" from="description">Team</note>
         <note priority="1" from="meaning">section</note>
       </trans-unit>
-      <trans-unit id="3644dfd10f2f105f1e2d1a39860a97396cf2f52a" datatype="html">
+      <trans-unit id="600225ba0450d546aee95582b888c89f97b035fe" datatype="html">
         <source>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Experte für Industrie 4.0 Kommunikation und Security
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Hans-Peter Bock ist Architekt, Ideengeber und Leiter der Entwicklung des Technologiedatenmarktplatz-Ökosystems.
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    Experte für Industrie 4.0 Kommunikation und Security
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    Hans-Peter Bock ist Architekt, Ideengeber und Leiter der Entwicklung des
+                    Technologiedatenmarktplatz-Ökosystems.
                 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">159</context>
+          <context context-type="linenumber">154</context>
         </context-group>
         <note priority="1" from="description">Team - hpbock</note>
         <note priority="1" from="meaning">section</note>
       </trans-unit>
-      <trans-unit id="138c447f93455e68a7816388293a3ec078e36c80" datatype="html">
+      <trans-unit id="4b42601c7e799a26454b3444080f3047faa289fe" datatype="html">
         <source>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                System Developer for New Technologies
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Manuel Beuttler hat im Projekt den Überblick über das Zusammenspiel der verschiedenen Komponenten.
-                Er verantwortet die Web-Services, sowie Spezifikation und Absicherung der Schnittstellen.
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    System Developer for New Technologies
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    Manuel Beuttler hat im Projekt den Überblick über das Zusammenspiel der verschiedenen Komponenten.
+                    Er verantwortet die Web-Services, sowie Spezifikation und Absicherung der Schnittstellen.
                 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">176</context>
+          <context context-type="linenumber">173</context>
         </context-group>
         <note priority="1" from="description">Team - mbeuttler</note>
         <note priority="1" from="meaning">section</note>
       </trans-unit>
-      <trans-unit id="72aeb28d126937e4b27abaebd901e0e1be7ad9ac" datatype="html">
+      <trans-unit id="61bd11cb1a18331309446ac6990415cba0f986a5" datatype="html">
         <source>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                System Architect for Enabling Technologies
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Christan Görg entwickelt das Bezahlsystem hinter dem Technologiedatenmarktplatz
-                und verantwortet den sicheren Umgang mit Technologiedaten auf der Maschinen-Steuerung.
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    System Architect for Enabling Technologies
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    Christan Görg entwickelt das Bezahlsystem hinter dem Technologiedatenmarktplatz
+                    und verantwortet den sicheren Umgang mit Technologiedaten auf der Maschinen-Steuerung.
                 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">193</context>
+          <context context-type="linenumber">191</context>
         </context-group>
         <note priority="1" from="description">Team - cgoerg</note>
         <note priority="1" from="meaning">section</note>
       </trans-unit>
-      <trans-unit id="703e286e320549b880e78248df81aeec4b25680e" datatype="html">
+      <trans-unit id="11e8f0115be88e421b74a5eae7d7a7bcff90632a" datatype="html">
         <source>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                System Architect for Big Data and Analytics
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Marcel Ely Gomes arbeitet am Herzen des Technologiedaten Marktplatz.
-                Er verantwortet das Datenbankdesign und entwickelt die Datenbank spezifischen Sicherheitskonzepte.
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    System Architect for Big Data and Analytics
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    Marcel Ely Gomes arbeitet am Herzen des Technologiedaten Marktplatz.
+                    Er verantwortet das Datenbankdesign und entwickelt die Datenbank spezifischen Sicherheitskonzepte.
                 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">210</context>
+          <context context-type="linenumber">209</context>
         </context-group>
         <note priority="1" from="description">Team - mgomes</note>
         <note priority="1" from="meaning">section</note>
       </trans-unit>
-      <trans-unit id="d2542323b64d2177b921df4afe86691d271e9bac" datatype="html">
+      <trans-unit id="ff9f15d04888369a4de1aa674d77f4700f5e30de" datatype="html">
         <source>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Experte für Informations- und Kommunikationstechnologien in Produktionsnetzwerken
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Klaus Bauer leitet den Bereich Basistechnologien bei TRUMPF und ist Visionsgeber des Technologiedatenmarktplatz.
-                <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Er beschrieb die Ideen dieses Marktplatzes bereits in den Umsetzungsempfehlungen von Industrie 4.0 und der Smart Service Welt.
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    Experte für Informations- und Kommunikationstechnologien in Produktionsnetzwerken
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    Klaus Bauer leitet den Bereich Basistechnologien bei TRUMPF und ist Visionsgeber des
+                    Technologiedatenmarktplatz.
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                    Er beschrieb die Ideen dieses Marktplatzes bereits in den Umsetzungsempfehlungen von Industrie 4.0
+                    und der Smart Service Welt.
                 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
