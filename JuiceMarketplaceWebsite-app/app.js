@@ -86,27 +86,28 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.use('/de', function(req, res) {
     res.cookie('language', 'de');
     res.sendFile(path.join(__dirname, 'dist/de/index.html'));
-})
+});
 
 // This route handles all requests to /en which are not served by the '/' rule.
 // These are especially routes which are angular internal routings.
 app.use('/en', function(req, res) {
     res.cookie('language', 'en');
     res.sendFile(path.join(__dirname, 'dist/en/index.html'));
-})
+});
 
 // This route selects the preferred language of the browser
 // and redirects the client. If the preferred language is not
 // supported, the browser is redirected to 'en'.
 
 app.use('/', function(req, res, next) {
-    var preferredLanguage = req.acceptsLanguages('de', 'en')
+    let preferredLanguage = req.acceptsLanguages('de', 'en');
     if (!preferredLanguage) {
         preferredLanguage = 'en'
     }
-    var targetPath = path.join('/', preferredLanguage, req.path)
+    res.cookie('language', preferredLanguage);
+    const targetPath = path.join('/', preferredLanguage, req.path);
     res.redirect(targetPath)
-})
+});
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
