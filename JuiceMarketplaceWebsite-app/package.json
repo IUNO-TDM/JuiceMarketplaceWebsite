@@ -58,7 +58,7 @@
     "ng2-google-charts": "^3.4.0",
     "ngx-cookieconsent": "^1.0.1",
     "ngx-i18nsupport": "^0.17.0",
-    "ngx-md": "^3.1.1",
+    "ngx-md": "^6.0.3",
     "passport": "^0.3.2",
     "passport-google-oauth": "^1.0.0",
     "passport-local": "^1.0.0",
