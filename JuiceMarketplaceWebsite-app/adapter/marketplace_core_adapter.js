@@ -335,67 +335,9 @@ self.getTopTechnologyData = function (from, to, limit, token, callback) {
     doRequest(options, callback);
 };
 
-self.getTotalRevenue = function (from, to, detail, token, callback) {
-
-    const options = buildOptionsForRequest(
-        'GET',
-        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PROTOCOL,
-        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.HOST,
-        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PORT,
-        '/reports/revenue',
-        {
-            from: from,
-            to: to,
-            detail: detail,
-            technologyuuid: CONFIG.TECHNOLOGY_UUID
-        }
-    );
-    options.headers.authorization = 'Bearer ' + token.accessToken;
-
-    doRequest(options, callback);
-};
 //</editor-fold>
 
 //<editor-fold desc="User (Non-Public) Reports">
-// getRevenueForUser
-self.getRevenueForUser = function (user, from, to, accessToken, callback) {
-
-    const options = buildOptionsForRequest(
-        'GET',
-        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PROTOCOL,
-        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.HOST,
-        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PORT,
-        '/reports/revenue/user',
-        {
-            user: user,
-            from: from,
-            to: to,
-            technologyuuid: CONFIG.TECHNOLOGY_UUID
-        }
-    );
-    options.headers.authorization = 'Bearer ' + accessToken;
-
-    doRequest(options, callback);
-};
-// getRevenueHistory
-self.getRevenueHistory = function (accessToken, from, to, callback) {
-
-    const options = buildOptionsForRequest(
-        'GET',
-        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PROTOCOL,
-        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.HOST,
-        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PORT,
-        '/reports/revenue/technologydata/history',
-        {
-            from: from,
-            to: to,
-            technologyuuid: CONFIG.TECHNOLOGY_UUID
-        }
-    );
-    options.headers.authorization = 'Bearer ' + accessToken;
-
-    doRequest(options, callback);
-};
 // getTopTechnologyDataForUser
 self.getTopTechnologyDataForUser = function (user, accessToken, from, to, limit, token, callback) {
 
@@ -419,92 +361,6 @@ self.getTopTechnologyDataForUser = function (user, accessToken, from, to, limit,
 };
 //</editor-fold>
 
-
-self.getCumulatedVaultBalanceForUser = function (user, accessToken, callback) {
-    const options = buildOptionsForRequest(
-        'GET',
-        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PROTOCOL,
-        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.HOST,
-        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PORT,
-        '/vault/users/' + user + '/balance',
-        null);
-    options.headers.authorization = 'Bearer ' + accessToken;
-
-    doRequest(options, callback);
-};
-
-self.getVaultWalletsForUser = function (user, accessToken, callback) {
-    const options = buildOptionsForRequest(
-        'GET',
-        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PROTOCOL,
-        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.HOST,
-        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PORT,
-        '/vault/users/' + user + '/wallets',
-        null);
-    options.headers.authorization = 'Bearer ' + accessToken;
-
-    doRequest(options, callback);
-};
-self.getVaultWalletForUserAndWalletId = function (user, walletId, accessToken, callback) {
-    const options = buildOptionsForRequest(
-        'GET',
-        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PROTOCOL,
-        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.HOST,
-        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PORT,
-        '/vault/users/' + user + '/wallets/' + walletId,
-        null);
-    options.headers.authorization = 'Bearer ' + accessToken;
-
-    doRequest(options, callback);
-};
-
-
-self.createVaultPayoutForUser = function (user, walletId, accessToken, payout, callback) {
-    const options = buildOptionsForRequest(
-        'POST',
-        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PROTOCOL,
-        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.HOST,
-        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PORT,
-        '/vault/users/' + user + '/wallets/' + walletId + '/payouts',
-        null);
-    options.body = payout;
-    options.headers.authorization = 'Bearer ' + accessToken;
-
-    doRequest(options, callback);
-};
-
-self.checkVaultPayoutForUser = function (user, walletId, accessToken, payout, callback) {
-    const options = buildOptionsForRequest(
-        'POST',
-        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PROTOCOL,
-        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.HOST,
-        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PORT,
-        '/vault/users/' + user + '/wallets/' + walletId + '/payouts/check',
-        null);
-    options.body = payout;
-    options.headers.authorization = 'Bearer ' + accessToken;
-
-    doRequest(options, callback);
-};
-
-self.getActivatedLicenseCountForUser = function (user, accessToken, callback) {
-
-    const options = buildOptionsForRequest(
-        'GET',
-        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PROTOCOL,
-        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.HOST,
-        CONFIG.HOST_SETTINGS.MARKETPLACE_CORE.PORT,
-        '/reports/licenses/count',
-        {
-            activated: true,
-            user: user,
-            technologyuuid: CONFIG.TECHNOLOGY_UUID
-        }
-    );
-    options.headers.authorization = 'Bearer ' + accessToken;
-
-    doRequest(options, callback);
-};
 
 self.getProtocols = function (eventType, clientId, from, to, limit, accessToken, callback) {
 
@@ -557,7 +413,6 @@ function mapToTdmRecipes(recipes) {
         recipe.id = r.technologydatauuid
         recipe.name = r.technologydataname
         recipe.description = r.technologydatadescription
-        recipe.licenseFee = r.licensefee
         recipe.program = r.technologydata
         recipe.backgroundColor = r.backgroundcolor
         recipe.components = mapToTdmComponents(r.componentlist)
@@ -574,7 +429,6 @@ function mapToTechnologyData(technologydata) {
         td.technologyId = r.technologyuuid;
         td.name = r.technologydataname;
         td.description = r.technologydatadescription;
-        td.licenseFee = r.licensefee;
         td.program = r.technologydata;
         td.backgroundColor = r.backgroundcolor;
         if(r.componentlist){

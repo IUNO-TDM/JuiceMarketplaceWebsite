@@ -5,7 +5,6 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {CreateRecipeComponent} from './create-recipe/create-recipe.component';
 import {RecipesComponent} from './recipes/recipes.component';
 import {AccessGuard} from './services/user.service';
-import {VaultComponent} from "./vault/vault.component";
 
 const routes: Routes = [
     {
@@ -14,7 +13,6 @@ const routes: Routes = [
             {path: 'dashboard', component: DashboardComponent, canActivate: [AccessGuard]},
             {path: 'create-recipe', component: CreateRecipeComponent, canActivate: [AccessGuard]},
             {path: 'recipes', component: RecipesComponent, canActivate: [AccessGuard]},
-            {path: 'vault', component: VaultComponent, canActivate: [AccessGuard]},
             {path: 'admin-dashboard', loadChildren: './admin-dashboard/admin-dashboard.module#AdminDashboardModule', canActivate: [AccessGuard]},
         ]
     },

@@ -8,8 +8,6 @@ const marketplaceCore = require('../adapter/marketplace_core_adapter');
 const authService = require('../adapter/auth_service_adapter');
 const logger = require('../global/logger');
 const helper = require('../services/helper_service');
-const encryption = require('../services/encryption_service');
-const recipeLimitService = require('../services/recipe_limit_service');
 const imageService = require('../services/image_service');
 const authenticationService = require('../services/authentication_service');
 
@@ -77,14 +75,7 @@ router.get('/:id/recipes/limit', authenticationService.paramIsEqualToSessionUser
     query: validation_schema.Empty,
     body: validation_schema.Empty
 }), function (req, res, next) {
-    marketplaceCore.getActivatedLicenseCountForUser(req.params['id'], req.user.token.accessToken, function (err, activatedLicenses) {
-        if (err) {
-            return next(err);
-        }
-
-        return res.json({limit: recipeLimitService.calculateRecipeLimit(activatedLicenses)});
-
-    });
+    return res.json({limit: CONFIG.RECIPE_LIMIT_PER_USER});
 });
 /**
  * Returns the amount of recipes the user already published on the marketplace
@@ -114,12 +105,8 @@ router.post('/:id/recipes', authenticationService.paramIsEqualToSessionUser('id'
         if (err) {
             return next(err);
         }
-        marketplaceCore.getActivatedLicenseCountForUser(req.params['id'], req.user.token.accessToken, function (err, activatedLicenses) {
-            if (err) {
-                return next(err);
-            }
-
-            const limit = recipeLimitService.calculateRecipeLimit(activatedLicenses);
+        {
+            const limit = CONFIG.RECIPE_LIMIT_PER_USER;
 
             if (recipes.length >= limit) {
                 logger.info('Recipe limit reached. Only a maximum of ' + limit + ' recipes is allowed per user.');
@@ -133,7 +120,6 @@ router.post('/:id/recipes', authenticationService.paramIsEqualToSessionUser('id'
             // recipe information for further processing
             const name = recipe['name'].trim();
             const description = recipe['description'].trim();
-            const licenseFee = recipe['licenseFee'];
 
             // check metadata
             let valid = true;
@@ -146,11 +132,6 @@ router.post('/:id/recipes', authenticationService.paramIsEqualToSessionUser('id'
             if (!description || description.length < 1) {
                 logger.warn('Submitted recipe: Description is missing');
                 validText = 'Beschreibung fehlt.';
-                valid = false;
-            }
-            if (!licenseFee) {
-                logger.warn('Submitted recipe: License Fee is missing');
-                validText = 'Lizenzgebühr fehlt.';
                 valid = false;
             }
 
@@ -209,23 +190,12 @@ router.post('/:id/recipes', authenticationService.paramIsEqualToSessionUser('id'
                 return res.send('Ungültiges Rezept: ' + validText);
             }
 
-            let encryptedProgram;
-            // Encrypt the recipe using our own encryption before passing it to the marketplace core
-            try {
-                const machineProgramString = JSON.stringify(machineProgram);
-                encryptedProgram = encryption.encryptData(machineProgramString);
-            }
-            catch (err) {
-                return res.sendStatus(500);
-            }
-
             const coreData = {};
 
             coreData.technologyDataName = name;
-            coreData.technologyData = encryptedProgram;
+            coreData.technologyData = machineProgram;
             coreData.technologyDataDescription = description;
             coreData.technologyUUID = CONFIG.TECHNOLOGY_UUID;
-            coreData.licenseFee = licenseFee;
             coreData.componentList = componentIds;
             coreData.backgroundColor = recipe.backgroundColor;
             coreData.image = recipe.imageRef ? imageService.loadImage(recipe.imageRef + '.svg'): undefined;
@@ -245,7 +215,7 @@ router.post('/:id/recipes', authenticationService.paramIsEqualToSessionUser('id'
                 res.sendStatus(201);
             });
 
-        });
+        }
     });
 });
 
@@ -281,6 +251,5 @@ router.put('/:user_id/image', authenticationService.paramIsEqualToSessionUser('u
 
 router.use('/:user_id/recipes', authenticationService.paramIsEqualToSessionUser('user_id'), require('./recipes'));
 router.use('/:id/reports', authenticationService.paramIsEqualToSessionUser('id'), require('./user_reports'));
-router.use('/:id/vault', authenticationService.paramIsEqualToSessionUser('id'), require('./vault'));
 
 module.exports = router;

@@ -6,16 +6,16 @@ self.Empty = {
     additionalProperties: false
 };
 
+// Keycloak adds further parameters (session_state, iss, state, ...)
 self.IUNO_Callback_Query = {
     type: 'object',
     properties: {
         code: {
-            type: 'string',
-            pattern: '^[a-z0-9]{40}$'
+            type: 'string'
         }
     },
     required: ['code'],
-    additionalProperties: false
+    additionalProperties: true
 };
 
 module.exports = self;

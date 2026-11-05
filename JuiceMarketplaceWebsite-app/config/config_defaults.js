@@ -1,56 +1,54 @@
 /**
- * Created by beuttlerma on 18.04.17.
+ * Configuration of the JuiceMarketplaceWebsite.
+ * All values can be overridden by environment variables.
  */
 
+const env = process.env;
 
-var self = {};
+function parseUrl(urlString) {
+    const u = new URL(urlString);
+    return {
+        PROTOCOL: u.protocol.replace(':', ''),
+        HOST: u.hostname,
+        PORT: u.port || (u.protocol === 'https:' ? 443 : 80)
+    };
+}
 
+function stripTrailingSlash(url) {
+    return url.replace(/\/+$/, '');
+}
 
-// ---- CONFIGURATION EXPORT ----
-self.LOG_LEVEL = 'debug';
+const publicScheme = env.PUBLIC_SCHEME || 'http';
+const publicHost = env.PUBLIC_HOST || 'localhost';
 
+const self = {};
+
+self.LOG_LEVEL = env.LOG_LEVEL || 'debug';
+
+self.CORE_URL = stripTrailingSlash(env.CORE_URL || 'http://localhost:3002');
 self.HOST_SETTINGS = {
-    MARKETPLACE_CORE: {
-        PROTOCOL: 'HTTP',
-        HOST: 'localhost',
-        PORT: 3002
-    },
-    OAUTH_SERVER_EXTERNAL: {
-        PROTOCOL: 'HTTP',
-        HOST: 'localhost',
-        PORT: 3005
-    },
-    OAUTH_SERVER_INTERNAL: {
-        PROTOCOL: 'HTTP',
-        HOST: 'localhost',
-        PORT: 3006
-    },
-    COUPON_SERVER: {
-        PROTOCOL: 'HTTP',
-        HOST: 'localhost',
-        PORT: 3010
-    }
+    MARKETPLACE_CORE: parseUrl(self.CORE_URL)
 };
+
+// Address of this website as seen by the browser (used as OIDC redirect URI base)
+self.PUBLIC_WEBSITE_URL = stripTrailingSlash(env.PUBLIC_WEBSITE_URL || (publicScheme + '://' + publicHost + ':3004'));
+
+// Keycloak, realm 'iuno'. The public URL is used for browser redirects, the internal URL for server-to-server calls.
+self.KEYCLOAK_REALM = env.KEYCLOAK_REALM || 'iuno';
+self.KEYCLOAK_PUBLIC_URL = stripTrailingSlash(env.KEYCLOAK_PUBLIC_URL || (publicScheme + '://' + publicHost + ':8080'));
+self.KEYCLOAK_INTERNAL_URL = stripTrailingSlash(env.KEYCLOAK_INTERNAL_URL || 'http://localhost:8080');
 
 self.OAUTH_CREDENTIALS = {
-    CLIENT_ID: '',
-    CLIENT_SECRET: '',
-    CALLBACK_URL: 'http://localhost:3004/auth/iuno/callback'
+    CLIENT_ID: env.WEBSITE_CLIENT_ID || 'marketplace-website',
+    CLIENT_SECRET: env.WEBSITE_CLIENT_SECRET || '',
+    CALLBACK_URL: self.PUBLIC_WEBSITE_URL + '/auth/callback'
 };
 
-self.TECHNOLOGY_UUID = 'da17a8fc-a5b3-40a4-b6a5-276667db027a';
+self.TECHNOLOGY_UUID = env.TECHNOLOGY_UUID || 'da17a8fc-a5b3-40a4-b6a5-276667db027a';
 
-self.PUBLIC_USER = {
-    username: 'public@iuno.com',
-    password: 'IsSecret'
-};
+self.RECIPE_LIMIT_PER_USER = parseInt(env.RECIPE_LIMIT_PER_USER, 10) || 20;
 
-self.PUBLIC_KEY_FILE_FOR_ENCRYPTION = 'resources/public_key_encryption.pem';
-
-self.RECIPE_LIMIT_PER_USER = 2;
-
-self.SESSION_SECRET = 'lbfifiou23bgofr2g18f12345121421pokdfsjga302lbfl2hbfdskb2o78gf324ougf232vksjhdvfakfviy3263972i';
-
-self.G_RE_CAPTCHA_SECRET = '';
+// Without a configured secret a random one is used; sessions are then lost on restart
+self.SESSION_SECRET = env.WEBSITE_SESSION_SECRET || require('crypto').randomBytes(32).toString('hex');
 
 module.exports = self;

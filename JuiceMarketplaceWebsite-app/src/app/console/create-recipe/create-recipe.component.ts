@@ -55,7 +55,6 @@ export class CreateRecipeComponent implements OnInit {
     recipeForm = new FormGroup({
         name: new FormControl('', [ Validators.required, Validators.minLength(1), Validators.maxLength(250)]),
         description: new FormControl('', [ Validators.required, Validators.minLength(1), Validators.maxLength(30000)]),
-        licenseFee: new FormControl('', [ Validators.required]),
     })
 
     // recipeForm: FormGroup
@@ -71,11 +70,9 @@ export class CreateRecipeComponent implements OnInit {
     showInstalledComponents = false;
     showAvailableComponents = true;
 
-    licenseFees: number[] = [0.25, 0.5, 0.75, 1.00];
     spinnerCounter = 0;
     // recipeName: string = "";
     // recipeDescription: string = "";
-    // recipeLicenseFee: number = -1;
     recipesLeft = 0;
     recipeLimit = 0;
     recipeCount = 0;
@@ -94,13 +91,11 @@ export class CreateRecipeComponent implements OnInit {
         // this.recipeForm = this.builder.group({
         //     title: ['', Validators.required],
         //     description: ['', Validators.required],
-        //     licenseFee: [-1, Validators.required]
         // })
         this.errorFields = {
             program: false,
             title: false,
-            description: false,
-            licenseFee: false
+            description: false
         }
 
         this.cocktail = new TdmCocktailProgram();
@@ -151,7 +146,6 @@ export class CreateRecipeComponent implements OnInit {
 
                 recipe.name = this.recipeForm.get('name').value;
                 recipe.description = this.recipeForm.get('description').value.trim();
-                recipe.licenseFee = this.recipeForm.get('licenseFee').value * 100000;
                 recipe.imageRef = this.recipeImagePicker.getSelectedImage();
                 recipe.backgroundColor = this.recipeImagePicker.backgroundColor;
 
@@ -173,14 +167,6 @@ export class CreateRecipeComponent implements OnInit {
                     valid = false;
                 } else {
                     this.errorFields.description = false
-                }
-                if (this.licenseFees.indexOf(this.recipeForm.get('licenseFee').value) < 0) {
-                    anchorName = "#detailsCard"
-                    this.errorFields.licenseFee = true
-                    // alert("Bitte wählen Sie eine Lizenzgebühr aus.");
-                    valid = false;
-                } else {
-                    this.errorFields.licenseFee = false
                 }
                 if ((this.cocktail.layers.length == 0 || this.cocktail.layers[0].components.length == 0)) {
                     anchorName = "#programCard"

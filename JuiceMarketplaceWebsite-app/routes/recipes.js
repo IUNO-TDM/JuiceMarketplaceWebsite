@@ -95,30 +95,6 @@ router.get('/', validate({
 });
 
 
-router.get('/licenses/count', validate({
-    query: validation_schema.License_Count_Query,
-    body: validation_schema.Empty
-}), function (req, res, next) {
-    logger.warn('[routes/recipes] NOT IMPLEMENTED YET');
-    res.send('NOT IMPLEMENTED YET');
-});
-
-router.get('/licenses/total', validate({
-    query: validation_schema.License_Total_Query,
-    body: validation_schema.Empty
-}), function (req, res, next) {
-    logger.warn('[routes/recipes] NOT IMPLEMENTED YET');
-    res.send('NOT IMPLEMENTED YET');
-});
-
-router.get('/licenses/total/history', validate({
-    query: validation_schema.License_History_Query,
-    body: validation_schema.Empty
-}), function (req, res, next) {
-    logger.warn('[routes/recipes] NOT IMPLEMENTED YET');
-    res.send('NOT IMPLEMENTED YET');
-});
-
 router.get('/:recipe_id', validate({
     query: validation_schema.Empty,
     body: validation_schema.Empty
@@ -145,23 +121,6 @@ router.delete('/:recipe_id', validate({
         }
         res.sendStatus(200);
     });
-});
-
-router.get('/:recipe_id/licenses/count', validate({
-    query: validation_schema.Recipe_License_Count_Query,
-    body: validation_schema.Empty
-}), function (req, res, next) {
-    logger.warn('[routes/recipes] NOT IMPLEMENTED YET');
-    res.send('NOT IMPLEMENTED YET');
-});
-
-
-router.get('/:recipe_id/licenses/count/history', validate({
-    query: validation_schema.Recipe_License_History_Query,
-    body: validation_schema.Empty
-}), function (req, res, next) {
-    logger.warn('[routes/recipes] NOT IMPLEMENTED YET');
-    res.send('NOT IMPLEMENTED YET');
 });
 
 router.get('/:recipe_id/image', validate({

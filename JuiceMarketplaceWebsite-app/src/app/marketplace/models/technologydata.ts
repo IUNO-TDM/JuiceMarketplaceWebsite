@@ -5,7 +5,6 @@ export class TechnologyData {
   technologyId: string;
   name: string;
   description: string;
-  licenseFee: number;
   backgroundColor: string;
   components: Array<Component>;
   juices: Array<Component>;

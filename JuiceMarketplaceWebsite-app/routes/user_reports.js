@@ -7,44 +7,6 @@ const validator = new Validator({allErrors: true});
 const validate = validator.validate;
 const validation_schema = require('../schema/user_reports_schema');
 
-router.get('/revenue', validate({
-    query: validation_schema.Revenue_Query,
-    body: validation_schema.Empty
-}), function (req, res, next) {
-    var token = req.user.token;
-
-    marketplaceCore.getRevenueForUser(
-        req.params['id'],
-        req.query['from'],
-        req.query['to'],
-        token['accessToken'],
-        function (err, recipes) {
-            if (err) {
-                return next(err);
-            }
-            res.send(recipes);
-        });
-});
-
-router.get('/revenue/history', validate({
-    query: validation_schema.Revenue_History_Query,
-    body: validation_schema.Empty
-}), function (req, res, next) {
-    var token = req.user.token;
-
-    marketplaceCore.getRevenueHistory(
-        token['accessToken'],
-        req.query['from'],
-        req.query['to'],
-        function (err, recipes) {
-            if (err) {
-                return next(err);
-            }
-            res.send(recipes);
-        });
-});
-
-
 router.get('/recipes/top', validate({
     query: validation_schema.Top_Query,
     body: validation_schema.Empty

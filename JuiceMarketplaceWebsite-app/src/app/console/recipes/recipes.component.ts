@@ -19,7 +19,7 @@ import {AccessGuard} from '../services/user.service';
 })
 
 export class RecipesComponent implements OnInit {
-    displayedColumns = ["position", "name", "description", "licensefee", "action"];
+    displayedColumns = ["position", "name", "description", "action"];
     dataSource = new MatTableDataSource<TdmCocktailRecipe>();
     errorMaxRecipes = false;
 

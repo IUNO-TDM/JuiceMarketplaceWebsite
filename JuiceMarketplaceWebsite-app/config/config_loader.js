@@ -1,37 +1,14 @@
 /**
- * Created by beuttlerma on 18.04.17.
+ * Loads the configuration (environment variables, see config_defaults.js).
  */
 
-/**
- * To use a custom config file use the config_default as a template.
- * Save the custom config file in the same directory. All files starting with private* will be ignored by git.
- *
- * Set the file name as environment variable for TDM_JMW_CONFIG.
- *
- * If the custom config is missing any variables, the default variables will be used.
- * If no custom config is defined, the default configuration will be loaded.
- *
- * @returns {config}
- */
+const config = require('./config_defaults');
 
-var config = require('./config_defaults');
-const ENV_NAME = 'TDM_JMW_CONFIG';
-if (process.env[ENV_NAME]) {
-    console.info('Loading configuration file: ' + process.env[ENV_NAME]);
-
-    try {
-        var customConfig = require('./' + process.env[ENV_NAME]);
-        // override default values from custom configuration
-        for (var key in customConfig) {
-            config[key] = customConfig[key];
-        }
-    }
-    catch (err) {
-        console.warn(err);
-    }
+if (!process.env.WEBSITE_SESSION_SECRET) {
+    console.warn('WEBSITE_SESSION_SECRET is not set. Using a random secret.');
 }
-else {
-    console.warn('ENV Variable: ' + ENV_NAME + ' not specified. Loading defaults only.');
+if (!config.OAUTH_CREDENTIALS.CLIENT_SECRET) {
+    console.warn('WEBSITE_CLIENT_SECRET is not set. Login will fail.');
 }
 
 module.exports = config;

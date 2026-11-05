@@ -2,20 +2,7 @@
 
 <div fxLayout="column" fxLayoutGap="10px">
     <div fxLayout.gt-md="row"  fxLayoutGap="10px" fxLayout="column">
-        <mat-card fxFlex.gt-md="60" class="iuno-card ">
-            <mat-card-header>
-                <mat-card-title>
-                    <span class="card-title" i18n>Umsatzverlauf im letzten Monat</span>
-                </mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                <google-chart *ngIf="revenueHistory && revenueHistory.length>0;else no_revenue_history" [data]="revenueHistoryData"></google-chart>
-
-                <ng-template #no_revenue_history><p class="nodata" i18n>Keine Daten vorhanden</p></ng-template>
-                <!--<div id='chart-revenue' style="padding: 10px;"></div>-->
-            </mat-card-content>
-        </mat-card>
-        <mat-card fxFlex.gt-md="40" class="iuno-card">
+        <mat-card fxFlex.gt-md="100" class="iuno-card">
             <mat-card-header>
                 <mat-card-title>
                     <span class="card-title" i18n>Top 5 im letzten Monat</span>
@@ -31,23 +18,7 @@
         <mat-card fxFlex.gt-md="50" class="iuno-card">
             <mat-card-header>
                 <mat-card-title>
-                    <span class="card-title" i18n>Lizenzverkäufe heute</span>
-                </mat-card-title>
-            </mat-card-header>
-            <mat-card-content fxLayoutAlign="center center" style="height: 100%;">
-            <span class="card-information" *ngIf="amountToday == null">
-              -
-            </span>
-                <span class="card-information" *ngIf="amountToday != null">
-              {{amountToday | number:'1.0'}}
-            </span>
-            </mat-card-content>
-        </mat-card>
-
-        <mat-card fxFlex.gt-md="50" class="iuno-card">
-            <mat-card-header>
-                <mat-card-title>
-                    <span class="card-title" i18n>Meistverkauftes Getränk</span>
+                    <span class="card-title" i18n>Beliebtestes Getränk</span>
                 </mat-card-title>
             </mat-card-header>
             <mat-card-content fxLayoutAlign="center center" style="height: 100%;">
@@ -56,21 +27,6 @@
                 </span>
                 <span class="card-information" *ngIf="topRecipeName != null">
                     {{topRecipeName}}
-                  </span>
-            </mat-card-content>
-        </mat-card>
-        <mat-card fxFlex.gt-md="50" class="iuno-card">
-            <mat-card-header>
-                <mat-card-title>
-                    <span class="card-title" i18n>Aktueller Kontostand</span>
-                </mat-card-title>
-            </mat-card-header>
-            <mat-card-content fxLayoutAlign="center center" style="height: 100%;">
-              <span class="card-information" *ngIf="vaultBalance == null">
-                  -x1
-                </span>
-                <span class="card-information" *ngIf="vaultBalance != null">
-                    {{vaultBalance | number:'1.0-5'}} IUNO
                   </span>
             </mat-card-content>
         </mat-card>

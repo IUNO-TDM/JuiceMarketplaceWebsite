@@ -88,10 +88,6 @@ export class IndexComponent implements OnInit {
         this.router.navigateByUrl('/console/recipes')
     }
 
-    openVault() {
-        this.router.navigateByUrl('/console/vault')
-    }
-
     openAdminDashboard() {
         this.router.navigateByUrl('/console/admin-dashboard');
     }

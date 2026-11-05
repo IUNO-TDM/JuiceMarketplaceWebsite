@@ -10,30 +10,6 @@ self.Empty = {
     additionalProperties: false
 };
 
-self.Revenue_Query = {
-    type: 'object',
-    properties: {
-        from: {
-            type: 'string',
-            format: 'date-time'
-        },
-        to: {
-            type: 'string',
-            format: 'date-time'
-        },
-        detail: {
-            type: 'string',
-            enum: ['day', 'hour']
-        }
-    },
-    required: [
-        'from',
-        'to',
-        'detail'
-    ],
-    additionalProperties: false
-};
-
 self.History_Query = {
     type: 'object',
     properties: {

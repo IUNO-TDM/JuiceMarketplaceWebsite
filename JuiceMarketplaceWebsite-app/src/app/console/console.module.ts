@@ -38,10 +38,7 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {UtilitiesModule} from '../utilities/utilities.module';
 import {AccessGuard} from './services/user.service';
 import {Ng2GoogleChartsModule} from "ng2-google-charts";
-import {VaultComponent} from './vault/vault.component';
-import {VaultPayoutDialogComponent} from './vault-payout-dialog/vault-payout-dialog.component';
 import {RecipeImagePickerModule} from "./recipe-image-picker/recipe-image-picker.module";
-import {VaultTestnetHelpDialogComponent} from "./vault-testnet-help-dialog/vault-testnet-help-dialog.component";
 
 import {CocktailConfiguratorModule, DragAndDropService} from 'cocktail-configurator'
 import {TdmCocktailComponentService} from 'tdm-common'
@@ -82,10 +79,7 @@ import {TdmCocktailComponentService} from 'tdm-common'
         ComponentListDialogComponent,
         CreateRecipeComponent,
         RecipesComponent,
-        DashboardComponent,
-        VaultComponent,
-        VaultPayoutDialogComponent,
-        VaultTestnetHelpDialogComponent
+        DashboardComponent
     ],
     providers: [
         AccessGuard,
@@ -95,8 +89,6 @@ import {TdmCocktailComponentService} from 'tdm-common'
     ],
     bootstrap: [ConsoleComponent],
     entryComponents: [
-        VaultPayoutDialogComponent,
-        VaultTestnetHelpDialogComponent,
         ComponentListDialogComponent,
     ]
 })

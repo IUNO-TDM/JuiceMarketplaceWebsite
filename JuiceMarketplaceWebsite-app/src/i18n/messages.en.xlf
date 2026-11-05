@@ -31,33 +31,29 @@
         <source>Titel</source>
         
         <target state="translated">Title</target>
-      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">71</context></context-group></trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">68</context></context-group></trans-unit>
       <trans-unit id="f09ad66c1ebf16217ba1a1072be7a98de2d95eac" datatype="html">
         <source>Beschreibung</source>
         <target state="translated">Description</target>
         
         
-      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">77</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/console/recipes/recipes.component.ts</context><context context-type="linenumber">27</context></context-group></trans-unit>
-      <trans-unit id="c51da9899fe9350fcc3f226a107341458a8a7640" datatype="html">
-        <source>Lizenzgebühr</source>
-        
-        <target state="translated">Licence fee</target>
-      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">83</context></context-group></trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">74</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/console/recipes/recipes.component.ts</context><context context-type="linenumber">27</context></context-group></trans-unit>
+      
       <trans-unit id="5ccc633c2e84a1ddb8f59dec8affa3af4aed7988" datatype="html">
         <source>Bild</source>
         
         <target state="translated">Image</target>
-      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">100</context></context-group></trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">87</context></context-group></trans-unit>
       <trans-unit id="05d6def11b80c405276ad18c4fc5183e8cea4f75" datatype="html">
         <source>Speichern</source>
         
         <target state="translated">Save</target>
-      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">111</context></context-group></trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">98</context></context-group></trans-unit>
       <trans-unit id="367e537f73ef5d6874808117f0d8376a5aab6811" datatype="html">
         <source>Rezeptlimit erreicht!</source>
         
         <target state="translated">Recipe limit reached!</target>
-      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">118</context></context-group></trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">105</context></context-group></trans-unit>
       
       <trans-unit id="adf103f42182c40380a2cca83020ede8447094b4" datatype="html">
         <source>Getränke verwalten</source>
@@ -101,34 +97,18 @@
         </context-group>
         <target state="translated">Drink name</target>
       </trans-unit>
-      <trans-unit id="12c40a8175a7959c9dab6ecd34f858c6901418b8" datatype="html">
-        <source>Lizenzgebühr (IUNOs)</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
-          <context context-type="linenumber">32</context>
-        </context-group>
-        <target state="translated">Licence fee (IUNOs)</target>
-      </trans-unit>
+      
       <trans-unit id="eda0838277daa4775a86e9b08c747922f33c0666" datatype="html">
         <source>Aktion</source>
         <target state="translated">Action</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
-          <context context-type="linenumber">42</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/vault/vault.component.ts</context>
-          <context context-type="linenumber">21</context>
-        </context-group>
-      </trans-unit>
+        
+        
+      <context-group purpose="location"><context context-type="sourcefile">app/console/recipes/recipes.component.ts</context><context context-type="linenumber">32</context></context-group></trans-unit>
       <trans-unit id="a813fd43c9a1b211fe541045d263d2c500c80f0f" datatype="html">
         <source>Löschen</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/recipes/recipes.component.ts</context>
-          <context context-type="linenumber">44</context>
-        </context-group>
+        
         <target state="translated">Delete</target>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">app/console/recipes/recipes.component.ts</context><context context-type="linenumber">34</context></context-group></trans-unit>
       <trans-unit id="f65253954b66e929a8b4d5ecaf61f9129f8cec64" datatype="html">
         <source>Dashboard</source>
         <context-group purpose="location">
@@ -138,78 +118,32 @@
         <note priority="1" from="description">headline</note>
         <target state="translated">Dashboard</target>
       </trans-unit>
-      <trans-unit id="38d0c576b0220019bdf34da5d5d1a9dc4734ee15" datatype="html">
-        <source>Umsatzverlauf im letzten Monat</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context>
-          <context context-type="linenumber">8</context>
-        </context-group>
-        <target state="translated">Turnover development in the last month</target>
-      </trans-unit>
+      
       <trans-unit id="6da8dd99b289bd6221d05270a76f46695793e396" datatype="html">
         <source>Keine Daten vorhanden</source>
         <target state="translated">No data available</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context>
-          <context context-type="linenumber">14</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context>
-          <context context-type="linenumber">26</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
-          <context context-type="linenumber">11</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
-          <context context-type="linenumber">23</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
-          <context context-type="linenumber">38</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
-          <context context-type="linenumber">50</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
-          <context context-type="linenumber">61</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="f13fb36aa96507264269eaa2bab3204d997d9c77" datatype="html">
-        <source>Top 5 im letzten Monat</source>
+        
+        
+        
+        
+        
+        
+        
+      <context-group purpose="location"><context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context><context context-type="linenumber">13</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/statistics/overview/overview.component.ts</context><context context-type="linenumber">12</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/statistics/overview/overview.component.ts</context><context context-type="linenumber">24</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/statistics/overview/overview.component.ts</context><context context-type="linenumber">35</context></context-group></trans-unit><trans-unit id="5399df965d6f12f48d2da8c2d1f711eb57685057" datatype="html">
+        <source>Beliebtestes Getränk</source><target state="translated">Most popular drink</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context>
           <context context-type="linenumber">21</context>
         </context-group>
+      </trans-unit>
+      <trans-unit id="f13fb36aa96507264269eaa2bab3204d997d9c77" datatype="html">
+        <source>Top 5 im letzten Monat</source>
+        
         <target state="translated">Top 5 last month</target>
-      </trans-unit>
-      <trans-unit id="2a586421a7737029d4d52290e9e7a827fa6f0523" datatype="html">
-        <source>Lizenzverkäufe heute</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context>
-          <context context-type="linenumber">34</context>
-        </context-group>
-        <target state="translated">License sales today</target>
-      </trans-unit>
-      <trans-unit id="0f116bcebf0ff208a58f0349381ccffa5171e53f" datatype="html">
-        <source>Meistverkauftes Getränk</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context>
-          <context context-type="linenumber">50</context>
-        </context-group>
-        <target state="translated">Best selling drink</target>
-      </trans-unit>
-      <trans-unit id="44552049e4bba7349026807493f7663f1cf25a2d" datatype="html">
-        <source>Aktueller Kontostand</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context>
-          <context context-type="linenumber">65</context>
-        </context-group>
-        <target state="translated">Current account balance</target>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">app/console/dashboard/dashboard.component.ts</context><context context-type="linenumber">8</context></context-group></trans-unit>
+      
+      
+      
       <trans-unit id="c47b6066a02b6434f0cd861e792d9ceebbe59235" datatype="html">
         <source>Datenschutz</source>
         <context-group purpose="location">
@@ -226,241 +160,41 @@
         </context-group>
         <target state="translated">Imprint</target>
       </trans-unit>
-      <trans-unit id="69f028470ae528627d013f54fb9b7d1c89f1a75e" datatype="html">
-        <source>Guthaben verwalten</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/vault/vault.component.ts</context>
-          <context context-type="linenumber">1</context>
-        </context-group>
-        <note priority="1" from="description">headline</note>
-        <target state="translated">Manage credit</target>
-      </trans-unit>
-      <trans-unit id="b3b404bc704c40aa6658654b3944a22bc68f8481" datatype="html">
-        <source>Guthaben im Bitcoin Vault</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/vault/vault.component.ts</context>
-          <context context-type="linenumber">3</context>
-        </context-group>
-        <target state="translated">Bitcoin Vault credit</target>
-      </trans-unit>
-      <trans-unit id="6f095e045f0e5d0744436162c6ff6df51d7bc83f" datatype="html">
-        <source>Kein Guthaben im Bitcoin Vault gespeichert.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/vault/vault.component.ts</context>
-          <context context-type="linenumber">5</context>
-        </context-group>
-        <target state="translated">No credit stored in Bitcoin Vault.</target>
-      </trans-unit>
-      <trans-unit id="a7cfbc126999f19af79727d5b0229ef2da2c5250" datatype="html">
-        <source>Wallet ID</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/vault/vault.component.ts</context>
-          <context context-type="linenumber">9</context>
-        </context-group>
-        <target state="translated">Wallet ID</target>
-      </trans-unit>
-      <trans-unit id="9e8ef231aa8b617100934ac9bebacbe27dc1451a" datatype="html">
-        <source>Guthaben (incl. unbestätigte Mittel) (IUNO)</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/vault/vault.component.ts</context>
-          <context context-type="linenumber">13</context>
-        </context-group>
-        <target state="translated">Credit (incl. unconfirmed funds) (IUNO)</target>
-      </trans-unit>
-      <trans-unit id="641ab9be9977e1cc90392463a71919e9017c1184" datatype="html">
-        <source>Bestätigtes Guthaben (IUNO)</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/vault/vault.component.ts</context>
-          <context context-type="linenumber">17</context>
-        </context-group>
-        <target state="translated">Confirmed credit (IUNO)</target>
-      </trans-unit>
-      <trans-unit id="133c17cdad17236bbf4fa9621616d31a73c93a4b" datatype="html">
-        <source>Auszahlung</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/vault/vault.component.ts</context>
-          <context context-type="linenumber">23</context>
-        </context-group>
-        <target state="translated">Payout</target>
-      </trans-unit>
-      <trans-unit id="ea6c9eed6d5dd4338b4822373651d67f37ea7150" datatype="html">
-        <source>Auszahlung von Guthaben veranlassen</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
-          <context context-type="linenumber">1</context>
-        </context-group>
-        <note priority="1" from="description">title</note>
-        <target state="translated">Initiate payment of credit balances</target>
-      </trans-unit>
-      <trans-unit id="bb98b916f3ac89322820c9d5487d6c87706b5a8e" datatype="html">
-        <source>Es sind <x id="INTERPOLATION" equiv-text="{{wallet.confirmed/100000 | number:'1.0-5'}}"/> IUNO in Ihrem Wallet zur Auszahlung bereit.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-            Dies entspricht <x id="INTERPOLATION_1" equiv-text="{{wallet.confirmed / unitFactor | number:'1.0-5'}}"/> <x id="INTERPOLATION_2" equiv-text="{{unitName}}"/> im Bitcoin Testnet.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
-          <context context-type="linenumber">5</context>
-        </context-group>
-        <target state="translated">There are                               
-          <x id="INTERPOLATION" equiv-text="{{wallet.confirmed/100000 | number:'1.0-5'}}"/> IUNO in your wallet ready to pay out.                              
-          <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>This corresponds to                               
-          <x id="INTERPOLATION_1" equiv-text="{{wallet.confirmed / unitFactor | number:'1.0-5'}}"/>
-          <x id="INTERPOLATION_2" equiv-text="{{unitName}}"/> in Bitcoin Testnet.                        
-        </target>
-      </trans-unit>
-      <trans-unit id="3f37bfe901c665205c03967962726ada2006bede" datatype="html">
-        <source>Aktuell sind davon noch <x id="INTERPOLATION" equiv-text="{{(wallet.unconfirmed-wallet.confirmed) / unitFactor | number: '1.0-8'}}"/>
-            <x id="INTERPOLATION_1" equiv-text="{{unitName}}"/> unbestätigt.
-            Sobald diese Transaktionen in der Blockchain bestätigt sind, kann man auch dieses Guthaben auszahlen.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
-          <context context-type="linenumber">11</context>
-        </context-group>
-        <target state="translated">Currently                               
-          <x id="INTERPOLATION" equiv-text="{{(wallet.unconfirmed-wallet.confirmed) / unitFactor | number: '1.0-8'}}"/>
-          <x id="INTERPOLATION_1" equiv-text="{{unitName}}"/> of them are still unconfirmed. As soon as these transactions are confirmed in the blockchain, you can also pay out this credit.                        
-        </target>
-      </trans-unit>
-      <trans-unit id="a23cdc12e71493323709959ee1cccb56087fdc2f" datatype="html">
-        <source>Wallet leeren</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
-          <context context-type="linenumber">16</context>
-        </context-group>
-        <target state="translated">Empty Wallet</target>
-      </trans-unit>
-      <trans-unit id="8d7fb4498230a1a42bf29edb7855134bb49f21c6" datatype="html">
-        <source>min. <x id="INTERPOLATION" equiv-text="{{6000/unitFactor | number: '1.0-8'}}"/>, max.
-                        <x id="INTERPOLATION_1" equiv-text="{{(wallet.confirmed-transactionFee)/unitFactor | number: '1.0-8'}}"/>
-                    </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
-          <context context-type="linenumber">34</context>
-        </context-group>
-        <target state="translated">min.                               
-          <x id="INTERPOLATION" equiv-text="{{6000/unitFactor | number: '1.0-8'}}"/>, max.                                                      
-          <x id="INTERPOLATION_1" equiv-text="{{(wallet.confirmed-transactionFee)/unitFactor | number: '1.0-8'}}"/>
-        </target>
-      </trans-unit>
-      <trans-unit id="10f2cfe2080e00cee322f5a4227ff967e5cee597" datatype="html">
-        <source>Die Transaktionsgebühr beträgt <x id="INTERPOLATION" equiv-text="{{transactionFee / unitFactor | number:'1.0-8'}}"/> <x id="INTERPOLATION_1" equiv-text="{{unitName}}"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-            und das Restguthaben im Wallet <x id="INTERPOLATION_2" equiv-text="{{remaining / unitFactor | number:'1.0-8'}}"/> <x id="INTERPOLATION_1" equiv-text="{{unitName}}"/></source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
-          <context context-type="linenumber">65</context>
-        </context-group>
-        <target state="translated">The transaction fee is                               
-          <x id="INTERPOLATION" equiv-text="{{transactionFee / unitFactor | number:'1.0-8'}}"/>
-          <x id="INTERPOLATION_1" equiv-text="{{unitName}}"/>
-          <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/> and the remaining balance in the Wallet is                               
-          <x id="INTERPOLATION_2" equiv-text="{{remaining / unitFactor | number:'1.0-8'}}"/>
-          <x id="INTERPOLATION_1" equiv-text="{{unitName}}"/>
-        </target>
-      </trans-unit>
-      <trans-unit id="7902b69333172d210bf736b62e3408550de0d56a" datatype="html">
-        <source>Auszahlen!</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
-          <context context-type="linenumber">77</context>
-        </context-group>
-        <target state="translated">Payout!</target>
-      </trans-unit>
-      <trans-unit id="5b919212544398c7e314b427a0f83f8f0ade5180" datatype="html">
-        <source>Auszahladresse</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
-          <context context-type="linenumber">22</context>
-        </context-group>
-        <target state="translated">Payout address</target>
-      </trans-unit>
-      <trans-unit id="21e0fda1c079d2740c574dc3b63b4249a7b79ca3" datatype="html">
-        <source>Auszahlbetrag</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
-          <context context-type="linenumber">29</context>
-        </context-group>
-        <target state="translated">Payment amount</target>
-      </trans-unit>
-      <trans-unit id="a7574ba7a58e1c89b5ed0fc5325bff999b1e9624" datatype="html">
-        <source>Informationen zur Währung IUNO</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/vault-testnet-help-dialog/vault-testnet-help-dialog.component.ts</context>
-          <context context-type="linenumber">1</context>
-        </context-group>
-        <note priority="1" from="description">title</note>
-        <target state="translated">Information on the currency IUNO</target>
-      </trans-unit>
-      <trans-unit id="9706ede4f0e4ad095a8dae68bdc32a482b021881" datatype="html">
-        <source><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>Die Währung in unserem Demonstrator nennt sich IUNO. Hinter den IUNOs steckt technisch das Bitcoin Testnet.
-        Diese Variante von Bitcoin ist zum Testen und zum Entwickeln mit der Bitcoin-Technik gedacht. Einen realen Wert,
-        den man beispielsweise in Euros ausdrücken könnte, gibt es nicht. Jedoch kann man damit Cocktails an unseren
-        Saftmischmaschinen bezahlen.<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
-    <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
-        Für dich als Technologiedatenhersteller speichern wir deine IUNOs, die du mit Lizenzverkäufen erhalten hast.
-        Wenn du willst, kannst du dir dein Guthaben gerne an deine Bitcoin-Wallet schicken. Dazu benötigst du eine
-        Bitcoin-Wallet, die mit dem Bitcoin-Testnet zusammenarbeitet.<x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
-    <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>
-        Folgende Apps können wir dazu empfehlen:
-    <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
-</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/vault-testnet-help-dialog/vault-testnet-help-dialog.component.ts</context>
-          <context context-type="linenumber">3</context>
-        </context-group>
-        <target state="translated">
-          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>The currency in our demonstrator is called IUNO. Behind the IUNOs is technically the Bitcoin Testnet. This variant of Bitcoin is intended for testing and development with the Bitcoin technology. There is no real value that could be expressed in euros, for example. However, it can be used to pay for cocktails on our juice mixers.          
-          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
-          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>For you as a technology data manufacturer, we store the IUNOs you received with license sales. If you want, you can send your credit to your Bitcoin Wallet. To do this, you need a Bitcoin Wallet that works with the Bitcoin Testnet.          
-          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
-          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p>"/>We can recommend the following apps:          
-          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p>"/>
-        </target>
-      </trans-unit>
-      <trans-unit id="528d26b5cdcbe4915ab2647216621d1cd1d19a3b" datatype="html">
-        <source>(Nur im Testnet empfehlenswert)</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/vault-testnet-help-dialog/vault-testnet-help-dialog.component.ts</context>
-          <context context-type="linenumber">22</context>
-        </context-group>
-        <target state="translated">(Only recommended in Testnet)</target>
-      </trans-unit>
-      <trans-unit id="4fe911d4cd8378dd81b654f199a0b99d8ca44946" datatype="html">
-        <source>Bitcoin Wallet für Testnet</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/vault-testnet-help-dialog/vault-testnet-help-dialog.component.ts</context>
-          <context context-type="linenumber">27</context>
-        </context-group>
-        <target state="translated">Bitcoin Wallet for Testnet</target>
-      </trans-unit>
-      <trans-unit id="7f575cba2711e7d28244a724f1c34f88e231a1aa" datatype="html">
-        <source>OK danke!</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/vault-testnet-help-dialog/vault-testnet-help-dialog.component.ts</context>
-          <context context-type="linenumber">34</context>
-        </context-group>
-        <target state="translated">OK thanks!</target>
-      </trans-unit>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       <trans-unit id="fe46a5104ffbded5e8b63f66ea3fe73a4c75e590" datatype="html">
         <source>Beliebte Getränkezutaten</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
-          <context context-type="linenumber">33</context>
-        </context-group>
+        
         <target state="translated">Popular recipe ingredients</target>
-      </trans-unit><trans-unit id="e73bf2fd958d4118f533d054316c785be8219118" datatype="html">
+      <context-group purpose="location"><context context-type="sourcefile">app/statistics/overview/overview.component.ts</context><context context-type="linenumber">7</context></context-group></trans-unit><trans-unit id="e73bf2fd958d4118f533d054316c785be8219118" datatype="html">
         <source>Dauerrenner unter den Getränken</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
-          <context context-type="linenumber">45</context>
-        </context-group>
+        
         <target state="translated">Recipes Hall of Fame</target>
-      </trans-unit><trans-unit id="8027ed8d0a2b64708be3988a33e80f39ee2e9652" datatype="html">
+      <context-group purpose="location"><context context-type="sourcefile">app/statistics/overview/overview.component.ts</context><context context-type="linenumber">19</context></context-group></trans-unit><trans-unit id="8027ed8d0a2b64708be3988a33e80f39ee2e9652" datatype="html">
         <source>Aktuell beliebte Rezepte</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
-          <context context-type="linenumber">56</context>
-        </context-group>
+        
         <target state="translated">Today's most popular recipes</target>
-      </trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">app/statistics/overview/overview.component.ts</context><context context-type="linenumber">30</context></context-group></trans-unit>
       
       
       
@@ -476,35 +210,7 @@
           <context context-type="sourcefile">app/account/account.component.ts</context>
           <context context-type="linenumber">19</context>
         </context-group>
-      <target state="translated">Login</target></trans-unit><trans-unit id="98f065ce54317107fa7ea7fb726d44b3e8e7265a" datatype="html">
-        <source>
-                Der Technologiedatenmarktplatz<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                für die<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                Lizenz zum Mixen
-            </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">8</context>
-        </context-group>
-        <note priority="1" from="description">intro text</note>
-      <target state="translated">
-                The Technology Data Marketplace<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                for the<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                license to mix
-            </target></trans-unit><trans-unit id="a33138be8c9fce88eba04363d4518be574f66a4e" datatype="html">
-        <source>
-                        Wir sind vom 16.10. bis 18.10. mit unserer Mischmaschine zusammen mit WIBU auf dem <x id="START_LINK" ctype="x-a" equiv-text="&lt;a>"/>IOTSWC 2018<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/> in Barcelona. Besuchen Sie uns gerne auf einen leckeren Cocktail! 
-                </source><target state="new">
-                        Find us in Barcelona at <x id="START_LINK" ctype="x-a" equiv-text="&lt;a>"/>IOTSWC 2018<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/> from 16th to 18th of october.
-                        Together with WIBU we are presenting our cocktail mixing machine. Come and visit us for a refreshing cocktail! 
-                </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">23</context>
-        </context-group>
-        <note priority="1" from="description">news</note>
-        <note priority="1" from="meaning">section</note>
-      </trans-unit><trans-unit id="3f12ced55bd8d55d5cadadb4850d06e292f67c20" datatype="html">
+      <target state="translated">Login</target></trans-unit><trans-unit id="3f12ced55bd8d55d5cadadb4850d06e292f67c20" datatype="html">
         <source>Was macht IUNO?</source>
         
         <note priority="1" from="description">IUNO</note>
@@ -525,18 +231,14 @@
         
         <note priority="1" from="description">Technologiedatenmarktplatz</note>
         <note priority="1" from="meaning">section header</note>
-      <target state="translated">Technology Data Marketplace</target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">49</context></context-group></trans-unit><trans-unit id="72128c952923920209dfb9076ab9202a7741484a" datatype="html">
+      <target state="translated">Technology Data Marketplace</target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">49</context></context-group></trans-unit><trans-unit id="0f285cfcab283bcddb8db93d1654fcbcc109f60a" datatype="html">
         <source>
-                Der Technologiedatenmarktplatz ermöglicht Daten bedarfsgerecht zu handeln, die für einen
-                Herstellungsprozeß benötigt werden. Für den bedarfsgerechten Handel ist es notwendig, daß die
-                gehandelten Daten auch nur wie gekauft verwendet werden, sprich pro Stück oder pro Zeiteinheit. Der
-                erarbeitete Demonstrator gewährt diese Sicherheit über die lizenzgerechte Nutzung der gehandelten
-                Daten.
+                Der Technologiedatenmarktplatz ermöglicht es, Rezepte für Mischmaschinen bereitzustellen und
+                abzurufen. Rezepte werden angelegt, im Marktplatz veröffentlicht und von den Maschinen zur Zubereitung
+                von Getränken verwendet.
             </source><target state="translated">
-                The Technology Data Marketplace makes it possible to trade data required for a production process.
-                For trading according to demand, it is necessary that the traded data is only used as purchased,
-                i.e. per piece or per unit of time. The developed demonstrator guarantees this security about the 
-                license-fair use of the traded data.
+                The Technology Data Marketplace makes it possible to provide and retrieve recipes for mixing machines.
+                Recipes are created, published on the marketplace and used by the machines to prepare drinks.
             </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
@@ -547,12 +249,12 @@
       </trans-unit><trans-unit id="3ed9d9721f2b215bcfb3719592969cdba54d8fba" datatype="html">
         <source>https://www.youtube-nocookie.com/embed/1CTcGxSz2yc?rel=0&amp;showinfo=0</source><target state="translated">https://www.youtube-nocookie.com/embed/LwuCGvIIVZM?rel=0&amp;showinfo=0</target>
         
-      <context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">60</context></context-group></trans-unit><trans-unit id="e9e61cddcc667445059d1706cff6f2720beb4048" datatype="html">
+      <context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">58</context></context-group></trans-unit><trans-unit id="e9e61cddcc667445059d1706cff6f2720beb4048" datatype="html">
         <source>Warum Cocktailrezepte?</source>
         
         <note priority="1" from="description">Warum Cocktailrezepte</note>
         <note priority="1" from="meaning">section header</note>
-      <target state="translated">Why cocktail recipes?</target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">72</context></context-group></trans-unit><trans-unit id="8e08d99b6f96f481d4ba8e1f41cc4bd20aaeb1b8" datatype="html">
+      <target state="translated">Why cocktail recipes?</target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">70</context></context-group></trans-unit><trans-unit id="8e08d99b6f96f481d4ba8e1f41cc4bd20aaeb1b8" datatype="html">
         <source>
                 IUNO hat als nationales Referenzprojekt zur IT-Sicherheit in der Industrie 4.0 Leuchtturmcharakter. Es
                 muß in der Öffentlichkeit weithin sichtbar sein, um mit den Inhalten und Ergebnissen eine möglichst
@@ -566,12 +268,12 @@
         <note priority="1" from="meaning">section</note>
       <target state="translated">
                 IUNO is a flagship project as a national reference project for IT security in Industry 4.0. It must be widely visible in the public in order to reach the widest possible audience with the contents and results. For this it needs a demonstrator machine, which can be easily shown at fairs and lectures and clearly conveys the subject. For this reason, the technology data marketplace is illustrated on a cocktail blender. This machine attracts enough attention, allowing the transfer of the very dry IT security issue.
-            </target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">73</context></context-group></trans-unit><trans-unit id="c82b8429a1804cf10fca528683230dbf431e92b7" datatype="html">
+            </target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">71</context></context-group></trans-unit><trans-unit id="c82b8429a1804cf10fca528683230dbf431e92b7" datatype="html">
         <source>Der Marktplatz ist live!</source>
         
         <note priority="1" from="description">Marktplatz ist live</note>
         <note priority="1" from="meaning">section header</note>
-      <target state="translated">The marketplace is live!</target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">90</context></context-group></trans-unit><trans-unit id="ba3224d55e372ae154febe89dcddf330a389eca8" datatype="html">
+      <target state="translated">The marketplace is live!</target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">88</context></context-group></trans-unit><trans-unit id="ba3224d55e372ae154febe89dcddf330a389eca8" datatype="html">
         <source>
                 Der Marktplatz wird mittlerweile von mehreren Maschinen bei den verschiedenen Projektpartnern genutzt.
                 Dies zeigen unsere live <x id="START_LINK" ctype="x-a" equiv-text="&lt;a>"/>Dashboards<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/>.
@@ -581,12 +283,12 @@
         <note priority="1" from="meaning">section</note>
       <target state="translated">
                 The marketplace is now used by several machines in the various project partners. This is shown by our live <x id="START_LINK" ctype="x-a" equiv-text="&lt;a>"/>Dashboards<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/>.
-            </target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">91</context></context-group></trans-unit><trans-unit id="6591f10ed53e8f03c25bdc47ced8ae5a1e024dbf" datatype="html">
+            </target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">89</context></context-group></trans-unit><trans-unit id="6591f10ed53e8f03c25bdc47ced8ae5a1e024dbf" datatype="html">
         <source>Lust am Ausprobieren?</source>
         
         <note priority="1" from="description">Lust am Ausprobieren</note>
         <note priority="1" from="meaning">section header</note>
-      <target state="translated">Feel like trying?</target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">109</context></context-group></trans-unit><trans-unit id="410c4f0bda410720af03e09bb2b4f955ef97c252" datatype="html">
+      <target state="translated">Feel like trying?</target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">107</context></context-group></trans-unit><trans-unit id="410c4f0bda410720af03e09bb2b4f955ef97c252" datatype="html">
         <source>
                 Das ganze Projekt ist OpenSource und steht auf Github zur Verfügung.
             </source>
@@ -595,7 +297,7 @@
         <note priority="1" from="meaning">section</note>
       <target state="translated">
                 The whole project is open source and is available on Github.
-            </target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">110</context></context-group></trans-unit><trans-unit id="9a91ff40b4d1054dc6b80476687e52ab3c5975f3" datatype="html">
+            </target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">108</context></context-group></trans-unit><trans-unit id="9a91ff40b4d1054dc6b80476687e52ab3c5975f3" datatype="html">
         <source>
                 Und wenn Sie selbst eine Maschine bauen möchten, dann wenden Sie sich gerne an uns.
             </source>
@@ -604,17 +306,17 @@
         <note priority="1" from="meaning">section add</note>
       <target state="translated">
                 And if you want to build a machine yourself, feel free to contact us.
-            </target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">116</context></context-group></trans-unit><trans-unit id="f1251e2b4609fb43cbab117132519bfc05602aa7" datatype="html">
+            </target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">114</context></context-group></trans-unit><trans-unit id="f1251e2b4609fb43cbab117132519bfc05602aa7" datatype="html">
         <source>Über uns</source>
         
         <note priority="1" from="description">Team</note>
         <note priority="1" from="meaning">section header</note>
-      <target state="translated">About us</target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">126</context></context-group></trans-unit><trans-unit id="193efcf00bd5896bdb0b3d811ae113c1523f4a6b" datatype="html">
+      <target state="translated">About us</target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">124</context></context-group></trans-unit><trans-unit id="193efcf00bd5896bdb0b3d811ae113c1523f4a6b" datatype="html">
         <source>Das Team hinter dem Projekt:</source>
         
         <note priority="1" from="description">Team</note>
         <note priority="1" from="meaning">section</note>
-      <target state="translated">The team behind the project:</target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">128</context></context-group></trans-unit><trans-unit id="600225ba0450d546aee95582b888c89f97b035fe" datatype="html">
+      <target state="translated">The team behind the project:</target><context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">126</context></context-group></trans-unit><trans-unit id="600225ba0450d546aee95582b888c89f97b035fe" datatype="html">
         <source>
                     <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
                     Experte für Industrie 4.0 Kommunikation und Security
@@ -630,13 +332,10 @@
                     Hans-Peter Bock is architect, creator of ideas and head 
                     of the development of the Technology Data Marketplace ecosystem.
                 </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">154</context>
-        </context-group>
+        
         <note priority="1" from="description">Team - hpbock</note>
         <note priority="1" from="meaning">section</note>
-      </trans-unit><trans-unit id="4b42601c7e799a26454b3444080f3047faa289fe" datatype="html">
+      <context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">152</context></context-group></trans-unit><trans-unit id="4b42601c7e799a26454b3444080f3047faa289fe" datatype="html">
         <source>
                     <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
                     System Developer for New Technologies
@@ -653,37 +352,31 @@
                     in the project. He is responsible for the web services, as well as specification 
                     and protection of the interfaces.
                 </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">173</context>
-        </context-group>
+        
         <note priority="1" from="description">Team - mbeuttler</note>
         <note priority="1" from="meaning">section</note>
-      </trans-unit><trans-unit id="61bd11cb1a18331309446ac6990415cba0f986a5" datatype="html">
+      <context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">171</context></context-group></trans-unit><trans-unit id="61bd11cb1a18331309446ac6990415cba0f986a5" datatype="html">
         <source>
                     <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
                     System Architect for Enabling Technologies
                     <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
                     <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                    Christan Görg entwickelt das Bezahlsystem hinter dem Technologiedatenmarktplatz
-                    und verantwortet den sicheren Umgang mit Technologiedaten auf der Maschinen-Steuerung.
+                    Christan Görg entwickelt den Technologiedatenmarktplatz
+                    und verantwortet den Umgang mit Technologiedaten auf der Maschinen-Steuerung.
                 </source><target state="translated">
                     <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
                     System Architect for Enabling Technologies
                     <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
                     <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                    Christan Görg develops the payment system behind 
-                    the technology data marketplace and is responsible
-                    for the secure handling of technology data on the
+                    Christan Görg develops the technology data marketplace 
+                    and is responsible
+                    for the handling of technology data on the
                     machine control system.
                 </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">191</context>
-        </context-group>
+        
         <note priority="1" from="description">Team - cgoerg</note>
         <note priority="1" from="meaning">section</note>
-      </trans-unit><trans-unit id="11e8f0115be88e421b74a5eae7d7a7bcff90632a" datatype="html">
+      <context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">189</context></context-group></trans-unit><trans-unit id="11e8f0115be88e421b74a5eae7d7a7bcff90632a" datatype="html">
         <source>
                     <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
                     System Architect for Big Data and Analytics
@@ -700,13 +393,10 @@
                     Data Marketplace. He is responsible for the database
                     design and develops the database specific security concepts.
                 </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">209</context>
-        </context-group>
+        
         <note priority="1" from="description">Team - mgomes</note>
         <note priority="1" from="meaning">section</note>
-      </trans-unit><trans-unit id="ff9f15d04888369a4de1aa674d77f4700f5e30de" datatype="html">
+      <context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">207</context></context-group></trans-unit><trans-unit id="ff9f15d04888369a4de1aa674d77f4700f5e30de" datatype="html">
         <source>
                     <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
                     Experte für Informations- und Kommunikationstechnologien in Produktionsnetzwerken
@@ -727,13 +417,10 @@
                     He described the ideas of this marketplace in the
                      implementation recommendations of Industrie 4.0 and the Smart Service world.
                 </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
-          <context context-type="linenumber">227</context>
-        </context-group>
+        
         <note priority="1" from="description">Team - kbauer</note>
         <note priority="1" from="meaning">section</note>
-      </trans-unit><trans-unit id="2c6838c274478601bf4ab83914dd16e710e4cb02" datatype="html">
+      <context-group purpose="location"><context context-type="sourcefile">app/landingpage/start/start.component.ts</context><context context-type="linenumber">225</context></context-group></trans-unit><trans-unit id="2c6838c274478601bf4ab83914dd16e710e4cb02" datatype="html">
         <source><x id="INTERPOLATION" equiv-text="{{object.name}}"/></source><target state="translated"><x id="INTERPOLATION" equiv-text="{{object.name}}"/></target>
         
       <context-group purpose="location"><context context-type="sourcefile">app/marketplace/gallery/gallery.component.ts</context><context context-type="linenumber">14</context></context-group></trans-unit><trans-unit id="985aa4045bdf3ce28034eff1f3c404740354afff" datatype="html">
@@ -743,55 +430,40 @@
           <context context-type="linenumber">13</context>
         </context-group>
         <note priority="1" from="description">description</note>
-      </trans-unit><trans-unit id="5e3750473444ed0d4ff0bf794ebaf415db164c8e" datatype="html">
-        <source>Lizenzgebühr:</source><target state="translated">Licensefee:</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/marketplace/gallery-detail/gallery-detail.component.ts</context>
-          <context context-type="linenumber">19</context>
-        </context-group>
-        <note priority="1" from="description">licensefee</note>
       </trans-unit><trans-unit id="672d44e7ea254e4c61b40eeef699e60bd18f723e" datatype="html">
         <source>Maschinen:</source><target state="translated">Machines:</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/marketplace/gallery-detail/gallery-detail.component.ts</context>
-          <context context-type="linenumber">25</context>
-        </context-group>
+        
         <note priority="1" from="description">machines</note>
-      </trans-unit><trans-unit id="c7cac8d33f07b9acce836beba9b8b478f1ae48ec" datatype="html">
+      <context-group purpose="location"><context context-type="sourcefile">app/marketplace/gallery-detail/gallery-detail.component.ts</context><context context-type="linenumber">19</context></context-group></trans-unit><trans-unit id="c7cac8d33f07b9acce836beba9b8b478f1ae48ec" datatype="html">
         <source>Materialien:</source><target state="translated">Materials:</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/marketplace/gallery-detail/gallery-detail.component.ts</context>
-          <context context-type="linenumber">32</context>
-        </context-group>
+        
         <note priority="1" from="description">materials</note>
-      </trans-unit><trans-unit id="99ef08091fb4d2267254423538b4c516c5bee2a4" datatype="html">
+      <context-group purpose="location"><context context-type="sourcefile">app/marketplace/gallery-detail/gallery-detail.component.ts</context><context context-type="linenumber">26</context></context-group></trans-unit><trans-unit id="99ef08091fb4d2267254423538b4c516c5bee2a4" datatype="html">
         <source>Zutaten:</source><target state="translated">Ingredients:</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/marketplace/gallery-detail/gallery-detail.component.ts</context>
-          <context context-type="linenumber">39</context>
-        </context-group>
+        
         <note priority="1" from="description">contents</note>
-      </trans-unit><trans-unit id="d5a5a26dd5ba4cc3dbbd43364dd5bdf6caaefb7f" datatype="html">
-        <source>Lizenzverkäufe (Heute)</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
-          <context context-type="linenumber">6</context>
-        </context-group>
-        <target state="translated">License sales (today)</target>
-      </trans-unit><trans-unit id="112748d842a1fa941cf99db6b8528dad5c5f8839" datatype="html">
-        <source>Lizenzverkäufe (Monat)</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/statistics/overview/overview.component.ts</context>
-          <context context-type="linenumber">18</context>
-        </context-group>
-        <target state="translated">License sales last month</target>
-      </trans-unit><trans-unit id="e7bb3084327f26b44499f31f24f9520ac8040242" datatype="html">
+      <context-group purpose="location"><context context-type="sourcefile">app/marketplace/gallery-detail/gallery-detail.component.ts</context><context context-type="linenumber">33</context></context-group></trans-unit><trans-unit id="e7bb3084327f26b44499f31f24f9520ac8040242" datatype="html">
         <source>./assets/images/tdm_text_de.svg</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
           <context context-type="linenumber">5</context>
         </context-group>
-      <target state="translated">./assets/images/tdm_text_en.svg</target></trans-unit><trans-unit id="929c58d8fcf868463089f85b8ded8f2c507bba34" datatype="html">
+      <target state="translated">./assets/images/tdm_text_en.svg</target></trans-unit><trans-unit id="dbee3c7dd3d07cac112f2df7d37e8aa24bd37ae8" datatype="html">
+        <source>
+                Der Technologiedatenmarktplatz<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                für die<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                Rezepte zum Mixen
+            </source><target state="translated">
+                The Technology Data Marketplace<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                for the<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+                recipes to mix
+            </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landingpage/start/start.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">intro text</note>
+      </trans-unit><trans-unit id="929c58d8fcf868463089f85b8ded8f2c507bba34" datatype="html">
         <source>Bitte fügen Sie mindestens eine Zutat hinzu!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
@@ -823,29 +495,14 @@
         <note priority="1" from="meaning">error</note>
       <target state="translated">Please enter a description!
                             <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                        </target></trans-unit><trans-unit id="f6cddcac4e1543114fdc7387973a3ffb298617dd" datatype="html">
-        <source>Bitte wählen Sie eine Lizenzgebühr aus!
-                            <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-                        </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">63</context>
-        </context-group>
-        <note priority="1" from="description">create recipe - license fee missing</note>
-        <note priority="1" from="meaning">error</note>
-      <target state="translated">Please select a license fee!
-                            <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
                         </target></trans-unit><trans-unit id="2b2aaee8f59e5cc9fc32d45ca562a645573c8235" datatype="html">
         <source>Sie haben bereits ihr Limit von <x id="INTERPOLATION" equiv-text="{{recipeLimit}}"/> Rezepten am Marktplatz erreicht.
                 <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
             </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context>
-          <context context-type="linenumber">119</context>
-        </context-group>
+        
       <target state="translated">You have already reached your limit of <x id="INTERPOLATION" equiv-text="{{recipeLimit}}"/> recipes on the marketplace.
                 <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
-            </target></trans-unit></body>
+            </target><context-group purpose="location"><context context-type="sourcefile">app/console/create-recipe/create-recipe.component.ts</context><context context-type="linenumber">106</context></context-group></trans-unit></body>
   </file>
   <file original="app/sidebar/index/index.component.ts" datatype="plaintext" source-language="de" target-language="en">
     <body>
@@ -856,7 +513,7 @@
         
         <note from="description" priority="1">Sidebar</note>
         <note from="meaning" priority="1">link to admin dashboard/admin dashboard</note>
-      <context-group purpose="location"><context context-type="sourcefile">app/sidebar/index/index.component.ts</context><context context-type="linenumber">25</context></context-group></trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">app/sidebar/index/index.component.ts</context><context context-type="linenumber">24</context></context-group></trans-unit>
       <trans-unit id="57b8728de504ae17b0de35dd3731abf992e9db9d" approved="yes">
         <source xml:space="preserve">Start</source>
         <target xml:space="preserve">Start</target>
@@ -919,14 +576,7 @@
         <note from="description" priority="1">Sidebar</note>
         <note from="meaning" priority="1">link to console/manage drinks</note>
       <context-group purpose="location"><context context-type="sourcefile">app/sidebar/index/index.component.ts</context><context context-type="linenumber">23</context></context-group></trans-unit>
-      <trans-unit id="4fc0481716e9d3e3d0dfc11fa4ab8be2b1166412" approved="yes">
-        <source xml:space="preserve">Guthaben verwalten</source>
-        <target xml:space="preserve">Manage credit</target>
-        <note from="translator">link to console/manage credit</note>
-        
-        <note from="description" priority="1">Sidebar</note>
-        <note from="meaning" priority="1">link to console/manage credit</note>
-      <context-group purpose="location"><context context-type="sourcefile">app/sidebar/index/index.component.ts</context><context context-type="linenumber">24</context></context-group></trans-unit>
+      
     </body>
   </file>
   <file original="app/console/component-list-dialog/component-list-dialog.component.ts" datatype="plaintext" source-language="de" target-language="en">
@@ -978,15 +628,9 @@
       <trans-unit id="1b24932d0f2269e4b41d0f936fdb5de1b94da401" approved="yes">
         <source xml:space="preserve">Abbrechen</source>
         <target xml:space="preserve">Cancel</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context>
-          <context context-type="linenumber">21</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/console/vault-payout-dialog/vault-payout-dialog.component.ts</context>
-          <context context-type="linenumber">76</context>
-        </context-group>
-      </trans-unit>
+        
+        
+      <context-group purpose="location"><context context-type="sourcefile">app/console/component-list-dialog/component-list-dialog.component.ts</context><context context-type="linenumber">21</context></context-group></trans-unit>
     </body>
   </file>
   <file original="app/console/create-recipe/create-recipe.component.ts" datatype="plaintext" source-language="de" target-language="en">

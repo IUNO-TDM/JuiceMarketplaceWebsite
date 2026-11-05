@@ -3,5 +3,3 @@ declare var module: NodeModule;
 interface NodeModule {
   id: string;
 }
-
-declare module 'bs58check';

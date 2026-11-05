@@ -38,134 +38,6 @@ self.Recipe_Query = {
     additionalProperties: false
 };
 
-self.License_Count_Query = {
-    type: 'object',
-    properties: {
-        createdBy: {
-            type: 'string',
-            format: 'uuid'
-        },
-        components: {
-            type: 'array',
-            items: {
-                type: 'string',
-                format: 'uuid'
-            },
-            additionalItems: false
-        },
-        orderBy: {
-            type: 'string',
-            enum: ['alphASC', 'alphDESC', 'random', 'ratingASC', 'ratingDESC']
-        },
-        startDate: {
-            type: 'string',
-            format: 'date-time'
-        },
-        endDate: {
-            type: 'string',
-            format: 'date-time'
-        }
-    },
-    required: [],
-    additionalProperties: false
-};
-
-self.License_Total_Query = {
-    type: 'object',
-    properties: {
-        createdBy: {
-            type: 'string',
-            format: 'uuid'
-        },
-        components: {
-            type: 'array',
-            items: {
-                type: 'string',
-                format: 'uuid'
-            },
-            additionalItems: false
-        },
-        startDate: {
-            type: 'string',
-            format: 'date-time'
-        },
-        endDate: {
-            type: 'string',
-            format: 'date-time'
-        }
-    },
-    required: [],
-    additionalProperties: false
-};
-
-self.License_History_Query = {
-    type: 'object',
-    properties: {
-        createdBy: {
-            type: 'string',
-            format: 'uuid'
-        },
-        components: {
-            type: 'array',
-            items: {
-                type: 'string',
-                format: 'uuid'
-            },
-            additionalItems: false
-        },
-        startDate: {
-            type: 'string',
-            format: 'date-time'
-        },
-        endDate: {
-            type: 'string',
-            format: 'date-time'
-        },
-        interval: {
-            type: 'string',
-            enum: ['minute', 'hour', 'day', 'week', 'month', 'year']
-        }
-    },
-    required: [],
-    additionalProperties: false
-};
-
-self.Recipe_License_Count_Query = {
-    type: 'object',
-    properties: {
-        startDate: {
-            type: 'string',
-            format: 'date-time'
-        },
-        endDate: {
-            type: 'string',
-            format: 'date-time'
-        }
-    },
-    required: [],
-    additionalProperties: false
-};
-
-self.Recipe_License_History_Query = {
-    type: 'object',
-    properties: {
-        startDate: {
-            type: 'string',
-            format: 'date-time'
-        },
-        endDate: {
-            type: 'string',
-            format: 'date-time'
-        },
-        interval: {
-            type: 'string',
-            enum: ['minute', 'hour', 'day', 'week', 'month', 'year']
-        }
-    },
-    required: [],
-    additionalProperties: false
-};
-
 self.Recipe_Image_Body = {
     type: 'object',
     properties: {
@@ -190,10 +62,6 @@ self.Recipe_Body = {
             type: "string",
             minLength: 1,
             maxLength: 30000
-        },
-        licenseFee: {
-            type: "integer",
-            enum: [25000, 50000, 75000, 100000]
         },
         program: {
             type: "object",
@@ -263,7 +131,7 @@ self.Recipe_Body = {
             pattern: '^#([A-Fa-f0-9]{3}|[A-Fa-f0-9]{4}|[A-Fa-f0-9]{6}|[A-Fa-f0-9]{8})$'
         }
     },
-    required: ['name', 'description', 'licenseFee', 'program'],
+    required: ['name', 'description', 'program'],
     additionalProperties: false
 };
 

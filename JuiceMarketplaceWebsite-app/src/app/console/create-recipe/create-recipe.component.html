@@ -53,14 +53,11 @@
             </mat-card-header>
             <mat-card-content fxLayout="row">
                 <div fxFlex="100">
-                    <app-message-box fxFlexFill *ngIf="errorFields.title || errorFields.description || errorFields.licenseFee" type="error" style="margin: 0px; margin-top: -1.5em;">
+                    <app-message-box fxFlexFill *ngIf="errorFields.title || errorFields.description " type="error" style="margin: 0px; margin-top: -1.5em;">
                         <ng-container *ngIf="errorFields.title" i18n="error|create recipe - title missing">Bitte geben Sie einen Titel ein!
                             <br>
                         </ng-container>
                         <ng-container *ngIf="errorFields.description" i18n="error|create recipe - description missing">Bitte geben Sie einen Beschreibungstext ein!
-                            <br>
-                        </ng-container>
-                        <ng-container *ngIf="errorFields.licenseFee" i18n="error|create recipe - license fee missing">Bitte wählen Sie eine Lizenzgebühr aus!
                             <br>
                         </ng-container>
                     </app-message-box>
@@ -77,16 +74,6 @@
                                 <textarea matInput formControlName="description" placeholder="Beschreibung" style="width: 100%; height: 100px;" i18n-placeholder></textarea>
                             </mat-form-field>
                             <!-- <span class="error" *ngIf="errorFields.description">Bitte geben Sie einen Beschreibungstext ein!</span> -->
-
-                            <!-- recipe license fee -->
-                            <mat-form-field fxFlexFill>
-                                <mat-select placeholder="Lizenzgebühr" formControlName="licenseFee" i18n-placeholder>
-                                    <mat-option *ngFor="let fee of licenseFees" [value]="fee">
-                                        {{fee | number:'1.2-2'}} IUNO
-                                    </mat-option>
-                                </mat-select>
-                            </mat-form-field>
-                            <!-- <span class="error" *ngIf="errorFields.licenseFee">Bitte wählen Sie eine Lizenzgebühr aus!</span> -->
                         </div>
                     </mat-card-content>
                 </div>

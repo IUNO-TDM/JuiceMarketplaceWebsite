@@ -8,29 +8,6 @@ const validator = new Validator({allErrors: true});
 const validate = validator.validate;
 const validation_schema = require('../schema/reports_schema');
 
-router.get('/revenue', validate({
-    query: validation_schema.Revenue_Query,
-    body: validation_schema.Empty
-}), function (req, res, next) {
-    authService.getPublicToken(function (err, token) {
-        if (err) {
-            return next(err);
-        }
-
-        marketplaceCore.getTotalRevenue(
-            req.query['from'],
-            req.query['to'],
-            req.query['detail'],
-            token, function (err, data) {
-                if (err) {
-                    return next(err);
-                }
-
-                res.json(data);
-            })
-    });
-});
-
 router.get('/recipes/history', validate({
     query: validation_schema.History_Query,
     body: validation_schema.Empty

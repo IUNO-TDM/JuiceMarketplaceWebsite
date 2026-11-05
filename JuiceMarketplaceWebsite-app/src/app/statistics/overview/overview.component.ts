@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {StatisticsService} from "../services/statistics.service";
 import * as moment from 'moment';
-import {RevenueReport} from "../models/RevenueReport";
 import {ComponentReport} from "../models/ComponentReport";
 import {RecipeReport} from "../models/RecipeReport";
 import { EventManager } from '@angular/platform-browser';
@@ -66,49 +65,21 @@ export class OverviewComponent implements OnInit {
             (e: any) => {
                 this.drawAllTimeTopRecipes()
                 this.drawComponentReports()
-                this.drawDayReport()
-                this.drawHourReports()
                 this.drawTodayTopRecipes()
             });
     }
 
-    hourreports: RevenueReport[];
-    dayreports: RevenueReport[];
     componentreports: ComponentReport[];
     allTimeTopRecipes: RecipeReport[];
     todayTopRecipes: RecipeReport[];
-    revenuePerHourData: any;
-    revenuePerDayData: any;
     topComponentsData: any;
     allTimeTopRecipesData: any;
     todayTopRecipesData: any;
 
     ngOnInit() {
-        let from = moment().startOf('day').hours(8).toDate();
-        let to = moment().startOf('day').hours(20).toDate();
-        // let to = moment().utc().endOf('day').toDate();
-        this.statisticsService.getRevenueReport(from, to, true).subscribe(reports => {
-            this.hourreports = reports;
-            this.drawHourReports();
-
-        }, error2 => {
-            console.log(error2)
-        });
-
-
-        let from2 = moment().utc().startOf('day').subtract(1, 'month').toDate();
-        let to2 = moment().utc().endOf('day').toDate();
-        this.statisticsService.getRevenueReport(from2, to2, false).subscribe(reports => {
-            this.dayreports = reports;
-            this.drawDayReport();
-
-        }, error2 => {
-            console.log(error2)
-        });
-
-        let from3 = moment([2010]).toDate()
-        let to3 = moment().utc().endOf('day').toDate();
-        this.statisticsService.getTopComponents(from3, to3, 10).subscribe(reports => {
+        let from1 = moment([2010]).toDate()
+        let to1 = moment().utc().endOf('day').toDate();
+        this.statisticsService.getTopComponents(from1, to1, 10).subscribe(reports => {
             this.componentreports = reports;
             this.drawComponentReports();
 
@@ -116,9 +87,9 @@ export class OverviewComponent implements OnInit {
             console.log(error2)
         })
 
-        let from4 = moment([2010]).toDate()
-        let to4 = moment().utc().endOf('day').toDate();
-        this.statisticsService.getTopRecipes(from4, to4, 10).subscribe(reports => {
+        let from2 = moment([2010]).toDate()
+        let to2 = moment().utc().endOf('day').toDate();
+        this.statisticsService.getTopRecipes(from2, to2, 10).subscribe(reports => {
             this.allTimeTopRecipes = reports;
             this.drawAllTimeTopRecipes();
 
@@ -126,9 +97,9 @@ export class OverviewComponent implements OnInit {
             console.log(error2)
         })
 
-        let from5 = moment().utc().startOf('day').toDate();
-        let to5 = moment().utc().endOf('day').toDate();
-        this.statisticsService.getTopRecipes(from5, to5, 10).subscribe(reports => {
+        let from3 = moment().utc().startOf('day').toDate();
+        let to3 = moment().utc().endOf('day').toDate();
+        this.statisticsService.getTopRecipes(from3, to3, 10).subscribe(reports => {
             this.todayTopRecipes = reports;
             this.drawTodayTopRecipes();
 
@@ -137,70 +108,6 @@ export class OverviewComponent implements OnInit {
         })
 
 
-    }
-
-    private drawHourReports() {
-        var x = [];
-        x[0] = 'x';
-        var data = [];
-
-
-        // var regions = [{start: reports.length - 1}];
-        for (var i in this.hourreports) {
-
-            var time = this.hourreports[i].startDate;
-            data.push([time, this.hourreports[i].amount]);
-
-        }
-        data.push(['Tageszeit', 'Umsatz']);
-
-        this.revenuePerHourData = {
-            chartType: 'AreaChart',
-            dataTable: data,
-            options: {
-                legend: {position: 'none'},
-                vAxis: {
-                    minValue: 0,
-                    gridlines: {count: -1}
-
-                },
-                hAxis:{
-                    format: "HH:mm"
-                }
-            }
-        };
-        data.reverse();
-    }
-
-    private drawDayReport() {
-
-        var data = [];
-
-
-        data.push(['Tageszeit', 'Umsatz']);
-        // var regions = [{start: reports.length - 1}];
-        for (var i in this.dayreports) {
-
-            var time = this.dayreports[i].startDate;
-            data.push([time, this.dayreports[i].amount]);
-
-        }
-
-        this.revenuePerDayData = {
-            chartType: 'AreaChart',
-            dataTable: data,
-            options: {
-                legend: {position: 'none'},
-                vAxis: {
-                    minValue: 0,
-                    gridlines: {count: -1}
-
-                },
-                hAxis: {
-                    format: 'dd.MM.'
-                }
-            }
-        };
     }
 
     private drawComponentReports() {

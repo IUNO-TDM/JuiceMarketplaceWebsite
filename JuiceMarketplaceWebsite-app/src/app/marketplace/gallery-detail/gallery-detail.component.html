@@ -15,12 +15,6 @@
                             {{_techData.description}}
                         </div>
                     </div>
-                    <div class="section">
-                        <div class="section-title" i18n="licensefee">Lizenzgebühr:</div>
-                        <div class="section-text">
-                            {{(_techData.licenseFee/100000) | number:'1.0-2'}} IUNO
-                        </div>
-                    </div>
                     <div *ngIf="_techData.machines && _techData.machines.length > 0" class="section">
                         <div class="section-title" i18n="machines">Maschinen:</div>
                         <mat-list>

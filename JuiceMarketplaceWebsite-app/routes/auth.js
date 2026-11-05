@@ -4,6 +4,7 @@
 const express = require('express');
 const logger = require('../global/logger');
 const config = require('../config/config_loader');
+const authAdapter = require('../adapter/auth_service_adapter');
 
 const {Validator, ValidationError} = require('express-json-validator-middleware');
 const validator = new Validator({allErrors: true});
@@ -20,14 +21,9 @@ module.exports = function (passport) {
     }), function (req, res) {
         req.logout();
 
-        const hostUrl = req.protocol + '://' + req.get('host');
-
-        const authServerLogout =
-            config.HOST_SETTINGS.OAUTH_SERVER_EXTERNAL.PROTOCOL
-            + '://' + config.HOST_SETTINGS.OAUTH_SERVER_EXTERNAL.HOST
-            + ':' + config.HOST_SETTINGS.OAUTH_SERVER_EXTERNAL.PORT
-            + '/passport/logout?redirect='
-            + encodeURIComponent(hostUrl);
+        const authServerLogout = authAdapter.endpoints.logout
+            + '?client_id=' + encodeURIComponent(config.OAUTH_CREDENTIALS.CLIENT_ID)
+            + '&post_logout_redirect_uri=' + encodeURIComponent(config.PUBLIC_WEBSITE_URL + '/');
 
         res.redirect(authServerLogout);
     });
@@ -56,15 +52,23 @@ module.exports = function (passport) {
 
         passport.authenticate('iuno')(req, res, next);
     });
-    router.get('/iuno/callback', validate({
+
+    // Registration page of Keycloak; the flow ends in the same callback as the login
+    router.get('/register', function (req, res) {
+        res.redirect(authAdapter.endpoints.registration
+            + '?client_id=' + encodeURIComponent(config.OAUTH_CREDENTIALS.CLIENT_ID)
+            + '&response_type=code&scope=openid'
+            + '&redirect_uri=' + encodeURIComponent(config.OAUTH_CREDENTIALS.CALLBACK_URL));
+    });
+
+    router.get('/callback', validate({
         query: validation_schema.IUNO_Callback_Query,
         body: validation_schema.Empty
     }), function (req, res, next) {
 
         passport.authenticate('iuno', {
             successRedirect: '/console',
-            failureRedirect: '/',
-            failureFlash: true
+            failureRedirect: '/'
         })(req, res, next);
     });
 
