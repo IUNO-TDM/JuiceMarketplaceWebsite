@@ -26,8 +26,10 @@ self.Protocols_Query = {
             format: 'date-time'
         },
         clientId: {
+            // Keycloak client id of the machine (e.g. machine-21); older entries hold UUIDs
             type: 'string',
-            format: 'uuid'
+            pattern: '^[A-Za-z0-9._-]+$',
+            maxLength: 255
         },
         limit: {
             type: 'integer'
