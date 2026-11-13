@@ -3,6 +3,7 @@
  */
 
 const express = require('express');
+const path = require('path');
 const router = express.Router();
 const marketplaceCore = require('../adapter/marketplace_core_adapter');
 const authService = require('../adapter/auth_service_adapter');
@@ -227,13 +228,10 @@ router.get('/:user_id/image', authenticationService.paramIsEqualToSessionUser('u
     body: validation_schema.Empty
 }), function (req, res, next) {
     authService.getImageForUser(req.params['user_id'], req.user.token, function (err, data) {
-        if (err) {
-            next(err);
-            return;
-        }
-
-        if (!data) {
-            res.sendStatus(404);
+        if (err || !data || !data.imageBuffer) {
+            // Keycloak users have no image: show a placeholder
+            res.set('Cache-Control', 'private, max-age=3600');
+            res.sendFile(path.join(__dirname, '../resources/default_avatar.svg'));
             return;
         }
 

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <title>Avatar</title>
+  <circle cx="32" cy="32" r="32" fill="#cfd8dc"/>
+  <circle cx="32" cy="25" r="11" fill="#90a4ae"/>
+  <path d="M12 54c2.5-10 10.5-15 20-15s17.5 5 20 15a31.8 31.8 0 0 1-40 0z" fill="#90a4ae"/>
+</svg>
